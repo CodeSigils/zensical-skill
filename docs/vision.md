@@ -23,6 +23,8 @@ composable skills or repository-specific guidance.
 - Inspect the target repository before assuming its layout or commands.
 - Keep light edits, article review, site modification, and publishing separate.
 - Preserve one canonical source and detect duplicate or drifting guidance.
+- Centralize repeated semantic configuration values when they should change
+  together, while keeping illustrative examples readable.
 - Treat local build success and remote deployment success as different evidence.
 - Prefer current primary sources and record version uncertainty.
 - Extract new workflows only after repeated work demonstrates a stable need.

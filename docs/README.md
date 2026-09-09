@@ -11,6 +11,7 @@ documents relevant to the proposed change.
 | CSS, theme, or landing-page workflow | `vision.md`, `roadmap.md`, `research.md` |
 | Accessibility workflow | `vision.md`, `roadmap.md`, `research.md` |
 | Commit or changelog policy | `AGENTS.md`, `README.md`, `release-checklist.md`, `CHANGELOG.md` |
+| Repeated values or centralization | `AGENTS.md`, `vision.md`, `roadmap.md`, `release-checklist.md` |
 | External source or comparable-skill pattern | `research.md`, `vision.md` |
 | Sequencing or release gate | `roadmap.md`, `vision.md` |
 | Distribution or compatibility | `vision.md`, `roadmap.md`, `research.md`, `release-checklist.md` |

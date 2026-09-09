@@ -27,6 +27,9 @@ release guarantee.
 - [ ] Keep `CHANGELOG.md` limited to user-visible or maintainer-significant
       changes; detailed rationale belongs in commits and research/decision
       records.
+- [ ] Review repeated semantic values (versions, runners, OS names, paths,
+      SHAs, ports, and feature flags); centralize values repeated more than
+      twice when they should change together, and document intentional copies.
 - [ ] Apply the accessibility reference to affected media, components, CSS,
       templates, or landing pages; record browser/assistive-technology limits.
 - [ ] Run the shared scenario/fixture suite once it exists.
