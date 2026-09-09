@@ -1,5 +1,20 @@
 # Repository instructions
 
+## Stale-state preflight
+
+Before any implementation, recommendation, or other consequential action,
+check whether the repository's instructions, roadmap, research, source
+registry, session notes, and target-site state are current and mutually
+consistent. Look for uncommitted changes, completed work still described as
+pending, superseded decisions, stale versions or commands, and claims that
+lack current evidence.
+
+If stale or conflicting state is found, do not silently build on it. Report the
+conflict, identify the canonical source, and either reconcile the records first
+or clearly label the proposed action as provisional. Re-check volatile
+external sources at the point of use. Record the freshness check and any
+intentionally unchanged records in the handoff.
+
 ## Documentation contract
 
 The planning documents under `docs/` describe the skill's intended scope; the
@@ -10,6 +25,12 @@ workflow boundaries, source evidence, or release expectations, read
 Before handoff, update every affected planning document or state why it remains
 unchanged. Search for duplicate guidance and drift between `SKILL.md`,
 references, and planning documents before adding a new rule.
+
+Keep `docs/research.md` active rather than archival: every entry must have a
+current purpose, source/date, or explicit historical disposition. Promote only
+evidence that informs a workflow, decision, or roadmap gate; move detailed
+session chronology to a session note and mark superseded claims instead of
+silently leaving them to drift.
 
 ### Meaningful-change documentation directive
 
@@ -34,6 +55,23 @@ Zensical documentation before general web search. Use standards bodies or
 primary provider sources for accessibility, media, privacy, and embed claims;
 label community observations as such and do not treat cached posts or snippets
 as evidence.
+
+For link work, evaluate effectiveness separately from existence. Check local
+targets and fragments recursively, preserve stable identifiers, distinguish
+navigation from semantic relationships, and give each important link a clear
+role. Do not add cross-links merely to increase graph density; prefer one
+canonical owner and link to it. Use the target site's configured checker when
+available, and report external-link freshness separately from local integrity.
+
+### Research-once protocol
+
+Before starting new research, search the existing research record, source
+registry, decisions, and session notes. Reuse an existing evidence entry when
+its scope and freshness fit the claim. At the point of use, revalidate
+volatile, version-sensitive, or decision-critical details rather than trusting
+an old snapshot. Record whether evidence was reused, revalidated, superseded,
+or newly discovered; do not silently repeat a search or silently carry stale
+evidence forward.
 
 ### Repeated-value heuristic
 

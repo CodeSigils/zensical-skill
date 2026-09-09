@@ -21,6 +21,22 @@ marketplace result. Marketplace presence is treated as distribution evidence
 only; rankings, install counts, and badges do not establish quality or
 compatibility. See [release-checklist.md](release-checklist.md).
 
+## Current status
+
+The core existing-site workflow has been exercised against the Code Sigils
+blog. Inspection, an authorized tab light edit, navigation and internal-link
+review, media and video review, presentation review, and a structured
+accessibility pass all have recorded evidence in `docs/research.md` and the
+Digital Basement session note. The remaining Phase 1 work is to consolidate
+those checks into a repeatable scenario or fixture only where the real-site
+evidence shows a need.
+
+No public package, host installation smoke check, or independent fixture suite
+is claimed yet. Those remain Phase 3 work.
+
+See the [research record](research.md) for the evidence behind this status and
+the [vision](vision.md) for the quality criteria.
+
 ## Capability-admission rule
 
 Do not add a new Zensical workflow, integration, or validation control merely
@@ -46,13 +62,20 @@ editorial conventions, and a live deployment boundary. Use it to test behavior
 before inventing synthetic fixtures. Run experiments in a branch or isolated
 worktree, and keep validation separate from publication.
 
-## Phase 1 — Existing-site review and light editing
+## Phase 1 — Existing-site review and light editing (substantially proven)
 
-- Test `SKILL.md`, `light-edit.md`, `editorial-review.md`,
-  `content-components.md`, and `validation.md` against the Code Sigils blog.
-- Record observed Zensical version, commands, configuration, and output path.
-- Add a small fixture or scenario only if a repeated failure or ambiguity needs
-  reproducible validation.
+- [x] Test the runtime routing and review guidance against the Code Sigils blog.
+- [x] Record the observed Zensical version, commands, configuration, and output
+  path.
+- [x] Exercise tabs, navigation, internal links, media, video embeds,
+  presentation customization, and accessibility review.
+- [x] Perform one authorized light edit in an isolated branch.
+- [x] Define bounded scenarios for the observed tab-rendering and
+  accessibility-invocation failures ([scenarios.md](scenarios.md)).
+- [x] Add a pinned fixture and isolated runner for the two observed failures;
+  keep broader fixtures deferred until another deterministic gap appears.
+- [x] Add a bounded non-root deployment-link fixture based on the blog's
+  `/docs/` boundary.
 
 **Exit condition:** an agent can inspect an existing site, make an authorized
 light edit or report a review finding, and validate the result without

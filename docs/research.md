@@ -1,5 +1,61 @@
 # Research and design record
 
+This is an active evidence index, not a graveyard. Each substantial entry must
+support a current workflow, decision, or roadmap gate. When evidence is
+superseded, mark the version/date and explain whether it was replaced, retained
+as historical context, or removed. Keep detailed dated execution notes in the
+related session record; keep this document concise enough to re-check.
+
+Related documents: [vision](vision.md), [roadmap](roadmap.md),
+[documentation index](README.md), and the
+[source registry](../zensical/references/source-registry.md).
+
+## Link effectiveness evidence
+
+The [agent-concepts-study link-integrity research](https://github.com/CodeSigils/agent-concepts-study/blob/main/research/note-organization/link-integrity-and-stable-identifiers.md)
+and its [anti-drift findings](https://github.com/CodeSigils/agent-concepts-study/blob/main/2026-07-26-DRIFT-minimum-anti-drift-strategy.md)
+provide a useful cross-project reference. The transferable rules are:
+
+- prefer stable identifiers and treat renames as repository-wide migrations;
+- validate references recursively, including anchors and non-content pointers;
+- separate navigation links from integrity checks and semantic relationships;
+- keep one owner for each truth and link to it rather than duplicating prose;
+- add links to solve a navigation need, not to inflate connectivity metrics; and
+- test link controls with both valid and intentionally broken cases.
+
+These are maintenance patterns, not universal Zensical behavior. Apply them
+proportionately to the target repository and record the target's actual link
+checker and deployment behavior.
+
+## Evaluation: lightweight article link manifests
+
+The proposed middle ground is worth keeping as an evaluation, but not as a
+new runtime requirement. A small optional manifest can record important
+external URLs, their role, `last_verified` date, and a simple check cadence;
+article Markdown remains the human-readable source. A generated inventory can
+show all links without making a second manually maintained copy mandatory.
+
+Zensical has a natural fit for only part of this design. Its current
+[validation documentation](https://zensical.org/docs/setup/validation/)
+states that internal links and anchors are checked during builds, and strict
+mode can fail a CI build when issues are found. Its
+[Markdown guidance](https://zensical.org/docs/authoring/markdown/) recommends
+relative links so pages can move with a site and its `site_url` can change.
+These native checks should remain the primary path for local integrity.
+
+The external portion is separate. Zensical's documented
+[GitHub Pages workflow](https://zensical.org/docs/publish-your-site/) builds and
+publishes on pushes, but does not define an article manifest or scheduled
+external-URL monitor. If the blog later needs this, add one small advisory
+scheduled workflow that checks selected manifests with limited retries and
+reports failures for review. It should not rewrite articles or block ordinary
+publishing. Normalize URLs before comparing manifest entries so fragments,
+trailing slashes, and harmless query differences do not create false drift.
+
+**Disposition:** retain as a future, optional maintenance slice. Do not add a
+manifest to every article until link inventory or a real rot incident shows
+that inline links plus Zensical's native checks are insufficient.
+
 ## Zola skill patterns worth transferring
 
 The existing `zola-skill` provides several transferable maintenance patterns:
@@ -25,9 +81,10 @@ commands, configuration, and supported features must be verified separately.
 
 - The runtime payload has been validated for structure with the skill creator's
   validator.
-- A current Zensical version has not yet been pinned for fixtures.
-- Admonition and tab behavior has been used in the Code Sigils site, but the
-  skill has not yet run an independent scenario suite.
+- The initial fixture scenarios are pinned to Zensical `0.0.60` and run in
+  isolated temporary copies.
+- The independent scenario suite covers tab rendering and reproducible
+  accessibility findings; it is not a complete site or WCAG conformance suite.
 - Public package installation and host-specific smoke checks are deferred.
 
 ## Blog research evidence
@@ -335,3 +392,28 @@ specific behavior; then consult W3C or other standards and primary provider
 documentation for cross-cutting claims. Community guides are useful for
 alternatives and practical observations when clearly labelled. Cached blog
 posts and search snippets are discovery leads, not evidence.
+
+## Front matter, base path, and asset acceptance (2026-09-09)
+
+The isolated `opencode-guide.md` build confirmed that front matter generated the
+expected title, description, and canonical URL
+(`https://codesigils.github.io/AI/OpenCode/opencode-guide/`). The configured
+stylesheet resolved under the generated route, and the root-absolute local
+OpenCode screenshot existed in the output. The article's YouTube iframe remained
+external and lacked a descriptive `title`; this is an accessibility finding,
+not a build failure. The source blog checkout remained clean.
+
+## Accessibility acceptance review (2026-09-09)
+
+The rendered `opencode-guide.md` page was reviewed for basic accessibility
+signals. It had a logical heading sequence with no level jumps, standard
+header/nav/main/article/footer landmarks, no empty links, and an image with an
+`alt` attribute. Two suggestions remain: add a descriptive `title` to the
+YouTube iframe, and provide a nearby transcript or clearly labelled descriptive
+fallback when the video's visual information is relevant. These are review
+findings only; no source edit was authorized, and no browser, keyboard, screen
+reader, contrast, or automated WCAG audit was performed.
+
+This exposed an execution gap in the first acceptance pass: accessibility rules
+existed, but the workflow did not route to a structured a11y report. The skill
+now treats rule presence and workflow invocation as separate acceptance claims.

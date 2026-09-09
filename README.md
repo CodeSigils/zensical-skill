@@ -38,7 +38,10 @@ docs/
 ├── vision.md                # purpose, boundaries, and quality criteria
 ├── roadmap.md               # evidence-gated implementation plan
 ├── research.md              # verified sources and comparable patterns
+├── scenarios.md             # bounded real-site acceptance procedures
 └── README.md                # maintainer reading matrix
+tests/fixtures/              # pinned deterministic scenario sites
+scripts/run_scenarios.sh     # isolated fixture runner
 AGENTS.md                   # maintainer change contract
 CHANGELOG.md                # project-level history
 LICENSE                     # MIT license
@@ -53,10 +56,13 @@ context and is not loaded as part of the skill.
 - The payload is structurally validated with the Agent Skills validator.
 - The repository is licensed under MIT and has a security reporting policy.
 - The initial workflows are designed around the Code Sigils Zensical blog.
-- Zensical `0.0.60` is observed in that site, but fixtures are not yet pinned
-  to a release.
-- No independent scenario suite, public package, or host installation smoke
-  check exists yet.
+- The initial fixtures and scenario runner are pinned to Zensical `0.0.60`.
+- The scenario suite covers tab rendering, reproducible accessibility findings,
+  and non-root deployment links; it is not a complete site or WCAG conformance
+  suite.
+- The runner distinguishes dependency/network blocks from fixture failures and
+  accepts an installed matching binary through `ZENSICAL_BIN`.
+- No public package or host installation smoke check exists yet.
 - Codex, OpenCode, and Hermes are the maintained compatibility targets.
 
 These are development facts, not guarantees about every Zensical repository.
@@ -102,9 +108,11 @@ verification steps are documented in
 ## Roadmap
 
 See [`docs/roadmap.md`](docs/roadmap.md). The next milestone is one complete
-existing-site review and light-edit workflow with evidence-backed validation.
-New scripts, fixtures, integrations, and CI should earn their place by solving
-a repeated problem observed in that workflow.
+existing-site review and light-edit workflow with evidence-backed validation;
+that milestone is substantially proven against the Code Sigils blog. The next
+milestone is to consolidate the proven checks into a small repeatable scenario
+only where it solves a demonstrated failure. New scripts, fixtures,
+integrations, and CI should earn their place through observed need.
 
 ## Status and feedback
 

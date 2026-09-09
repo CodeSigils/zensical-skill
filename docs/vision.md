@@ -7,6 +7,10 @@ and validating Zensical static sites. It helps an agent preserve an existing
 site's conventions while using Zensical components such as admonitions and
 content tabs, media assets, and the site's presentation customization safely.
 
+Related planning documents: [roadmap](roadmap.md) for sequencing and acceptance
+gates, [research](research.md) for current evidence, and
+[the documentation index](README.md) for the reading matrix.
+
 ## Boundaries
 
 The skill owns repository inspection, presentation syntax, content/navigation

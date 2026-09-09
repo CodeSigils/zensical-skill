@@ -14,6 +14,7 @@ documents relevant to the proposed change.
 | Repeated values or centralization | `AGENTS.md`, `vision.md`, `roadmap.md`, `release-checklist.md` |
 | External source or comparable-skill pattern | `research.md`, `vision.md` |
 | Sequencing or release gate | `roadmap.md`, `vision.md` |
+| Acceptance scenario or fixture | `scenarios.md`, `roadmap.md`, `research.md` |
 | Distribution or compatibility | `vision.md`, `roadmap.md`, `research.md`, `release-checklist.md` |
 | Release or market discoverability | `roadmap.md`, `research.md`, `release-checklist.md` |
 

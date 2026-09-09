@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added pinned Zensical `0.0.60` fixtures and an isolated scenario runner for
+  tab rendering, accessibility-review evidence, and non-root deployment links.
+- Made scenario dependency failures explicit and support an installed
+  `ZENSICAL_BIN` for offline validation.
 - Added a narrow Zensical skill payload for existing-site inspection, light
   editing, article review, content components, validation, and source routing.
 - Added maintainer planning documents for scope, roadmap, research, and drift
