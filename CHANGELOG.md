@@ -19,7 +19,8 @@
 - Added a lightweight commit-message checker and documented a curated changelog
   policy so detailed rationale remains in commits and research records.
 - Refined repeated-value awareness into a smell/drift heuristic rather than a
-  mandatory extraction rule; linked general Python code review to `py-review`.
+  mandatory extraction rule; scoped it to repository scripts, CI, and
+  configuration.
 - Clarified that accessibility supports discoverability and usability but is
   not an SEO shortcut, ranking guarantee, or substitute for an SEO strategy.
 - Added an explicit research-source priority: inspect the target repository,

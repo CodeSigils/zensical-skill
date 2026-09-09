@@ -89,11 +89,7 @@ records what each source supports and when it was checked.
 
 Repeated semantic values are review signals for possible duplication or drift,
 not automatic extraction targets. Centralize a value only when its copies
-should change together and the trade-off improves clarity. For general Python
-code-quality review, pair this skill with
-[`py-review-skill`](https://github.com/CodeSigils/py-review-skill).
-For Python project structure, tooling, packaging, and CI, also use
-[`python-project-workflow-skill`](https://github.com/CodeSigils/python-project-workflow-skill).
+should change together and the trade-off improves clarity.
 
 Commit policy is checked with `python3 scripts/check_commit_messages.py`; each
 commit must explain `what:` and `why:` in its body. The changelog is curated and
