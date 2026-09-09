@@ -72,9 +72,10 @@ coverage than its evidence supports.
 
 The initial runtime payload is a reviewable narrow slice. Its three bounded
 fixtures run through one lockfile-pinned scenario environment. It passes the
-local Agent Skill structural validator, but has not yet been installed or
-published as a public skill; release-level `skills-ref` validation remains
-pending a pinned validator revision.
+local Agent Skill structural validator and the pinned official `skills-ref`
+validator at agentskills commit `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
+It has not yet been installed as a host skill; marketplace, host-discovery,
+and production-readiness claims remain out of scope.
 
 ## Compatibility strategy
 

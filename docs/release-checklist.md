@@ -17,10 +17,12 @@ release guarantee.
 
 ## Local validation
 
-- [ ] Run the official Agent Skills validator from a clean environment using
+- [x] Run the official Agent Skills validator from a clean environment using
       the pinned command below; record the exact commit and result.
 
       `uvx --from git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref skills-ref validate zensical`
+
+      Result (2026-09-09): `Valid skill: zensical`.
 - [ ] Check relative references and front matter.
 - [ ] Run `bash zensical/scripts/check_site_hygiene.sh .` and resolve or
       explicitly review any candidate before release.

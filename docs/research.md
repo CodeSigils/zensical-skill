@@ -79,9 +79,9 @@ commands, configuration, and supported features must be verified separately.
 
 ## Current evidence limits
 
-- The runtime payload passes the local Agent Skill structural validator.
-  Release-level `skills-ref` validation remains pending a pinned validator
-  revision.
+- The runtime payload passes the local Agent Skill structural validator and the
+  pinned official `skills-ref` validator at agentskills commit
+  `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
 - The initial fixture scenarios run in isolated temporary copies through the
   committed, lockfile-pinned Zensical `0.0.60` scenario environment.
 - The independent scenario suite covers tab rendering and reproducible

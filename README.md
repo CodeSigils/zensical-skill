@@ -74,8 +74,9 @@ context and is not loaded as part of the skill.
 
 ## Current state
 
-- The payload passes the local Agent Skill structural validator; release-level
-  `skills-ref` validation remains pending a pinned validator revision.
+- The payload passes the local Agent Skill structural validator and the pinned
+  official `skills-ref` validator at agentskills commit
+  `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
 - The repository is licensed under MIT and has a security reporting policy.
 - The initial workflows are designed around the Code Sigils Zensical blog.
 - The initial fixtures run through a lockfile-pinned Zensical `0.0.60`
