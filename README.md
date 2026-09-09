@@ -109,6 +109,15 @@ and the target site's configuration.
 Do not install, execute, publish, or deploy third-party material as part of
 discovery or review without explicit authorization.
 
+### Optional discovery tooling
+
+The official Skills CLI, commonly invoked through `npx --yes`, is an optional
+discovery-time tool for broad catalog searches. It is not a runtime dependency
+of this skill or of a target Zensical site. Because `npx --yes` downloads and
+executes external code, use it only with explicit authorization and an
+isolated working directory; report it as unavailable rather than silently
+bootstrapping it.
+
 ## Primary references
 
 - [Zensical documentation](https://zensical.org/docs/)

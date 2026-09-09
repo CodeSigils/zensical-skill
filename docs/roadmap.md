@@ -107,11 +107,13 @@ minimal scope, rendered confidence, and an honest handoff.
 - [ ] Record a bounded capability comparison against `koda-zensical`, keeping
   language- or client-specific conventions out of the core router unless a
   target repository requires them.
-- [ ] Add a discovery regression scenario: run a broad Skills CLI query such as
+- [x] Add a discovery regression scenario: run a broad Skills CLI query such as
   `npx --yes skills find zensical`, preserve the provider timestamp/result count,
   and compare its candidates with direct repository and documented catalog
   searches. Treat `skills find` as a retrieval signal, not proof of quality or
-  complete indexing.
+  complete indexing. See [discovery-evidence.md](discovery-evidence.md); the
+  captured count is the number displayed by the invocation, not a provider-wide
+  total.
 - [ ] Update the skill-discovery workflow to search Skills.sh after local and
   documented catalog sources, while recording unavailable, stale, or
   unauthenticated sources instead of interpreting absence as proof.
