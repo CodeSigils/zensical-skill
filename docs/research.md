@@ -199,6 +199,25 @@ Zensical component. The next acceptance slice should exercise a tabbed article,
 navigation/link review, and an explicitly authorized light edit in an isolated
 branch or worktree.
 
+## Tab-awareness acceptance slice (2026-09-09)
+
+The next slice used `docs/JS-TS/oxc-formatting.md` in an isolated clone and
+branch (`codex/zensical-tabs`). The source contained package-manager commands
+written as separate one-label tab blocks with unindented code fences. Zensical
+therefore built successfully but rendered empty tab panels; this is a semantic
+rendering failure that a build-only check does not catch.
+
+The authorized light edit grouped each equivalent installation command inside a
+single tab set and added the missing Bun option. Commit `fd85f61` contains only
+that article change. Rebuilding with the installed Zensical `0.0.60` binary
+passed with `No issues found`; rendered HTML showed one `data-tabs="1:4"` group
+and one `data-tabs="2:4"` group, each with non-empty npm/pnpm/yarn/bun panels.
+
+This validates a concrete tab-awareness rule: equivalent package-manager
+commands belong in one complete tab group, and rendered output must be checked
+for panel content rather than trusting a successful build. The branch was not
+published or pushed; the original blog checkout remained unchanged.
+
 ### Disco and native search
 
 Zensical's current search documentation describes native client-side search,
