@@ -8,7 +8,14 @@ uses the same package manager or output directory.
 1. Run the documented build command, preferably its clean form.
 2. Run the project's link or Markdown checks if available.
 3. Inspect generated output for the changed page, navigation, admonitions,
-   tabs, assets, and base-path behavior.
+   tabs, media assets, embeds, and base-path behavior. For images, verify
+   rendered source paths and alt text; for video/audio/iframes, verify fallback,
+   dimensions, and provider boundaries where feasible.
+   For CSS, templates, or landing pages, inspect at least a narrow viewport and
+   both configured color schemes when the change affects them.
+   Apply the accessibility reference for semantic names, alt text, iframe
+   titles, captions/transcripts, focus, contrast, zoom, and motion. Report
+   static checks separately from browser or assistive-technology evidence.
 4. Run `git diff --check` for whitespace and formatting errors.
 
 If a check requires network access, state that dependency. If the build tool is

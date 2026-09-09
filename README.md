@@ -3,7 +3,8 @@
 `zensical-skill` is a focused Agent Skill for inspecting, lightly editing,
 reviewing, and validating existing [Zensical](https://zensical.org/) sites.
 It helps an agent preserve a repository's conventions while working with
-Zensical Markdown components such as admonitions and content tabs.
+Zensical Markdown components, navigation, media assets, and presentation
+customization.
 
 This is an early, reviewable project—not a complete Zensical automation suite.
 The current payload is intentionally narrow and is being developed from real
@@ -15,7 +16,10 @@ The skill currently routes these tasks:
 
 - inspect an existing Zensical repository and identify its conventions;
 - make an explicitly authorized light Markdown edit;
-- review content, navigation, links, front matter, admonitions, and tabs;
+- review content, navigation, links, front matter, admonitions, tabs, and
+  images or embeds;
+- review responsive CSS, theme overrides, and landing-page conventions;
+- review accessibility concerns across content, media, components, and themes;
 - validate a build and, where feasible, affected rendered output; and
 - report deployment boundaries and configuration/documentation drift.
 

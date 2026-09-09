@@ -5,13 +5,14 @@
 `zensical` is a focused Agent Skill for inspecting, lightly editing, reviewing,
 and validating Zensical static sites. It helps an agent preserve an existing
 site's conventions while using Zensical components such as admonitions and
-content tabs safely.
+content tabs, media assets, and the site's presentation customization safely.
 
 ## Boundaries
 
 The skill owns repository inspection, presentation syntax, content/navigation
 consistency, link and front-matter checks, builds, rendered-output inspection,
-and bounded deployment awareness.
+media and asset behavior, CSS/theme customization, landing pages, and bounded
+deployment awareness.
 
 It does not own prose craft, blog voice, SEO strategy, generic frontend work,
 autonomous publishing, or every Zensical feature. Those capabilities remain
@@ -41,8 +42,12 @@ A workflow is ready to keep when it demonstrates all of the following:
 - **Minimal coherent change:** an authorized repair changes only the affected
   scope and keeps unrelated architecture intact.
 - **Rendered confidence:** validation covers the build and, where feasible, the
-  affected rendered page, including links, admonitions, tabs, assets, and base
-  paths.
+  affected rendered page, including links, admonitions, tabs, media assets,
+  embeds, CSS/theme overrides, landing-page behavior, and base paths.
+  Accessibility evidence must distinguish static inspection from browser or
+  assistive-technology testing.
+- Accessibility can support discoverability and reader usability, but remains
+  distinct from SEO strategy and ranking claims.
 - **Honest handoff:** the agent reports exact checks, remaining uncertainty,
   deployment limits, and any human decision still required.
 - **Maintainability:** references remain discoverable, source dates or versions

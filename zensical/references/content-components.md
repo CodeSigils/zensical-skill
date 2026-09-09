@@ -41,3 +41,12 @@ independent baseline, or deeper context. Check relative links against the
 configured base path. Add one navigation entry in the canonical navigation
 source and avoid duplicating local article links in index pages when the site's
 rules prohibit them.
+
+## Media handoff
+
+For images, video, audio, or embedded players, continue with
+[media.md](media.md). Do not bury asset existence, base-path, privacy, or
+accessibility checks inside an admonition or tab review.
+
+For accessible names, keyboard behavior, contrast, and alternatives, also read
+[accessibility.md](accessibility.md).

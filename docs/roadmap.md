@@ -62,8 +62,11 @@ minimal scope, rendered confidence, and an honest handoff.
 
 ## Phase 2 — Component and content-model confidence
 
-- Verify admonitions, content tabs, front matter, navigation, base paths, and
-  asset links against current Zensical sources and a real repository.
+- Verify admonitions, content tabs, front matter, navigation, base paths,
+  images, captions, lightboxes, embeds, and asset links against current
+  Zensical sources and a real repository. Include responsive CSS, theme
+  overrides, landing-page behavior, and accessibility checks when the target
+  uses them.
 - Add focused references only for behavior that changes agent decisions.
 
 ## Phase 3 — Release and maintenance evidence

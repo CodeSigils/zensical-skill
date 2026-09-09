@@ -7,6 +7,9 @@ documents relevant to the proposed change.
 | --- | --- |
 | Skill scope or trigger | `vision.md`, `roadmap.md` |
 | Workflow or validation change | `vision.md`, `roadmap.md`, `research.md` |
+| Media or asset workflow | `vision.md`, `roadmap.md`, `research.md` |
+| CSS, theme, or landing-page workflow | `vision.md`, `roadmap.md`, `research.md` |
+| Accessibility workflow | `vision.md`, `roadmap.md`, `research.md` |
 | External source or comparable-skill pattern | `research.md`, `vision.md` |
 | Sequencing or release gate | `roadmap.md`, `vision.md` |
 | Distribution or compatibility | `vision.md`, `roadmap.md`, `research.md`, `release-checklist.md` |

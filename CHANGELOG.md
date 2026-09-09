@@ -8,5 +8,15 @@
   control.
 - Added explicit boundaries between editorial intent and Zensical presentation
   syntax, including admonitions and content tabs.
+- Added media and asset guidance covering images, optional GLightbox galleries,
+  raw HTML video/audio embeds, base paths, accessibility, privacy, and
+  rendered-output limits.
+- Added capability-aware guidance for responsive media, scoped CSS overrides,
+  custom MiniJinja themes, page-selected templates, and landing pages.
+- Added cross-cutting accessibility guidance for semantic HTML, ARIA restraint,
+  text alternatives, captions, transcripts, keyboard use, contrast, zoom, and
+  honest WCAG validation boundaries.
+- Clarified that accessibility supports discoverability and usability but is
+  not an SEO shortcut, ranking guarantee, or substitute for an SEO strategy.
 - Added MIT licensing, a security policy, and a release/discoverability
   checklist covering `skills-ref`, host checks, and marketplace evidence.

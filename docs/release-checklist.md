@@ -21,6 +21,8 @@ release guarantee.
       from a clean environment using a source pinned to an immutable
       `agentskills/agentskills` commit; record the exact commit and result.
 - [ ] Check relative references and front matter.
+- [ ] Apply the accessibility reference to affected media, components, CSS,
+      templates, or landing pages; record browser/assistive-technology limits.
 - [ ] Run the shared scenario/fixture suite once it exists.
 - [ ] Review the final payload tree and confirm only `zensical/` is distributed.
 - [ ] Record unresolved network, version, rendering, or deployment uncertainty.

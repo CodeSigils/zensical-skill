@@ -36,6 +36,15 @@ Choose the smallest applicable workflow:
 - **Lightly edit or author Markdown:** read [references/light-edit.md](references/light-edit.md)
   and [references/content-components.md](references/content-components.md), then
   preserve the article's own editorial rules.
+- **Review media or assets:** read [references/media.md](references/media.md),
+  then inspect the target's image, video, audio, embed, and asset conventions.
+- **Review responsive presentation or customization:** read
+  [references/customization.md](references/customization.md), then inspect
+  `extra_css`, `extra_javascript`, `custom_dir`, theme settings, and landing
+  page conventions.
+- **Review accessibility:** read [references/accessibility.md](references/accessibility.md)
+  whenever content, media, components, CSS, templates, or landing pages affect
+  names, alternatives, keyboard use, contrast, zoom, or motion.
 - **Review article quality:** read [references/editorial-review.md](references/editorial-review.md)
   and use its evidence-based finding format.
 - **Review admonitions, tabs, links, or navigation:** read
@@ -97,6 +106,13 @@ Keep these modes distinct:
 - Keep front matter and section metadata consistent with the site's existing
   conventions. Do not invent fields because another static-site generator uses
   them.
+- Treat images, video, audio, and external embeds as separate media concerns.
+  A passing build proves neither player behavior nor remote availability.
+- Treat CSS overrides, custom templates, and landing pages as version-sensitive
+  presentation layers. Preserve scoped changes and validate rendered behavior.
+- Treat accessibility as a cross-cutting quality concern. Prefer native HTML
+  and visible text before ARIA, and never claim WCAG compliance from a build
+  alone.
 
 ## Handoff
 

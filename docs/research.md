@@ -248,3 +248,79 @@ multilingual search is unavailable.
 
 Sources: [Zensical site search](https://zensical.org/docs/setup/search/) and
 [Zensical roadmap](https://zensical.org/about/roadmap/).
+
+## Media and asset capability review (2026-09-09)
+
+The current Zensical documentation gives images a richer supported path than
+other media: attribute-list alignment, captions/figures, lazy loading,
+light/dark variants, and the optional GLightbox image gallery extension. The
+official reference set does not describe an equivalent native video or audio
+authoring component. Those commonly remain raw HTML, CSS, JavaScript, or
+external-provider integrations and therefore need separate rendered and
+privacy/offline checks.
+
+The Code Sigils blog exercises this mixed model: local SVG/PNG/JPEG/WebP
+assets, inline HTML images, and YouTube iframes styled by custom CSS. A build
+can prove that these elements were emitted, but not that an external player
+loads, that a caption is accessible, or that a media URL survives a deployment
+subpath. The media reference now requires asset existence, alt text, responsive
+dimensions, fallback/caption handling, base-path behavior, provider/privacy
+boundaries, and explicit size/licensing decisions.
+
+Primary sources: [Zensical images](https://zensical.org/docs/authoring/images/),
+[GLightbox](https://zensical.org/docs/setup/extensions/glightbox/), and
+[Zensical customization/assets](https://zensical.org/docs/customization/).
+
+## Video-heavy article acceptance review (2026-09-09)
+
+Review-only testing used `docs/AI/OpenCode/opencode-guide.md` in an isolated
+copy of the Code Sigils blog. The documented Zensical `0.0.60` build passed with
+`No issues found`. The generated page emitted the local OpenCode screenshot,
+loaded `stylesheets/extra.css`, and preserved the responsive
+`youtube-video-wrapper` and 16:9 iframe rules. The local image target existed in
+the generated output, and the source checkout remained clean.
+
+The review found one actionable accessibility concern: the YouTube iframe has
+`allowfullscreen` but no descriptive `title` attribute. This is a review
+finding, not an authorized edit. Static build and HTML inspection cannot prove
+that YouTube loads, that keyboard focus behaves correctly, or that the remote
+provider remains available offline.
+
+## Accessibility baseline (2026-09-09)
+
+Accessibility is now a cross-cutting quality concern rather than an ARIA-only
+feature. The skill uses WCAG 2.2 and W3C guidance as the review baseline:
+prefer semantic HTML and visible names, use `alt` according to image purpose,
+provide captions and transcripts for time-based media, label iframes, preserve
+keyboard and focus behavior, and check contrast, zoom/reflow, color
+independence, and reduced motion where presentation changes. Static checks and
+Zensical builds provide evidence about emitted markup only; they do not certify
+WCAG conformance or replace browser and assistive-technology testing.
+
+Accessibility can support discoverability through crawlable structure,
+descriptive alternatives, and usable content. It should remain a quality and
+inclusion goal rather than being reduced to keyword, ranking, or SEO advice.
+
+Sources: [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [W3C Images Tutorial](https://www.w3.org/WAI/tutorials/images/), [W3C Audio and Video Media](https://www.w3.org/WAI/media/av/), and [W3C Accessible Names](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/).
+
+## Presentation and landing-page capability review (2026-09-09)
+
+The blog supplies a real customization reference: `extra_css` loads scoped
+responsive rules for YouTube wrappers and images, while `docs/index.md` acts as
+the public landing page with front matter, introductory sections, admonitions,
+tabs, diagrams, and links. The current Zensical customization documentation
+also supports `extra_javascript`, `custom_dir`, MiniJinja template overrides,
+focused `main.html` block extensions, and page-selected templates through front
+matter. Its guidance favors focused block overrides over replacing `base.html`
+because the latter is more likely to drift across releases.
+
+This evidence expands the skill's awareness without making it a generic
+frontend skill. It should inspect existing CSS and theme conventions, preserve
+responsive and accessibility behavior, test narrow viewports and configured
+color schemes when relevant, and treat custom templates and third-party
+embeds as version-sensitive. A build proves emission, not visual layout,
+keyboard behavior, contrast, or remote-player availability.
+
+Primary sources: [Zensical customization](https://zensical.org/docs/customization/),
+[front matter](https://zensical.org/docs/authoring/frontmatter/), and
+[colors](https://zensical.org/docs/setup/colors/).
