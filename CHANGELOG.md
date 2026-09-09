@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Recorded a static comparison of related Zensical skills and added roadmap
+  work for authoring-pattern evaluation and Skills CLI discovery regression
+  coverage.
 - Improved skill discovery metadata, repository badges, the pinned
   `skills-ref` release check, and GitHub repository topics/description.
 - Hardened repository hygiene for package caches, nested artifacts, and common

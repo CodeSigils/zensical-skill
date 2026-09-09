@@ -446,3 +446,33 @@ reader, contrast, or automated WCAG audit was performed.
 This exposed an execution gap in the first acceptance pass: accessibility rules
 existed, but the workflow did not route to a structured a11y report. The skill
 now treats rule presence and workflow invocation as separate acceptance claims.
+
+## Related Zensical skill comparison (2026-09-09)
+
+Two Skills.sh candidates were downloaded for static comparison into an
+isolated project directory; neither was installed into a client skill path or
+executed. `layeredcraft/skills@zensical-site` (MIT, repository updated
+2026-09-09) has a progressive authoring router, voice/tone and content-type
+references, front-matter and Markdown guidance, configuration caveats, and a
+page-draft template. These are useful patterns for future authoring support,
+but the skill targets Zensical.org content and does not cover real-site
+maintenance, security hygiene, or bounded deployment checks.
+`xcode-nlp/kodaskills@koda-zensical` (MIT, repository updated 2026-07-21) provides
+Russian-language formatting conventions and syntax reminders; it is a partial,
+language-specific fit rather than a core dependency.
+
+The candidates show that authoring references and templates could complement
+this skill, but they do not justify widening the runtime router yet. Admit a
+feature only after a Code Sigils blog need, current primary-source evidence, a
+bounded scenario, and a maintenance owner exist.
+
+The first discovery pass missed these candidates because it did not run a
+fresh, broad Skills CLI search. A follow-up `npx --yes skills find zensical`
+query (2026-09-09) returned multiple indexed candidates, while direct source
+listing confirmed `CodeSigils/zensical-skill` is installable but not yet
+surfaced by search. Future discovery should use Skills CLI as a retrieval
+stage after local and documented catalog checks, record query time and provider
+status, inspect canonical repositories, and treat missing search results as
+provisional rather than evidence of absence. The command downloads and runs
+external CLI code, so it requires explicit authorization and an isolated
+environment.
