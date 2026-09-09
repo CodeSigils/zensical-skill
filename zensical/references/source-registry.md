@@ -25,3 +25,13 @@ upstream route changes.
 When network access is unavailable, distinguish repository evidence from memory
 and do not present an unverified command as current. Record the review date in a
 project's release or verification notes when the detail is volatile.
+
+## Research order
+
+For a live task, inspect the target repository first. For Zensical syntax,
+configuration, theme, navigation, Markdown, or CLI behavior, check the current
+official Zensical documentation and source registry before broad web search.
+Use standards bodies and primary provider documentation for accessibility,
+media, privacy, or embed claims, and use community material only for clearly
+labelled observations or alternatives. Cached posts and search snippets are
+leads, not evidence.

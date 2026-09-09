@@ -18,5 +18,8 @@
   honest WCAG validation boundaries.
 - Clarified that accessibility supports discoverability and usability but is
   not an SEO shortcut, ranking guarantee, or substitute for an SEO strategy.
+- Added an explicit research-source priority: inspect the target repository,
+  consult official Zensical documentation first for Zensical behavior, then use
+  standards, primary providers, and clearly labelled community observations.
 - Added MIT licensing, a security policy, and a release/discoverability
   checklist covering `skills-ref`, host checks, and marketplace evidence.

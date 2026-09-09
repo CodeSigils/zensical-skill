@@ -29,6 +29,12 @@ question, add a concise session or decision note in the related project and
 link it rather than copying the same prose into every file. State explicitly
 which records were intentionally unchanged.
 
+For research, inspect the target repository first and consult current official
+Zensical documentation before general web search. Use standards bodies or
+primary provider sources for accessibility, media, privacy, and embed claims;
+label community observations as such and do not treat cached posts or snippets
+as evidence.
+
 At the end of each roadmap phase, update the roadmap status, acceptance
 evidence, exact validation commands and outcomes, source dates, affected links,
 and intentionally unchanged planning documents. A phase is not complete until

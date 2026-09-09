@@ -27,6 +27,12 @@ voice, SEO, generic frontend, or autonomous publishing skill.
 - Treat package versions, CLI commands, supported components, and theme
   behavior as release-dependent. Consult [references/source-registry.md](references/source-registry.md)
   and current upstream documentation when a claim depends on a version.
+- Use web research deliberately for broad site concerns, but give sources a
+  clear order: inspect the target repository, consult current official
+  Zensical documentation first for Zensical behavior, then use authoritative
+  standards (such as W3C) and reputable community or provider sources for
+  accessibility, design, embeds, and context. Never replace an official
+  Zensical answer with a cached blog or generic static-site advice.
 
 ## Route the request
 

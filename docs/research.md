@@ -324,3 +324,14 @@ keyboard behavior, contrast, or remote-player availability.
 Primary sources: [Zensical customization](https://zensical.org/docs/customization/),
 [front matter](https://zensical.org/docs/authoring/frontmatter/), and
 [colors](https://zensical.org/docs/setup/colors/).
+
+## Research-source priority
+
+Because a personal site spans Zensical behavior, accessibility, media, design,
+providers, and editorial concerns, agents should use web search as a research
+instrument without flattening all sources into one authority order. Inspect the
+repository first; use current official Zensical documentation for Zensical-
+specific behavior; then consult W3C or other standards and primary provider
+documentation for cross-cutting claims. Community guides are useful for
+alternatives and practical observations when clearly labelled. Cached blog
+posts and search snippets are discovery leads, not evidence.
