@@ -17,7 +17,6 @@ documents relevant to the proposed change.
 | Acceptance scenario or fixture | `scenarios.md`, `roadmap.md`, `research.md` |
 | Distribution or compatibility | `vision.md`, `roadmap.md`, `research.md`, `release-checklist.md` |
 | Release or market discoverability | `roadmap.md`, `research.md`, `release-checklist.md` |
-| External discovery evidence | `discovery-evidence.md`, `roadmap.md`, `research.md` |
 
 When a change affects scope, sequencing, evidence, or release expectations,
 update the corresponding planning document before completing the work. Recheck
