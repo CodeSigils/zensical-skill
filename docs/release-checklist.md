@@ -21,6 +21,12 @@ release guarantee.
       from a clean environment using a source pinned to an immutable
       `agentskills/agentskills` commit; record the exact commit and result.
 - [ ] Check relative references and front matter.
+- [ ] Run `python3 scripts/check_commit_messages.py <release-range>` and verify
+      every commit has a concise subject plus non-empty `what:` and `why:`
+      fields.
+- [ ] Keep `CHANGELOG.md` limited to user-visible or maintainer-significant
+      changes; detailed rationale belongs in commits and research/decision
+      records.
 - [ ] Apply the accessibility reference to affected media, components, CSS,
       templates, or landing pages; record browser/assistive-technology limits.
 - [ ] Run the shared scenario/fixture suite once it exists.

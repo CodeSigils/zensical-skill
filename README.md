@@ -87,6 +87,10 @@ The source registry in
 [`zensical/references/source-registry.md`](zensical/references/source-registry.md)
 records what each source supports and when it was checked.
 
+Commit policy is checked with `python3 scripts/check_commit_messages.py`; each
+commit must explain `what:` and `why:` in its body. The changelog is curated and
+does not duplicate the full commit history.
+
 Public distribution and market discoverability are not claimed yet. The
 verification steps are documented in
 [`docs/release-checklist.md`](docs/release-checklist.md).

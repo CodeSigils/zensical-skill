@@ -47,6 +47,17 @@ what: Describe the files or behavior changed.
 why: Explain the user need, evidence, or design reason.
 ```
 
+Run `python3 scripts/check_commit_messages.py HEAD` before handoff. To review a
+batch, pass a range such as `HEAD~5..HEAD`. The checker enforces a concise
+subject plus non-empty `what:` and `why:` fields; add validation details when
+they affect confidence or future maintenance.
+
+Keep `CHANGELOG.md` curated: record user-visible or maintainer-significant
+changes, group related work under `Unreleased`, and periodically consolidate it
+into release notes. Commit history, research, decisions, and session notes hold
+the detailed implementation and rationale; do not mirror every commit in the
+changelog.
+
 ## Change boundaries
 
 - Keep Zensical-specific implementation separate from editorial voice and

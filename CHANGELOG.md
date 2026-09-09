@@ -16,6 +16,8 @@
 - Added cross-cutting accessibility guidance for semantic HTML, ARIA restraint,
   text alternatives, captions, transcripts, keyboard use, contrast, zoom, and
   honest WCAG validation boundaries.
+- Added a lightweight commit-message checker and documented a curated changelog
+  policy so detailed rationale remains in commits and research records.
 - Clarified that accessibility supports discoverability and usability but is
   not an SEO shortcut, ranking guarantee, or substitute for an SEO strategy.
 - Added an explicit research-source priority: inspect the target repository,
