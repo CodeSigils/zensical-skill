@@ -78,6 +78,8 @@ worktree, and keep validation separate from publication.
   keep broader fixtures deferred until another deterministic gap appears.
 - [x] Add a bounded non-root deployment-link fixture based on the blog's
   `/docs/` boundary.
+- [x] Strengthen fixture assertions for non-empty tab panels, positive iframe
+  titles, and nested base-path navigation.
 
 **Exit condition:** an agent can inspect an existing site, make an authorized
 light edit or report a review finding, and validate the result without

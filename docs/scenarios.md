@@ -21,7 +21,8 @@ misnested.
 4. Inspect the generated HTML for one complete tab group and non-empty panels.
 
 **Pass evidence:** the build succeeds, the expected tab group is present in
-   rendered output, every advertised alternative has visible content, and the
+   rendered output, every advertised alternative has a non-empty rendered
+   panel, and the source checkout was not changed beyond the authorization.
    source checkout was not changed beyond the authorization.
 
 ## Scenario B — Accessibility review is actually invoked
@@ -42,7 +43,8 @@ misnested.
 
 **Pass evidence:** the handoff contains a structured accessibility section,
    concrete paths and findings (or an explicit no-finding result), test limits,
-   and any authorized remediation.
+   and any authorized remediation. The fixture runner also keeps a positive
+   titled-iframe control alongside the intentional missing-title finding.
 
 ## Scenario C — Non-root deployment links
 
@@ -58,9 +60,9 @@ pages link to one another.
    subpath, and verify the destination is generated.
 
 **Pass evidence:** the generated link resolves to the destination under the
-configured deployment path, the destination exists, and no root-relative
-assumption was introduced. Relative links are acceptable when the generated
-route and deployed base path remain correct.
+   configured deployment path, the destination exists, a nested page links back
+   to home, and no root-relative assumption was introduced. Relative links are
+   acceptable when the generated route and deployed base path remain correct.
 
 ## Maintenance boundary
 
@@ -76,6 +78,7 @@ The runner resolves all scenarios through the committed
 only site inputs. If dependency acquisition is unavailable, the runner reports
 an environment block rather than a fixture failure. Use an already-installed
 matching binary through `ZENSICAL_BIN` when offline validation is authorized.
+The runner also requires `rg` with PCRE2 support for the iframe-title assertion.
 
 Related: [roadmap](roadmap.md), [research](research.md), and the runtime
 [validation reference](../zensical/references/validation.md).

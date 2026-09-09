@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Strengthened scenario assertions with non-empty tab-panel checks, a positive
+  titled-iframe control, and nested base-path navigation coverage.
 - Recorded a static comparison of related Zensical skills and added roadmap
   work for authoring-pattern evaluation and Skills CLI discovery regression
   coverage.

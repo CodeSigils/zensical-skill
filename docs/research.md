@@ -118,6 +118,19 @@ host discovery, or deployment evidence.
 
 ## Blog research evidence
 
+## Scenario assertion hardening (2026-09-09)
+
+The isolated fixture runner now checks four rendered tab panels and their
+command labels, keeps a correctly titled iframe alongside the intentional
+missing-title finding, and verifies a nested page links back to the homepage
+under the configured `/docs/` deployment path. The strengthened suite passed
+with the pinned Zensical `0.0.60` package loaded from the local uv cache via
+`ZENSICAL_BIN`; no network or source-site mutation was required. The runner
+still requires `rg` with PCRE2 support for the negative iframe assertion.
+
+This improves regression confidence for the three observed boundaries without
+claiming complete tab, accessibility, or deployment coverage.
+
 The Code Sigils repository provides a useful, but site-specific, Zensical
 reference. Its `pyproject.toml` currently pins Zensical `0.0.60`; its
 `zensical.toml` demonstrates the `[project]` configuration shape, feature

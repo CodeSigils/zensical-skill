@@ -65,7 +65,18 @@ if [[ "$tab_count" -lt 1 ]]; then
   printf 'tabbed-site: no rendered tab group found\n' >&2
   exit 1
 fi
-printf 'tabbed-site: rendered tab group with all four alternatives\n'
+panel_count="$(rg -o '<div class="tabbed-block">' "$tab_output" | wc -l)"
+if [[ "$panel_count" -ne 4 ]]; then
+  printf 'tabbed-site: expected 4 non-empty tab panels; found %s\n' "$panel_count" >&2
+  exit 1
+fi
+for command_name in npm pnpm yarn bun; do
+  if ! rg -F "$command_name" "$tab_output" >/dev/null; then
+    printf 'tabbed-site: rendered panel missing command: %s\n' "$command_name" >&2
+    exit 1
+  fi
+done
+printf 'tabbed-site: rendered tab group with four non-empty alternatives\n'
 
 a11y_output="$run_root/accessibility-site-output/index.html"
 if ! rg -F '<iframe ' "$a11y_output" >/dev/null; then
@@ -78,12 +89,25 @@ else
   printf 'accessibility-site: fixture no longer reproduces missing-title finding\n' >&2
   exit 1
 fi
+if rg -F 'title="Example video"' "$a11y_output" >/dev/null; then
+  printf 'accessibility-site: correctly titled iframe remains valid\n'
+else
+  printf 'accessibility-site: positive iframe-title control missing\n' >&2
+  exit 1
+fi
 
 base_output="$run_root/base-path-site-output/index.html"
 if rg -F 'href="about/"' "$base_output" >/dev/null && [[ -f "$run_root/base-path-site-output/about/index.html" ]]; then
   printf 'base-path-site: generated relative link resolves under /docs deployment path\n'
 else
   printf 'base-path-site: generated link lost configured deployment path\n' >&2
+  exit 1
+fi
+about_output="$run_root/base-path-site-output/about/index.html"
+if rg -F 'href="./.."' "$about_output" >/dev/null; then
+  printf 'base-path-site: nested page links back to home under deployment path\n'
+else
+  printf 'base-path-site: nested page lost its home link\n' >&2
   exit 1
 fi
 
