@@ -40,7 +40,8 @@ docs/
 ├── research.md              # verified sources and comparable patterns
 ├── scenarios.md             # bounded real-site acceptance procedures
 └── README.md                # maintainer reading matrix
-tests/fixtures/              # pinned deterministic scenario sites
+tests/fixtures/              # site-only deterministic scenario inputs
+tests/scenario-env/          # locked Zensical test environment
 scripts/run_scenarios.sh     # isolated fixture runner
 AGENTS.md                   # maintainer change contract
 CHANGELOG.md                # project-level history
@@ -53,10 +54,12 @@ context and is not loaded as part of the skill.
 
 ## Current state
 
-- The payload is structurally validated with the Agent Skills validator.
+- The payload passes the local Agent Skill structural validator; release-level
+  `skills-ref` validation remains pending a pinned validator revision.
 - The repository is licensed under MIT and has a security reporting policy.
 - The initial workflows are designed around the Code Sigils Zensical blog.
-- The initial fixtures and scenario runner are pinned to Zensical `0.0.60`.
+- The initial fixtures run through a lockfile-pinned Zensical `0.0.60`
+  scenario environment.
 - The scenario suite covers tab rendering, reproducible accessibility findings,
   and non-root deployment links; it is not a complete site or WCAG conformance
   suite.
@@ -107,11 +110,10 @@ verification steps are documented in
 
 ## Roadmap
 
-See [`docs/roadmap.md`](docs/roadmap.md). The next milestone is one complete
-existing-site review and light-edit workflow with evidence-backed validation;
-that milestone is substantially proven against the Code Sigils blog. The next
-milestone is to consolidate the proven checks into a small repeatable scenario
-only where it solves a demonstrated failure. New scripts, fixtures,
+See [`docs/roadmap.md`](docs/roadmap.md). The existing-site review and light-
+edit workflow is substantially proven against the Code Sigils blog, with a
+small repeatable scenario suite for the observed failures. The next milestone
+is Phase 2 component and content-model confidence. New scripts, fixtures,
 integrations, and CI should earn their place through observed need.
 
 ## Status and feedback

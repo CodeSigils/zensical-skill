@@ -79,13 +79,31 @@ commands, configuration, and supported features must be verified separately.
 
 ## Current evidence limits
 
-- The runtime payload has been validated for structure with the skill creator's
-  validator.
-- The initial fixture scenarios are pinned to Zensical `0.0.60` and run in
-  isolated temporary copies.
+- The runtime payload passes the local Agent Skill structural validator.
+  Release-level `skills-ref` validation remains pending a pinned validator
+  revision.
+- The initial fixture scenarios run in isolated temporary copies through the
+  committed, lockfile-pinned Zensical `0.0.60` scenario environment.
 - The independent scenario suite covers tab rendering and reproducible
   accessibility findings; it is not a complete site or WCAG conformance suite.
 - Public package installation and host-specific smoke checks are deferred.
+
+## Locked scenario-environment maintenance (2026-09-09)
+
+The deterministic fixtures now use one committed `tests/scenario-env/uv.lock`
+instead of independently resolving their direct dependencies. The environment
+pins Zensical `0.0.60` and its resolved transitive graph; fixture directories
+contain only the site inputs that the runner copies into isolation. The lock
+was checked offline with `uv lock --check --offline --project
+tests/scenario-env`, and the scenario runner passed against the matching
+installed binary from the Code Sigils blog.
+
+An isolated copy of `/home/sand/labs/zensical-test` was also rebuilt with that
+binary. It passed with `No issues found`, generated 18 HTML files plus native
+search output, and retained the tabbed OXC and embedded-media OpenCode routes.
+The source checkout remained clean. This revalidates the current fixture
+environment against the real acceptance site; it does not establish release,
+host discovery, or deployment evidence.
 
 ## Blog research evidence
 

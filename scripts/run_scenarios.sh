@@ -4,6 +4,7 @@ set -euo pipefail
 expected_version="0.0.60"
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 fixture_root="$repo_root/tests/fixtures"
+scenario_root="$repo_root/tests/scenario-env"
 run_root="$(mktemp -d "${TMPDIR:-/tmp}/zensical-skill-scenarios.XXXXXX")"
 trap 'rm -rf "$run_root"' EXIT
 
@@ -33,7 +34,7 @@ else
     local work="$run_root/$(basename "$fixture")-work"
     cp -a "$fixture" "$work"
     local log="$run_root/$(basename "$fixture")-uv.log"
-    if ! (cd "$work" && UV_CACHE_DIR="$run_root/uv-cache" uv run --project "$work" zensical build --clean) >"$log" 2>&1; then
+    if ! UV_CACHE_DIR="$run_root/uv-cache" uv run --locked --project "$scenario_root" --directory "$work" zensical build --clean >"$log" 2>&1; then
       cat "$log" >&2
       if rg -qi 'pypi|dns|network|fetch|resolution' "$log"; then
         printf 'Environment blocked dependency acquisition; rerun with ZENSICAL_BIN or restore package access.\n' >&2

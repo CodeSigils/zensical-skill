@@ -66,8 +66,11 @@ coverage than its evidence supports.
 
 ## Current status
 
-The initial runtime payload is a reviewable narrow slice. It has not yet been
-installed or published as a public skill, and no workflow fixture suite exists.
+The initial runtime payload is a reviewable narrow slice. Its three bounded
+fixtures run through one lockfile-pinned scenario environment. It passes the
+local Agent Skill structural validator, but has not yet been installed or
+published as a public skill; release-level `skills-ref` validation remains
+pending a pinned validator revision.
 
 ## Compatibility strategy
 

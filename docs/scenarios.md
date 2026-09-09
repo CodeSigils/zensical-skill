@@ -71,9 +71,11 @@ temporary copies. Add another fixture or assertion only when a repeated
 real-site run exposes a deterministic failure that the current scenarios cannot
 represent. Keep target-site results and source versions in the research record.
 
-If dependency acquisition is unavailable, the runner reports an environment
-block rather than a fixture failure. Use an already-installed matching binary
-through `ZENSICAL_BIN` when offline validation is authorized.
+The runner resolves all scenarios through the committed
+`tests/scenario-env/uv.lock` with `uv --locked`; fixture directories contain
+only site inputs. If dependency acquisition is unavailable, the runner reports
+an environment block rather than a fixture failure. Use an already-installed
+matching binary through `ZENSICAL_BIN` when offline validation is authorized.
 
 Related: [roadmap](roadmap.md), [research](research.md), and the runtime
 [validation reference](../zensical/references/validation.md).

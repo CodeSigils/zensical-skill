@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Centralized scenario dependencies in one committed lockfile and reconciled
+  stale fixture and validation status claims across the planning records.
 - Added pinned Zensical `0.0.60` fixtures and an isolated scenario runner for
   tab rendering, accessibility-review evidence, and non-root deployment links.
 - Made scenario dependency failures explicit and support an installed

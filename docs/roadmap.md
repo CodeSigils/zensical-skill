@@ -27,12 +27,12 @@ The core existing-site workflow has been exercised against the Code Sigils
 blog. Inspection, an authorized tab light edit, navigation and internal-link
 review, media and video review, presentation review, and a structured
 accessibility pass all have recorded evidence in `docs/research.md` and the
-Digital Basement session note. The remaining Phase 1 work is to consolidate
-those checks into a repeatable scenario or fixture only where the real-site
-evidence shows a need.
+Digital Basement session note. The observed tab, accessibility-invocation, and
+non-root-link failures are now covered by a small repeatable fixture suite.
+Further fixture work remains conditional on a real-site gap.
 
-No public package, host installation smoke check, or independent fixture suite
-is claimed yet. Those remain Phase 3 work.
+No public package or host installation smoke check is claimed yet. Those remain
+Phase 3 work.
 
 See the [research record](research.md) for the evidence behind this status and
 the [vision](vision.md) for the quality criteria.

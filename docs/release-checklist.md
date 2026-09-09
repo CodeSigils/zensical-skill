@@ -33,7 +33,7 @@ release guarantee.
       improves clarity.
 - [ ] Apply the accessibility reference to affected media, components, CSS,
       templates, or landing pages; record browser/assistive-technology limits.
-- [ ] Run the shared scenario/fixture suite once it exists.
+- [ ] Run the shared locked scenario/fixture suite.
 - [ ] Review the final payload tree and confirm only `zensical/` is distributed.
 - [ ] Record unresolved network, version, rendering, or deployment uncertainty.
 
