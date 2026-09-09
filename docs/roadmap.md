@@ -15,6 +15,21 @@ has a placeholder.
 4. **Release deliberately:** verify project-scoped discovery for Codex,
    OpenCode, and Hermes before considering public distribution.
 
+The release gate includes the official `skills-ref` validator, a clean payload
+tree, host-specific discoverability checks, and a documented skills.sh or
+marketplace result. Marketplace presence is treated as distribution evidence
+only; rankings, install counts, and badges do not establish quality or
+compatibility. See [release-checklist.md](release-checklist.md).
+
+## Acceptance environment
+
+The Code Sigils blog is the first real acceptance environment. It already
+contains the Zensical features and maintenance conditions this skill must
+understand: navigation, admonitions, content tabs, links, configuration,
+editorial conventions, and a live deployment boundary. Use it to test behavior
+before inventing synthetic fixtures. Run experiments in a branch or isolated
+worktree, and keep validation separate from publication.
+
 ## Phase 1 — Existing-site review and light editing
 
 - Test `SKILL.md`, `light-edit.md`, `editorial-review.md`,

@@ -8,3 +8,5 @@
   control.
 - Added explicit boundaries between editorial intent and Zensical presentation
   syntax, including admonitions and content tabs.
+- Added MIT licensing, a security policy, and a release/discoverability
+  checklist covering `skills-ref`, host checks, and marketplace evidence.

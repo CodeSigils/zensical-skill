@@ -9,8 +9,14 @@ documents relevant to the proposed change.
 | Workflow or validation change | `vision.md`, `roadmap.md`, `research.md` |
 | External source or comparable-skill pattern | `research.md`, `vision.md` |
 | Sequencing or release gate | `roadmap.md`, `vision.md` |
-| Distribution or compatibility | `vision.md`, `roadmap.md`, `research.md` |
+| Distribution or compatibility | `vision.md`, `roadmap.md`, `research.md`, `release-checklist.md` |
+| Release or market discoverability | `roadmap.md`, `research.md`, `release-checklist.md` |
 
 When a change affects scope, sequencing, evidence, or release expectations,
 update the corresponding planning document before completing the work. Recheck
 volatile sources before a release or after a Zensical upgrade.
+
+`release-checklist.md` records commands and evidence that are only meaningful
+for a public or package-discovery release. Do not copy its installation
+commands into the runtime skill until they have been verified for the target
+host and current provider contract.

@@ -105,3 +105,12 @@ evidence that either reference is Zensical-compatible.
 
 The follow-up was static and read-only. Candidate scripts were not executed;
 no installation or behavior smoke test was authorized.
+
+## Acceptance-environment decision
+
+The Code Sigils blog is the primary real-world testbed for this skill. Its
+existing Zensical configuration and content exercise the components and
+maintenance boundaries that matter to the first release. This is stronger
+evidence than speculative fixtures, so the first behavioral validation should
+run against the blog in an isolated branch or worktree. Synthetic fixtures
+should be added only when a real-site failure needs a smaller reproducible case.

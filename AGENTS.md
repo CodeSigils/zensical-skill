@@ -11,6 +11,18 @@ Before handoff, update every affected planning document or state why it remains
 unchanged. Search for duplicate guidance and drift between `SKILL.md`,
 references, and planning documents before adding a new rule.
 
+At the end of each roadmap phase, update the roadmap status, acceptance
+evidence, exact validation commands and outcomes, source dates, affected links,
+and intentionally unchanged planning documents. A phase is not complete until
+this documentation gate is satisfied.
+
+Use an imperative commit subject and include these body fields in every commit:
+
+```text
+what: Describe the files or behavior changed.
+why: Explain the user need, evidence, or design reason.
+```
+
 ## Change boundaries
 
 - Keep Zensical-specific implementation separate from editorial voice and

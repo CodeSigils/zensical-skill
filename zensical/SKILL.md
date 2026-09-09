@@ -1,8 +1,10 @@
 ---
 name: zensical
 description: Inspect, lightly edit, review, and validate Zensical static sites, including Markdown components, navigation, configuration, links, builds, and bounded deployment checks. Use for concrete Zensical repository work; do not use for generic prose writing or frontend work.
+license: MIT
 metadata:
   short-description: "Maintain Zensical sites safely"
+  compatibility: "Requires filesystem and shell access; Zensical is required for build validation; network is needed only for current documentation and external-link checks."
 ---
 
 # Zensical

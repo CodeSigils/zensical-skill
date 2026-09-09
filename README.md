@@ -37,6 +37,8 @@ docs/
 └── README.md                # maintainer reading matrix
 AGENTS.md                   # maintainer change contract
 CHANGELOG.md                # project-level history
+LICENSE                     # MIT license
+SECURITY.md                 # reporting and payload boundaries
 ```
 
 The runtime payload is under `zensical/`. The `docs/` directory is maintainer
@@ -45,6 +47,7 @@ context and is not loaded as part of the skill.
 ## Current state
 
 - The payload is structurally validated with the Agent Skills validator.
+- The repository is licensed under MIT and has a security reporting policy.
 - The initial workflows are designed around the Code Sigils Zensical blog.
 - Zensical `0.0.60` is observed in that site, but fixtures are not yet pinned
   to a release.
@@ -79,6 +82,10 @@ discovery or review without explicit authorization.
 The source registry in
 [`zensical/references/source-registry.md`](zensical/references/source-registry.md)
 records what each source supports and when it was checked.
+
+Public distribution and market discoverability are not claimed yet. The
+verification steps are documented in
+[`docs/release-checklist.md`](docs/release-checklist.md).
 
 ## Roadmap
 
