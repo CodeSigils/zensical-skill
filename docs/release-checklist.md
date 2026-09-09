@@ -76,6 +76,15 @@ authority. Before announcing discoverability:
 If the provider cannot be queried or the canonical path is stale, report
 discoverability as pending and do not install or recommend the package.
 
+Current evidence (2026-09-09): `npx --yes skills add
+CodeSigils/zensical-skill --list` cloned the public repository and listed one
+skill, `zensical`, with its complete payload path. A broad
+`npx --yes skills find zensical` query returned related third-party skills but
+did not yet surface this repository. Direct source installation is therefore
+verified, while Skills.sh search indexing remains pending. The CLI query was
+run only after explicit authorization and from an isolated temporary
+directory; the candidate payload was not executed.
+
 ## Release handoff
 
 The handoff must include the source ref, validation commands and outcomes,

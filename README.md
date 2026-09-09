@@ -88,7 +88,9 @@ context and is not loaded as part of the skill.
   accepts an installed matching binary through `ZENSICAL_BIN`.
 - The runtime payload includes a no-secret-output hygiene preflight for common
   tracked credential and private-key indicators; it is not a full secret scan.
-- No public package or host installation smoke check exists yet.
+- Direct Skills CLI source listing has been verified; Skills.sh search indexing
+  for this repository remains pending, and no host-loader smoke check is
+  claimed yet.
 - Codex, OpenCode, and Hermes are the maintained compatibility targets.
 
 These are development facts, not guarantees about every Zensical repository.
