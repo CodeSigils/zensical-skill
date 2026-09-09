@@ -19,10 +19,11 @@ voice, SEO, generic frontend, or autonomous publishing skill.
   configuration, theme, output directory, or deployment workflow.
 - Preserve the site's conventions and source-of-truth locations. Do not create
   parallel configuration or duplicate navigation entries.
-- Inspect workflows, scripts, and documentation for repeated semantic values.
-  When a value appears more than twice and should change together, use the
-  repository's visible canonical variable or configuration source; do not
-  centralize incidental examples or prose.
+- Notice repeated semantic values in site configuration, workflows, scripts,
+  and documentation as possible duplication or drift smells. Recommend
+  centralization only when the values should change together and the benefit
+  outweighs the loss of local clarity; do not mechanically extract examples or
+  prose.
 - Separate editorial intent from presentation implementation. The article or
   review process decides whether a tip, warning, or tab is useful; this skill
   implements and validates the Zensical syntax.
@@ -123,6 +124,10 @@ Keep these modes distinct:
 - Treat accessibility as a cross-cutting quality concern. Prefer native HTML
   and visible text before ARIA, and never claim WCAG compliance from a build
   alone.
+- For general Python code-quality review, use the complementary `py-review`
+  skill, and use `python-project-workflow` for Python project/tooling/CI
+  structure. This skill reviews Python only as it affects the Zensical site
+  task.
 
 ## Handoff
 

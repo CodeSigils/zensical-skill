@@ -18,9 +18,8 @@
   honest WCAG validation boundaries.
 - Added a lightweight commit-message checker and documented a curated changelog
   policy so detailed rationale remains in commits and research records.
-- Added repeated-value awareness: centralize semantic configuration repeated
-  more than twice when the copies should change together, while preserving
-  intentional examples and fixtures.
+- Refined repeated-value awareness into a smell/drift heuristic rather than a
+  mandatory extraction rule; linked general Python code review to `py-review`.
 - Clarified that accessibility supports discoverability and usability but is
   not an SEO shortcut, ranking guarantee, or substitute for an SEO strategy.
 - Added an explicit research-source priority: inspect the target repository,

@@ -35,15 +35,14 @@ primary provider sources for accessibility, media, privacy, and embed claims;
 label community observations as such and do not treat cached posts or snippets
 as evidence.
 
-### Repeated-value and centralization rule
+### Repeated-value heuristic
 
-During review, notice repeated semantic values. When the same version, runner,
-operating system, path, SHA, feature flag, port, or other configuration value
-appears more than twice and the occurrences should change together, define it
-once in a visible, canonical variable or configuration source. Do not extract
-incidental literals, examples, prose, test fixtures, or values whose repetition
-improves clarity. Prefer a named variable that explains the value's role, and
-report any intentional duplication.
+During review, notice repeated semantic values as possible duplication or drift
+smells. If a version, runner, operating system, path, SHA, feature flag, port,
+or similar value is repeated and should change together, recommend a visible,
+named canonical source. The count is a signal, not a doctrine: keep incidental
+literals, examples, prose, fixtures, and repetition that improves clarity.
+Report the evidence and trade-off before extracting anything.
 
 At the end of each roadmap phase, update the roadmap status, acceptance
 evidence, exact validation commands and outcomes, source dates, affected links,

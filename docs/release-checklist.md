@@ -28,8 +28,9 @@ release guarantee.
       changes; detailed rationale belongs in commits and research/decision
       records.
 - [ ] Review repeated semantic values (versions, runners, OS names, paths,
-      SHAs, ports, and feature flags); centralize values repeated more than
-      twice when they should change together, and document intentional copies.
+      SHAs, ports, and feature flags) as possible duplication/drift smells;
+      centralize only when the values should change together and the trade-off
+      improves clarity.
 - [ ] Apply the accessibility reference to affected media, components, CSS,
       templates, or landing pages; record browser/assistive-technology limits.
 - [ ] Run the shared scenario/fixture suite once it exists.
