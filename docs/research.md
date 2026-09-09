@@ -218,6 +218,16 @@ commands belong in one complete tab group, and rendered output must be checked
 for panel content rather than trusting a successful build. The branch was not
 published or pushed; the original blog checkout remained unchanged.
 
+## Navigation and internal-link acceptance (2026-09-09)
+
+The rendered isolated site was checked after the tab edit. The target article
+contained its expected route, breadcrumb/sidebar navigation, footer navigation,
+and related internal links. A read-only pass over all generated HTML checked 280
+internal links and found no missing local targets, including root-absolute links
+from the 404 page. This provides evidence for generated navigation and local
+link integrity; it does not validate external URLs, browser interaction, or
+deployment-host routing.
+
 ### Disco and native search
 
 Zensical's current search documentation describes native client-side search,
