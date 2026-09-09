@@ -173,3 +173,24 @@ Primary sources checked:
 - [Python Markdown extensions](https://zensical.org/docs/compatibility/markdown/python-markdown/)
 - [Customization](https://zensical.org/docs/customization/)
 - [Get started](https://zensical.org/docs/get-started/)
+
+### Disco and native search
+
+Zensical's current search documentation describes native client-side search,
+enabled by default, with offline support and page/section/block exclusion
+controls. The Zensical roadmap identifies the underlying engine as Disco, a
+modular search system intended to evolve beyond the current integrated use.
+Agents maintaining a Zensical site should therefore inspect the native search
+configuration and generated behavior before proposing an external search
+service. This is especially important for privacy, offline distribution, and
+avoiding an unnecessary runtime dependency.
+
+This does not mean the skill should configure or tune Disco automatically. It
+should report the target site's search state, recognize exclusions and relevant
+feature flags, and verify version-sensitive behavior against current sources.
+The search interface is currently English-only while multilingual content
+search is supported; this distinction should not be turned into a claim that
+multilingual search is unavailable.
+
+Sources: [Zensical site search](https://zensical.org/docs/setup/search/) and
+[Zensical roadmap](https://zensical.org/about/roadmap/).

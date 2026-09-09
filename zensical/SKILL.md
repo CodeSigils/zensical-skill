@@ -40,6 +40,9 @@ Choose the smallest applicable workflow:
   and use its evidence-based finding format.
 - **Review admonitions, tabs, links, or navigation:** read
   [references/content-components.md](references/content-components.md).
+- **Review search behavior or exclusions:** inspect the target's native search
+  configuration and current source-registry entry before proposing an external
+  search service.
 - **Build, render, or check a change:** read
   [references/validation.md](references/validation.md).
 - **Diagnose a failure:** inspect the supplied error and repository commands

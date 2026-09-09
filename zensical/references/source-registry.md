@@ -14,6 +14,7 @@ upstream route changes.
 | Zensical project | [zensical.org](https://zensical.org/) | Not pinned yet | Current project identity and supported installation paths; do not copy cached commands. |
 | Project configuration | Repository's declared config and lockfile | Per target repository | Installed version, commands, output path, and local conventions; local evidence wins over generic examples. |
 | Deployment | Repository workflow and hosting documentation | Per target repository | Trigger paths, build command, artifact, and deployment boundary; a local build does not prove deployment. |
+| Site search / Disco | [setup/search](https://zensical.org/docs/setup/search/) and [Zensical roadmap](https://zensical.org/about/roadmap/) | Checked 2026-09-09; site uses 0.0.60 | Native client-side search is enabled by default and supports offline use; inspect `search.exclude` and search features before recommending a third-party service. The engine is evolving and its interface is currently English-only even though multilingual search is supported. |
 
 When network access is unavailable, distinguish repository evidence from memory
 and do not present an unverified command as current. Record the review date in a
