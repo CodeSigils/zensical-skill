@@ -1,0 +1,20 @@
+# Source registry
+
+Keep version-sensitive facts tied to current primary sources. Update this
+registry when the skill is tested against a new Zensical release or when an
+upstream route changes.
+
+| Topic | Primary source | Verified version/date | What to verify and caveat |
+| --- | --- | --- | --- |
+| Zensical documentation | [zensical.org/docs](https://zensical.org/docs/) | Not pinned yet | Configuration, Markdown extensions, navigation, and release behavior; recheck before relying on version-sensitive syntax. |
+| Admonitions | [authoring/admonitions](https://zensical.org/docs/authoring/admonitions/) | Checked 2026-09-09; site uses 0.0.60 | Supported callout types, nesting, collapsible details, and configuration; confirm against the target version. |
+| Content tabs | [authoring/content-tabs](https://zensical.org/docs/authoring/content-tabs/) | Checked 2026-09-09; site uses 0.0.60 | Tab syntax, nested content, anchors, and linked tabs; labels link by title rather than position. |
+| Markdown compatibility | [authoring/markdown](https://zensical.org/docs/authoring/markdown/) | Checked 2026-09-09 | Python-Markdown compatibility and four-space indentation requirements; do not assume another Markdown renderer behaves the same way. |
+| Navigation | [setup/navigation](https://zensical.org/docs/setup/navigation/) | Checked 2026-09-09 | Implicit folder navigation versus explicit configuration and navigation features. |
+| Zensical project | [zensical.org](https://zensical.org/) | Not pinned yet | Current project identity and supported installation paths; do not copy cached commands. |
+| Project configuration | Repository's declared config and lockfile | Per target repository | Installed version, commands, output path, and local conventions; local evidence wins over generic examples. |
+| Deployment | Repository workflow and hosting documentation | Per target repository | Trigger paths, build command, artifact, and deployment boundary; a local build does not prove deployment. |
+
+When network access is unavailable, distinguish repository evidence from memory
+and do not present an unverified command as current. Record the review date in a
+project's release or verification notes when the detail is volatile.

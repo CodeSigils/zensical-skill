@@ -1,0 +1,62 @@
+# Python bytecode and caches
+__pycache__/
+*.py[codz]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.uv-cache/
+
+# Build, render, and coverage artifacts
+build/
+dist/
+site/
+public/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+artifacts/
+
+# Virtual environments and local tooling
+.venv/
+venv/
+env/
+ENV/
+.tox/
+.nox/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Editor and operating-system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.vscode/
+.idea/
+tmp/
+.tmp/
+.cache/
+*.log
+*.swp
+*.swo
+*~
+Thumbs.db
+[Dd]esktop.ini
+
+# Agent runtime state (user-local, not skill source)
+.agents/
+.hermes/
+.claude/
+.cursor/
+.gemini/
+.codex/
+.opencode/
+.open-mem/
+.omo/
