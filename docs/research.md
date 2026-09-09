@@ -174,6 +174,31 @@ Primary sources checked:
 - [Customization](https://zensical.org/docs/customization/)
 - [Get started](https://zensical.org/docs/get-started/)
 
+## Phase 1 acceptance run (2026-09-09)
+
+The first real-site review used the Code Sigils blog at
+`/home/sand/labs/zensical-test` and the `free-ai-models.md` article as the
+review target. The source checkout remained clean. Its declared environment
+uses Python `>=3.13`, Zensical `0.0.60`, `uv`, implicit navigation, native
+search, linked tabs, navigation pruning, and GitHub Pages deployment.
+
+The documented command `uv run zensical build --clean` could not write to the
+read-only source checkout in this environment. Running the same command from
+an isolated copy under `/tmp` succeeded:
+
+- Zensical build: passed with `No issues found`;
+- rendered output: 18 HTML files, including the target route;
+- native search output: `site/search.json` generated (164,788 bytes);
+- rendered target: article metadata, admonitions, OpenCode content, feature
+  flags, and canonical resource links were present;
+- source mutation: none.
+
+This is partial behavioral evidence for inspection, rendering, search, and
+review boundaries—not proof of host discovery, deployment success, or every
+Zensical component. The next acceptance slice should exercise a tabbed article,
+navigation/link review, and an explicitly authorized light edit in an isolated
+branch or worktree.
+
 ### Disco and native search
 
 Zensical's current search documentation describes native client-side search,
