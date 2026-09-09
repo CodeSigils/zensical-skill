@@ -88,6 +88,17 @@ commands, configuration, and supported features must be verified separately.
   accessibility findings; it is not a complete site or WCAG conformance suite.
 - Public package installation and host-specific smoke checks are deferred.
 
+## Sensitive-material preflight (2026-09-09)
+
+The runtime now has a small Git-tracked-file preflight for common environment,
+key, credential-file, and high-confidence token signatures. It reports paths
+and finding types only, exits nonzero on candidates, and requires maintainer
+direction before any remediation. It deliberately does not scan Git history,
+ignored/untracked files, or every provider-specific format, and it does not
+rotate credentials or rewrite history. GitHub's current secret-scanning and
+sensitive-data-removal guidance supports that boundary: a real exposed secret
+must be rotated or revoked before any coordinated history-removal work.
+
 ## Locked scenario-environment maintenance (2026-09-09)
 
 The deterministic fixtures now use one committed `tests/scenario-env/uv.lock`

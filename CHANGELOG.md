@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Improved skill discovery metadata, repository badges, the pinned
+  `skills-ref` release check, and GitHub repository topics/description.
+- Hardened repository hygiene for package caches, nested artifacts, and common
+  credential-bearing files; fixed ShellCheck warnings in the scenario runner.
+- Added a bounded, no-secret-output tracked-file hygiene preflight for common
+  credential and private-key indicators before authorized publication work.
 - Centralized scenario dependencies in one committed lockfile and reconciled
   stale fixture and validation status claims across the planning records.
 - Added pinned Zensical `0.0.60` fixtures and an isolated scenario runner for

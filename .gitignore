@@ -7,6 +7,11 @@ __pycache__/
 .mypy_cache/
 .pyright/
 .uv-cache/
+.cache/
+.npm/
+.pnpm-store/
+.yarn/
+node_modules/
 
 # Build, render, and coverage artifacts
 build/
@@ -32,6 +37,19 @@ ENV/
 .env.*
 !.env.example
 !.env.*.example
+!.env.sample
+!.env.*.sample
+!.env.template
+!.env.*.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+credentials*.json
+secrets*.json
+.npmrc
+.pypirc
 
 # Editor and operating-system files
 .DS_Store
@@ -42,7 +60,6 @@ ENV/
 .idea/
 tmp/
 .tmp/
-.cache/
 *.log
 *.swp
 *.swo

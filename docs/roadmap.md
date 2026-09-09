@@ -29,7 +29,9 @@ review, media and video review, presentation review, and a structured
 accessibility pass all have recorded evidence in `docs/research.md` and the
 Digital Basement session note. The observed tab, accessibility-invocation, and
 non-root-link failures are now covered by a small repeatable fixture suite.
-Further fixture work remains conditional on a real-site gap.
+Further fixture work remains conditional on a real-site gap. The runtime also
+includes a bounded tracked-file hygiene preflight for authorized publication
+work; it is intentionally not a comprehensive secret-scanning claim.
 
 No public package or host installation smoke check is claimed yet. Those remain
 Phase 3 work.

@@ -1,5 +1,9 @@
 # zensical-skill
 
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-2563eb.svg)](https://agentskills.io/specification)
+[![skills.sh](https://skills.sh/b/codesigils/zensical-skill)](https://skills.sh/codesigils/zensical-skill)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 `zensical-skill` is a focused Agent Skill for inspecting, lightly editing,
 reviewing, and validating existing [Zensical](https://zensical.org/) sites.
 It helps an agent preserve a repository's conventions while working with
@@ -9,6 +13,19 @@ customization.
 This is an early, reviewable project—not a complete Zensical automation suite.
 The current payload is intentionally narrow and is being developed from real
 maintenance work on the Code Sigils blog.
+
+## Install with Skills CLI
+
+```bash
+npx skills add CodeSigils/zensical-skill \
+  --skill zensical --agent codex --copy --yes
+```
+
+For a live project-scoped checkout, point an agent that supports external skill
+directories at the repository's `zensical/` directory instead. Review the
+payload and its references before installing; the repository's security policy
+and release checklist are maintainer records, not a guarantee that every
+target site is safe.
 
 ## Current scope
 
@@ -20,6 +37,8 @@ The skill currently routes these tasks:
   images or embeds;
 - review responsive CSS, theme overrides, and landing-page conventions;
 - review accessibility concerns across content, media, components, and themes;
+- run a bounded tracked-file hygiene preflight before authorized commits,
+  publishing, or deployment; and
 - validate a build and, where feasible, affected rendered output; and
 - report deployment boundaries and configuration/documentation drift.
 
@@ -33,6 +52,7 @@ editorial or presentation capabilities.
 zensical/
 ├── SKILL.md                 # portable runtime payload
 ├── agents/openai.yaml       # Codex metadata
+├── scripts/                 # bounded runtime checks
 └── references/              # loaded only when a workflow needs detail
 docs/
 ├── vision.md                # purpose, boundaries, and quality criteria
@@ -65,6 +85,8 @@ context and is not loaded as part of the skill.
   suite.
 - The runner distinguishes dependency/network blocks from fixture failures and
   accepts an installed matching binary through `ZENSICAL_BIN`.
+- The runtime payload includes a no-secret-output hygiene preflight for common
+  tracked credential and private-key indicators; it is not a full secret scan.
 - No public package or host installation smoke check exists yet.
 - Codex, OpenCode, and Hermes are the maintained compatibility targets.
 

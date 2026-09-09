@@ -15,8 +15,8 @@ gates, [research](research.md) for current evidence, and
 
 The skill owns repository inspection, presentation syntax, content/navigation
 consistency, link and front-matter checks, builds, rendered-output inspection,
-media and asset behavior, CSS/theme customization, landing pages, and bounded
-deployment awareness.
+media and asset behavior, CSS/theme customization, landing pages, bounded
+tracked-file hygiene before authorized publication, and deployment awareness.
 
 It does not own prose craft, blog voice, SEO strategy, generic frontend work,
 autonomous publishing, or every Zensical feature. Those capabilities remain
@@ -44,6 +44,10 @@ A workflow is ready to keep when it demonstrates all of the following:
   primary source for version-sensitive behavior.
 - **Authorization fidelity:** it distinguishes light edits, review-only work,
   site modification, and publishing; it does not mutate beyond the request.
+- **Sensitive-material restraint:** before an authorized commit, publish, or
+  deployment action, it uses a bounded no-secret-output preflight and stops for
+  maintainer direction rather than attempting credential rotation or history
+  rewriting.
 - **Source-of-truth discipline:** it preserves the observed content model,
   navigation, configuration, and output conventions without duplicating them.
 - **Minimal coherent change:** an authorized repair changes only the affected

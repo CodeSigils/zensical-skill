@@ -18,6 +18,11 @@ uses the same package manager or output directory.
    static checks separately from browser or assistive-technology evidence.
 4. Run `git diff --check` for whitespace and formatting errors.
 
+For an authorized commit, publish, or deployment action in a Git repository,
+also run the sensitive-material preflight in
+[site-inspection.md](site-inspection.md). Report only candidate paths and the
+check's limits; never echo a suspected credential into the handoff.
+
 If a check requires network access, state that dependency. If the build tool is
 unavailable, report the limitation and use static inspection rather than
 inventing a successful result.

@@ -24,3 +24,26 @@ the requested change may affect more than one source file.
 
 Record uncertainty rather than inferring a Zensical convention from a different
 site or from a cached example.
+
+## Sensitive-material preflight
+
+Before an authorized commit, publish, or deployment action in a Git repository,
+run the bundled check from the skill directory:
+
+```bash
+bash scripts/check_site_hygiene.sh /path/to/site
+```
+
+It checks tracked paths for common secret-bearing names and tracked content for
+a small set of high-confidence private-key and token signatures. It prints only
+candidate paths and finding types, never matched values. A nonzero result means
+stop and ask the maintainer how to proceed; do not add a secret to `.gitignore`
+and call the exposure fixed, rotate credentials, rewrite Git history, or bypass
+GitHub protection without explicit authorization.
+
+This is a bounded preflight, not a comprehensive secret scanner. It does not
+scan ignored or untracked files, Git history, provider dashboards, generated
+deployment artifacts, or every secret format. A real exposure needs provider
+rotation/revocation before any history-removal plan. See GitHub's
+[secret-scanning guidance](https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning)
+and [sensitive-data removal guidance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).

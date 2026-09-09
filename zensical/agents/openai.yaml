@@ -1,3 +1,4 @@
 interface:
   display_name: "Zensical"
-  short_description: "Help with Zensical tasks and workflows"
+  short_description: "Maintain Zensical sites safely"
+  default_prompt: "Use $zensical to review this Zensical site and validate its bounded changes."

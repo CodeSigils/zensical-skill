@@ -18,7 +18,8 @@ if [[ -n "$zensical_bin" ]]; then
   run_build() {
     local fixture="$1"
     local output="$2"
-    local work="$run_root/$(basename "$fixture")-work"
+    local work
+    work="$run_root/$(basename "$fixture")-work"
     cp -a "$fixture" "$work"
     (cd "$work" && "$zensical_bin" build --clean)
     cp -a "$work/site" "$output"
@@ -31,9 +32,11 @@ else
   run_build() {
     local fixture="$1"
     local output="$2"
-    local work="$run_root/$(basename "$fixture")-work"
+    local work
+    work="$run_root/$(basename "$fixture")-work"
     cp -a "$fixture" "$work"
-    local log="$run_root/$(basename "$fixture")-uv.log"
+    local log
+    log="$run_root/$(basename "$fixture")-uv.log"
     if ! UV_CACHE_DIR="$run_root/uv-cache" uv run --locked --project "$scenario_root" --directory "$work" zensical build --clean >"$log" 2>&1; then
       cat "$log" >&2
       if rg -qi 'pypi|dns|network|fetch|resolution' "$log"; then

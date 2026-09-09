@@ -1,10 +1,24 @@
 ---
 name: zensical
-description: Inspect, lightly edit, review, and validate Zensical static sites, including Markdown components, navigation, configuration, links, builds, and bounded deployment checks. Use for concrete Zensical repository work; do not use for generic prose writing or frontend work.
+description: "Review, lightly edit, and validate existing Zensical static sites: inspect their configuration and content model, check Markdown components, links, accessibility, media, builds, and bounded deployment concerns. Use for concrete Zensical repository work; not for generic prose writing, frontend development, or autonomous publishing."
 license: MIT
 metadata:
   short-description: "Maintain Zensical sites safely"
   compatibility: "Requires filesystem and shell access; Zensical is required for build validation; network is needed only for current documentation and external-link checks."
+  keywords:
+    - zensical
+    - static-site-generator
+    - markdown
+    - documentation-site
+    - site-maintenance
+    - content-tabs
+    - admonitions
+    - accessibility
+    - link-validation
+    - agent-skills
+  repository: "CodeSigils/zensical-skill"
+  maintainers:
+    - CodeSigils
 ---
 
 # Zensical
@@ -29,6 +43,11 @@ voice, SEO, generic frontend, or autonomous publishing skill.
   implements and validates the Zensical syntax.
 - Make bounded changes authorized by the user. Do not publish, change hosting,
   or install third-party integrations unless requested.
+- Before an authorized commit, publish, or deployment change, run the bounded
+  tracked-file hygiene check when the target is a Git repository. Treat a
+  finding as a stop-and-review signal: do not print its value, rotate or remove
+  credentials, rewrite history, or bypass provider protection without explicit
+  user authorization.
 - Treat package versions, CLI commands, supported components, and theme
   behavior as release-dependent. Consult [references/source-registry.md](references/source-registry.md)
   and current upstream documentation when a claim depends on a version.
