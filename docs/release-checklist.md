@@ -17,8 +17,9 @@ release guarantee.
 
 ## Local validation
 
-- [ ] Run the pinned official Agent Skills validator (`skills-ref validate
-      zensical`) from a clean environment; record the exact validator revision.
+- [ ] Run the official Agent Skills validator (`skills-ref validate zensical`)
+      from a clean environment using a source pinned to an immutable
+      `agentskills/agentskills` commit; record the exact commit and result.
 - [ ] Check relative references and front matter.
 - [ ] Run the shared scenario/fixture suite once it exists.
 - [ ] Review the final payload tree and confirm only `zensical/` is distributed.

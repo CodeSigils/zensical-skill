@@ -21,6 +21,22 @@ marketplace result. Marketplace presence is treated as distribution evidence
 only; rankings, install counts, and badges do not establish quality or
 compatibility. See [release-checklist.md](release-checklist.md).
 
+## Capability-admission rule
+
+Do not add a new Zensical workflow, integration, or validation control merely
+because the framework supports it. Admit a capability only when all five
+conditions are present:
+
+1. a concrete user need;
+2. an observed failure or repeated workflow;
+3. current primary-source evidence;
+4. a bounded fixture or scenario that can prove the behavior; and
+5. a named maintenance owner.
+
+Keep structural validation, behavioral validation on the Code Sigils blog,
+host discoverability, and marketplace availability as separate claims. A pass
+in one layer must not imply a pass in another.
+
 ## Acceptance environment
 
 The Code Sigils blog is the first real acceptance environment. It already

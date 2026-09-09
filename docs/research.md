@@ -106,6 +106,24 @@ evidence that either reference is Zensical-compatible.
 The follow-up was static and read-only. Candidate scripts were not executed;
 no installation or behavior smoke test was authorized.
 
+## Evidence and scope lessons from the latest Zola review
+
+The latest Zola evidence reinforces four rules for this project:
+
+- `skills-ref` conformance is a reproducible format gate only; pin its source
+  revision before release.
+- Structural checks, real-site behavior, host loading, and marketplace listing
+  are separate evidence layers and must not be collapsed into one support
+  claim.
+- A capability enters the roadmap only after a user need, observed failure,
+  primary-source evidence, bounded fixture, and maintenance owner exist.
+- Roadmap status is evidence, not aspiration; remove or relabel stale phase
+  claims when implementation or validation changes.
+
+The larger Zola fixture suite and future-capability document remain references,
+not requirements. The current Zensical roadmap is intentionally smaller until
+the Code Sigils blog acceptance workflow demonstrates a gap.
+
 ## Acceptance-environment decision
 
 The Code Sigils blog is the primary real-world testbed for this skill. Its
