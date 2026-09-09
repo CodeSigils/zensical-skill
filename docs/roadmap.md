@@ -85,3 +85,13 @@ CI workflow for each host or copy the skill into host-specific directories.
 - Deployment automation.
 - A large fixture suite before the first workflow proves what needs testing.
 - Support and CI matrices for agents outside Codex, OpenCode, and Hermes.
+
+## Independent capability boundary
+
+Zensical's wider built-in surface is documented independently from Zola. Do
+not expand the runtime router just because a feature exists. Add a focused
+capability only when the blog or another accepted target supplies a concrete
+workflow, current primary-source evidence, a bounded behavior scenario, and a
+maintenance owner. Candidate future slices include navigation feature
+interactions, MkDocs compatibility, workspace watch/symlink behavior, and theme
+customization; each remains deferred until real work requires it.

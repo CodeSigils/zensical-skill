@@ -132,3 +132,44 @@ maintenance boundaries that matter to the first release. This is stronger
 evidence than speculative fixtures, so the first behavioral validation should
 run against the blog in an isolated branch or worktree. Synthetic fixtures
 should be added only when a real-site failure needs a smaller reproducible case.
+
+## Independent Zensical capability review (2026-09-09)
+
+Zola is an architectural reference for repository discipline, not a capability
+baseline. Current official Zensical documentation shows a broader, partly
+batteries-included surface:
+
+- a native `zensical.toml` project scope plus compatibility with existing
+  `mkdocs.yml` projects and most Material for MkDocs settings;
+- Python Markdown and a large set of supported extensions, including
+  admonitions, tabs, tooltips, task/definition lists, snippets, and diagrams;
+- implicit or explicit navigation, sections, tabs, instant navigation,
+  previews, breadcrumbs, pruning, and section index pages;
+- a built-in development server and preview workflow;
+- theme customization through MiniJinja-compatible templates and Material
+  extensions; and
+- workspace watch and symlink rules that affect what content is visible during
+  builds.
+
+These features create distinct Zensical concerns that should not be collapsed
+into a generic “Markdown site” workflow. The runtime skill should initially
+route only the subset already exercised by the Code Sigils blog. The roadmap
+may later add focused capability references when a real site task demonstrates
+the need.
+
+The independent review also identified two version-sensitive cautions to keep
+visible: Zensical's Markdown compatibility currently follows Python Markdown,
+including four-space indentation behavior, and some navigation features have
+explicit incompatibilities (for example, pruning versus expansion). A target
+repository's configuration and current official documentation remain the
+source of truth.
+
+Primary sources checked:
+
+- [Zensical basics](https://zensical.org/docs/setup/basics/)
+- [Navigation](https://zensical.org/docs/setup/navigation/)
+- [Markdown](https://zensical.org/docs/authoring/markdown/)
+- [MkDocs compatibility](https://zensical.org/docs/compatibility/mkdocs/)
+- [Python Markdown extensions](https://zensical.org/docs/compatibility/markdown/python-markdown/)
+- [Customization](https://zensical.org/docs/customization/)
+- [Get started](https://zensical.org/docs/get-started/)
