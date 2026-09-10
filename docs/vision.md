@@ -80,8 +80,8 @@ fixtures run through one lockfile-pinned scenario environment. It passes the
 local Agent Skill structural validator and the pinned official `skills-ref`
 validator at agentskills commit `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
 Clean, project-scoped installation smoke checks are recorded for Codex,
-OpenCode, and Hermes. Marketplace indexing and production-readiness claims
-remain out of scope.
+OpenCode, and Hermes. Skills.sh indexing is confirmed; production-readiness
+claims remain out of scope.
 
 ## Compatibility strategy
 

@@ -33,6 +33,14 @@ Further fixture work remains conditional on a real-site gap. The runtime also
 includes a bounded tracked-file hygiene preflight for authorized publication
 work; it is intentionally not a comprehensive secret-scanning claim.
 
+Phase 2 is substantially proven for the target-used component and presentation
+paths: admonitions, tabs, front matter, navigation, base paths, images, local
+assets, video embeds, responsive CSS, and the landing page all have official
+source and Code Sigils evidence. GLightbox was documented as an optional
+extension rather than enabled without a target need. Browser keyboard,
+contrast, captions/transcripts, remote-player availability, and deployment
+remain manual or provider-bound checks rather than completion claims.
+
 No public release is claimed. Project-scoped host installation smoke checks are
 recorded for Codex, OpenCode, and Hermes, and the public Skills.sh directory
 now indexes the payload; public release remains Phase 3 work.
@@ -88,21 +96,28 @@ inventing site conventions. The workflow must also satisfy the quality
 criteria in [vision.md](vision.md): precise routing, evidence, authorization,
 minimal scope, rendered confidence, and an honest handoff.
 
-## Phase 2 — Component and content-model confidence
+## Phase 2 — Component and content-model confidence (substantially proven)
 
-- Verify admonitions, content tabs, front matter, navigation, base paths,
-  images, captions, lightboxes, embeds, and asset links against current
-  Zensical sources and a real repository. Include responsive CSS, theme
-  overrides, landing-page behavior, and accessibility checks when the target
-  uses them.
-- Add focused references only for behavior that changes agent decisions.
+- [x] Verify target-used admonitions, content tabs, front matter, navigation,
+  base paths, images, local assets, embeds, responsive CSS, landing-page
+  behavior, and static accessibility signals against current Zensical sources
+  and the Code Sigils blog.
+- [x] Record optional GLightbox behavior without enabling it or claiming
+  interaction coverage where the acceptance target does not use it.
+- [x] Add focused references only for behavior that changes agent decisions.
+
+**Exit condition:** a target-used component can be inspected, changed only with
+authorization, and checked in rendered output without importing another site's
+conventions. Browser interaction, assistive technology, remote-player,
+captions/transcripts, and deployment outcomes remain separate manual checks;
+add another fixture only when a real-site run exposes a deterministic gap.
 
 ## Phase 3 — Release and maintenance evidence
 
-- Add a version-pinned source registry entry and validation runner when the
+- [x] Add a version-pinned source registry entry and validation runner when the
   workflow has stable observable behavior.
-- Add discovery scenarios for matching and non-matching prompts.
-- Define a project-scoped installation smoke check before public release.
+- [x] Add discovery scenarios for matching and non-matching prompts.
+- [x] Define a project-scoped installation smoke check before public release.
 - [x] Compare the downloaded `layeredcraft/zensical-site` references and
   templates for useful authoring patterns (voice/tone, content types,
   front-matter, and configuration caveats); admit only capabilities that meet
