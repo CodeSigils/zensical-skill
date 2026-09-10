@@ -47,11 +47,11 @@ release guarantee.
 Verify from clean, project-scoped temporary directories. Do not install into a
 working repository and do not infer one host's behavior from another.
 
-| Host | Evidence required | Status |
-| --- | --- | --- |
-| Codex | Skill is discoverable and all referenced files are present | Pass (project-scoped smoke) |
-| OpenCode | Documented skill directory is recognized and references resolve | Pass (project-scoped smoke) |
-| Hermes | Documented external directory is recognized and references resolve | Pass (project-scoped smoke) |
+| Host     | Evidence required                                                  | Status                      |
+| -------- | ------------------------------------------------------------------ | --------------------------- |
+| Codex    | Skill is discoverable and all referenced files are present         | Pass (project-scoped smoke) |
+| OpenCode | Documented skill directory is recognized and references resolve    | Pass (project-scoped smoke) |
+| Hermes   | Documented external directory is recognized and references resolve | Pass (project-scoped smoke) |
 
 Record the host, source commit, CLI/tool version, observed installation path,
 command output, and cleanup result. Host checks should be small discovery and
@@ -69,13 +69,13 @@ root was removed after the checks; no live host skill directory was changed.
 Treat skills.sh or another marketplace as a distribution index, not a quality
 authority. Before announcing discoverability:
 
-- [ ] Confirm the canonical repository and payload path are publicly resolvable.
-- [ ] Verify the provider's current install command and agent identifiers from
+- [x] Confirm the canonical repository and payload path are publicly resolvable.
+- [x] Verify the provider's current install command and agent identifiers from
       its documentation; do not copy cached commands.
-- [ ] Run a clean, project-scoped install using the current documented command.
-- [ ] Confirm the `zensical` skill is listed and its complete referenced tree is
+- [x] Run a clean, project-scoped install using the current documented command.
+- [x] Confirm the `zensical` skill is listed and its complete referenced tree is
       present.
-- [ ] Record the provider response, source commit/ref, CLI version, and any
+- [x] Record the provider response, source commit/ref, CLI version, and any
       unauthenticated or stale-catalog limitation.
 - [ ] Do not claim “featured”, “verified”, or “supported” from ranking or
       install counts alone.
@@ -83,14 +83,16 @@ authority. Before announcing discoverability:
 If the provider cannot be queried or the canonical path is stale, report
 discoverability as pending and do not install or recommend the package.
 
-Current evidence (2026-09-09): `npx --yes skills add
-CodeSigils/zensical-skill --list` cloned the public repository and listed one
-skill, `zensical`, with its complete payload path. A broad
-`npx --yes skills find zensical` query returned related third-party skills but
-did not yet surface this repository. Direct source installation is therefore
-verified, while Skills.sh search indexing remains pending. The CLI query was
-run only after explicit authorization and from an isolated temporary
-directory; the candidate payload was not executed.
+Current evidence (2026-09-10): Skills CLI `1.5.25` ran the documented command
+`npx --yes skills add CodeSigils/zensical-skill --skill zensical --agent codex
+--copy --yes` in an isolated temporary directory. It cloned public
+`CodeSigils/zensical-skill` at `main` ref `23de5a7d01de6467133976cfd9c968b9f7404a6c`,
+found one skill, and copied `zensical` to `.agents/skills/zensical`. The full
+runtime tree was present: `SKILL.md`, `agents/openai.yaml`, nine references, and
+`scripts/check_site_hygiene.sh`; the temporary directory was removed. A broad
+`npx --yes skills find zensical` query still returned related third-party
+skills without surfacing this repository. Direct source installation is
+verified; Skills.sh search indexing and public release claims remain pending.
 
 ## Release handoff
 

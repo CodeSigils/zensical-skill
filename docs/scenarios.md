@@ -61,9 +61,29 @@ pages link to one another.
    subpath, and verify the destination is generated.
 
 **Pass evidence:** the generated link resolves to the destination under the
-   configured deployment path, the destination exists, a nested page links back
-   to home, and no root-relative assumption was introduced. Relative links are
-   acceptable when the generated route and deployed base path remain correct.
+configured deployment path, the destination exists, a nested page links back
+to home, and no root-relative assumption was introduced. Relative links are
+acceptable when the generated route and deployed base path remain correct.
+
+## Scenario D — Deployment instructions match the workflow
+
+**Purpose:** catch the failure where a repository's agent instructions describe
+an obsolete dependency-installation command or omit a workflow trigger that
+changes the deployed site.
+
+**Target:** a repository with `AGENTS.md` containing a `## Deployment` section
+and `.github/workflows/docs.yml` using the conventional lockfile-backed Zensical
+workflow.
+
+1. Run `python3 zensical/scripts/check_instruction_contract.py /path/to/site`.
+2. When the check reports a missing path or command, compare both files and
+   update the instructions only if the workflow is the source of truth.
+3. Build an isolated copy with the workflow's locked command after any
+   authorized correction.
+
+**Pass evidence:** the check reports a matching documented contract, or it
+explicitly skips a repository that does not use the targeted layout. It does
+not validate arbitrary YAML workflows, deployment success, or host state.
 
 ## Maintenance boundary
 

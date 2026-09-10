@@ -25,6 +25,22 @@ the requested change may affect more than one source file.
 Record uncertainty rather than inferring a Zensical convention from a different
 site or from a cached example.
 
+## Deployment-instruction drift
+
+When a repository documents deployment in `AGENTS.md` and uses
+`.github/workflows/docs.yml`, compare the documented trigger paths and build
+commands with the workflow before a deployment-sensitive change. The bundled
+check covers the observed lockfile-backed Zensical contract without reading or
+printing secrets:
+
+```bash
+python3 scripts/check_instruction_contract.py /path/to/site
+```
+
+It checks only the conventional `docs.yml` layout and skips repositories that
+do not have both files or a `## Deployment` section. A failure is a
+documentation-drift finding, not proof that the workflow itself is broken.
+
 ## Sensitive-material preflight
 
 Before an authorized commit, publish, or deployment action in a Git repository,

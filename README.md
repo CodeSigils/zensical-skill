@@ -14,22 +14,32 @@ This is an early, reviewable project—not a complete Zensical automation suite.
 The current payload is intentionally narrow and is being developed from real
 maintenance work on the Code Sigils blog.
 
-## Skills CLI candidate command
+## Quick start
 
-The command below is the provider's current direct-source form, but a clean
-Codex host-install smoke test remains pending. Treat it as a candidate until
-that check is recorded in the release checklist.
+Copy the complete `zensical/` directory; its references are part of the
+runtime payload. The following project-scoped paths have file-availability
+smoke evidence, but they do not imply public marketplace indexing or a
+long-running host reload.
+
+| Host     | Project-scoped location                     | Setup                                                                                                                                     |
+| -------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Codex    | `.agents/skills/zensical/`                  | `mkdir -p .agents/skills && cp -R zensical .agents/skills/`                                                                               |
+| OpenCode | `.opencode/skills/zensical/`                | `mkdir -p .opencode/skills && cp -R zensical .opencode/skills/`                                                                           |
+| Hermes   | configured `skills.external_dirs` directory | Add the repository's `zensical/` directory to `external_dirs`; do not copy it into a live global skill directory unless that is intended. |
+
+Skills CLI `1.5.25` installed this direct-source command successfully in a
+disposable Codex project on 2026-09-10. Review the payload before using it;
+Skills.sh search indexing for this repository remains pending.
 
 ```bash
 npx skills add CodeSigils/zensical-skill \
   --skill zensical --agent codex --copy --yes
 ```
 
-For a live project-scoped checkout, point an agent that supports external skill
-directories at the repository's `zensical/` directory instead. Review the
-payload and its references before installing; the repository's security policy
-and release checklist are maintainer records, not a guarantee that every
-target site is safe.
+For live development, agents that support external skill directories can point
+directly at the repository's `zensical/` directory. The security policy and
+release checklist are maintainer records, not guarantees that every target site
+is safe.
 
 ## Current scope
 
@@ -42,13 +52,30 @@ The skill currently routes these tasks:
 - review responsive CSS, theme overrides, and landing-page conventions;
 - review accessibility concerns across content, media, components, and themes;
 - run a bounded tracked-file hygiene preflight before authorized commits,
-  publishing, or deployment; and
+  publishing, or deployment;
 - validate a build and, where feasible, affected rendered output; and
 - report deployment boundaries and configuration/documentation drift.
 
-It does not own prose craft, blog voice, SEO, generic frontend work,
-autonomous publishing, or every Zensical feature. Those remain separate
-editorial or presentation capabilities.
+## How to use it
+
+Load `zensical` for a concrete task in an existing Zensical repository. The
+runtime router selects focused references progressively.
+
+| Request                                          | Routed workflow                              |
+| ------------------------------------------------ | -------------------------------------------- |
+| “Orient me in this Zensical site”                | Site inspection                              |
+| “Make this small Markdown, tab, or link edit”    | Authorized light edit and content components |
+| “Review this article, navigation, or embed”      | Editorial, media, and component review       |
+| “Check accessibility or responsive presentation” | Accessibility and customization review       |
+| “Build and validate this change”                 | Build and rendered-output validation         |
+| “Why did this Zensical build fail?”              | Narrow failure diagnosis                     |
+
+## What it does not handle
+
+The skill does not own prose craft, blog voice, SEO, generic frontend work,
+full theme authoring, autonomous publishing or deployment, comprehensive WCAG
+certification, or every Zensical feature. Those remain separate editorial,
+presentation, or release capabilities.
 
 ## Repository map
 
@@ -96,7 +123,9 @@ zensical/
 │   ├── site-inspection.md           # repository orientation and preflight
 │   ├── source-registry.md           # version-sensitive primary sources
 │   └── validation.md                # build and rendered-output checks
-└── scripts/check_site_hygiene.sh    # no-secret-output tracked-file preflight
+└── scripts/
+    ├── check_instruction_contract.py # deployment-instruction drift check
+    └── check_site_hygiene.sh         # no-secret-output tracked-file preflight
 ```
 
 What users receive:
@@ -120,6 +149,15 @@ Everything outside it is repository-only development or acceptance evidence.
 
 ## Current state
 
+| Surface            | Status                      | Evidence boundary                                                                        |
+| ------------------ | --------------------------- | ---------------------------------------------------------------------------------------- |
+| Codex              | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.agents/skills/zensical/`              |
+| OpenCode           | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.opencode/skills/zensical/`            |
+| Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
+| Skills CLI install | Passed in isolation         | Version 1.5.25 copied the complete payload to a disposable `.agents/skills/zensical/`    |
+| Skills.sh search   | Pending                     | A fresh `skills find zensical` result did not surface this repository                    |
+| Public release     | Not claimed                 | Direct-source installation is not marketplace indexing or release evidence               |
+
 - The payload passes the local Agent Skill structural validator and the pinned
   official `skills-ref` validator at agentskills commit
   `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
@@ -135,14 +173,23 @@ Everything outside it is repository-only development or acceptance evidence.
   accepts an installed matching binary through `ZENSICAL_BIN`.
 - The runtime payload includes a no-secret-output hygiene preflight for common
   tracked credential and private-key indicators; it is not a full secret scan.
-- Direct Skills CLI source listing and project-scoped host-loader smoke checks
+- Direct Skills CLI installation and project-scoped host-loader smoke checks
   for Codex, OpenCode, and Hermes have been verified; Skills.sh search indexing
-  for this repository remains pending.
-- Codex, OpenCode, and Hermes are the maintained compatibility targets.
+  and public release remain pending.
 
 These are development facts, not guarantees about every Zensical repository.
 Version-sensitive behavior must be checked against the current documentation
 and the target site's configuration.
+
+## Security model
+
+The skill works only in the repository and scope the user authorizes. Its
+tracked-file hygiene preflight reports candidate paths and finding types, never
+secret values; it is not a full secret scan. Builds, documentation lookups, and
+external-link checks can require network access. Commits, publishing,
+deployment, credential rotation, and history rewriting require separate,
+explicit authorization. See [SECURITY.md](SECURITY.md) for disclosure and
+payload boundaries.
 
 ## Development workflow
 
@@ -155,6 +202,25 @@ and the target site's configuration.
 
 Do not install, execute, publish, or deploy third-party material as part of
 discovery or review without explicit authorization.
+
+## Validate
+
+Run the focused checks from the repository root:
+
+```bash
+uvx --from git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref skills-ref validate zensical
+bash scripts/run_scenarios.sh
+bash zensical/scripts/check_site_hygiene.sh .
+python3 zensical/scripts/check_instruction_contract.py /path/to/site
+git diff --check
+```
+
+The validator checks payload structure, the scenario runner checks the pinned
+Zensical fixtures, and the hygiene preflight checks tracked files for common
+sensitive-material candidates. The instruction-contract check compares a
+conventional documented deployment section with its workflow. None proves
+deployment success, player behavior, remote-link availability, or full
+accessibility conformance.
 
 ## Primary references
 

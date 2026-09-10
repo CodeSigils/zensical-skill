@@ -504,6 +504,38 @@ root was removed after validation. These are file-availability and path
 discovery checks, not claims that a long-running host session has reloaded the
 skill or that public package installation succeeds.
 
+## Skills CLI clean installation (2026-09-10)
+
+Skills CLI `1.5.25` ran `npx --yes skills add CodeSigils/zensical-skill
+--skill zensical --agent codex --copy --yes` from an isolated temporary
+directory. The provider cloned public `main` at
+`23de5a7d01de6467133976cfd9c968b9f7404a6c`, found one skill, and copied the
+complete payload to `.agents/skills/zensical`: `SKILL.md`, `agents/openai.yaml`,
+nine references, and `scripts/check_site_hygiene.sh`. The temporary directory
+was removed after inspection. This proves the current direct-source installation
+path for Codex; it does not establish marketplace search indexing, a published
+release, or long-running host reload behavior.
+
+## Live Code Sigils blog audit (2026-09-10)
+
+The clean `CodeSigils/CodeSigils.github.io` checkout at
+`/home/sand/labs/zensical-test` was copied to a temporary directory and built
+with its locked Zensical `0.0.60` environment. The build completed with `No
+issues found` and produced 18 HTML pages. Static generated-output inspection
+found three iframes with non-empty titles and 22 images with explicit `alt`
+attributes; source inventory found eight content tabs, three iframes, and 57
+admonitions. This is static/rendered evidence only, not browser keyboard,
+contrast, captions/transcripts, remote-player, or deployment evidence.
+
+One documentation-drift finding was recorded: the blog's `AGENTS.md` said the
+deployment workflow watches only `docs/**`, `zensical.toml`, and its workflow
+file and runs `pip install zensical` then `zensical build --clean`. The actual
+`.github/workflows/docs.yml` also watches `pyproject.toml`, `uv.lock`, and
+`.python-version`, runs `uv sync --locked`, then runs `uv run zensical build
+--clean`. The authorized repair reconciled the instructions, and the new
+bounded instruction-contract check covers this layout. The result remains
+static workflow evidence, not deployment success.
+
 ## Related Zensical skill comparison (2026-09-09)
 
 Two Skills.sh candidates were downloaded for static comparison into an
