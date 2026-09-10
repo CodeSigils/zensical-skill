@@ -27,6 +27,11 @@ Use this skill for a concrete task in an existing or explicitly requested
 Zensical site. It is a presentation and site-maintenance skill, not a writing
 voice, SEO, generic frontend, or autonomous publishing skill.
 
+Never impose conventions from the Code Sigils acceptance blog or any other
+test site on a target repository. The target site's own configuration, content
+model, and editorial rules are authoritative; project-specific observations in
+the source registry are evidence only.
+
 ## Operating boundaries
 
 - Inspect the repository before assuming its content layout, navigation,

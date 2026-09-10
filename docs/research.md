@@ -84,8 +84,9 @@ commands, configuration, and supported features must be verified separately.
   `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
 - The initial fixture scenarios run in isolated temporary copies through the
   committed, lockfile-pinned Zensical `0.0.60` scenario environment.
-- The independent scenario suite covers tab rendering and reproducible
-  accessibility findings; it is not a complete site or WCAG conformance suite.
+- The independent scenario suite covers tab rendering, reproducible
+  accessibility findings, and non-root deployment links; it is not a complete
+  site or WCAG conformance suite.
 - Public package installation and host-specific smoke checks are deferred.
 
 ## Sensitive-material preflight (2026-09-09)
@@ -125,8 +126,9 @@ command labels, keeps a correctly titled iframe alongside the intentional
 missing-title finding, and verifies a nested page links back to the homepage
 under the configured `/docs/` deployment path. The strengthened suite passed
 with the pinned Zensical `0.0.60` package loaded from the local uv cache via
-`ZENSICAL_BIN`; no network or source-site mutation was required. The runner
-still requires `rg` with PCRE2 support for the negative iframe assertion.
+`ZENSICAL_BIN`; no network or source-site mutation was required. The iframe
+assertion now uses Python's HTML parser, so it does not require `rg` PCRE2
+support; `rg` remains a general runner prerequisite.
 
 This improves regression confidence for the three observed boundaries without
 claiming complete tab, accessibility, or deployment coverage.
@@ -470,9 +472,6 @@ references, front-matter and Markdown guidance, configuration caveats, and a
 page-draft template. These are useful patterns for future authoring support,
 but the skill targets Zensical.org content and does not cover real-site
 maintenance, security hygiene, or bounded deployment checks.
-`xcode-nlp/kodaskills@koda-zensical` (MIT, repository updated 2026-07-21) provides
-Russian-language formatting conventions and syntax reminders; it is a partial,
-language-specific fit rather than a core dependency.
 
 The candidates show that authoring references and templates could complement
 this skill, but they do not justify widening the runtime router yet. Admit a

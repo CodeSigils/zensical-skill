@@ -8,6 +8,31 @@ scenario_root="$repo_root/tests/scenario-env"
 run_root="$(mktemp -d "${TMPDIR:-/tmp}/zensical-skill-scenarios.XXXXXX")"
 trap 'rm -rf "$run_root"' EXIT
 
+count_iframes_missing_titles() {
+  python3 - "$1" <<'PY'
+from html.parser import HTMLParser
+from pathlib import Path
+import sys
+
+
+class IframeTitleCounter(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.missing = 0
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        title = next((value for name, value in attrs if name.lower() == "title"), None)
+        if tag.lower() == "iframe" and not (title and title.strip()):
+            self.missing += 1
+
+
+parser = IframeTitleCounter()
+parser.feed(Path(sys.argv[1]).read_text(encoding="utf-8"))
+parser.close()
+print(parser.missing)
+PY
+}
+
 zensical_bin="${ZENSICAL_BIN:-}"
 if [[ -n "$zensical_bin" ]]; then
   actual_version="$($zensical_bin --version | awk 'NR == 1 { print $NF }')"
@@ -83,14 +108,15 @@ if ! rg -F '<iframe ' "$a11y_output" >/dev/null; then
   printf 'accessibility-site: iframe fixture missing from output\n' >&2
   exit 1
 fi
-if rg -P '<iframe\b(?:(?!title=)[^>])*>' "$a11y_output" >/dev/null; then
-  printf 'accessibility-site: expected iframe-title finding is reproducible\n'
+missing_title_count="$(count_iframes_missing_titles "$a11y_output")"
+if [[ "$missing_title_count" -eq 3 ]]; then
+  printf 'accessibility-site: expected iframe-title findings are reproducible\n'
 else
-  printf 'accessibility-site: fixture no longer reproduces missing-title finding\n' >&2
+  printf 'accessibility-site: expected 3 missing iframe titles; found %s\n' "$missing_title_count" >&2
   exit 1
 fi
-if rg -F 'title="Example video"' "$a11y_output" >/dev/null; then
-  printf 'accessibility-site: correctly titled iframe remains valid\n'
+if rg -F 'Example video' "$a11y_output" >/dev/null && rg -F 'Whitespace title' "$a11y_output" >/dev/null; then
+  printf 'accessibility-site: correctly titled iframe controls remain valid\n'
 else
   printf 'accessibility-site: positive iframe-title control missing\n' >&2
   exit 1

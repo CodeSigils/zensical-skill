@@ -21,9 +21,8 @@ misnested.
 4. Inspect the generated HTML for one complete tab group and non-empty panels.
 
 **Pass evidence:** the build succeeds, the expected tab group is present in
-   rendered output, every advertised alternative has a non-empty rendered
-   panel, and the source checkout was not changed beyond the authorization.
-   source checkout was not changed beyond the authorization.
+rendered output, every advertised alternative has a non-empty rendered
+panel, and the source checkout was not changed beyond the authorization.
 
 ## Scenario B — Accessibility review is actually invoked
 
@@ -43,8 +42,10 @@ misnested.
 
 **Pass evidence:** the handoff contains a structured accessibility section,
    concrete paths and findings (or an explicit no-finding result), test limits,
-   and any authorized remediation. The fixture runner also keeps a positive
-   titled-iframe control alongside the intentional missing-title finding.
+and any authorized remediation. The fixture runner also keeps positive titled-
+iframe controls (including whitespace around `=`) alongside three intentional
+missing-title findings, one of which has a misleading `data-title` attribute
+and one of which has an empty `title` attribute.
 
 ## Scenario C — Non-root deployment links
 
@@ -78,7 +79,10 @@ The runner resolves all scenarios through the committed
 only site inputs. If dependency acquisition is unavailable, the runner reports
 an environment block rather than a fixture failure. Use an already-installed
 matching binary through `ZENSICAL_BIN` when offline validation is authorized.
-The runner also requires `rg` with PCRE2 support for the iframe-title assertion.
+The runner requires Bash, `rg`, and `python3` for its shell checks and
+HTML-aware iframe-title assertion. It also requires either `uv` or an exact
+matching `ZENSICAL_BIN`; standard shell tools such as `awk`, `cp`, `mktemp`,
+and `wc` must be available.
 
 Related: [roadmap](roadmap.md), [research](research.md), and the runtime
 [validation reference](../zensical/references/validation.md).

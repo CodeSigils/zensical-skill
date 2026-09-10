@@ -2,11 +2,11 @@
 
 ## Scope
 
-This repository ships Markdown instructions and references under `zensical/`.
-It does not ship credentials, a service, or executable runtime code. Security
-concerns include malicious or misleading instructions, unsafe commands,
-prompt-injection content in references, and supply-chain changes to the
-published payload.
+This repository ships Markdown instructions, references, and a bounded shell
+preflight under `zensical/`. It does not ship credentials or a network service.
+Security concerns include malicious or misleading instructions, unsafe commands
+or shell-script changes, prompt-injection content in references, and
+supply-chain changes to the published payload.
 
 ## Reporting
 

@@ -102,18 +102,16 @@ minimal scope, rendered confidence, and an honest handoff.
   workflow has stable observable behavior.
 - Add discovery scenarios for matching and non-matching prompts.
 - Define a project-scoped installation smoke check before public release.
-- [ ] Compare the downloaded `layeredcraft/zensical-site` references and
+- [x] Compare the downloaded `layeredcraft/zensical-site` references and
   templates for useful authoring patterns (voice/tone, content types,
   front-matter, and configuration caveats); admit only capabilities that meet
   the evidence-gated rule above.
-- [ ] Record a bounded capability comparison against `koda-zensical`, keeping
-  language- or client-specific conventions out of the core router unless a
-  target repository requires them.
 - [ ] Add a discovery regression scenario: run a broad Skills CLI query such as
   `npx --yes skills find zensical`, preserve the provider timestamp/result count,
   and compare its candidates with direct repository and documented catalog
   searches. Treat `skills find` as a retrieval signal, not proof of quality or
-  complete indexing.
+  complete indexing. Evidence is recorded in `docs/research.md`; the query
+  returned related candidates but did not surface this repository.
 - [ ] Update the skill-discovery workflow to search Skills.sh after local and
   documented catalog sources, while recording unavailable, stale, or
   unauthenticated sources instead of interpreting absence as proof.

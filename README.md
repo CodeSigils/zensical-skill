@@ -14,7 +14,11 @@ This is an early, reviewable project—not a complete Zensical automation suite.
 The current payload is intentionally narrow and is being developed from real
 maintenance work on the Code Sigils blog.
 
-## Install with Skills CLI
+## Skills CLI candidate command
+
+The command below is the provider's current direct-source form, but a clean
+Codex host-install smoke test remains pending. Treat it as a candidate until
+that check is recorded in the release checklist.
 
 ```bash
 npx skills add CodeSigils/zensical-skill \
@@ -72,13 +76,56 @@ SECURITY.md                 # reporting and payload boundaries
 The runtime payload is under `zensical/`. The `docs/` directory is maintainer
 context and is not loaded as part of the skill.
 
+## Skill Payload — What Ships to the User
+
+Only the `zensical/` directory is the portable Agent Skill payload. It contains
+the router, on-demand references, client metadata, and the bounded tracked-file
+hygiene check.
+
+```text
+zensical/
+├── SKILL.md                         # scope, routing, and safety boundaries
+├── agents/openai.yaml               # optional Codex display metadata
+├── references/
+│   ├── accessibility.md             # semantic and rendered a11y checks
+│   ├── content-components.md        # admonitions, tabs, links, navigation
+│   ├── customization.md             # CSS, themes, templates, landing pages
+│   ├── editorial-review.md          # bounded article-quality review
+│   ├── light-edit.md                # authorized minimal Markdown edits
+│   ├── media.md                     # media, embeds, assets, base paths
+│   ├── site-inspection.md           # repository orientation and preflight
+│   ├── source-registry.md           # version-sensitive primary sources
+│   └── validation.md                # build and rendered-output checks
+└── scripts/check_site_hygiene.sh    # no-secret-output tracked-file preflight
+```
+
+What users receive:
+
+- agentskills.io `name` and `description` frontmatter for `zensical`;
+- repository-agnostic Zensical maintenance and review instructions;
+- references loaded progressively for the requested workflow; and
+- a bounded, read-only-by-default hygiene preflight for authorized publication
+  work.
+
+What does not ship in the payload:
+
+- Code Sigils or Digital Basement editorial conventions;
+- blog-specific content types, tone, or terminology;
+- test fixtures, the locked scenario environment, or generated site output;
+- maintainer planning, research, release, and session documentation; or
+- host-specific copies and project configuration.
+
+Copy the complete `zensical/` directory to preserve reference discovery.
+Everything outside it is repository-only development or acceptance evidence.
+
 ## Current state
 
 - The payload passes the local Agent Skill structural validator and the pinned
   official `skills-ref` validator at agentskills commit
   `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
 - The repository is licensed under MIT and has a security reporting policy.
-- The initial workflows are designed around the Code Sigils Zensical blog.
+- The initial workflows are acceptance-tested against the Code Sigils Zensical
+  blog; its editorial conventions are not part of the portable payload.
 - The initial fixtures run through a lockfile-pinned Zensical `0.0.60`
   scenario environment.
 - The scenario suite covers tab rendering, reproducible accessibility findings,

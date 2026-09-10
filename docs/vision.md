@@ -22,6 +22,11 @@ It does not own prose craft, blog voice, SEO strategy, generic frontend work,
 autonomous publishing, or every Zensical feature. Those capabilities remain
 composable skills or repository-specific guidance.
 
+The Code Sigils blog is an acceptance environment, not a template for other
+sites. Blog-specific editorial conventions remain in the Digital Basement
+project; this skill uses them only as test evidence and follows each target
+repository's own conventions.
+
 ## Principles
 
 - Inspect the target repository before assuming its layout or commands.
