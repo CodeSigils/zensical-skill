@@ -574,14 +574,18 @@ target-lockfile requirement for version-sensitive syntax and installation
 commands. This verifies source freshness and project identity, not a new
 Zensical release or compatibility guarantee.
 
-## Skills.sh indexing escalation (2026-09-10)
+## Skills.sh indexing escalation and resolution (2026-09-10)
 
 Direct Skills CLI discovery rechecked the public `CodeSigils/zensical-skill`
 repository at `09e89eba53ff1ed2f4a5f89a6d6a02d1eb889ff1` and found its one
-`zensical` skill. The Skills.sh API returned 31 matches for `zensical` and
-three other CodeSigils skills, but omitted this repository. At the same time,
-the canonical skill page returned HTTP 200 while the repository page returned
-HTTP 404. The evidence and a request for provider ingestion are recorded in
+`zensical` skill. The Skills.sh API initially returned 31 matches for
+`zensical` and three other CodeSigils skills, but omitted this repository. At
+the same time, the canonical skill page returned HTTP 200 while the repository
+page returned HTTP 404. The evidence and an indexing request were recorded in
 [`vercel-labs/skills#2205`](https://github.com/vercel-labs/skills/issues/2205).
-This is an external, pending discoverability action; it does not establish
-search indexing, ranking, verification, or public-release status.
+
+A same-day recheck returned `codesigils/zensical-skill/zensical` in both the
+`zensical` and `CodeSigils` searches (32 and four results respectively), and
+both the repository and skill pages returned HTTP 200. The requester posted
+the verification and closed the issue. This confirms directory indexing only;
+it does not establish ranking, verification, support, or public-release status.

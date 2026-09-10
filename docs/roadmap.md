@@ -33,9 +33,9 @@ Further fixture work remains conditional on a real-site gap. The runtime also
 includes a bounded tracked-file hygiene preflight for authorized publication
 work; it is intentionally not a comprehensive secret-scanning claim.
 
-No public package or marketplace installation is claimed yet. Project-scoped
-host installation smoke checks are recorded for Codex, OpenCode, and Hermes;
-public distribution remains Phase 3 work.
+No public release is claimed. Project-scoped host installation smoke checks are
+recorded for Codex, OpenCode, and Hermes, and the public Skills.sh directory
+now indexes the payload; public release remains Phase 3 work.
 
 See the [research record](research.md) for the evidence behind this status and
 the [vision](vision.md) for the quality criteria.

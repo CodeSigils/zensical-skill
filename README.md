@@ -18,8 +18,7 @@ maintenance work on the Code Sigils blog.
 
 Copy the complete `zensical/` directory; its references are part of the
 runtime payload. The following project-scoped paths have file-availability
-smoke evidence, but they do not imply public marketplace indexing or a
-long-running host reload.
+smoke evidence, but they do not imply long-running host reload behavior.
 
 | Host     | Project-scoped location                     | Setup                                                                                                                                     |
 | -------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,8 +27,8 @@ long-running host reload.
 | Hermes   | configured `skills.external_dirs` directory | Add the repository's `zensical/` directory to `external_dirs`; do not copy it into a live global skill directory unless that is intended. |
 
 Skills CLI `1.5.25` installed this direct-source command successfully in a
-disposable Codex project on 2026-09-10. Review the payload before using it;
-Skills.sh search indexing for this repository remains pending.
+disposable Codex project on 2026-09-10. Skills.sh also indexes the repository;
+review the payload before using it.
 
 ```bash
 npx skills add CodeSigils/zensical-skill \
@@ -155,8 +154,8 @@ Everything outside it is repository-only development or acceptance evidence.
 | OpenCode           | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.opencode/skills/zensical/`            |
 | Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
 | Skills CLI install | Passed in isolation         | Version 1.5.25 copied the complete payload to a disposable `.agents/skills/zensical/`    |
-| Skills.sh search   | Pending                     | A fresh `skills find zensical` result did not surface this repository                    |
-| Public release     | Not claimed                 | Direct-source installation is not marketplace indexing or release evidence               |
+| Skills.sh search   | Indexed                     | Fresh public API searches return `codesigils/zensical-skill/zensical`                    |
+| Public release     | Not claimed                 | Marketplace indexing is not a release, support, or compatibility guarantee               |
 
 - The payload passes the local Agent Skill structural validator and the pinned
   official `skills-ref` validator at agentskills commit
@@ -173,9 +172,9 @@ Everything outside it is repository-only development or acceptance evidence.
   accepts an installed matching binary through `ZENSICAL_BIN`.
 - The runtime payload includes a no-secret-output hygiene preflight for common
   tracked credential and private-key indicators; it is not a full secret scan.
-- Direct Skills CLI installation and project-scoped host-loader smoke checks
-  for Codex, OpenCode, and Hermes have been verified; Skills.sh search indexing
-  and public release remain pending.
+- Direct Skills CLI installation, project-scoped host-loader smoke checks for
+  Codex, OpenCode, and Hermes, and Skills.sh search indexing have been
+  verified; public release remains unclaimed.
 
 These are development facts, not guarantees about every Zensical repository.
 Version-sensitive behavior must be checked against the current documentation

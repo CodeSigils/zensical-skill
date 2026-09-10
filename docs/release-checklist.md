@@ -90,14 +90,13 @@ Current evidence (2026-09-10): Skills CLI `1.5.25` ran the documented command
 found one skill, and copied `zensical` to `.agents/skills/zensical`. The full
 runtime tree was present: `SKILL.md`, `agents/openai.yaml`, nine references, and
 `scripts/check_site_hygiene.sh`; the temporary directory was removed. A broad
-`npx --yes skills find zensical` query still returned related third-party
+`npx --yes skills find zensical` query initially returned related third-party
 skills without surfacing this repository. Direct source installation is
-verified; Skills.sh search indexing and public release claims remain pending.
-On 2026-09-10, the canonical skill page returned HTTP 200 while the repository
-page returned HTTP 404, and the search API still omitted this repository. A
-provider indexing request is open as
-[`vercel-labs/skills#2205`](https://github.com/vercel-labs/skills/issues/2205);
-wait for the provider response before changing the pending status.
+verified. A same-day recheck found `codesigils/zensical-skill/zensical` in both
+the `zensical` and `CodeSigils` public API searches, and both canonical pages
+returned HTTP 200. The requester verified and closed
+[`vercel-labs/skills#2205`](https://github.com/vercel-labs/skills/issues/2205).
+Skills.sh indexing is now confirmed; public-release claims remain pending.
 
 ## Release handoff
 
