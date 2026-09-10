@@ -93,6 +93,11 @@ runtime tree was present: `SKILL.md`, `agents/openai.yaml`, nine references, and
 `npx --yes skills find zensical` query still returned related third-party
 skills without surfacing this repository. Direct source installation is
 verified; Skills.sh search indexing and public release claims remain pending.
+On 2026-09-10, the canonical skill page returned HTTP 200 while the repository
+page returned HTTP 404, and the search API still omitted this repository. A
+provider indexing request is open as
+[`vercel-labs/skills#2205`](https://github.com/vercel-labs/skills/issues/2205);
+wait for the provider response before changing the pending status.
 
 ## Release handoff
 
