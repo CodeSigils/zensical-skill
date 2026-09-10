@@ -56,6 +56,11 @@ the source registry are evidence only.
 - Treat package versions, CLI commands, supported components, and theme
   behavior as release-dependent. Consult [references/source-registry.md](references/source-registry.md)
   and current upstream documentation when a claim depends on a version.
+- For skill-discovery or release requests, search in this order: the local
+  payload and repository, documented/official catalogs, then Skills.sh via a
+  fresh Skills CLI query. Record the query date, result count, and any
+  unauthenticated, stale, or unavailable catalog state; treat search results
+  as retrieval leads rather than quality or completeness proof.
 - Use web research deliberately for broad site concerns, but give sources a
   clear order: inspect the target repository, consult current official
   Zensical documentation first for Zensical behavior, then use authoritative

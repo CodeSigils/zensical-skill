@@ -483,6 +483,27 @@ plus the three rendered iframe titles. Browser keyboard, contrast, remote
 player availability, captions, and transcript adequacy remain separate manual
 checks; this result does not claim WCAG conformance.
 
+## Skills CLI discovery regression (2026-09-10)
+
+An isolated `npx --yes skills find zensical` query returned 20 indexed
+candidates. The result included `layeredcraft/skills@zensical-site` (9
+installs) and related setup, authoring, and debugging skills, but did not
+surface `CodeSigils/zensical-skill`. The command completed successfully through
+the Skills.sh provider; no installation or execution of a candidate was
+performed. This confirms Skills CLI is useful as a retrieval stage while its
+result set remains neither a quality assessment nor proof of complete indexing.
+
+## Project-scoped host smoke checks (2026-09-10)
+
+In one isolated temporary root, the portable `zensical/` payload was copied to
+the documented project-scoped locations for Codex (`.agents/skills/zensical`),
+OpenCode (`.opencode/skills/zensical`), and Hermes (`.hermes/skills/zensical`).
+Each copy had a non-empty runtime `SKILL.md`, and the `site-inspection.md` and
+`validation.md` references resolved from that runtime directory. The temporary
+root was removed after validation. These are file-availability and path
+discovery checks, not claims that a long-running host session has reloaded the
+skill or that public package installation succeeds.
+
 ## Related Zensical skill comparison (2026-09-09)
 
 Two Skills.sh candidates were downloaded for static comparison into an

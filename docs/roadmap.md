@@ -33,8 +33,9 @@ Further fixture work remains conditional on a real-site gap. The runtime also
 includes a bounded tracked-file hygiene preflight for authorized publication
 work; it is intentionally not a comprehensive secret-scanning claim.
 
-No public package or host installation smoke check is claimed yet. Those remain
-Phase 3 work.
+No public package or marketplace installation is claimed yet. Project-scoped
+host installation smoke checks are recorded for Codex, OpenCode, and Hermes;
+public distribution remains Phase 3 work.
 
 See the [research record](research.md) for the evidence behind this status and
 the [vision](vision.md) for the quality criteria.
@@ -106,13 +107,13 @@ minimal scope, rendered confidence, and an honest handoff.
   templates for useful authoring patterns (voice/tone, content types,
   front-matter, and configuration caveats); admit only capabilities that meet
   the evidence-gated rule above.
-- [ ] Add a discovery regression scenario: run a broad Skills CLI query such as
+- [x] Add a discovery regression scenario: run a broad Skills CLI query such as
   `npx --yes skills find zensical`, preserve the provider timestamp/result count,
   and compare its candidates with direct repository and documented catalog
   searches. Treat `skills find` as a retrieval signal, not proof of quality or
   complete indexing. Evidence is recorded in `docs/research.md`; the query
   returned related candidates but did not surface this repository.
-- [ ] Update the skill-discovery workflow to search Skills.sh after local and
+- [x] Update the skill-discovery workflow to search Skills.sh after local and
   documented catalog sources, while recording unavailable, stale, or
   unauthenticated sources instead of interpreting absence as proof.
 

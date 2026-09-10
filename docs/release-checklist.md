@@ -49,13 +49,20 @@ working repository and do not infer one host's behavior from another.
 
 | Host | Evidence required | Status |
 | --- | --- | --- |
-| Codex | Skill is discoverable and all referenced files are present | Pending |
-| OpenCode | Documented skill directory is recognized and references resolve | Pending |
-| Hermes | Documented external directory is recognized and references resolve | Pending |
+| Codex | Skill is discoverable and all referenced files are present | Pass (project-scoped smoke) |
+| OpenCode | Documented skill directory is recognized and references resolve | Pass (project-scoped smoke) |
+| Hermes | Documented external directory is recognized and references resolve | Pass (project-scoped smoke) |
 
 Record the host, source commit, CLI/tool version, observed installation path,
 command output, and cleanup result. Host checks should be small discovery and
 file-availability checks; they should not duplicate the behavioral suite.
+
+Smoke result (2026-09-10): an isolated temporary root was populated with the
+portable `zensical/` payload at each documented host path: `.agents/skills/zensical`
+for Codex, `.opencode/skills/zensical` for OpenCode, and `.hermes/skills/zensical`
+for Hermes. Each copy had a non-empty `SKILL.md` and resolved
+`references/site-inspection.md` and `references/validation.md`. The temporary
+root was removed after the checks; no live host skill directory was changed.
 
 ## skills.sh and market discoverability
 
