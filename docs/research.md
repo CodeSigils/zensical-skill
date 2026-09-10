@@ -562,3 +562,14 @@ status, inspect canonical repositories, and treat missing search results as
 provisional rather than evidence of absence. The command downloads and runs
 external CLI code, so it requires explicit authorization and an isolated
 environment.
+
+## Core source-registry freshness check (2026-09-10)
+
+The official Zensical documentation and project home page were rechecked from
+their canonical URLs. The documentation site was reachable but did not expose
+a single global release version; the home page describes Zensical as an
+open-source technical-writing system built by the creators of Material for
+MkDocs. The registry therefore records the check date and retains the
+target-lockfile requirement for version-sensitive syntax and installation
+commands. This verifies source freshness and project identity, not a new
+Zensical release or compatibility guarantee.
