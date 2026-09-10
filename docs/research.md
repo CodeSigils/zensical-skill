@@ -462,6 +462,27 @@ This exposed an execution gap in the first acceptance pass: accessibility rules
 existed, but the workflow did not route to a structured a11y report. The skill
 now treats rule presence and workflow invocation as separate acceptance claims.
 
+## Phase 2 rendered component repair (2026-09-10)
+
+An isolated, lockfile-pinned Zensical `0.0.60` build of the clean Code Sigils
+blog completed with `No issues found` and generated 18 HTML pages. Rendered
+inspection then found two empty content-tab panels on `docs/index.md`: the
+Python and Rust fences were adjacent to their tab labels instead of nested
+inside them. The build did not report this semantic rendering failure.
+
+The same pass found three YouTube iframes without descriptive `title`
+attributes in the OpenCode, Hermes Agent, and Dolphin LLM guides. The affected
+images had explicit alternatives, and the existing responsive CSS remained
+scoped to the image and YouTube wrappers. The authorized repair indented the
+two tab bodies and added descriptive iframe titles. The existing pinned
+fixtures already cover non-empty tab panels and missing iframe titles, so this
+real-site confirmation did not add another fixture.
+
+Validation must rebuild an isolated copy and inspect the homepage's tab panels
+plus the three rendered iframe titles. Browser keyboard, contrast, remote
+player availability, captions, and transcript adequacy remain separate manual
+checks; this result does not claim WCAG conformance.
+
 ## Related Zensical skill comparison (2026-09-09)
 
 Two Skills.sh candidates were downloaded for static comparison into an
