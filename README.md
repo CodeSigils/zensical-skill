@@ -153,7 +153,7 @@ Everything outside it is repository-only development or acceptance evidence.
 | Codex              | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.agents/skills/zensical/`              |
 | OpenCode           | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.opencode/skills/zensical/`            |
 | Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
-| Skills CLI install | Passed in isolation         | Version 1.5.25 copied the complete payload to a disposable `.agents/skills/zensical/`    |
+| Skills CLI install | Passed on current main      | Version 1.5.25 copied all 13 payload files at `d7ef1e0` into disposable `.agents/skills/zensical/` |
 | Skills.sh search   | Indexed                     | Fresh public API searches return `codesigils/zensical-skill/zensical`                    |
 | Public release     | Not claimed                 | Marketplace indexing is not a release, support, or compatibility guarantee               |
 

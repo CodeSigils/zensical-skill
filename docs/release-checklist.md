@@ -98,6 +98,16 @@ returned HTTP 200. The requester verified and closed
 [`vercel-labs/skills#2205`](https://github.com/vercel-labs/skills/issues/2205).
 Skills.sh indexing is now confirmed; public-release claims remain pending.
 
+Current-main package refresh (2026-09-10): Skills CLI `1.5.25` copied
+`CodeSigils/zensical-skill@main` at
+`d7ef1e05583593d66e79fce807f38979566f088c` into an isolated
+`.agents/skills/zensical` directory. The installed tree contained all thirteen
+payload files: `SKILL.md`, `agents/openai.yaml`, nine references, and both
+runtime scripts (`check_site_hygiene.sh` and `check_instruction_contract.py`).
+The temporary directory was removed after verification. This is a current
+Codex package-install check; OpenCode and Hermes retain their documented
+project-path smoke evidence rather than an inferred host-loader claim.
+
 ## Release handoff
 
 The handoff must include the source ref, validation commands and outcomes,

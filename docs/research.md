@@ -589,3 +589,14 @@ A same-day recheck returned `codesigils/zensical-skill/zensical` in both the
 both the repository and skill pages returned HTTP 200. The requester posted
 the verification and closed the issue. This confirms directory indexing only;
 it does not establish ranking, verification, support, or public-release status.
+
+## Current-main Skills CLI package refresh (2026-09-10)
+
+The documented direct-source command was re-run in a disposable Codex project
+with Skills CLI `1.5.25`. It cloned `main` at
+`d7ef1e05583593d66e79fce807f38979566f088c`, found the one `zensical` skill,
+and copied all thirteen payload files to `.agents/skills/zensical`: the
+entrypoint, Codex metadata, nine references, and both runtime scripts. The
+temporary project was removed after inspection. The CLI displayed provider risk
+assessments during installation, but this record makes no independent safety,
+support, or compatibility claim from those labels.
