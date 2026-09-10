@@ -79,8 +79,9 @@ The initial runtime payload is a reviewable narrow slice. Its three bounded
 fixtures run through one lockfile-pinned scenario environment. It passes the
 local Agent Skill structural validator and the pinned official `skills-ref`
 validator at agentskills commit `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
-It has not yet been installed as a host skill; marketplace, host-discovery,
-and production-readiness claims remain out of scope.
+Clean, project-scoped installation smoke checks are recorded for Codex,
+OpenCode, and Hermes. Marketplace indexing and production-readiness claims
+remain out of scope.
 
 ## Compatibility strategy
 
