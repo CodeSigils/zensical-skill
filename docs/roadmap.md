@@ -36,10 +36,13 @@ work; it is intentionally not a comprehensive secret-scanning claim.
 Phase 2 is substantially proven for the target-used component and presentation
 paths: admonitions, tabs, front matter, navigation, base paths, images, local
 assets, video embeds, responsive CSS, and the landing page all have official
-source and Code Sigils evidence. GLightbox was documented as an optional
+source and Code Sigils evidence. A narrow BrowserOS desktop review now also
+confirms rendered structural and media signals and produced a repaired
+code-line-anchor keyboard finding. GLightbox was documented as an optional
 extension rather than enabled without a target need. Browser keyboard,
-contrast, captions/transcripts, remote-player availability, and deployment
-remain manual or provider-bound checks rather than completion claims.
+contrast, narrow-view reflow, captions/transcripts, remote-player availability,
+and deployment remain manual or provider-bound checks rather than completion
+claims.
 
 No public release is claimed. Project-scoped host installation smoke checks are
 recorded for Codex, OpenCode, and Hermes, and the public Skills.sh directory

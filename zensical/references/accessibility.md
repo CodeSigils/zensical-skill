@@ -43,6 +43,21 @@ certify accessibility. The skill should report concrete markup, content, or
 rendering findings with evidence and distinguish automated/static checks from
 browser or assistive-technology testing.
 
+### Code-line anchors
+
+When a target configures `pymdownx.highlight.anchor_linenums = true`, inspect a
+representative rendered code block if keyboard use is in scope. In Zensical
+0.0.60, the Code Sigils acceptance site emitted empty, zero-width line-anchor
+links that became keyboard tab stops. This is an observed rendering behavior,
+not a universal defect claim.
+
+If disabling those anchors is the appropriate repair, preserve the target's
+complete Markdown-extension configuration: defining
+`[project.markdown_extensions]` replaces Zensical's defaults. Keep
+`line_spans` when the site uses code selection, validate the generated HTML,
+and re-check the choice after an upgrade. Do not disable line anchors by
+default without an observed accessibility or interaction need.
+
 Accessible structure, descriptive alternatives, and usable content can support
 discoverability and search-result usability. Accessibility review is still an
 inclusion and quality practice, not an SEO shortcut or a ranking guarantee.

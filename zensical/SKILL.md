@@ -153,6 +153,9 @@ Keep these modes distinct:
 - Treat accessibility as a cross-cutting quality concern. Prefer native HTML
   and visible text before ARIA, and never claim WCAG compliance from a build
   alone.
+- When rendered behavior is in scope and browser access is available, inspect
+  a representative affected page. Otherwise, report the static-check limit;
+  browser inspection is evidence, not a new mandatory dependency.
 
 ## Handoff
 

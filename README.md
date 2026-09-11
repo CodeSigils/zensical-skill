@@ -50,6 +50,8 @@ The skill currently routes these tasks:
   images or embeds;
 - review responsive CSS, theme overrides, and landing-page conventions;
 - review accessibility concerns across content, media, components, and themes;
+- use a browser for a representative rendered-page check when it is available
+  and the requested presentation scope warrants it;
 - run a bounded tracked-file hygiene preflight before authorized commits,
   publishing, or deployment;
 - validate a build and, where feasible, affected rendered output; and

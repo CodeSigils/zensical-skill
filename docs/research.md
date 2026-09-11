@@ -89,6 +89,29 @@ commands, configuration, and supported features must be verified separately.
   site or WCAG conformance suite.
 - Public package installation and host-specific smoke checks are deferred.
 
+## Browser-rendered accessibility evidence (2026-09-11)
+
+A BrowserOS review of the deployed Code Sigils homepage and OpenCode guide
+confirmed the expected language, main/article landmarks, skip links, image
+alternative, titled YouTube iframe, desktop reflow, and absence of page-console
+errors. It was a narrow desktop-browser check, not a mobile, contrast,
+caption/transcript, assistive-technology, or WCAG-conformance audit.
+
+The review found 202 empty, zero-width, focusable code-line anchors in the
+OpenCode guide. The target used Zensical `0.0.60` with the default
+`pymdownx.highlight.anchor_linenums = true`. An isolated build using the full
+0.0.60 default extension list and `anchor_linenums = false` succeeded, retained
+line spans, and removed the generated anchors. The live-site configuration was
+then changed and rebuilt successfully. This is a focused acceptance finding;
+it does not establish that all Zensical versions or sites have the same issue.
+
+The same review considered analytics and discoverability. The evidence supports
+an opt-in decision boundary rather than a new runtime workflow: inspect a
+target's canonical URL, metadata, robots, and sitemap when asked; start with
+Search Console for indexing questions; do not add GA4 or consent configuration
+without a concrete measurement question, authorization, and privacy review.
+The current Zensical analytics integration is documented as under overhaul.
+
 ## Sensitive-material preflight (2026-09-09)
 
 The runtime now has a small Git-tracked-file preflight for common environment,

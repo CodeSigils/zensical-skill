@@ -16,3 +16,6 @@
 - Clarified that Code Sigils is acceptance evidence rather than a target-site
   convention, and that the listed Skills CLI command remains a candidate until
   a clean host-install smoke test is recorded.
+- Added an optional browser-rendered accessibility check and a version-sensitive
+  code-line-anchor finding, while keeping analytics and search discoverability
+  outside the runtime workflow unless explicitly requested.
