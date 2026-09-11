@@ -118,6 +118,45 @@ Search Console for indexing questions; do not add GA4 or consent configuration
 without a concrete measurement question, authorization, and privacy review.
 The current Zensical analytics integration is documented as under overhaul.
 
+## Media semantics and new-tab link policy (2026-09-11)
+
+The existing media workflow already requires meaningful alternatives,
+descriptive iframe titles, appropriate captions/transcripts, player controls,
+and rendered inspection. The durable refinement is to make raw HTML media a
+contextual semantic review: inspect native controls, caption tracks or provider
+captions, transcripts where needed, and reader-impacting autoplay/loop choices.
+It does not prescribe `sandbox`, `referrerpolicy`, or provider attributes,
+because those need provider-compatibility and site-privacy evidence.
+
+Current MDN documentation states that `target="_blank"` provides implicit
+`noopener` behavior in modern HTML. An explicit `rel="noopener"` can be a
+project convention, but `noreferrer` also suppresses the HTTP referrer and is
+therefore a privacy/attribution decision, not a universal security repair.
+The runtime now asks for that decision only when a link intentionally opens a
+new tab. No dedicated fixture was added: no target-site failure or repeated
+Zensical rendering behavior has established a deterministic assertion.
+
+## Maturity assessment (2026-09-11)
+
+The payload currently contains 13 runtime files (628 lines across its router
+and references) and five bounded acceptance scenarios. It is therefore best
+understood as a work-in-progress, evidence-led maintenance playbook with a few
+deterministic checks—not a comprehensive Zensical linter, browser test suite,
+or accessibility conformance system. Its fixtures cover observed rendering and
+configuration behavior, while media-provider operation, broad browser coverage,
+and deployment remain bounded review concerns. The roadmap retains the current
+narrow scope until two or three materially different real maintenance tasks
+demonstrate a repeated, testable gap.
+
+The resulting direction is not a permanent ceiling: it may become a reusable
+methodology or automation capability if value is demonstrated. For each
+proposal, the agent must first inspect the target repository and reconsult
+current official Zensical documentation, then evaluate the installed version,
+user value, validation path, maintenance owner, and authorization boundary.
+That consultation should produce a concise, target-relevant set of documented
+options for the user, including fit, trade-offs, and verification needs rather
+than an exhaustive feature list or an implied configuration change.
+
 ## Sensitive-material preflight (2026-09-09)
 
 The runtime now has a small Git-tracked-file preflight for common environment,

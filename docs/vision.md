@@ -38,6 +38,15 @@ repository's own conventions.
 - Treat local build success and remote deployment success as different evidence.
 - Prefer current primary sources and record version uncertainty.
 - Extract new workflows only after repeated work demonstrates a stable need.
+- Before assessing a proposed Zensical capability, consult the target
+  repository and current official Zensical documentation; weigh demonstrated
+  user value, validation burden, maintenance ownership, and authorization.
+- Turn that consultation into a small, relevant set of documented Zensical
+  options for the user, with concrete fit, trade-offs, and validation needs;
+  do not present an exhaustive catalog or imply optional functionality is
+  enabled.
+- The skill may mature into a reusable methodology or automation capability,
+  but only through that evidence-gated path.
 
 ## Quality criteria
 
@@ -62,6 +71,9 @@ A workflow is ready to keep when it demonstrates all of the following:
   embeds, CSS/theme overrides, landing-page behavior, and base paths.
   Accessibility evidence must distinguish static inspection from browser or
   assistive-technology testing.
+- **Proportionate semantics:** raw HTML media and intentionally new-tab links
+  receive a contextual accessibility, privacy, and behavior review; the skill
+  does not auto-apply provider attributes or a global `noreferrer` policy.
 - Accessibility can support discoverability and reader usability, but remains
   distinct from SEO strategy and ranking claims.
 - **Honest handoff:** the agent reports exact checks, remaining uncertainty,
@@ -75,13 +87,14 @@ coverage than its evidence supports.
 
 ## Current status
 
-The initial runtime payload is a reviewable narrow slice. Its three bounded
-fixtures run through one lockfile-pinned scenario environment. It passes the
-local Agent Skill structural validator and the pinned official `skills-ref`
-validator at agentskills commit `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
-Clean, project-scoped installation smoke checks are recorded for Codex,
-OpenCode, and Hermes. Skills.sh indexing is confirmed; production-readiness
-claims remain out of scope.
+The initial runtime payload is a work-in-progress, reviewable narrow slice.
+Its three bounded fixtures run through one lockfile-pinned scenario
+environment. It passes the local Agent Skill structural validator and the
+pinned official `skills-ref` validator at agentskills commit
+`69ef37e9424c0a7ea9dd2293b559e43ec8176379`. Clean, project-scoped
+installation smoke checks are recorded for Codex, OpenCode, and Hermes.
+Skills.sh indexing is confirmed; comprehensive automation, broad browser
+coverage, and production-readiness claims remain out of scope.
 
 ## Compatibility strategy
 

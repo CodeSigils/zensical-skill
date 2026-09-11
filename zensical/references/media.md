@@ -36,6 +36,13 @@ their own validation.
 - Check responsive dimensions, keyboard access, captions/subtitles, poster
   images, a descriptive `title` on iframes, and whether the embed depends on
   third-party JavaScript.
+- For raw HTML media, use native elements where they express the content:
+  verify meaningful controls and, for prerecorded spoken video, a captions
+  track or documented provider captions plus a transcript or equivalent where
+  the content needs one. Treat autoplay, muted playback, and looping as
+  reader-impacting choices, not harmless defaults. Do not prescribe `sandbox`,
+  `referrerpolicy`, or provider-specific attributes without checking that they
+  preserve the target embed's intended behavior and the site's privacy policy.
 - Do not claim that a successful build proves that a player loads or that an
   external URL is available.
 

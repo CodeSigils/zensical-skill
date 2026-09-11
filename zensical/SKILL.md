@@ -32,6 +32,30 @@ test site on a target repository. The target site's own configuration, content
 model, and editorial rules are authoritative; project-specific observations in
 the source registry are evidence only.
 
+## Maturity and evidence
+
+This skill is work in progress, not a comprehensive Zensical automation or
+conformance tool. Apply only the workflow and validation confidence supported
+by the target repository and the referenced evidence. Do not turn a review
+prompt into a universal lint rule, claim browser, provider, deployment, or WCAG
+coverage that was not performed, or add a new workflow merely because Zensical
+or HTML supports it. Record a bounded finding instead. Expand the skill only
+after a concrete user need, repeated or observed behavior, current primary
+evidence, a proportionate validation path, and a named maintenance owner.
+
+When the user evaluates a proposed Zensical addition, integration, workflow,
+or automation capability, first inspect the target repository and consult the
+current official Zensical documentation through
+[references/source-registry.md](references/source-registry.md). Treat that
+documentation and the target's installed version as the decision baseline;
+then assess user value, validation, maintenance cost, and authorization before
+recommending or implementing it. The skill may grow into a reusable methodology
+or automation capability only when that value is demonstrated, not assumed.
+After that consultation, suggest the small set of relevant documented Zensical
+sections or capabilities to the user, explain the concrete fit and trade-offs,
+and identify what would need validation. Do not dump a feature catalog, imply a
+capability is enabled, or implement an optional addition without authorization.
+
 ## Operating boundaries
 
 - Inspect the repository before assuming its content layout, navigation,

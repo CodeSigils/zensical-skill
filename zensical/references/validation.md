@@ -10,7 +10,10 @@ uses the same package manager or output directory.
 3. Inspect generated output for the changed page, navigation, admonitions,
    tabs, media assets, embeds, and base-path behavior. For images, verify
    rendered source paths and alt text; for video/audio/iframes, verify fallback,
-   dimensions, and provider boundaries where feasible.
+   dimensions, provider boundaries, descriptive iframe titles, and applicable
+   native controls or caption/transcript provision where feasible. For links
+   that intentionally open a new tab, verify the project's `noopener` and
+   referrer-policy decision rather than auto-adding `noreferrer`.
    For CSS, templates, or landing pages, inspect at least a narrow viewport and
    both configured color schemes when the change affects them.
    Apply the accessibility reference for semantic names, alt text, iframe

@@ -51,6 +51,33 @@ now indexes the payload; public release remains Phase 3 work.
 See the [research record](research.md) for the evidence behind this status and
 the [vision](vision.md) for the quality criteria.
 
+## Maturity assessment and next evidence gate
+
+The skill is a work in progress. Its current strength is a narrow,
+evidence-led maintenance workflow with a small set of real-site-derived
+fixtures; it is not a generic site linter, a complete browser test suite, or a
+Zensical conformance tool. The maintainer documentation is intentionally more
+rigorous than the current runtime automation, so keep new process and payload
+material only when it changes an agent decision.
+
+Before broadening the payload, exercise it on two or three materially different
+real Zensical maintenance tasks. Record only repeated, concrete gaps. Admit a
+small rendered-output helper or a new fixture only when such a gap has a stable
+observable behavior and a maintenance owner; otherwise preserve the current
+review guidance and state its limits.
+
+For every proposed Zensical addition, integration, workflow, or automation
+capability, inspect the target repository and reconsult current official
+Zensical documentation before evaluating value. If repeated evidence justifies
+it, the next form may be a reusable methodology or automation capability—not
+necessarily another reference file—but it must retain explicit validation,
+maintenance ownership, and authorization boundaries.
+
+The evaluation handoff should suggest only the relevant documented Zensical
+sections or capabilities, explain their target-specific fit and trade-offs, and
+name any validation needed. It must not substitute a feature catalog for a
+recommendation or treat an optional capability as configured.
+
 ## Capability-admission rule
 
 Do not add a new Zensical workflow, integration, or validation control merely
@@ -110,6 +137,9 @@ minimal scope, rendered confidence, and an honest handoff.
 - [x] Add focused references only for behavior that changes agent decisions.
 - [x] Add a dedicated rendered fixture for the observed empty code-line-anchor
   regression; keep it separate from the iframe-title accessibility fixture.
+- [x] Clarify proportionate HTML-media semantics and intentional new-tab link
+  privacy/security review without turning either into a universal rewrite or
+  an unproven fixture requirement.
 
 **Exit condition:** a target-used component can be inspected, changed only with
 authorization, and checked in rendered output without importing another site's

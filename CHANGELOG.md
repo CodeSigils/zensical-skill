@@ -21,3 +21,12 @@
   outside the runtime workflow unless explicitly requested.
 - Added a pinned rendered fixture proving that the documented code-line-anchor
   repair preserves line spans without emitting empty keyboard tab stops.
+- Clarified proportionate semantic review for raw HTML media and intentional
+  new-tab links, including the boundary between `noopener` conventions and an
+  explicitly authorized `noreferrer` privacy policy.
+- Marked the payload explicitly as work in progress and added an evidence-gated
+  directive against overstating coverage or expanding it without a proven need.
+- Required current official Zensical documentation and target-version review
+  before evaluating proposed additions, integrations, workflows, or automation.
+- Require capability evaluations to offer users a concise, documented,
+  target-relevant set of options with trade-offs and validation needs.

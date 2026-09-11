@@ -10,9 +10,19 @@ It helps an agent preserve a repository's conventions while working with
 Zensical Markdown components, navigation, media assets, and presentation
 customization.
 
-This is an early, reviewable project—not a complete Zensical automation suite.
-The current payload is intentionally narrow and is being developed from real
-maintenance work on the Code Sigils blog.
+This is an early work-in-progress, reviewable project—not a complete Zensical
+automation suite. The current payload is intentionally narrow and is being
+developed from real maintenance work on the Code Sigils blog; rely on its
+recorded checks, not implied coverage beyond them.
+
+It can evolve into a broader methodology or automation capability, but only
+when real use demonstrates value and current official Zensical documentation,
+the target's installed version, validation cost, and ongoing maintenance support
+the addition.
+
+When a user explores an addition, the skill should turn that documentation
+check into a short, relevant set of Zensical options with fit, trade-offs, and
+validation needs—not a generic feature catalog or an unapproved change.
 
 ## Quick start
 
@@ -47,7 +57,8 @@ The skill currently routes these tasks:
 - inspect an existing Zensical repository and identify its conventions;
 - make an explicitly authorized light Markdown edit;
 - review content, navigation, links, front matter, admonitions, tabs, and
-  images or embeds;
+  images or embeds, including proportionate HTML-media semantics and new-tab
+  link policy;
 - review responsive CSS, theme overrides, and landing-page conventions;
 - review accessibility concerns across content, media, components, and themes;
 - use a browser for a representative rendered-page check when it is available

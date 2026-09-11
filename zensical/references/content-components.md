@@ -42,6 +42,16 @@ configured base path. Add one navigation entry in the canonical navigation
 source and avoid duplicating local article links in index pages when the site's
 rules prohibit them.
 
+Keep ordinary links in the current tab unless a new browsing context has a
+clear reader benefit. When a link deliberately uses `target="_blank"`, review
+the target's trust level and the project's browser-support and referrer policy.
+Modern HTML gives `_blank` the `noopener` behavior, so do not report its
+absence as a defect by itself; an explicit `rel="noopener"` may still be a
+useful project convention. Do not add `noreferrer` mechanically: it also
+suppresses the HTTP referrer and should follow a deliberate privacy or
+attribution decision. Preserve an intentional `rel` value and report an
+unclear policy as a review question rather than silently rewriting every link.
+
 ## Media handoff
 
 For images, video, audio, or embedded players, continue with
