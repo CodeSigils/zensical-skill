@@ -87,14 +87,14 @@ coverage than its evidence supports.
 
 ## Current status
 
-The initial runtime payload is a work-in-progress, reviewable narrow slice.
-Its three bounded fixtures run through one lockfile-pinned scenario
-environment. It passes the local Agent Skill structural validator and the
-pinned official `skills-ref` validator at agentskills commit
-`69ef37e9424c0a7ea9dd2293b559e43ec8176379`. Clean, project-scoped
-installation smoke checks are recorded for Codex, OpenCode, and Hermes.
-Skills.sh indexing is confirmed; comprehensive automation, broad browser
-coverage, and production-readiness claims remain out of scope.
+The initial runtime payload is a usable, actively developed narrow slice for
+its documented maintenance scope. Its three bounded fixtures run through one
+lockfile-pinned scenario environment. It passes the local Agent Skill
+structural validator and the pinned official `skills-ref` validator at
+agentskills commit `69ef37e9424c0a7ea9dd2293b559e43ec8176379`. Clean,
+project-scoped installation smoke checks are recorded for Codex, OpenCode, and
+Hermes. Skills.sh indexing is confirmed; comprehensive automation, broad
+browser coverage, and production-readiness claims remain out of scope.
 
 ## Compatibility strategy
 

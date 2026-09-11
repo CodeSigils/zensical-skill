@@ -34,7 +34,8 @@ the source registry are evidence only.
 
 ## Maturity and evidence
 
-This skill is work in progress, not a comprehensive Zensical automation or
+This skill is usable for its documented, evidence-backed maintenance scope and
+is actively developed; it is not a comprehensive Zensical automation or
 conformance tool. Apply only the workflow and validation confidence supported
 by the target repository and the referenced evidence. Do not turn a review
 prompt into a universal lint rule, claim browser, provider, deployment, or WCAG

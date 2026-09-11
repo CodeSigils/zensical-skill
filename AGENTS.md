@@ -15,6 +15,18 @@ or clearly label the proposed action as provisional. Re-check volatile
 external sources at the point of use. Record the freshness check and any
 intentionally unchanged records in the handoff.
 
+## Digital Basement umbrella alignment
+
+When meaningful Zensical-skill work changes its maturity, scope, capability
+admission, or relationship to editorial work, also inspect the corresponding
+Digital Basement umbrella records when they are available at
+`/home/sand/projects/digital-basement/`: `ARCHITECTURE.md`, `ROADMAP.md`,
+`docs/editorial-core.md`, and the relevant session note. Reconcile a stale
+description in the same session, keeping the editorial core separate from the
+Zensical presentation-maintenance skill. If that workspace is unavailable or
+the change does not affect the relationship, state that explicitly rather than
+inventing a cross-project update.
+
 ## Documentation contract
 
 The planning documents under `docs/` describe the skill's intended scope; the

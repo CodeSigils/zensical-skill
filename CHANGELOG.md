@@ -30,3 +30,7 @@
   before evaluating proposed additions, integrations, workflows, or automation.
 - Require capability evaluations to offer users a concise, documented,
   target-relevant set of options with trade-offs and validation needs.
+- Added a maintainer-only cross-project consistency gate for the related
+  Digital Basement umbrella records when the skill's role or maturity changes.
+- Clarified that the skill is usable for its documented, evidence-backed scope
+  while actively developed beyond it.

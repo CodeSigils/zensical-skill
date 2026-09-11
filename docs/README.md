@@ -17,6 +17,7 @@ documents relevant to the proposed change.
 | Acceptance scenario or fixture | `scenarios.md`, `roadmap.md`, `research.md` |
 | Distribution or compatibility | `vision.md`, `roadmap.md`, `research.md`, `release-checklist.md` |
 | Release or market discoverability | `roadmap.md`, `research.md`, `release-checklist.md` |
+| Digital Basement umbrella alignment | `AGENTS.md`, `roadmap.md`, `research.md`; then the corresponding Digital Basement architecture, roadmap, editorial core, and session note when available |
 
 When a change affects scope, sequencing, evidence, or release expectations,
 update the corresponding planning document before completing the work. Recheck

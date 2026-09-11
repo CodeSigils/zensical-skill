@@ -157,6 +157,17 @@ That consultation should produce a concise, target-relevant set of documented
 options for the user, including fit, trade-offs, and verification needs rather
 than an exhaustive feature list or an implied configuration change.
 
+## Cross-project umbrella alignment (2026-09-11)
+
+The Digital Basement umbrella continued to describe `zensical-skill` as future
+work after it had become an independent work-in-progress project. The canonical
+Digital Basement architecture, extraction roadmap, editorial core, and dated
+session note were reconciled on 2026-09-11. The skill-maintainer preflight now
+requires checking those records when a meaningful change affects maturity,
+scope, capability admission, or the editorial boundary. This remains a
+maintainer-only consistency check: the portable skill must not depend on the
+Digital Basement workspace or import its editorial rules.
+
 ## Sensitive-material preflight (2026-09-09)
 
 The runtime now has a small Git-tracked-file preflight for common environment,

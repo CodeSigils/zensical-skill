@@ -78,6 +78,42 @@ sections or capabilities, explain their target-specific fit and trade-offs, and
 name any validation needed. It must not substitute a feature catalog for a
 recommendation or treat an optional capability as configured.
 
+### Qualitative review (2026-09-11)
+
+At this stage the skill is strong as a careful, evidence-led Zensical
+maintenance playbook, but not yet an automation capability: its deterministic
+coverage is limited to builds, focused rendered fixtures, instruction-contract
+checks, and tracked-file hygiene. The explicit maturity and capability-review
+directives improve decision quality, but they do not substitute for browser,
+provider, deployment, or broad accessibility testing. The principal delivery
+risk is governance growing faster than useful runtime capability; reject new
+documentation or process unless it changes an agent decision or supports a
+repeated, testable workflow.
+
+When a meaningful skill change affects its maturity, scope, capability
+admission, or editorial boundary, recheck the corresponding Digital Basement
+umbrella records in the same session. This is a cross-project consistency gate,
+not a reason to couple the portable runtime payload to Digital Basement.
+
+### Next-session field validation
+
+Freeze new process and reference material unless it changes an agent decision
+or addresses a repeated, testable failure. Use the skill on three materially
+different real tasks: one content/component task, one site-structure task, and
+one media/accessibility task with rendered inspection where available. For each,
+record in the existing research or session record only the target/request,
+repeated manual checks, finding or near-miss, time or uncertainty cost, and
+what a helper would have changed.
+
+Consult current official Zensical documentation only for additions,
+integrations, capability proposals, version changes, or genuine uncertainty;
+read the relevant section and target version rather than treating a full-docs
+review as a ritual. After the third task, decide whether to keep the current
+playbook, add one focused helper, or defer. A rendered-output helper is
+admissible only when at least two tasks repeat the same observable check; it
+should begin as a report-only audit of explicitly named affected pages, not a
+global linter or build blocker.
+
 ## Capability-admission rule
 
 Do not add a new Zensical workflow, integration, or validation control merely

@@ -10,10 +10,11 @@ It helps an agent preserve a repository's conventions while working with
 Zensical Markdown components, navigation, media assets, and presentation
 customization.
 
-This is an early work-in-progress, reviewable project—not a complete Zensical
-automation suite. The current payload is intentionally narrow and is being
-developed from real maintenance work on the Code Sigils blog; rely on its
-recorded checks, not implied coverage beyond them.
+This is a usable, actively developed skill for its documented, evidence-backed
+maintenance scope—not a complete Zensical automation suite. The current payload
+is intentionally narrow and is being developed from real maintenance work on
+the Code Sigils blog; rely on its recorded checks, not implied coverage beyond
+them.
 
 It can evolve into a broader methodology or automation capability, but only
 when real use demonstrates value and current official Zensical documentation,
