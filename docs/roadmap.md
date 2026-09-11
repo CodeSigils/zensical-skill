@@ -108,6 +108,8 @@ minimal scope, rendered confidence, and an honest handoff.
 - [x] Record optional GLightbox behavior without enabling it or claiming
   interaction coverage where the acceptance target does not use it.
 - [x] Add focused references only for behavior that changes agent decisions.
+- [x] Add a dedicated rendered fixture for the observed empty code-line-anchor
+  regression; keep it separate from the iframe-title accessibility fixture.
 
 **Exit condition:** a target-used component can be inspected, changed only with
 authorization, and checked in rendered output without importing another site's

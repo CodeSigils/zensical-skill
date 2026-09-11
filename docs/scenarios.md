@@ -85,6 +85,25 @@ workflow.
 explicitly skips a repository that does not use the targeted layout. It does
 not validate arbitrary YAML workflows, deployment success, or host state.
 
+## Scenario E — Code-line anchors do not become empty tab stops
+
+**Purpose:** catch the rendered accessibility regression where highlighted code
+lines emit empty, zero-width anchor links that keyboard users must tab through.
+
+**Target:** a minimal site with Zensical's 0.0.60 Markdown-extension defaults
+made explicit, `pymdownx.highlight.line_spans = "__span"`, and
+`pymdownx.highlight.anchor_linenums = false`.
+
+1. Build an isolated fixture containing a highlighted multi-line code block.
+2. Inspect the rendered HTML for retained `__span-*` line spans.
+3. Assert that it contains no `a[id^="__codelineno-"]` anchors.
+4. Keep this separate from the iframe-title fixture: it proves a configuration
+   repair, not generic accessibility conformance.
+
+**Pass evidence:** the build succeeds, line spans remain available for code
+selection, and no generated code-line anchors are emitted. Revisit the fixture
+when the pinned Zensical version or its default extension set changes.
+
 ## Maintenance boundary
 
 These scenarios prove only the bounded behaviors named above, not universal

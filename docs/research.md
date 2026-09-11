@@ -105,6 +105,12 @@ line spans, and removed the generated anchors. The live-site configuration was
 then changed and rebuilt successfully. This is a focused acceptance finding;
 it does not establish that all Zensical versions or sites have the same issue.
 
+The acceptance finding now has a dedicated, lockfile-backed `code-anchor-site`
+fixture. It makes the 0.0.60 extension defaults explicit, disables
+`anchor_linenums`, and asserts that generated line spans remain while
+`__codelineno-*` anchors do not appear. The fixture stays separate from the
+iframe-title case so each assertion represents one repairable behavior.
+
 The same review considered analytics and discoverability. The evidence supports
 an opt-in decision boundary rather than a new runtime workflow: inspect a
 target's canonical URL, metadata, robots, and sitemap when asked; start with

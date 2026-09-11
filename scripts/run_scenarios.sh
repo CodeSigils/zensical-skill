@@ -76,7 +76,7 @@ else
   }
 fi
 
-for fixture in tabbed-site accessibility-site base-path-site; do
+for fixture in tabbed-site accessibility-site base-path-site code-anchor-site; do
   printf '%s: Zensical %s build\n' "$fixture" "$expected_version"
   run_build "$fixture_root/$fixture" "$run_root/$fixture-output"
 done
@@ -122,6 +122,17 @@ else
   exit 1
 fi
 
+code_anchor_output="$run_root/code-anchor-site-output/index.html"
+if ! rg -F 'id="__span-0-1"' "$code_anchor_output" >/dev/null; then
+  printf 'code-anchor-site: rendered line spans are missing\n' >&2
+  exit 1
+fi
+if rg -F '<a id="__codelineno-' "$code_anchor_output" >/dev/null; then
+  printf 'code-anchor-site: empty code-line anchors remain in rendered output\n' >&2
+  exit 1
+fi
+printf 'code-anchor-site: retained line spans without focusable code-line anchors\n'
+
 base_output="$run_root/base-path-site-output/index.html"
 if rg -F 'href="about/"' "$base_output" >/dev/null && [[ -f "$run_root/base-path-site-output/about/index.html" ]]; then
   printf 'base-path-site: generated relative link resolves under /docs deployment path\n'
@@ -137,4 +148,4 @@ else
   exit 1
 fi
 
-printf 'PASS: Zensical scenario builds, rendered tabs, a11y finding, and base-path link assertions\n'
+printf 'PASS: Zensical scenario builds, rendered tabs, a11y findings, code-line-anchor repair, and base-path link assertions\n'

@@ -19,3 +19,5 @@
 - Added an optional browser-rendered accessibility check and a version-sensitive
   code-line-anchor finding, while keeping analytics and search discoverability
   outside the runtime workflow unless explicitly requested.
+- Added a pinned rendered fixture proving that the documented code-line-anchor
+  repair preserves line spans without emitting empty keyboard tab stops.
