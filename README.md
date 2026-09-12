@@ -37,9 +37,11 @@ smoke evidence, but they do not imply long-running host reload behavior.
 | OpenCode | `.opencode/skills/zensical/`                | `mkdir -p .opencode/skills && cp -R zensical .opencode/skills/`                                                                           |
 | Hermes   | configured `skills.external_dirs` directory | Add the repository's `zensical/` directory to `external_dirs`; do not copy it into a live global skill directory unless that is intended. |
 
-Skills CLI `1.5.25` installed this direct-source command successfully in a
-disposable Codex project on 2026-09-10. Skills.sh also indexes the repository;
-review the payload before using it.
+Skills CLI `1.5.25` installed this direct-source command successfully from
+commit `d7ef1e0` in a disposable Codex project on 2026-09-10. Skills.sh
+indexing was also confirmed that day; review the payload before using it. The
+documented baseline is `npx skills add <skill-name>`; the flags below are
+recorded installation evidence, not a claim about every current CLI option.
 
 ```bash
 npx skills add CodeSigils/zensical-skill \
@@ -167,8 +169,8 @@ Everything outside it is repository-only development or acceptance evidence.
 | Codex              | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.agents/skills/zensical/`              |
 | OpenCode           | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.opencode/skills/zensical/`            |
 | Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
-| Skills CLI install | Passed on current main      | Version 1.5.25 copied all 13 payload files at `d7ef1e0` into disposable `.agents/skills/zensical/` |
-| Skills.sh search   | Indexed                     | Fresh public API searches return `codesigils/zensical-skill/zensical`                    |
+| Skills CLI install | Passed at `d7ef1e0`         | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` |
+| Skills.sh search   | Indexed on 2026-09-10        | Public API searches returned `codesigils/zensical-skill/zensical`                        |
 | Public release     | Not claimed                 | Marketplace indexing is not a release, support, or compatibility guarantee               |
 
 - The payload passes the local Agent Skill structural validator and the pinned
@@ -263,9 +265,11 @@ verification steps are documented in
 
 See [`docs/roadmap.md`](docs/roadmap.md). The existing-site review and light-
 edit workflow is substantially proven against the Code Sigils blog, with a
-small repeatable scenario suite for the observed failures. The next milestone
-is Phase 2 component and content-model confidence. New scripts, fixtures,
-integrations, and CI should earn their place through observed need.
+small repeatable scenario suite for the observed failures. The completed
+three-task field run did not justify another helper or fixture. The next
+milestone requires either a repeated, testable maintenance gap or an explicit
+reviewed release candidate; new scripts, fixtures, integrations, and CI should
+earn their place through observed need.
 
 ## Status and feedback
 
