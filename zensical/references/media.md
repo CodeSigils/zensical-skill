@@ -2,14 +2,18 @@
 
 Read this reference when an article includes images, image galleries, video,
 audio, embedded players, or a large asset collection. This is presentation and
-validation guidance; editorial voice, image selection, captions, rights, and
-provenance remain separate concerns.
+validation guidance; editorial voice and image selection remain separate
+concerns.
 
 ## Images
 
 - Prefer local, repository-controlled assets when durability, offline use, or
   provenance matters. Resolve image paths from the source Markdown file and
   confirm the configured `docs_dir` and base path.
+- When introducing externally sourced media, confirm that its licence permits
+  the intended reuse and record its source, creator, and licence. Add visible
+  attribution when the licence or target-site policy requires it. Do not
+  download or commit media with unclear rights.
 - Preserve meaningful alt text. Decorative images should have an intentional
   empty alternative rather than a filename or invented claim.
 - Use width, alignment, captions, and lazy loading only when they improve the
