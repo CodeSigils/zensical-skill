@@ -679,3 +679,34 @@ entrypoint, Codex metadata, nine references, and both runtime scripts. The
 temporary project was removed after inspection. The CLI displayed provider risk
 assessments during installation, but this record makes no independent safety,
 support, or compatibility claim from those labels.
+
+## Three-task live-blog field validation (2026-09-12)
+
+The skill was exercised against the live Code Sigils blog checkout at
+`/home/sand/labs/zensical-test` on three materially different maintenance
+tasks. The component task repaired `docs/JS-TS/oxc-formatting.md`: package
+manager tab bodies were not nested below their labels, so a clean Zensical
+build succeeded while the rendered page contained six one-panel groups rather
+than two three-panel groups. Source nesting, a clean build, and rendered panel
+counts confirmed the repair. A report-only tab audit could have exposed this
+failure, but this is one occurrence, not evidence for a new helper.
+
+The site-structure task reviewed the configured canonical root and generated
+navigation on the homepage plus the `AI/` and `JS-TS/` section pages. The
+canonical URLs matched `https://codesigils.github.io/`; depth-relative links
+such as `./..` and `../AI/` resolved to generated output targets. It found no
+defect. The cost was a small, page-specific source/output comparison, and a
+helper would not have replaced a repeated check.
+
+The media/accessibility task inspected representative rendered pages and then
+the complete generated site. All 22 rendered images had an `alt` attribute;
+all three YouTube iframes had non-empty descriptive `title` attributes. This
+does not establish keyboard, screen-reader, contrast, captions/transcripts,
+remote-player, or WCAG conformance. It found no defect; a helper would have
+duplicated a single static check rather than removed repeated work.
+
+Decision: retain the current playbook and add neither a new fixture nor a
+rendered-output helper. Only the component task produced a finding, and no
+observable manual check recurred across two tasks. The live-blog repository
+was clean after the reviews; the component repair was committed separately as
+`a7c7e44`.

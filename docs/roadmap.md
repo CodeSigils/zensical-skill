@@ -95,24 +95,27 @@ admission, or editorial boundary, recheck the corresponding Digital Basement
 umbrella records in the same session. This is a cross-project consistency gate,
 not a reason to couple the portable runtime payload to Digital Basement.
 
-### Next-session field validation
+### Field validation outcome (2026-09-12)
 
-Freeze new process and reference material unless it changes an agent decision
-or addresses a repeated, testable failure. Use the skill on three materially
-different real tasks: one content/component task, one site-structure task, and
-one media/accessibility task with rendered inspection where available. For each,
-record in the existing research or session record only the target/request,
-repeated manual checks, finding or near-miss, time or uncertainty cost, and
-what a helper would have changed.
+The planned three-task run on the live Code Sigils blog is complete: a
+content/component repair, a site-structure review, and a media/accessibility
+review with rendered inspection. The component task found and repaired one
+semantically empty tab group; the other two found no defect. The details and
+limits are recorded in `research.md`.
+
+Keep the current playbook; do not add a helper or fixture from this run. No
+observable check recurred across two tasks, so a rendered-output helper would
+not yet remove demonstrated repeated work. Freeze new process and reference
+material unless it changes an agent decision or addresses a repeated, testable
+failure.
 
 Consult current official Zensical documentation only for additions,
 integrations, capability proposals, version changes, or genuine uncertainty;
 read the relevant section and target version rather than treating a full-docs
-review as a ritual. After the third task, decide whether to keep the current
-playbook, add one focused helper, or defer. A rendered-output helper is
-admissible only when at least two tasks repeat the same observable check; it
-should begin as a report-only audit of explicitly named affected pages, not a
-global linter or build blocker.
+review as a ritual. A future rendered-output helper is admissible only when at
+least two tasks repeat the same observable check; it should begin as a
+report-only audit of explicitly named affected pages, not a global linter or
+build blocker.
 
 ## Capability-admission rule
 
