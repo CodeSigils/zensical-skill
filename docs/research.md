@@ -721,3 +721,31 @@ applies the target repository's guidance first and offers portable suggestions
 about clarity, evidence, examples, jargon, links, and durable details; it does
 not carry a voice rubric, article formula, SEO strategy, or publication gate.
 This removes a scope ambiguity without adding a fixture or automation claim.
+
+## Optional article-review field test (2026-09-12)
+
+The optional review reference was used to create a short, reviewable field note
+for the Code Sigils blog from the maintainer's `agent-concepts-study` notes.
+The target repository's editorial guidance supplied the style boundary; the
+portable reference supplied the review pass. It surfaced one concrete evidence
+problem before publication: the initial draft combined two separate project
+cases, so the article was narrowed to one documented project rather than
+claiming a blended conclusion. The resulting article has a clear reader
+purpose, personal scope, concrete maintenance example, caveat, and practical
+next step. A clean Zensical build generated the expected canonical route and
+rendered headings and callout.
+
+This is one successful use, not evidence for a new fixture, automation, or
+generic editorial policy. Browser reading behavior, reader response, and
+publication remain untested at this point.
+
+## New-article placement field observation (2026-09-12)
+
+The optional article-review field test also required a category decision:
+`agent-instruction-drift.md` belonged in the existing broad `AI/` collection,
+not the nested `AI/OpenCode/` collection, because the reader problem was agent
+instruction maintenance rather than an OpenCode workflow. The resulting build
+placed the page in the `AI` navigation branch. Existing inspection guidance
+mentioned section indexes and navigation but did not state this decision rule,
+so the light-edit reference now makes it explicit. This is one observed
+authoring decision; it does not justify a category classifier or fixture.

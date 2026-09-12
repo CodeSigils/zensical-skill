@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a narrow new-article placement rule: choose an existing category from
+  the primary reader question and request direction only when placement would
+  materially change audience or navigation.
+
 - Clarified optional article review: it follows target-repository guidance and
   offers portable content suggestions without imposing a voice, article
   formula, SEO strategy, or publication gate.

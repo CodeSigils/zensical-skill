@@ -127,6 +127,17 @@ Ordinary new-article work remains focused on front matter, headings, links,
 components, media, navigation, and rendered output. This is a scope
 clarification, not a new workflow or automation capability.
 
+### New-article placement clarification (2026-09-12)
+
+Creating a page needs an explicit category decision because its location
+affects generated navigation and the target site's CMS or content model. The
+authoring reference now directs an agent to inspect existing categories and
+place an article by its primary reader question, not by an incidental source or
+tool. It asks only when plausible locations would materially change audience or
+navigation, and keeps new categories, collection entries, and navigation
+branches behind explicit authorization. This is a small authoring decision aid,
+not a new automation workflow.
+
 ## Capability-admission rule
 
 Do not add a new Zensical workflow, integration, or validation control merely

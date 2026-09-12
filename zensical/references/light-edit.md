@@ -11,6 +11,14 @@ local `AGENTS.md`, and the site's existing admonition/tab patterns. Identify
 the canonical navigation and configured base path before changing links or
 routes.
 
+For a new article, also inspect existing collections or section folders and
+their landing pages. Choose the existing category that best matches the
+article's primary reader question, not an incidental source repository or tool
+mentioned in the article. If two placements would materially change its
+audience or navigation, explain the options and ask the user; otherwise make
+the smallest defensible placement. Do not create a category, collection entry,
+or navigation branch without explicit authorization.
+
 ## Make the bounded change
 
 - Change only the requested wording, Markdown, link, front matter, admonition,

@@ -17,6 +17,9 @@ The skill owns repository inspection, presentation syntax, content/navigation
 consistency, link and front-matter checks, builds, rendered-output inspection,
 media and asset behavior, CSS/theme customization, landing pages, bounded
 tracked-file hygiene before authorized publication, and deployment awareness.
+For a new article, it chooses among existing categories from the primary reader
+question and observed navigation conventions; new categories or navigation
+branches remain an explicitly authorized site modification.
 
 It does not define a target's prose craft, article-quality policy, blog voice,
 SEO strategy, generic frontend work, autonomous publishing, or every Zensical

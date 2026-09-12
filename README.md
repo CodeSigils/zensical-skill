@@ -58,7 +58,8 @@ is safe.
 The skill currently routes these tasks:
 
 - inspect an existing Zensical repository and identify its conventions;
-- make an explicitly authorized light Markdown edit;
+- make an explicitly authorized light Markdown edit or place a new article in
+  the best-fitting existing category;
 - review publication-facing structure: navigation, links, front matter,
   headings, admonitions, tabs, and images or embeds, including proportionate
   HTML-media semantics and new-tab link policy;
