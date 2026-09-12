@@ -91,36 +91,11 @@ runtime router selects focused references progressively.
 
 ## What it does not handle
 
-The skill does not define a house voice, a mandatory article formula, SEO
-strategy, generic frontend work, full theme authoring, autonomous publishing
-or deployment, comprehensive WCAG certification, or every Zensical feature.
-Those remain target-specific editorial, presentation, or release capabilities.
-
-## Repository map
-
-```text
-zensical/
-├── SKILL.md                 # portable runtime payload
-├── agents/openai.yaml       # Codex metadata
-├── scripts/                 # bounded runtime checks
-└── references/              # loaded only when a workflow needs detail
-docs/
-├── vision.md                # purpose, boundaries, and quality criteria
-├── roadmap.md               # evidence-gated implementation plan
-├── research.md              # verified sources and comparable patterns
-├── scenarios.md             # bounded real-site acceptance procedures
-└── README.md                # maintainer reading matrix
-tests/fixtures/              # site-only deterministic scenario inputs
-tests/scenario-env/          # locked Zensical test environment
-scripts/run_scenarios.sh     # isolated fixture runner
-AGENTS.md                   # maintainer change contract
-CHANGELOG.md                # project-level history
-LICENSE                     # MIT license
-SECURITY.md                 # reporting and payload boundaries
-```
-
-The runtime payload is under `zensical/`. The `docs/` directory is maintainer
-context and is not loaded as part of the skill.
+The skill can offer optional, target-guidance-first article suggestions, but it
+does not define a house voice, mandatory article formula, SEO strategy, or full
+theme-authoring workflow. It also does not autonomously publish or deploy,
+claim comprehensive WCAG certification, or cover every Zensical feature. Those
+remain target-specific editorial, presentation, or release capabilities.
 
 ## Skill Payload — What Ships to the User
 
@@ -165,6 +140,32 @@ What does not ship in the payload:
 
 Copy the complete `zensical/` directory to preserve reference discovery.
 Everything outside it is repository-only development or acceptance evidence.
+
+## Repository map
+
+```text
+zensical/
+├── SKILL.md                 # portable runtime payload
+├── agents/openai.yaml       # Codex metadata
+├── scripts/                 # bounded runtime checks
+└── references/              # loaded only when a workflow needs detail
+docs/
+├── vision.md                # purpose, boundaries, and quality criteria
+├── roadmap.md               # evidence-gated implementation plan
+├── research.md              # verified sources and comparable patterns
+├── scenarios.md             # bounded real-site acceptance procedures
+└── README.md                # maintainer reading matrix
+tests/fixtures/              # site-only deterministic scenario inputs
+tests/scenario-env/          # locked Zensical test environment
+scripts/run_scenarios.sh     # isolated fixture runner
+AGENTS.md                   # maintainer change contract
+CHANGELOG.md                # project-level history
+LICENSE                     # MIT license
+SECURITY.md                 # reporting and payload boundaries
+```
+
+The runtime payload is under `zensical/`. The `docs/` directory is maintainer
+context and is not loaded as part of the skill.
 
 ## Current state
 
