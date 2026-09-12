@@ -18,9 +18,12 @@ consistency, link and front-matter checks, builds, rendered-output inspection,
 media and asset behavior, CSS/theme customization, landing pages, bounded
 tracked-file hygiene before authorized publication, and deployment awareness.
 
-It does not own prose craft, blog voice, SEO strategy, generic frontend work,
-autonomous publishing, or every Zensical feature. Those capabilities remain
-composable skills or repository-specific guidance.
+It does not define a target's prose craft, article-quality policy, blog voice,
+SEO strategy, generic frontend work, autonomous publishing, or every Zensical
+feature. Those capabilities remain separate workflows or repository-specific
+guidance. When explicitly asked to review an article, it applies the target's
+guidance first and offers portable suggestions; it does not turn them into a
+style system, validation gate, or automatic rewrite.
 
 The Code Sigils blog is an acceptance environment, not a template for other
 sites. Blog-specific editorial conventions remain in the Digital Basement

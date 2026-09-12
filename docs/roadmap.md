@@ -117,6 +117,16 @@ least two tasks repeat the same observable check; it should begin as a
 report-only audit of explicitly named affected pages, not a global linter or
 build blocker.
 
+### Editorial-boundary correction (2026-09-12)
+
+The portable runtime keeps an optional, target-guidance-first article-review
+reference for explicit review requests. It offers portable suggestions about
+clarity, evidence, examples, jargon, links, and durable details without
+carrying a house voice, article formula, SEO strategy, or publication gate.
+Ordinary new-article work remains focused on front matter, headings, links,
+components, media, navigation, and rendered output. This is a scope
+clarification, not a new workflow or automation capability.
+
 ## Capability-admission rule
 
 Do not add a new Zensical workflow, integration, or validation control merely

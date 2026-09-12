@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Clarified optional article review: it follows target-repository guidance and
+  offers portable content suggestions without imposing a voice, article
+  formula, SEO strategy, or publication gate.
+
 - Added the initial portable Zensical maintenance skill: repository inspection,
   bounded light edits and reviews, content components, media, presentation,
   accessibility, validation, and explicit publishing boundaries.

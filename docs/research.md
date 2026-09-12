@@ -710,3 +710,14 @@ rendered-output helper. Only the component task produced a finding, and no
 observable manual check recurred across two tasks. The live-blog repository
 was clean after the reviews; the component repair was committed separately as
 `a7c7e44`.
+
+## Editorial-boundary correction (2026-09-12)
+
+The runtime had a contradiction: it said that prose craft and blog voice were
+outside scope, while routing a generic article-quality review through an
+`editorial-review.md` reference. The replacement is an optional
+`article-review.md` reference used only for explicit review requests. It
+applies the target repository's guidance first and offers portable suggestions
+about clarity, evidence, examples, jargon, links, and durable details; it does
+not carry a voice rubric, article formula, SEO strategy, or publication gate.
+This removes a scope ambiguity without adding a fixture or automation claim.

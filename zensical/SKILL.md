@@ -110,8 +110,10 @@ Choose the smallest applicable workflow:
 - **Review accessibility:** read [references/accessibility.md](references/accessibility.md)
   whenever content, media, components, CSS, templates, or landing pages affect
   names, alternatives, keyboard use, contrast, zoom, or motion.
-- **Review article quality:** read [references/editorial-review.md](references/editorial-review.md)
-  and use its evidence-based finding format.
+- **Review an article draft:** only when explicitly requested, read
+  [references/article-review.md](references/article-review.md). Apply the
+  target's own editorial guidance first; treat the result as suggestions, not
+  validation requirements.
 - **Review admonitions, tabs, links, or navigation:** read
   [references/content-components.md](references/content-components.md).
 - **Review search behavior or exclusions:** inspect the target's native search
@@ -151,9 +153,14 @@ Keep these modes distinct:
 - **Light edit:** make a small requested wording, Markdown, front-matter, link,
   admonition, or tab change. Preserve the page's voice, route, metadata shape,
   and surrounding structure. Do not silently turn it into a rewrite.
-- **Article-quality review:** inspect flow, reader promise, evidence, jargon,
-  links, scope, and durability; report bounded findings. Do not edit unless the
-  user authorizes a revision.
+- **Content-structure review:** inspect front matter, headings, links,
+  components, media, and the rendered route. Follow any target-repository
+  editorial guidance, but report only presentation, integrity, or validation
+  findings; do not judge voice, argument, or article quality.
+- **Article-content review:** only for an explicit article-review request,
+  apply the target's editorial guidance first and offer portable suggestions on
+  clarity, evidence, examples, jargon, links, and durable details. Do not
+  impose a voice, article formula, SEO strategy, or publication gate.
 - **Site modification:** change navigation, configuration, assets, or templates
   only within the explicitly requested scope.
 - **Publish or deploy:** never infer authorization from a successful build.

@@ -59,9 +59,11 @@ The skill currently routes these tasks:
 
 - inspect an existing Zensical repository and identify its conventions;
 - make an explicitly authorized light Markdown edit;
-- review content, navigation, links, front matter, admonitions, tabs, and
-  images or embeds, including proportionate HTML-media semantics and new-tab
-  link policy;
+- review publication-facing structure: navigation, links, front matter,
+  headings, admonitions, tabs, and images or embeds, including proportionate
+  HTML-media semantics and new-tab link policy;
+- provide an optional, target-guidance-first content review when explicitly
+  requested, without imposing a house style or article formula;
 - review responsive CSS, theme overrides, and landing-page conventions;
 - review accessibility concerns across content, media, components, and themes;
 - use a browser for a representative rendered-page check when it is available
@@ -80,17 +82,18 @@ runtime router selects focused references progressively.
 | ------------------------------------------------ | -------------------------------------------- |
 | “Orient me in this Zensical site”                | Site inspection                              |
 | “Make this small Markdown, tab, or link edit”    | Authorized light edit and content components |
-| “Review this article, navigation, or embed”      | Editorial, media, and component review       |
+| “Check article structure, navigation, or embed” | Media and component review                    |
+| “Review this article draft”                      | Optional target-guidance-first content review |
 | “Check accessibility or responsive presentation” | Accessibility and customization review       |
 | “Build and validate this change”                 | Build and rendered-output validation         |
 | “Why did this Zensical build fail?”              | Narrow failure diagnosis                     |
 
 ## What it does not handle
 
-The skill does not own prose craft, blog voice, SEO, generic frontend work,
-full theme authoring, autonomous publishing or deployment, comprehensive WCAG
-certification, or every Zensical feature. Those remain separate editorial,
-presentation, or release capabilities.
+The skill does not define a house voice, a mandatory article formula, SEO
+strategy, generic frontend work, full theme authoring, autonomous publishing
+or deployment, comprehensive WCAG certification, or every Zensical feature.
+Those remain target-specific editorial, presentation, or release capabilities.
 
 ## Repository map
 
@@ -130,9 +133,9 @@ zensical/
 ├── agents/openai.yaml               # optional Codex display metadata
 ├── references/
 │   ├── accessibility.md             # semantic and rendered a11y checks
+│   ├── article-review.md             # optional portable content review
 │   ├── content-components.md        # admonitions, tabs, links, navigation
 │   ├── customization.md             # CSS, themes, templates, landing pages
-│   ├── editorial-review.md          # bounded article-quality review
 │   ├── light-edit.md                # authorized minimal Markdown edits
 │   ├── media.md                     # media, embeds, assets, base paths
 │   ├── site-inspection.md           # repository orientation and preflight
