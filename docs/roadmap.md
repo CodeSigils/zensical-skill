@@ -109,6 +109,12 @@ not yet remove demonstrated repeated work. Freeze new process and reference
 material unless it changes an agent decision or addresses a repeated, testable
 failure.
 
+The live-blog review also exposed a small handoff gap: an agent can finish a
+validated edit without surfacing that the focused diff is ready for an
+authorized commit. The runtime now offers that next step while keeping commit,
+push, publishing, and deployment as separate user-authorized actions. This is
+a handoff correction, not Git automation or a new validation capability.
+
 Consult current official Zensical documentation only for additions,
 integrations, capability proposals, version changes, or genuine uncertainty;
 read the relevant section and target version rather than treating a full-docs

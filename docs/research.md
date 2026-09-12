@@ -89,6 +89,16 @@ commands, configuration, and supported features must be verified separately.
   site or WCAG conformance suite.
 - Public package installation and host-specific smoke checks are deferred.
 
+## Verified-edit handoff (2026-09-12)
+
+During the live Code Sigils BrowserOS guide review, a small, validated media
+markup repair remained in the Git working tree until the maintainer separately
+asked for a commit and push. The durable lesson is a handoff cue, not Git
+automation: after an authorized edit has a focused, validated diff, state that
+it is ready to commit and offer the commit as the next action. Review, build,
+or validation requests still do not authorize a commit; push, publish, and
+deployment remain separately authorized.
+
 ## Browser-rendered accessibility evidence (2026-09-11)
 
 A BrowserOS review of the deployed Code Sigils homepage and OpenCode guide

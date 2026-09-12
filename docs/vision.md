@@ -83,7 +83,9 @@ A workflow is ready to keep when it demonstrates all of the following:
 - Accessibility can support discoverability and reader usability, but remains
   distinct from SEO strategy and ranking claims.
 - **Honest handoff:** the agent reports exact checks, remaining uncertainty,
-  deployment limits, and any human decision still required.
+  deployment limits, and any human decision still required. A focused,
+  validated pending Git diff is identified as ready to commit and offered as a
+  next step, never treated as commit or push authorization.
 - **Maintainability:** references remain discoverable, source dates or versions
   are recorded when volatile, and repeated guidance does not drift across files.
 

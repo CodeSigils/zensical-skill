@@ -72,6 +72,8 @@ The skill currently routes these tasks:
 - run a bounded tracked-file hygiene preflight before authorized commits,
   publishing, or deployment;
 - validate a build and, where feasible, affected rendered output; and
+- identify a focused, validated pending diff as ready to commit and offer that
+  next step, without treating review or validation as Git authorization; and
 - report deployment boundaries and configuration/documentation drift.
 
 ## How to use it

@@ -140,7 +140,9 @@ Choose the smallest applicable workflow:
 6. Validate Markdown structure, links, navigation, and the rendered output
    using the project's own commands where available.
 7. Report changed files, checks run, deployment implications, and remaining
-   version-sensitive uncertainty.
+   version-sensitive uncertainty. When an authorized edit leaves a focused,
+   validated diff in a Git repository, say that it is ready to commit and offer
+   that next step.
 
 For review-only work, do not modify files or claim that a recommendation was
 implemented. Tie every finding to repository evidence and distinguish a broken
@@ -192,6 +194,8 @@ Keep these modes distinct:
 ## Handoff
 
 For a review, report findings with file paths and concrete evidence before
-proposing fixes. For an edit, report the focused change and validation. If a
-source, command, link, or rendering behavior could have drifted, say exactly
-what was verified and what still needs a maintainer's review.
+proposing fixes. For an edit, report the focused change and validation. When a
+validated edit is pending in a Git working tree, offer to commit it; do not
+commit, push, publish, or deploy unless the user separately authorizes each
+action. If a source, command, link, or rendering behavior could have drifted,
+say exactly what was verified and what still needs a maintainer's review.

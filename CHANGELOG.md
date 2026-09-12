@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a verified-edit handoff: focused, validated pending Git changes are
+  identified as ready to commit and the agent offers that next step without
+  inferring commit, push, publish, or deployment authorization.
+
 - Added a narrow new-article placement rule: choose an existing category from
   the primary reader question and request direction only when placement would
   materially change audience or navigation.
