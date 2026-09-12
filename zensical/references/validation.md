@@ -9,9 +9,11 @@ uses the same package manager or output directory.
 2. Run the project's link or Markdown checks if available.
 3. Inspect generated output for the changed page, navigation, admonitions,
    tabs, media assets, embeds, and base-path behavior. For images, verify
-   rendered source paths and alt text; for video/audio/iframes, verify fallback,
-   dimensions, provider boundaries, descriptive iframe titles, and applicable
-   native controls or caption/transcript provision where feasible. For links
+   rendered source paths, alt text, intrinsic dimensions, and a suitable loading
+   decision; inspect `srcset`/`sizes` when variants are supplied. For
+   video/audio/iframes, verify fallback, dimensions, provider boundaries,
+   descriptive iframe titles, and applicable native controls or
+   caption/transcript provision where feasible. For links
    that intentionally open a new tab, verify the project's `noopener` and
    referrer-policy decision rather than auto-adding `noreferrer`.
    For CSS, templates, or landing pages, inspect at least a narrow viewport and

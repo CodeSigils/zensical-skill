@@ -62,7 +62,7 @@ The skill currently routes these tasks:
   the best-fitting existing category;
 - review publication-facing structure: navigation, links, front matter,
   headings, admonitions, tabs, and images or embeds, including proportionate
-  HTML-media semantics and new-tab link policy;
+  HTML-media semantics, performance, and new-tab link policy;
 - provide an optional, target-guidance-first content review when explicitly
   requested, without imposing a house style or article formula;
 - review responsive CSS, theme overrides, and landing-page conventions;
