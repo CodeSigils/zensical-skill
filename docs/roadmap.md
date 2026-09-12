@@ -115,6 +115,12 @@ authorized commit. The runtime now offers that next step while keeping commit,
 push, publishing, and deployment as separate user-authorized actions. This is
 a handoff correction, not Git automation or a new validation capability.
 
+The same maintenance work made documentation freshness concrete: before a
+meaningful handoff, compare current claims with their canonical owners and
+label dated evidence rather than silently treating it as current. Keep this as
+a focused manual check; no freshness linter, score, or schedule is justified
+until repeated drift demonstrates a stable, automatable failure.
+
 Consult current official Zensical documentation only for additions,
 integrations, capability proposals, version changes, or genuine uncertainty;
 read the relevant section and target version rather than treating a full-docs

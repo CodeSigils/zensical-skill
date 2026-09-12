@@ -10,6 +10,8 @@ documents relevant to the proposed change.
 | Media or asset workflow | `vision.md`, `roadmap.md`, `research.md` |
 | CSS, theme, or landing-page workflow | `vision.md`, `roadmap.md`, `research.md` |
 | Accessibility workflow | `vision.md`, `roadmap.md`, `research.md` |
+| Documentation freshness contract | `AGENTS.md`, the canonical owner for each affected claim, and the relevant planning document |
+| Runtime distribution contract | `AGENTS.md`, `release-checklist.md`, and the relevant host-install evidence |
 | Commit or changelog policy | `AGENTS.md`, `README.md`, `release-checklist.md`, `CHANGELOG.md` |
 | Repeated values or centralization | `AGENTS.md`, `vision.md`, `roadmap.md`, `release-checklist.md` |
 | External source or comparable-skill pattern | `research.md`, `vision.md` |

@@ -87,7 +87,9 @@ commands, configuration, and supported features must be verified separately.
 - The independent scenario suite covers tab rendering, reproducible
   accessibility findings, and non-root deployment links; it is not a complete
   site or WCAG conformance suite.
-- Public package installation and host-specific smoke checks are deferred.
+- Direct Skills CLI installation and project-scoped host smoke checks are
+  recorded; public release and long-running host-reload behavior remain
+  unclaimed.
 
 ## Verified-edit handoff (2026-09-12)
 
@@ -746,16 +748,18 @@ next step. A clean Zensical build generated the expected canonical route and
 rendered headings and callout.
 
 This is one successful use, not evidence for a new fixture, automation, or
-generic editorial policy. Browser reading behavior, reader response, and
-publication remain untested at this point.
+generic editorial policy. The article was later published and received a
+bounded rendered BrowserOS inspection; reader response and broad browser
+coverage remain untested.
 
 ## New-article placement field observation (2026-09-12)
 
-The optional article-review field test also required a category decision:
-`agent-instruction-drift.md` belonged in the existing broad `AI/` collection,
-not the nested `AI/OpenCode/` collection, because the reader problem was agent
-instruction maintenance rather than an OpenCode workflow. The resulting build
-placed the page in the `AI` navigation branch. Existing inspection guidance
-mentioned section indexes and navigation but did not state this decision rule,
-so the light-edit reference now makes it explicit. This is one observed
-authoring decision; it does not justify a category classifier or fixture.
+The optional article-review field test also required a category decision. The
+article did not belong in `AI/OpenCode/`, because the reader problem was agent
+instruction maintenance rather than an OpenCode workflow. A later authorized
+navigation change created the target site's `AI/Agent-Work/` subcategory and
+moved the article there; this is now its live placement. Existing inspection
+guidance mentioned section indexes and navigation but did not state the primary
+reader-question rule, so the light-edit reference now makes it explicit. This
+is one observed authoring decision; it does not justify a category classifier
+or fixture.

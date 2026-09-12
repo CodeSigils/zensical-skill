@@ -47,6 +47,11 @@ release guarantee.
 Verify from clean, project-scoped temporary directories. Do not install into a
 working repository and do not infer one host's behavior from another.
 
+The repository's `zensical/` directory remains the source of truth. Installed
+copies are distribution artifacts: after a runtime-payload change, verify or
+refresh one only when active-host use or release evidence requires it. A source
+commit does not prove that an installed copy or running host session updated.
+
 | Host     | Evidence required                                                  | Status                      |
 | -------- | ------------------------------------------------------------------ | --------------------------- |
 | Codex    | Skill is discoverable and all referenced files are present         | Pass (project-scoped smoke) |
@@ -83,7 +88,7 @@ authority. Before announcing discoverability:
 If the provider cannot be queried or the canonical path is stale, report
 discoverability as pending and do not install or recommend the package.
 
-Current evidence (2026-09-10): Skills CLI `1.5.25` ran the documented command
+Recorded evidence (2026-09-10): Skills CLI `1.5.25` ran the documented command
 `npx --yes skills add CodeSigils/zensical-skill --skill zensical --agent codex
 --copy --yes` in an isolated temporary directory. It cloned public
 `CodeSigils/zensical-skill` at `main` ref `23de5a7d01de6467133976cfd9c968b9f7404a6c`,
@@ -98,7 +103,7 @@ returned HTTP 200. The requester verified and closed
 [`vercel-labs/skills#2205`](https://github.com/vercel-labs/skills/issues/2205).
 Skills.sh indexing is now confirmed; public-release claims remain pending.
 
-Current-main package refresh (2026-09-10): Skills CLI `1.5.25` copied
+Latest recorded package refresh (2026-09-10): Skills CLI `1.5.25` copied
 `CodeSigils/zensical-skill@main` at
 `d7ef1e05583593d66e79fce807f38979566f088c` into an isolated
 `.agents/skills/zensical` directory. The installed tree contained all thirteen

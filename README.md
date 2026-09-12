@@ -102,8 +102,9 @@ remain target-specific editorial, presentation, or release capabilities.
 ## Skill Payload — What Ships to the User
 
 Only the `zensical/` directory is the portable Agent Skill payload. It contains
-the router, on-demand references, client metadata, and the bounded tracked-file
-hygiene check.
+the router, on-demand references, client metadata, and two bounded checks: a
+tracked-file hygiene preflight and a conventional deployment-instruction
+contract check.
 
 ```text
 zensical/

@@ -15,6 +15,32 @@ or clearly label the proposed action as provisional. Re-check volatile
 external sources at the point of use. Record the freshness check and any
 intentionally unchanged records in the handoff.
 
+### Documentation freshness contract
+
+Before handing off a meaningful change, perform this small review:
+
+1. Classify affected statements as current claims or dated historical evidence.
+2. Search for repeated affected terms, counts, versions, commands, and status
+   words such as `current`, `latest`, `deferred`, or `pending`.
+3. Compare each current claim with its canonical owner: runtime behavior in
+   `zensical/`, user-facing scope in `README.md`, evidence in the registry or
+   research record, and sequencing in the roadmap.
+4. Revalidate only volatile or decision-critical external facts at the point of
+   use, then record corrected, historical, or intentionally unchanged state.
+
+This contract is a focused manual review, not a freshness score, recurring
+schedule, or documentation linter. Add automation only after repeated,
+observable drift shows that it would remove real maintenance work.
+
+### Runtime distribution contract
+
+The repository's `zensical/` directory is the canonical runtime payload.
+Installed copies are distribution artifacts, not a second source of truth. When
+a change affects that payload, verify or refresh an installed copy only when
+the user requests active-host use or a release/install check requires it;
+otherwise report that existing sessions may still use an older copy. Do not
+assume a source commit updates an installed skill or a running host session.
+
 ## Digital Basement umbrella alignment
 
 When meaningful Zensical-skill work changes its maturity, scope, capability
@@ -125,4 +151,7 @@ changelog.
   evidence.
 - Do not add tests, scripts, or release automation until a repeated workflow
   makes their value concrete.
+- When an authorized edit leaves a focused, validated Git diff, identify it as
+  ready to commit and offer that next step. Do not infer commit, push, publish,
+  or deployment authorization.
 - Do not commit, push, publish, or deploy unless the user authorizes it.

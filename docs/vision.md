@@ -88,6 +88,8 @@ A workflow is ready to keep when it demonstrates all of the following:
   next step, never treated as commit or push authorization.
 - **Maintainability:** references remain discoverable, source dates or versions
   are recorded when volatile, and repeated guidance does not drift across files.
+  Meaningful handoffs distinguish historical evidence from current claims and
+  compare the latter with their canonical owners before introducing automation.
 
 These criteria are acceptance questions, not a numeric score. A workflow may
 need additional domain or presentation checks, but it should not claim broader
@@ -96,8 +98,9 @@ coverage than its evidence supports.
 ## Current status
 
 The initial runtime payload is a usable, actively developed narrow slice for
-its documented maintenance scope. Its three bounded fixtures run through one
-lockfile-pinned scenario environment. It passes the local Agent Skill
+its documented maintenance scope. Its four rendered fixture sites and one
+bounded instruction-contract scenario run through one lockfile-pinned scenario
+environment. It passes the local Agent Skill
 structural validator and the pinned official `skills-ref` validator at
 agentskills commit `69ef37e9424c0a7ea9dd2293b559e43ec8176379`. Clean,
 project-scoped installation smoke checks are recorded for Codex, OpenCode, and

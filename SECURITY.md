@@ -2,11 +2,12 @@
 
 ## Scope
 
-This repository ships Markdown instructions, references, and a bounded shell
-preflight under `zensical/`. It does not ship credentials or a network service.
-Security concerns include malicious or misleading instructions, unsafe commands
-or shell-script changes, prompt-injection content in references, and
-supply-chain changes to the published payload.
+This repository ships Markdown instructions, references, and two bounded local
+checks under `zensical/`: a shell hygiene preflight and a Python
+deployment-instruction contract check. It does not ship credentials or a
+network service. Security concerns include malicious or misleading
+instructions, unsafe commands or script changes, prompt-injection content in
+references, and supply-chain changes to the published payload.
 
 ## Reporting
 
@@ -28,4 +29,4 @@ The skill should request only the filesystem, shell, and network access needed
 for the target repository and current documentation. A successful build is not
 evidence that a deployment or external integration is safe.
 
-Last reviewed: 2026-09-09.
+Last reviewed: 2026-09-12.
