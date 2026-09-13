@@ -119,6 +119,10 @@ Choose the smallest applicable workflow:
 - **Review search behavior or exclusions:** inspect the target's native search
   configuration and current source-registry entry before proposing an external
   search service.
+- **Review release output, sitemap, or canonical URLs:** read
+  [references/validation.md](references/validation.md), inspect the configured
+  `site_url`, and distinguish generated-output integrity from indexing or
+  deployment success.
 - **Build, render, or check a change:** read
   [references/validation.md](references/validation.md).
 - **Diagnose a failure:** inspect the supplied error and repository commands

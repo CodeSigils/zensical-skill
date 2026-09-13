@@ -32,6 +32,24 @@ If a check requires network access, state that dependency. If the build tool is
 unavailable, report the limitation and use static inspection rather than
 inventing a successful result.
 
+## Sitemap and canonical-URL review
+
+Use this focused check only for an explicit release-output, sitemap, or
+canonical-URL request. Inspect the configured `site_url` first; do not add or
+guess a canonical domain, deployment subpath, or `robots.txt` policy.
+
+After an isolated clean build, verify that `site/sitemap.xml` exists, contains
+the intended canonical root and representative affected routes, and retains
+the configured deployment subpath. When the repository has a `robots.txt`,
+verify any sitemap directive agrees with the generated sitemap's canonical
+location. Report a missing file, inconsistent URL, or lost subpath as a
+finding.
+
+This verifies generated static output only. It does not prove that a host
+deployed the files, that a crawler can fetch them, or that a search engine
+accepted or indexed the sitemap. Submit to a search provider, change hosting,
+or edit robots policy only with separate authorization.
+
 ## Deployment boundary
 
 A successful local build proves only that the configured site generated output.

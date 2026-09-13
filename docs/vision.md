@@ -6,6 +6,8 @@
 and validating Zensical static sites. It helps an agent preserve an existing
 site's conventions while using Zensical components such as admonitions and
 content tabs, media assets, and the site's presentation customization safely.
+It is product-facing for current Code Sigils and Digital Basement publishing
+work while deliberately generalizing through proven existing-site workflows.
 
 Related planning documents: [roadmap](roadmap.md) for sequencing and acceptance
 gates, [research](research.md) for current evidence, and
@@ -33,6 +35,13 @@ sites. Blog-specific editorial conventions remain in the Digital Basement
 project; this skill uses them only as test evidence and follows each target
 repository's own conventions.
 
+The intended generic scope is existing-site maintenance, not a claim that
+every feature of Zensical or another generator is available. A future language
+workflow must model Zensical's documented one-canonical-language-per-project
+behavior and alternate deployments, rather than copying Zola's multilingual
+content-routing model. Feed support remains deferred until an upstream-native
+or explicitly owned integration has a real use case.
+
 ## Principles
 
 - Inspect the target repository before assuming its layout or commands.
@@ -53,6 +62,9 @@ repository's own conventions.
   enabled.
 - The skill may mature into a reusable methodology or automation capability,
   but only through that evidence-gated path.
+- Broaden generic coverage one workflow at a time: prove inspection and release
+  evidence on independent repositories before adding authoring/content-model,
+  theme-override, or language-selector guidance.
 
 ## Quality criteria
 
@@ -77,6 +89,10 @@ A workflow is ready to keep when it demonstrates all of the following:
   embeds, CSS/theme overrides, landing-page behavior, and base paths.
   Accessibility evidence must distinguish static inspection from browser or
   assistive-technology testing.
+- **Release discoverability:** when an explicit release review is requested and
+  `site_url` is configured, inspect the generated sitemap and canonical URLs.
+  This is output integrity evidence, not proof of indexing, hosting, or
+  deployment success.
 - **Proportionate semantics:** raw HTML media and intentionally new-tab links
   receive a contextual accessibility, privacy, and behavior review; the skill
   does not auto-apply provider attributes or a global `noreferrer` policy.

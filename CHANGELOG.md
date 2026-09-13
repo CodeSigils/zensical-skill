@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added bounded sitemap and canonical-URL validation for explicit release-output
+  reviews, including a non-root deployment-path fixture and matching robots
+  directive assertion.
+
 - Added a verified-edit handoff: focused, validated pending Git changes are
   identified as ready to commit and the agent offers that next step without
   inferring commit, push, publish, or deployment authorization.

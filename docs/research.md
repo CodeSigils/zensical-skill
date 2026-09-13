@@ -77,6 +77,33 @@ templates, and fixture expectations are not transferable facts.
 These are architectural patterns, not Zensical facts. Zensical-specific syntax,
 commands, configuration, and supported features must be verified separately.
 
+## Independent Zensical skill and target search (2026-09-13)
+
+An authorized independent search used Skills.sh's one-shot CLI with the query
+`zensical` at 2026-09-13T07:35Z. The CLI was not installed; its isolated
+`npx --yes skills find zensical` attempt returned no result output within the
+tool's 30-second window, and the documented Skills.sh API could not be used
+because no Vercel OIDC credential was available. This is a provider limitation,
+not evidence that no Skills.sh result exists.
+
+A canonical-source fallback found `AI-Riksarkivet/ra-skills` commit
+`ac06534f6f98ca55096a9dcbcd76dd9b0403424d` (2026-08-31, Apache-2.0). Its
+`zensical-authoring` and `zensical-setup` payloads are present as standalone
+`SKILL.md` files with valid front matter and no referenced runtime files. They
+are useful comparison material for component examples and setup coverage, but
+they assume broad default configuration and include greenfield/deployment
+recipes; do not install or copy them into this skill. The portable skill's
+target-inspection, authorization, and evidence boundaries remain preferable.
+
+For a second real-site evaluation, the authorized shallow clone of
+`maplibre/martin` at `4f7abb03cb5c02e055aa3214f009d16a9f59ca7a`
+(2026-09-11) is a suitable candidate. It uses a non-root canonical URL,
+explicit navigation, `docs_dir = "docs/content"`, `site_dir = "target/book"`,
+and `custom_dir = "docs/overrides"`. Its observed documentation build command
+uses a Docker image through `just docs-build`; inspect it read-only first and
+do not run containers, alter content, or add a fixture until an authorized
+bounded task identifies a repeatable behavior.
+
 ## Current evidence limits
 
 - The runtime payload passes the local Agent Skill structural validator and the
@@ -90,6 +117,88 @@ commands, configuration, and supported features must be verified separately.
 - Direct Skills CLI installation and project-scoped host smoke checks are
   recorded; public release and long-running host-reload behavior remain
   unclaimed.
+
+## Generic-site expansion baseline (2026-09-13)
+
+The skill is product-facing for Code Sigils and Digital Basement publishing
+work, but its portable scope is intended for existing Zensical sites rather
+than a single blog. Current official Zensical documentation supports a staged
+generic expansion: front matter and the `meta` plugin provide content metadata;
+`custom_dir` and MiniJinja support bounded template overrides; `site_url`
+supports sitemap-dependent navigation features; and language selection supports
+alternate deployment links with `hreflang`.
+
+Important limits were rechecked. Zensical documents one canonical language per
+generated project, so an eventual language workflow must validate multiple
+deployments rather than claim Zola-style translated-content routing. The
+compatibility roadmap still lists RSS as planned; feed generation is not a
+native skill capability. These facts are recorded in the source registry with
+the 2026-09-13 review date.
+
+Decision: retain the existing runtime boundary and add no new router entry,
+automation, or fixture yet. First collect two or three authorized,
+materially different existing-site tasks. A fixture is justified only when one
+of those tasks produces a deterministic, repeated behavior that the current
+suite cannot represent. The roadmap now names the smallest candidate fixture
+shapes and required evidence; this is a planning decision, not an implemented
+authoring, i18n, feed, sitemap, or theme-authoring workflow.
+
+### Sitemap priority update (2026-09-13)
+
+The maintainer identified a sitemap as a concrete next need. Zensical's current
+documentation ties sitemap-dependent navigation features to a configured
+`site_url`. An isolated build of the authorized Code Sigils test blog confirmed
+that its existing `site_url = "https://codesigils.github.io/"` generated
+`site/sitemap.xml` containing 17 canonical routes; the generated `robots.txt`
+retained `Sitemap: https://codesigils.github.io/sitemap.xml`. No source change
+was needed because both settings were already present.
+
+The roadmap therefore promotes a generated `sitemap.xml` plus canonical-URL
+check to the first candidate release-review slice. It remains a target-specific
+field validation, not a portable runtime check or fixture: the next evidence
+must cover an authorized second target or a non-root deployment path. An
+eventual fixture must distinguish generated-output integrity from indexing and
+deployment.
+
+**Implementation update (2026-09-13):** the maintainer explicitly authorized
+the next skill slice. The current source evidence, the successful Code Sigils
+output inspection, and the existing non-root base-path fixture justify a
+bounded sitemap assertion. The runtime now routes explicit sitemap/canonical
+reviews to the validation reference; the fixture asserts canonical root and
+nested URLs and a matching `robots.txt` sitemap directive under `/docs/`.
+It does not test remote availability, provider deployment, or indexing. A
+second real target remains the gate for any broader generic release workflow.
+
+### Second independent release-output target (2026-09-13)
+
+The authorized shallow checkout of `maplibre/martin` at
+`4f7abb03cb5c02e055aa3214f009d16a9f59ca7a` supplied the second target. Its
+configuration is materially different from Code Sigils: source is
+`docs/content`, output is `target/book`, navigation is explicit, templates use
+`custom_dir = "docs/overrides"`, instant navigation is enabled, and the
+configured canonical base is `https://maplibre.org/martin/`. An isolated copy
+built successfully with the repository's documented
+`docker run --rm -v ${PWD}:/docs zensical/zensical:latest build` recipe. The
+pulled image reported digest
+`sha256:254414bbeb4d7a6996bc0c368b846dcdad681a75ae8fd0365b016d4933c9a4eb`;
+because the target uses the mutable `latest` tag, this is evidence for this run
+rather than a reproducible version guarantee.
+
+The generated output contained 63 sitemap locations and 64 HTML pages with a
+canonical URL. Every sitemap location and canonical URL retained `/martin/`.
+The source has a focused `docs/overrides/404.html` that uses `config.site_url`
+for both its `<base>` element and home link; generated output preserved those
+values. Neither source nor output contained `robots.txt`, so no sitemap
+directive was expected or claimed. The original target checkout remained
+clean.
+
+This validates the current explicit sitemap/canonical review on a second real
+target with non-default directories and a deployment subpath. It found no new
+deterministic failure and adds no runtime rule, fixture, authoring workflow,
+override workflow, language workflow, or feed integration. The target's
+`docs/README.md` retains legacy mdBook references (`src` and
+`output.html.redirect`); that is a target documentation-drift observation, not
+evidence about Zensical behavior and was not edited.
 
 ## Verified-edit handoff (2026-09-12)
 

@@ -11,10 +11,12 @@ Zensical Markdown components, navigation, media assets, and presentation
 customization.
 
 This is a usable, actively developed skill for its documented, evidence-backed
-maintenance scope—not a complete Zensical automation suite. The current payload
-is intentionally narrow and is being developed from real maintenance work on
-the Code Sigils blog; rely on its recorded checks, not implied coverage beyond
-them.
+maintenance scope—not a complete Zensical automation suite. It is the current
+product-facing presentation-maintenance tool for Code Sigils and Digital
+Basement publishing work, and is designed to generalize to existing Zensical
+sites as each workflow earns evidence. The current payload is intentionally
+narrow and is being developed from real maintenance work on the Code Sigils
+blog; rely on its recorded checks, not implied coverage beyond them.
 
 It can evolve into a broader methodology or automation capability, but only
 when real use demonstrates value and current official Zensical documentation,
@@ -71,6 +73,8 @@ The skill currently routes these tasks:
   and the requested presentation scope warrants it;
 - run a bounded tracked-file hygiene preflight before authorized commits,
   publishing, or deployment;
+- review generated sitemaps and canonical URLs during an explicit release-output
+  review, without claiming indexing or deployment success;
 - validate a build and, where feasible, affected rendered output; and
 - identify a focused, validated pending diff as ready to commit and offer that
   next step, without treating review or validation as Git authorization; and
@@ -265,9 +269,29 @@ Commit policy is checked with `python3 scripts/check_commit_messages.py`; each
 commit must explain `what:` and `why:` in its body. The changelog is curated and
 does not duplicate the full commit history.
 
-Public distribution and market discoverability are not claimed yet. The
-verification steps are documented in
+Public release, support, and compatibility guarantees are not claimed yet.
+Skills.sh indexing is discoverability evidence, not a release. The verification
+steps are documented in
 [`docs/release-checklist.md`](docs/release-checklist.md).
+
+## Generic-site expansion
+
+Code Sigils is the current product-facing acceptance environment, not a
+template that other sites must follow. The next expansion is to prove the
+existing-site workflow on two or three materially different Zensical
+repositories. Candidate slices are generic content-model/authoring work,
+bounded MiniJinja theme overrides, explicit release review, and a
+multi-deployment language-selector workflow. Each needs a real user request,
+current official evidence, a focused scenario or fixture, and a named
+maintenance owner before it becomes part of the portable payload.
+
+Do not promise Zola-equivalent multilingual content routing or native feeds:
+Zensical currently supports one canonical language per generated project and
+can link alternate-language deployments; its RSS compatibility support remains
+planned. Generated sitemap behavior can be reviewed when `site_url` is
+configured; it is the next planned release-review slice, but it is not
+deployment proof. See the roadmap and source registry for the capability
+boundaries.
 
 ## Roadmap
 

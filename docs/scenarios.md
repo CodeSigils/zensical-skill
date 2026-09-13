@@ -123,5 +123,46 @@ HTML-aware iframe-title assertion. It also requires either `uv` or an exact
 matching `ZENSICAL_BIN`; standard shell tools such as `awk`, `cp`, `mktemp`,
 and `wc` must be available.
 
+## Scenario F — Sitemap and canonical URLs under a deployment subpath
+
+**Purpose:** catch a generated sitemap or `robots.txt` directive that loses a
+configured deployment subpath or disagrees with canonical output.
+
+**Target:** a site with `site_url` containing a path such as `/docs/`, a root
+page, and a nested page.
+
+1. Inspect the configured `site_url` and any source `robots.txt` policy.
+2. Build an isolated copy with the documented command.
+3. Verify `site/sitemap.xml` contains canonical root and nested-route URLs that
+   retain the configured path.
+4. When the repository supplies `robots.txt`, verify its sitemap directive
+   names the same canonical sitemap location.
+
+**Pass evidence:** the generated sitemap and robots directive retain the
+configured deployment path. This proves static output only; it does not prove
+provider deployment, crawler access, or search-engine indexing.
+
+## Planned generic-site fixtures
+
+Do not create these fixtures merely to fill a coverage table. They become
+admissible only after an authorized external-site task demonstrates the same
+deterministic behavior or failure and names a maintainer. When admitted, retain
+only the smallest applicable case:
+
+- **Content-model/authoring:** a new or moved page preserves the observed
+  front-matter shape, route, navigation, tags, and required redirect.
+- **Theme override:** a `custom_dir` block override renders on a representative
+  page without replacing unrelated base-template behavior.
+- **Language selector:** one canonical-language build links correctly to an
+  alternate deployment, including intended `hreflang` and a non-root base path.
+  This is not a translated-content routing fixture.
+- **Release review:** a configured `site_url` generates the expected sitemap
+  entries and canonical URLs. This is now covered by Scenario F's bounded
+  non-root fixture; expand it only after a real target exposes another
+  deterministic sitemap behavior.
+
+Each new fixture must identify the upstream version, source task, expected
+rendered assertion, validation command, and its limits in `research.md`.
+
 Related: [roadmap](roadmap.md), [research](research.md), and the runtime
 [validation reference](../zensical/references/validation.md).

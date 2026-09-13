@@ -148,4 +148,22 @@ else
   exit 1
 fi
 
-printf 'PASS: Zensical scenario builds, rendered tabs, a11y findings, code-line-anchor repair, and base-path link assertions\n'
+sitemap_output="$run_root/base-path-site-output/sitemap.xml"
+if [[ -f "$sitemap_output" ]] \
+  && rg -F '<loc>https://example.test/docs/</loc>' "$sitemap_output" >/dev/null \
+  && rg -F '<loc>https://example.test/docs/about/</loc>' "$sitemap_output" >/dev/null; then
+  printf 'base-path-site: sitemap retains canonical root and nested route under /docs\n'
+else
+  printf 'base-path-site: sitemap missing canonical routes or deployment subpath\n' >&2
+  exit 1
+fi
+robots_output="$run_root/base-path-site-output/robots.txt"
+if [[ -f "$robots_output" ]] \
+  && rg -F 'Sitemap: https://example.test/docs/sitemap.xml' "$robots_output" >/dev/null; then
+  printf 'base-path-site: robots directive advertises canonical sitemap location\n'
+else
+  printf 'base-path-site: robots sitemap directive missing or inconsistent\n' >&2
+  exit 1
+fi
+
+printf 'PASS: Zensical scenario builds, rendered tabs, a11y findings, code-line-anchor repair, base-path links, and sitemap assertions\n'
