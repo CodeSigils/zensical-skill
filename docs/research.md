@@ -200,6 +200,16 @@ override workflow, language workflow, or feed integration. The target's
 `output.html.redirect`); that is a target documentation-drift observation, not
 evidence about Zensical behavior and was not edited.
 
+The target-specific revision, paths, digest, counts, and `/martin/` examples
+remain in this research record and the roadmap/source evidence, not in the
+runtime source registry. This keeps the installed skill target-generic while
+preserving the reproducible maintainer evidence.
+
+The runtime registry boundary was tightened at the same time: it now carries
+only primary-source pointers, review dates or version caveats, and generic
+decision guidance. Target names, local paths, commits, digests, counts, and
+test results are deliberately excluded from the payload and remain here.
+
 ## Verified-edit handoff (2026-09-12)
 
 During the live Code Sigils BrowserOS guide review, a small, validated media

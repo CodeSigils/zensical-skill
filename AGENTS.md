@@ -143,6 +143,16 @@ into release notes. Commit history, research, decisions, and session notes hold
 the detailed implementation and rationale; do not mirror every commit in the
 changelog.
 
+### Runtime source-registry boundary
+
+`zensical/references/source-registry.md` is an agent-facing runtime reference,
+not an experiment log or target inventory. Keep its rows limited to current
+primary-source pointers, review dates or versions, and generic caveats that
+change an agent decision. Do not put repository names, local paths, commits,
+digests, page counts, or test results in it. Record target-specific observations
+and historical evidence in `docs/research.md`, `docs/roadmap.md`, or a linked
+session note instead.
+
 ## Change boundaries
 
 - Keep Zensical-specific implementation separate from editorial voice and

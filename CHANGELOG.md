@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Kept second-target release evidence in maintainer records only; the runtime
+  source registry remains target-generic and contains no MapLibre-specific
+  paths or canonical URLs.
+
+- Tightened the runtime source-registry contract: primary-source pointers and
+  generic caveats belong in the payload; target paths, counts, revisions, and
+  test results belong in maintainer research records.
+
 - Added bounded sitemap and canonical-URL validation for explicit release-output
   reviews, including a non-root deployment-path fixture and matching robots
   directive assertion.
