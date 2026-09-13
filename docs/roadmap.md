@@ -44,9 +44,10 @@ contrast, narrow-view reflow, captions/transcripts, remote-player availability,
 and deployment remain manual or provider-bound checks rather than completion
 claims.
 
-No public release is claimed. Project-scoped host installation smoke checks are
-recorded for Codex, OpenCode, and Hermes, and the public Skills.sh directory
-now indexes the payload; public release remains Phase 3 work.
+Release evidence and project-scoped host installation smoke checks are complete
+for Codex, OpenCode, and Hermes. The public Skills.sh directory now indexes the
+payload, but indexing is distribution evidence only; no maintainer authorization
+for a public release or publication is claimed.
 
 See the [research record](research.md) for the evidence behind this status and
 the [vision](vision.md) for the quality criteria.
@@ -60,8 +61,8 @@ Zensical conformance tool. The maintainer documentation is intentionally more
 rigorous than the current runtime automation, so keep new process and payload
 material only when it changes an agent decision.
 
-Before broadening the payload, exercise it on two or three materially different
-real Zensical maintenance tasks. Record only repeated, concrete gaps. Admit a
+Before broadening the remaining payload, exercise it on two or three materially
+different real Zensical maintenance tasks. Record only repeated, concrete gaps. Admit a
 small rendered-output helper or a new fixture only when such a gap has a stable
 observable behavior and a maintenance owner; otherwise preserve the current
 review guidance and state its limits.
@@ -73,52 +74,49 @@ it, the next form may be a reusable methodology or automation capability—not
 necessarily another reference file—but it must retain explicit validation,
 maintenance ownership, and authorization boundaries.
 
-### Generic existing-site expansion plan (planned)
+### Generic existing-site expansion plan
 
 Keep Code Sigils as the product-facing acceptance environment while proving
 that the portable skill works for generic existing Zensical sites. This is a
 sequence of small workflow admissions, not a promise of Zola feature parity:
 
-1. Run two or three authorized, materially different external-site tasks. At
-   least one should be a content-model or authoring change and one a release or
-   presentation review. Record the target's configuration shape, installed
-   version, commands, result, and unresolved limits.
-2. If a behavior repeats, admit one focused workflow at a time: generic
-   content-model/authoring, bounded MiniJinja/custom-dir overrides, or explicit
-   release review with generated sitemap and canonical-URL checks. Each retains
-   target conventions and separate publication authorization.
-3. Treat language selection as a separate multi-deployment workflow. Zensical
+1. Keep the bounded release-output slice admitted: Code Sigils and MapLibre
+   Martin provide two real target observations for generated sitemap and
+   canonical-URL checks. This proves static output only, not hosting, indexing,
+   or deployment.
+2. For the remaining generic slices, run two or three authorized, materially
+   different external-site tasks. At least one must be a content-model or
+   authoring change and one a theme/presentation review. Record the target's
+   configuration shape, installed version, commands, result, and unresolved
+   limits.
+3. If a remaining behavior repeats, admit one focused workflow at a time:
+   content-model/authoring or bounded MiniJinja/custom-dir overrides. Each
+   retains target conventions and separate publication authorization.
+4. Treat language selection as a separate multi-deployment workflow. Zensical
    documents one canonical language per generated project; do not promise
    Zola-style translated-content routing. Admit it only after a real project
    needs alternate-language links, `hreflang`, and base-path validation.
-4. Keep feeds deferred. The current Zensical compatibility roadmap lists RSS
+5. Keep feeds deferred. The current Zensical compatibility roadmap lists RSS
    as planned, so no native-feed workflow is admitted without upstream support
    or an explicitly authorized, maintained integration.
 
-Fixture planning follows the same gate. Do not pre-create a large matrix. Once
-a real task supplies a deterministic failure or repeated observable behavior,
-add the smallest isolated fixture that proves its repair: content-model route
-and redirect preservation; a custom-dir block override and generated page; a
-language-selector link, `hreflang`, and deployed base path; or a sitemap
-canonical-URL assertion. Record the source version, target evidence, command,
-expected output, owner, and reason the fixture is needed in
-`docs/scenarios.md` and `docs/research.md`.
+Fixture planning follows the same gate. Do not pre-create a large matrix. The
+sitemap/canonical assertion is now an admitted bounded release-output fixture.
+For the remaining slices, add the smallest isolated fixture only when a real
+task supplies a deterministic failure or repeated observable behavior:
+content-model route and redirect preservation; a custom-dir block override and
+generated page; or a language-selector link, `hreflang`, and deployed base path.
+Record the source version, target evidence, command, expected output, owner, and
+reason the fixture is needed in `docs/scenarios.md` and `docs/research.md`.
 
 ### Sitemap priority (2026-09-13)
 
-An explicit sitemap need is now recorded as the first candidate release-review
-slice. The Code Sigils test blog field check passed on 2026-09-13: its existing
+An explicit sitemap need was recorded as the first release-review slice. The
+Code Sigils test blog field check passed on 2026-09-13: its existing
 `site_url` generated `site/sitemap.xml` with 17 canonical routes, and the
-copied `robots.txt` advertised the same sitemap URL. This is one
-target-specific output observation, not generic workflow admission.
-
-Before a portable runtime check or fixture is added, repeat the validation on
-an authorized second target or a target with a deployment subpath. Inspect its
-`site_url`, build an isolated copy, and verify the generated `sitemap.xml`
-contains the expected canonical routes without losing that subpath. Record the
-Zensical version and output assertion in the source and research records. The
-resulting check must report missing or inconsistent output; it must not claim
-that a search engine indexed the sitemap or that hosting deployed it
+copied `robots.txt` advertised the same sitemap URL. The second-target check is
+now complete. The validation reports missing or inconsistent output; it does
+not claim that a search engine indexed the sitemap or that hosting deployed it
 successfully.
 
 **Implementation update (2026-09-13):** the explicit maintainer request, the
@@ -135,10 +133,18 @@ documented Docker build recipe. Its non-default `docs_dir = "docs/content"`,
 generated 63 sitemap locations and 64 canonical-bearing HTML pages, all
 retaining `/martin/`. The target has no source or generated `robots.txt`, so
 that conditional part of Scenario F was correctly not inferred. This confirms
-the existing bounded static-output review across a second real target; it does
-not prove hosting, indexing, or a full generic release workflow, and it does
-not admit authoring, overrides, language selection, or feeds without their
-own target tasks.
+the admitted bounded static-output review across a second real target; it does
+not prove hosting, indexing, or deployment, and it does not admit authoring,
+overrides, language selection, or feeds.
+
+**Content-model trace outcome (2026-09-13):** the same target's
+`quick-start/index.md` was traced from front matter through explicit `nav`,
+relative links, and generated output. The build emitted the expected route and
+all five linked quick-start pages under the configured base path. This confirms
+the review method but found no repeatable Zensical failure; generic authoring
+and content-model workflow admission remains deferred until an authorized
+repair or repeated need appears. A review-only trace is evidence of the review
+method, not evidence of a generic authoring capability.
 
 The evaluation handoff should suggest only the relevant documented Zensical
 sections or capabilities, explain their target-specific fit and trade-offs, and
@@ -265,7 +271,7 @@ inventing site conventions. The workflow must also satisfy the quality
 criteria in [vision.md](vision.md): precise routing, evidence, authorization,
 minimal scope, rendered confidence, and an honest handoff.
 
-## Phase 2 — Component and content-model confidence (substantially proven)
+## Phase 2 — Target-used component and content-model confidence (substantially proven)
 
 - [x] Verify target-used admonitions, content tabs, front matter, navigation,
   base paths, images, local assets, embeds, responsive CSS, landing-page
@@ -314,7 +320,8 @@ CI workflow for each host or copy the skill into host-specific directories.
 ## Deferred
 
 - Full theme authoring or generic frontend work.
-- Generic workflow claims before two or three independent existing-site runs.
+- Generic authoring, content-model, theme-override, or language workflows before
+  their own authorized independent-site evidence and bounded validation.
 - Zola-style multilingual content routing; Zensical language selection needs a
   separate multi-deployment evidence slice.
 - Feed generation until upstream support or an explicitly owned integration is

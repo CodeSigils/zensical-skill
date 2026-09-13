@@ -10,6 +10,10 @@
   generic caveats belong in the payload; target paths, counts, revisions, and
   test results belong in maintainer research records.
 
+- Reconciled roadmap gates: the sitemap/canonical slice is admitted after two
+  target validations, while generic authoring, content-model, theme-override,
+  language, and feed workflows remain separately evidence-gated.
+
 - Added bounded sitemap and canonical-URL validation for explicit release-output
   reviews, including a non-root deployment-path fixture and matching robots
   directive assertion.

@@ -210,6 +210,26 @@ only primary-source pointers, review dates or version caveats, and generic
 decision guidance. Target names, local paths, commits, digests, counts, and
 test results are deliberately excluded from the payload and remain here.
 
+### Second-target content-model trace (2026-09-13)
+
+A review-only trace used MapLibre Martin's `quick-start/index.md`. Its front
+matter supplies only a page icon; the page's relative links to Linux, macOS,
+and Windows are represented by matching entries in the explicit `nav` tree.
+The isolated Zensical build passed, emitted the expected `quick-start/` route,
+and rendered all five linked quick-start routes with canonical URLs under the
+configured deployment path. The generated page also retained the target's
+`lang="en"` marker.
+
+This is positive evidence for a future generic content-model/authoring review:
+inspect front matter, explicit or implicit navigation, relative links, and
+generated routes together. It did not expose a repeatable Zensical failure, so
+no runtime workflow or fixture was added.
+
+The target's `docs/README.md` still says files may only be added and points to
+the mdBook `output.html.redirect` mechanism, but no such file exists in the
+checkout. This is a target documentation-drift finding, not evidence that
+Zensical supports that redirect mechanism; the target was not edited.
+
 ## Verified-edit handoff (2026-09-12)
 
 During the live Code Sigils BrowserOS guide review, a small, validated media
