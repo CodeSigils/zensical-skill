@@ -32,7 +32,7 @@ compatibility. See [release-checklist.md](release-checklist.md).
 The core existing-site workflow has been exercised against the Code Sigils
 blog. Inspection, an authorized tab light edit, navigation and internal-link
 review, media and video review, presentation review, and a structured
-accessibility pass all have recorded evidence in `docs/research.md` and the
+accessibility pass all have recorded evidence in `docs/research/index.md` and the
 Digital Basement session note. The observed tab, accessibility-invocation, and
 non-root-link failures are now covered by a small repeatable fixture suite.
 Further fixture work remains conditional on a real-site gap. The runtime also
@@ -55,7 +55,7 @@ for Codex, OpenCode, and Hermes. The public Skills.sh directory now indexes the
 payload, but indexing is distribution evidence only; no maintainer authorization
 for a public release or publication is claimed.
 
-See the [research record](research.md) for the evidence behind this status and
+See the [research record](research/index.md) for the evidence behind this status and
 the [vision](vision.md) for the quality criteria.
 
 ## Maturity assessment and next evidence gate
@@ -113,7 +113,7 @@ task supplies a deterministic failure or repeated observable behavior:
 content-model route and redirect preservation; a custom-dir block override and
 generated page; or a language-selector link, `hreflang`, and deployed base path.
 Record the source version, target evidence, command, expected output, owner, and
-reason the fixture is needed in `docs/scenarios.md` and `docs/research.md`.
+reason the fixture is needed in `docs/scenarios.md` and `docs/research/index.md`.
 
 ### Sitemap priority (2026-09-13)
 
@@ -180,7 +180,7 @@ The planned three-task run on the live Code Sigils blog is complete: a
 content/component repair, a site-structure review, and a media/accessibility
 review with rendered inspection. The component task found and repaired one
 semantically empty tab group; the other two found no defect. The details and
-limits are recorded in `research.md`.
+limits are recorded in `research/index.md`.
 
 Keep the current playbook; do not add a helper or fixture from this run. No
 observable check recurred across two tasks, so a rendered-output helper would
@@ -217,6 +217,12 @@ carrying a house voice, article formula, SEO strategy, or publication gate.
 Ordinary new-article work remains focused on front matter, headings, links,
 components, media, navigation, and rendered output. This is a scope
 clarification, not a new workflow or automation capability.
+
+Scope extension (2026-09-24): on an explicit user request for a more human
+voice pass, the same article-review reference may load an installed
+community de-slop skill as an additional sentence-level lens, never as a
+gate; this keeps the portable-suggestion framing and adds no workflow or
+automation capability.
 
 ### New-article placement clarification (2026-09-12)
 
@@ -312,7 +318,7 @@ add another fixture only when a real-site run exposes a deterministic gap.
   `npx --yes skills find zensical`, preserve the provider timestamp/result count,
   and compare its candidates with direct repository and documented catalog
   searches. Treat `skills find` as a retrieval signal, not proof of quality or
-  complete indexing. Evidence is recorded in `docs/research.md`; the query
+  complete indexing. Evidence is recorded in `docs/research/index.md`; the query
   returned related candidates but did not surface this repository.
 - [x] Update the skill-discovery workflow to search Skills.sh after local and
   documented catalog sources, while recording unavailable, stale, or
@@ -322,6 +328,11 @@ Keep release verification bounded to Codex, OpenCode, and Hermes. Run one
 shared local validation suite, then one small installation/discoverability
 check per host from an isolated temporary directory. Do not create a separate
 CI workflow for each host or copy the skill into host-specific directories.
+
+A minimal validation gate (commit-message policy and the shared scenario suite)
+now runs in CI on push and pull request against `main` (2026-09-24). It is a
+single host-agnostic workflow, not per-host CI, and it does not change the
+manual release checklist or deploy anything.
 
 ## Deferred
 
@@ -336,6 +347,9 @@ CI workflow for each host or copy the skill into host-specific directories.
 - Deployment automation.
 - A large fixture suite before the first workflow proves what needs testing.
 - Support and CI matrices for agents outside Codex, OpenCode, and Hermes.
+- Automated version-freshness detection (for example a Dependabot flow for the
+  `tests/scenario-env` uv project) while the pin-bump evidence gate remains the
+  manual contract.
 
 ## Independent capability boundary
 

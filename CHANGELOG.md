@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+- Added a minimal validation gate in CI (`validate.yml`: commit-message
+  policy and the shared scenario suite on push and pull request) after the
+  governance audit; GitHub Releases and semver tags stay optional.
+- Moved research records under `docs/research/` and added dated audit records
+  under `docs/reports/`; all references and reading-matrix rows updated.
+
+- Allowed the optional article review to load an installed community de-slop
+  skill as an additional lens when the user explicitly asks for a more human
+  voice pass, always applied at sentence level with the density and quotation
+  caveats; preferred skills and a ranking are recorded in the editorial-voice
+  research.
+
+- Expanded the optional article-review guidance with a compact catalogue of
+  machine-typical prose tells (antithesis inversions, opener tics, filler
+  hedges, formulaic lists, padding tails) plus density and quotation
+  caveats, and recorded the supporting external evidence in a dedicated
+  editorial-voice research file.
+
 - Kept second-target release evidence in maintainer records only; the runtime
   source registry remains target-generic and contains no MapLibre-specific
   paths or canonical URLs.
