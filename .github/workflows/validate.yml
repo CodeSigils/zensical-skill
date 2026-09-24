@@ -1,0 +1,35 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  commit-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Check commit message policy
+        run: |
+          RANGE="${{ github.event.pull_request.base.sha || github.event.before }}..HEAD"
+          if git rev-parse "$RANGE" >/dev/null 2>&1; then
+            python3 scripts/check_commit_messages.py "$RANGE"
+          else
+            echo "::warning::Range $RANGE not resolvable; checking HEAD only"
+            python3 scripts/check_commit_messages.py HEAD
+          fi
+
+  scenarios:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+      - name: Run scenario suite
+        run: bash scripts/run_scenarios.sh

@@ -9,7 +9,7 @@ release guarantee.
 - [ ] `LICENSE` is present and the runtime `SKILL.md` declares the same license.
 - [ ] `SECURITY.md` describes private reporting and payload boundaries.
 - [ ] `CHANGELOG.md` records the user-facing change.
-- [ ] `docs/vision.md`, `docs/roadmap.md`, and `docs/research.md` reflect the
+- [ ] `docs/vision.md`, `docs/roadmap.md`, and `docs/research/index.md` reflect the
       release scope and current evidence.
 - [ ] The source registry has current primary-source dates and version caveats.
 - [ ] No credentials, generated output, agent runtime state, or private data is
@@ -117,6 +117,7 @@ project-path smoke evidence rather than an inferred host-loader claim.
 
 The handoff must include the source ref, validation commands and outcomes,
 host matrix, marketplace status, known limitations, and the next review trigger
-(for example, a Zensical upgrade or provider contract change). GitHub Releases,
-semver tags, and CI automation are optional until the manual process becomes a
-demonstrated bottleneck.
+(for example, a Zensical upgrade or provider contract change). A minimal
+validation gate (`validate.yml`: commit-message policy and the shared scenario
+suite) runs on push and pull request; GitHub Releases and semver tags remain
+optional until the manual process becomes a demonstrated bottleneck.
