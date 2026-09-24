@@ -428,6 +428,39 @@ than adding another tell list:
 The runtime reference stays a compact principle; exhaustive tell lists remain in
 the installed lens and in this file.
 
+## Fourth published-article pass: Oh My OpenAgent Guide (2026-09-24)
+
+The optional article-review workflow was tested against the Code Sigils
+`oh-my-opencode-guide.md` (title: "Oh My OpenAgent Guide"), a 1,463-word
+technical decision guide. Target guidance describes the desired voice as calm,
+practical, curious, and human; the pass identified that profile before making
+any findings.
+
+The tell-family coverage was clean: no stacked rhetorical questions, opener
+tics, filler hedges, formulaic three-part clusters, copula avoidance,
+present-participle padding, or performed-authenticity tells. The article's
+inline negative contrasts are load-bearing decision criteria, so they stayed.
+The installed `drunkrhin0/antislop` checkout at `c65cd6b` still surfaced its
+absolute em-dash rule; most dashes were annotated link descriptions, and the
+two sentence-internal dashes fit the target's voice. They were correctly
+treated as an `over-correction`, not a cleanup target.
+
+The pass produced three small maintenance edits rather than a rewrite:
+
+- Replaced the vague claim that a large MCP catalogue consumes "significant
+  context" with OpenCode's concrete warning that it can exceed the context
+  limit.
+- Replaced six redirecting `developers.openai.com/codex/` links with their
+  canonical `learn.chatgpt.com/docs/` destinations.
+- Updated the article's review date after revalidating the upstream project,
+  its installation guide, OpenCode's MCP documentation, and the redirected
+  Codex pages.
+
+This is evidence that the voice-profile and coverage-line additions work as
+intended: they preserve a strong target voice, make no tell-family omission
+invisible, and let factual/link maintenance emerge separately from style.
+It does not justify another runtime change or a scoring gate.
+
 ## Sources
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
