@@ -4,6 +4,12 @@ The roadmap is evidence-gated. A phase is complete when the workflow works on
 the target blog and its limits are documented—not when every possible feature
 has a placeholder.
 
+Every consequential implementation, research, review, or validation action
+must read this roadmap before acting and revisit it afterward. Update the
+affected gate when status, evidence, sequencing, scope, or a deferred decision
+changes; otherwise record that the roadmap was intentionally left unchanged.
+Review-only evidence must not be described as implementation.
+
 ## Priority order
 
 1. **Prove the core workflow:** existing-site inspection, one light edit, and

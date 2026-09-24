@@ -15,6 +15,17 @@ or clearly label the proposed action as provisional. Re-check volatile
 external sources at the point of use. Record the freshness check and any
 intentionally unchanged records in the handoff.
 
+### Roadmap after-action gate
+
+For every consequential implementation, research, review, or validation
+action, read `docs/roadmap.md` before acting and identify the active phase or
+gate it may affect. After the action, reopen the roadmap and compare the
+result with that gate. Update the roadmap in the same work session when the
+action changes status, evidence, sequencing, scope, or a deferred decision.
+If it changes none of those, state explicitly in the handoff that the roadmap
+was revisited and intentionally left unchanged. Never leave a completed gate
+described as pending, or treat a review-only result as an implementation.
+
 ### Documentation freshness contract
 
 Before handing off a meaningful change, perform this small review:

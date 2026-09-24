@@ -14,6 +14,10 @@
   target validations, while generic authoring, content-model, theme-override,
   language, and feed workflows remain separately evidence-gated.
 
+- Added a mandatory project-agent roadmap after-action gate for consequential
+  work: agents must read the roadmap before acting, revisit it afterward, and
+  record either the updated gate or an intentional no-change decision.
+
 - Added bounded sitemap and canonical-URL validation for explicit release-output
   reviews, including a non-root deployment-path fixture and matching robots
   directive assertion.
