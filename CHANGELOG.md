@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Refined the optional article review with three light behavioral guards
+  borrowed from community de-slop skills: an over-correction guard, an
+  authority-precedence rule for conflicting guidance, and second-generation
+  "performed authenticity" tells; the sources and non-adopted heavy
+  techniques are recorded in the editorial-voice research.
+- Trimmed the `README.md` positioning paragraph to its scope statement,
+  removing the product-facing/Code Sigils-and-Digital-Basement framing.
 - Added a minimal validation gate in CI (`validate.yml`: commit-message
   policy and the shared scenario suite on push and pull request) after the
   governance audit; GitHub Releases and semver tags stay optional.

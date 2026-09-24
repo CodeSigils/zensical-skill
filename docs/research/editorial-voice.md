@@ -185,6 +185,30 @@ sentence level with the density rule: a skill is a lens, not a gate.
    voice and substantive editorial judgment with the target repository's
    own policy and the user.
 
+## Adopted guidance (2026-09-24)
+
+After inspecting the cloned skills above, three light behavioral ideas were
+adopted into the runtime article-review reference — framing, not new tell
+lists:
+
+- Over-correction guard — from `crypdick/unslop` ("Avoid over-correction",
+  "Unslop ≠ minimize", "Preserve voice and register"): removing connectives,
+  flattening register, or deleting structure that serves the content can read
+  worse than the tell it removed. Pair it with "rewrite, don't just swap
+  words."
+- Authority precedence — from `drunkrhin0/antislop` `profiles.md` and
+  `preservation-contract.md`: target's published rules, then the user's
+  explicit instruction, then a supplied sample, then defaults; a sample lends
+  style traits only, never facts or experiences.
+- Second-generation "performed authenticity" tells — from
+  `wernerkasselman-au/llm-tips` §5.14: philosophical mic drops, forced casual
+  asides, and invented informality, the overshoot when prose is pushed to
+  "sound human."
+
+Deliberately not adopted: absolute bans, numeric gates and risk scores, and
+bundled detector scripts — they conflict with the portable, opt-in,
+non-gating boundary in [vision](../vision.md).
+
 ## Sources
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)

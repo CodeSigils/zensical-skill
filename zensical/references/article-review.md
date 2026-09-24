@@ -5,6 +5,11 @@ article draft. Read and follow any editorial guidance in the target repository
 first. This is a portable suggestion pass, not a house style, an SEO formula,
 or a publication gate.
 
+When guidance conflicts, follow the target repository's published editorial
+rules first, then the user's explicit instruction, then a supplied writing
+sample, then general defaults. A writing sample lends style traits only; it
+never supplies facts, claims, or experiences.
+
 Check only what fits the article's purpose and form:
 
 - a clear reader purpose or question;
@@ -21,8 +26,10 @@ Check only what fits the article's purpose and form:
   "—the thing is—"); filler hedges ("It's worth noting", "That said",
   "At the end of the day"); colon- and dash-heavy constructions that
   manufacture a reveal; formulaic three-part lists; scope inflation
-  ("Beyond X"); copula avoidance ("serves as" for "is") and
-  present-participle padding tails ("...highlighting the importance of").
+  ("Beyond X"); copula avoidance ("serves as" for "is"); present-participle
+  padding tails ("...highlighting the importance of"); and second-generation
+  "performed authenticity" tells (philosophical mic drops, forced casual
+  asides, invented informality).
   Judge density, not single instances: flag clusters, repetition, and
   mismatch with the surrounding voice; never rewrite a phrase that is
   quoted, titled, or under discussion; a contrast that genuinely rules
@@ -35,7 +42,11 @@ additional lens. Apply it at sentence level, never as a gate; its phrase
 lists are triage, and the density rule and quotation caveat above still
 govern. Prefer skills with exception discipline: load-bearing contrasts
 are legitimate, and one flagged word proves nothing. Keep the author's
-voice, structure, facts, and uncertainty; report, do not rewrite.
+voice, structure, facts, and uncertainty; report, do not rewrite. The
+opposite failure counts too: stripping connectives, flattening register, or
+deleting structure that serves the content can read worse than the tell it
+removed. Prefer a rewrite that states the concrete fact over a word swap,
+and never add slang, typos, or invented personality to sound human.
 
 Do not require a fixed opening, conclusion, point of view, length, heading
 pattern, callout, keyword, FAQ, or metadata field. Do not invent experiences,
