@@ -75,7 +75,7 @@ Before handoff, update every affected planning document or state why it remains
 unchanged. Search for duplicate guidance and drift between `SKILL.md`,
 references, and planning documents before adding a new rule.
 
-Keep `docs/research.md` active rather than archival: every entry must have a
+Keep `docs/research/index.md` active rather than archival: every entry must have a
 current purpose, source/date, or explicit historical disposition. Promote only
 evidence that informs a workflow, decision, or roadmap gate; move detailed
 session chronology to a session note and mark superseded claims instead of
@@ -89,7 +89,7 @@ quality criteria, update the relative records in the same work session:
 - `README.md` when discoverable scope or user-facing capability changes;
 - `docs/vision.md` for boundaries or quality criteria;
 - `docs/roadmap.md` for sequencing or acceptance expectations;
-- `docs/research.md` and the source registry for new evidence or volatile
+- `docs/research/index.md` and the source registry for new evidence or volatile
   claims;
 - the affected `zensical/references/` file for operational detail; and
 - `CHANGELOG.md` for a user-visible capability change.
@@ -161,7 +161,7 @@ not an experiment log or target inventory. Keep its rows limited to current
 primary-source pointers, review dates or versions, and generic caveats that
 change an agent decision. Do not put repository names, local paths, commits,
 digests, page counts, or test results in it. Record target-specific observations
-and historical evidence in `docs/research.md`, `docs/roadmap.md`, or a linked
+and historical evidence in `docs/research/index.md`, `docs/roadmap.md`, or a linked
 session note instead.
 
 ## Change boundaries

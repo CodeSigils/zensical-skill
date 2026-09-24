@@ -6,9 +6,9 @@ superseded, mark the version/date and explain whether it was replaced, retained
 as historical context, or removed. Keep detailed dated execution notes in the
 related session record; keep this document concise enough to re-check.
 
-Related documents: [vision](vision.md), [roadmap](roadmap.md),
-[documentation index](README.md), and the
-[source registry](../zensical/references/source-registry.md).
+Related documents: [vision](../vision.md), [roadmap](../roadmap.md),
+[documentation index](../README.md), and the
+[source registry](../../zensical/references/source-registry.md).
 
 ## Link effectiveness evidence
 
@@ -26,6 +26,15 @@ provide a useful cross-project reference. The transferable rules are:
 These are maintenance patterns, not universal Zensical behavior. Apply them
 proportionately to the target repository and record the target's actual link
 checker and deployment behavior.
+
+## Machine-typical prose tells and editorial voice (2026-09-24)
+
+Community tell catalogues and practitioner editorial-voice practices are
+recorded in the dedicated [editorial-voice research](editorial-voice.md)
+file, created because no prior human-voice entry existed. Purpose: supporting
+evidence for the portable prose-tell guidance in the optional article-review
+reference. Disposition: active; recheck the linked community sources if the
+checklist families are revisited.
 
 ## Evaluation: lightweight article link manifests
 
@@ -110,7 +119,8 @@ bounded task identifies a repeatable behavior.
   pinned official `skills-ref` validator at agentskills commit
   `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
 - The initial fixture scenarios run in isolated temporary copies through the
-  committed, lockfile-pinned Zensical `0.0.60` scenario environment.
+  committed, lockfile-pinned Zensical `0.0.64` scenario environment (pin in
+  `tests/scenario-env/pyproject.toml`).
 - The independent scenario suite covers tab rendering, reproducible
   accessibility findings, and non-root deployment links; it is not a complete
   site or WCAG conformance suite.

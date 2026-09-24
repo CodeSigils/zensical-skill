@@ -4,7 +4,7 @@ This is a compact runtime reference for current primary sources. Each row must
 provide a source, review date or version, and a caveat that changes an agent's
 decision. Keep it target-generic: do not add repository names, local paths,
 commits, digests, page counts, or test results here. Put target-specific
-observations and historical evidence in `docs/research.md` and the roadmap.
+observations and historical evidence in `docs/research/index.md` and the roadmap.
 
 Update this registry when a primary-source route, version-sensitive fact, or
 generic validation caveat changes—not merely because another site was tested.
