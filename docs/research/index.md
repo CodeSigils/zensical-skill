@@ -36,6 +36,17 @@ evidence for the portable prose-tell guidance in the optional article-review
 reference. Disposition: active; recheck the linked community sources if the
 checklist families are revisited.
 
+## Agent-skill structure and packaging conventions (2026-09-24)
+
+The agentskills specification, the skills.sh CLI contract, the
+`agents/openai.yaml` convention, and our own payload's status against each
+are recorded in the dedicated
+[skill-structure-conventions research](skill-structure-conventions.md) file.
+Purpose: re-verifiable reference for `SKILL.md` frontmatter and payload
+layout decisions, including the 2026-09-24 `compatibility` top-level fix.
+Disposition: active; recheck against the pinned commits listed in its
+Sources when the payload structure is next revised.
+
 ## Evaluation: lightweight article link manifests
 
 The proposed middle ground is worth keeping as an evaluation, but not as a

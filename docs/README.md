@@ -16,6 +16,7 @@ documents relevant to the proposed change.
 | Repeated values or centralization | `AGENTS.md`, `vision.md`, `roadmap.md`, `release-checklist.md` |
 | External source or comparable-skill pattern | `research/index.md`, `vision.md` |
 | Editorial voice or prose-tell guidance | `research/editorial-voice.md`, `research/index.md`, `vision.md` |
+| Skill packaging, frontmatter, or payload contract | `research/skill-structure-conventions.md`, `research/index.md`, `release-checklist.md` |
 | Sequencing or release gate | `roadmap.md`, `vision.md` |
 | Acceptance scenario or fixture | `scenarios.md`, `roadmap.md`, `research/index.md` |
 | Distribution or compatibility | `vision.md`, `roadmap.md`, `research/index.md`, `release-checklist.md` |

@@ -7,6 +7,10 @@
   governance audit; GitHub Releases and semver tags stay optional.
 - Moved research records under `docs/research/` and added dated audit records
   under `docs/reports/`; all references and reading-matrix rows updated.
+- Recorded the agentskills specification and skills.sh CLI packaging
+  conventions (frontmatter contract, payload layout, `agents/openai.yaml`
+  scope, and our payload's status) in a dedicated
+  `docs/research/skill-structure-conventions.md` reference.
 
 - Allowed the optional article review to load an installed community de-slop
   skill as an additional lens when the user explicitly asks for a more human
