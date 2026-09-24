@@ -232,6 +232,34 @@ ban. The article-review reference now suggests keeping dash density low and
 reserving em-dashes for genuine asides, since a dash that only joins two
 clauses usually reads the same with a comma or a period.
 
+## Second review pass: coverage check (2026-09-24)
+
+A checklist pass with the article-review guidance was run over a second
+published article (`agent-memory-surfaces.md`, 1,291-word prose body), this
+time applying the tell families as a coverage list instead of reading only
+the lens output.
+
+- Dash density: about eleven body em-dashes (roughly one per 117 words),
+  mostly joining two clauses or opening an appositive — the case the
+  dash-density guidance targets. Four or five could become a comma, colon,
+  or period.
+- `comprehensive` (line 51) is on the antislop forbidden list but used
+  precisely, in a deliberate contrast with "well-understood"; optional.
+- The five-beat anaphora and "Nothing preserves *why*." are deliberate and
+  on-voice; keep.
+- The antithesis / inversion family: no period-stopped reveals. Only inline
+  `X, not Y` contrasts, all load-bearing (a map not a benchmark; words not
+  understanding; position not just size). One, "it records what was said,
+  not what was understood", was softened to "it keeps the words and loses
+  the understanding behind them" for consistency.
+
+Coverage lesson: the first pass over this article reported only the lens's
+scored findings and missed the inversion family until asked. A pass should
+walk every tell family in the article-review checklist and report each as
+found or none, so omissions are visible. This is a review-procedure
+observation, not yet a change to the runtime guidance; the editorial charter
+asks for several observations before a process rule changes.
+
 ## Sources
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)

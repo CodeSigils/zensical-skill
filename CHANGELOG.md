@@ -13,6 +13,9 @@
   published article and added a light dash-density suggestion to the optional
   article review: keep dash density low and reserve em-dashes for genuine
   asides. Absolute em-dash bans stay rejected.
+- Recorded a second article-review pass and its coverage lesson (walk every
+  tell family and report each as found or none) in the editorial-voice
+  research.
 - Trimmed the `README.md` positioning paragraph to its scope statement,
   removing the product-facing/Code Sigils-and-Digital-Basement framing.
 - Added a minimal validation gate in CI (`validate.yml`: commit-message
