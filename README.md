@@ -11,12 +11,7 @@ Zensical Markdown components, navigation, media assets, and presentation
 customization.
 
 This is a usable, actively developed skill for its documented, evidence-backed
-maintenance scope—not a complete Zensical automation suite. It is the current
-product-facing presentation-maintenance tool for Code Sigils and Digital
-Basement publishing work, and is designed to generalize to existing Zensical
-sites as each workflow earns evidence. The current payload is intentionally
-narrow and is being developed from real maintenance work on the Code Sigils
-blog; rely on its recorded checks, not implied coverage beyond them.
+maintenance scope—not a complete Zensical automation suite.
 
 It can evolve into a broader methodology or automation capability, but only
 when real use demonstrates value and current official Zensical documentation,
