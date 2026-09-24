@@ -9,6 +9,15 @@
   honor and improve the author's voice rather than replace it. The sources
   and non-adopted heavy techniques are recorded in the editorial-voice
   research.
+- Recorded how each downloaded community de-slop skill approaches the problem,
+  what is adoptable without heavy lifting, and how to use a lens without
+  replacing the author's voice; flagged a possible lightweight
+  `editorial-voice` skill as a future, undecided proposal.
+- Combed two published articles with the antislop lens and the article-review
+  tell families, and recorded the emerging patterns and voice suggestions
+  (dash density is the only recurring scored item; structural uniformity
+  across the three notes is the pattern to watch) in the editorial-voice
+  research.
 - Recorded a real audit pass with the installed community de-slop lens over a
   published article and added a light dash-density suggestion to the optional
   article review: keep dash density low and reserve em-dashes for genuine

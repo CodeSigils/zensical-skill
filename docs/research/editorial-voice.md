@@ -260,6 +260,155 @@ found or none, so omissions are visible. This is a review-procedure
 observation, not yet a change to the runtime guidance; the editorial charter
 asks for several observations before a process rule changes.
 
+## Structured passes: memory-surfaces and awesome-list (2026-09-24)
+
+Two published articles were combed with the same two-lens workflow: first the
+installed `drunkrhin0/antislop` audit lens, then the article-review tell
+families walked as a coverage list, plus the dash-density guidance and the
+target's editorial charter.
+
+`agent-memory-surfaces.md` (1,288-word prose body; 11 body em-dashes, about
+one per 108 words):
+
+- antislop: Formulaic Writing Risk Score about 80/100. The scored items were
+  the em-dashes and one `comprehensive` (line 52), used precisely against
+  "well-understood". No banned phrases, no opener, filler, copula, or
+  participle tells, output integrity clean.
+- Tell families: no period-stopped inversions; four load-bearing inline
+  `X, not Y` contrasts (map not benchmark; words not understanding; snapshot
+  not the system; position not just size). No stacked questions, opener tics,
+  or filler hedges. A few natural tricolons (preferences/corrections/identity;
+  versions/links/APIs).
+- Target guidance: point of view present, examples real and linked with
+  reasons, one admonition used as a signpost, reflective close.
+
+`agent-maintained-awesome-list.md` (2,241-word prose body; 22 body em-dashes,
+about one per 100 words):
+
+- antislop: Formulaic Writing Risk Score about 86/100. The scored items were
+  the em-dashes only. No banned vocabulary or phrases, output integrity clean.
+- Tell families: no period-stopped inversions; one load-bearing "not because
+  X, but because Y" (line 243); benign "rather than" and "instead of". One
+  single rhetorical question as a section lead (line 140). No opener tics or
+  filler hedges. The closing three-part parallel ("whether its checks fail
+  closed...; whether its state files...; and whether its freshness ritual...")
+  is the closest thing to a formulaic three-part list.
+- Target guidance: concrete real-repository examples with annotated links,
+  visible judgement, honest framing, one admonition.
+
+## Emerging patterns and voice suggestions (2026-09-24)
+
+Across the three Agent-Work notes (drift 92/100; memory about 80/100;
+awesome-list about 86/100):
+
+1. Dash density is the only recurring scored item. Every article sits near one
+   em-dash per 100-120 words; the lens flags all of them and our light
+   guidance targets the clause-joining ones. This is the one place worth
+   spending editing effort.
+2. No false positives anywhere. The lens never invented a vocabulary, phrase,
+   opener, filler, copula, or participle finding on our prose; its only
+   over-fire is the absolute em-dash rule.
+3. Load-bearing contrasts recur and are legitimate. Inline `X, not Y` is a
+   house habit, not a tell, and stays protected.
+4. Punchy short declaratives ("Nothing preserves *why*.", "And false
+   confidence compounds.") are deliberate and unflagged.
+5. Structural uniformity is the emerging voice risk. All three notes share the
+   same skeleton: an opening hook, body sections, a `!!! tip` near the close, a
+   "## What I look for now" three-item list, "## Related reading", and a
+   reflective last line. The editorial charter names repeated headings and
+   predictable callout placement as a uniformity smell, so this is the pattern
+   to watch.
+
+Suggestions for the voice guidance (proposals, not yet adopted):
+
+- Vary the closing shape. The "## What I look for now" plus three-item formula
+  has now appeared three times; the next article should close differently or
+  drop it.
+- Vary or omit the admonition when it is not a genuine signpost, rather than
+  placing one near the close by habit.
+- Treat dash density as a soft target (roughly under one em-dash per 150
+  words) and prefer a comma or colon for a dash that only joins two clauses.
+- Keep walking every tell family and reporting each as found or none, so the
+  pass stays complete.
+
+## How the downloaded skills approach the problem (2026-09-24)
+
+Detail behind the ranking above — each skill's actual method, read from the
+cloned checkouts (community tooling, reviewed 2026-09-24):
+
+- `drunkrhin0/antislop` — a mode-routed system. It declares an activation
+  boundary (prose artifacts only; not code, config, data, or facts), then
+  routes between a writing mode and an audit mode. Audit mode produces a
+  Formulaic Writing Risk Score out of 100 with a violations table and a
+  separate output-integrity check, and states plainly that it cannot prove AI
+  authorship. Its load-bearing ideas are its rules precedence (voice wins,
+  structure outranks word swaps, positive guidance outranks a single ban), its
+  preservation contract (a Draft/Revise/Audit/Transform edit-authority model
+  that forbids strengthening claims or certainty beyond the source), and its
+  `over-correction` status for cases where applying a rule would flatten valid
+  voice. Its heavy parts are the score, the large reference and eval payload,
+  and its absolute zero-em-dash rule.
+- `crypdick/unslop` — a copyeditor's process. It keeps strong exception
+  discipline ("Unslop ≠ minimize"; "a single em dash in a paragraph is fine"),
+  rewrites rather than swapping words, and runs a private second pass. Its
+  maxims are concrete editing moves (say it straight, name actors and
+  mechanisms, let things be small, use "is" and "has", cut scaffolding, do not
+  hedge-stack, let paragraphs breathe). Its heavy part is a bundled Python
+  detector.
+- `jalaalrd/anti-ai-slop-writing` — a prescriptive directive. It carries a
+  large banned list, punctuation quotas, structural bans, a "what to do
+  instead" section, and an explicit voice-calibration step ("match *their*
+  voice"). The calibration idea is adoptable; the absolute bans and quotas are
+  the heavy, over-firing parts.
+- `wernerkasselman-au/llm-tips` — an evidence-cited policy. Each rule names an
+  authority, and its §5.14 names the second-generation tells that appear when
+  prose is pushed to "sound human" (philosophical mic drops, forced casual
+  asides). Its numeric gates and absolute bans are the heavy parts.
+
+## Adoptable without heavy lifting
+
+The ideas worth taking are framing and edit discipline, not tooling:
+
+| Idea | Source | Why it is cheap |
+|---|---|---|
+| Preservation contract — keep claims, facts, quotes, numbers, attribution; never strengthen certainty | antislop | A rule about what not to change; no payload |
+| Rules precedence — voice > structure > word choice | antislop | Three lines; already implied by target-guidance-first |
+| "Rewrite, don't swap words" | unslop | One instruction; prevents cosmetic edits |
+| Over-correction guard | unslop | One instruction; already adopted |
+| Voice calibration — match the author's register | anti-ai-slop-writing | Already the authority-precedence rule |
+| Performed-authenticity tells | llm-tips | One tell family; already adopted |
+
+Deliberately left out (heavy lifting for little gain): risk scores, numeric
+gates, absolute bans, bundled detector scripts, and large reference or eval
+payloads.
+
+## Using a lens without replacing the author's voice
+
+The line between "a lens" and "a rewriter" is the whole point:
+
+- Follow the target repository's published rules first, then the user's
+  instruction, then a supplied sample, then defaults.
+- Treat every finding as a candidate, reported with
+  `severity | path | evidence | reader impact | suggestion | validation`; the
+  author decides.
+- Judge density, not single instances; leave quoted, titled, and load-bearing
+  material alone.
+- Never add slang, typos, or invented personality to "sound human."
+- Keep the lens optional and sentence-level; it is a second opinion, never a
+  gate or an automatic rewrite.
+
+## Possible separate editorial-voice skill (proposal, not decided)
+
+A lightweight `editorial-voice` skill could wrap the best community lens plus
+the portable principle above, so the capability travels to repositories that
+are not Zensical sites. It would stay a thin orchestrator: read the target's
+guidance, optionally load an installed lens, apply the density rule and
+preservation contract, and report suggestions without rewriting. It must not
+reimplement tell lists or impose a house voice, or it duplicates the seven
+community skills already recorded here. Per the capability-admission rule it
+still needs a bounded fixture and a named owner, so this is flagged as a
+future decision, not adopted.
+
 ## Sources
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
