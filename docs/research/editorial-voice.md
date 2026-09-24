@@ -209,6 +209,29 @@ Deliberately not adopted: absolute bans, numeric gates and risk scores, and
 bundled detector scripts — they conflict with the portable, opt-in,
 non-gating boundary in [vision](../vision.md).
 
+## Real-world audit pass (2026-09-24)
+
+The installed `drunkrhin0/antislop` lens (registry 3.0.0) was run in audit
+mode over a published article (`agent-instruction-drift.md`, 978-word prose
+body) to inspect behavior, not to gate. Its Formulaic Writing Risk Score was
+92/100; the only scored findings were four em-dashes from its zero-em-dash
+house rule. Vocabulary and phrase rules produced no false positives, and
+output integrity was clean.
+
+Two conclusions:
+
+- The lens is precise on clean, specific prose: it invented no findings and
+  left the article's load-bearing contrast and quoted terms alone.
+- Its absolute formatting rule conflicts with our house style. The four
+  em-dashes are legitimate, so under antislop's own `over-correction` status
+  they are not defects. This confirms the decision not to adopt absolute
+  bans.
+
+Adopted from the pass: a light, density-based dash preference rather than a
+ban. The article-review reference now suggests keeping dash density low and
+reserving em-dashes for genuine asides, since a dash that only joins two
+clauses usually reads the same with a comma or a period.
+
 ## Sources
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
