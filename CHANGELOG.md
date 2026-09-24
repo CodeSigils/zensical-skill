@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added two procedural steps to the optional article review: a voice-profile
+  step that names the voice traits to honor before flagging anything, and a
+  coverage line that reports every tell family as found or none. The evidence is
+  recorded in the editorial-voice research.
 - Refined the optional article review with three light behavioral guards
   borrowed from community de-slop skills: an over-correction guard, an
   authority-precedence rule for conflicting guidance, and second-generation

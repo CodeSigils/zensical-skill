@@ -409,6 +409,25 @@ community skills already recorded here. Per the capability-admission rule it
 still needs a bounded fixture and a named owner, so this is flagged as a
 future decision, not adopted.
 
+## Runtime guidance promoted (2026-09-24)
+
+Two procedural ideas from this research were promoted into the runtime
+article-review reference, because they change how a review is conducted rather
+than adding another tell list:
+
+- **Voice-profile step** — before flagging anything, name the voice traits worth
+  keeping (formality, rhythm, punctuation habits, and whether warmth or humor is
+  genuine) from the draft and any supplied sample, and state them in the report.
+  This makes "honor and improve" actionable; it borrows the voice-calibration
+  idea from `jalaalrd/anti-ai-slop-writing` and the sample-lends-traits-only rule
+  from `drunkrhin0/antislop`.
+- **Coverage line** — walk every tell family and report each as found or none.
+  This promotes the coverage lesson recorded after the second review pass, where
+  the antithesis family was missed until it was asked about.
+
+The runtime reference stays a compact principle; exhaustive tell lists remain in
+the installed lens and in this file.
+
 ## Sources
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)

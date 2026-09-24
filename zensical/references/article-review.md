@@ -10,6 +10,11 @@ rules first, then the user's explicit instruction, then a supplied writing
 sample, then general defaults. A writing sample lends style traits only; it
 never supplies facts, claims, or experiences.
 
+Before flagging anything, characterize the voice already present: name the
+traits worth keeping — formality, rhythm, punctuation habits, and whether
+warmth or humor is genuine — from the draft and any supplied sample, and state
+them in the report. The aim is to improve that voice, not replace it.
+
 Check only what fits the article's purpose and form:
 
 - a clear reader purpose or question;
@@ -64,3 +69,6 @@ Use `blocker` only for a concrete correctness or broken-route problem,
 `warning` for a material clarity, evidence, or maintenance risk, and `note`
 for a bounded improvement. For review-only work, report suggestions without
 editing.
+
+Walk every tell family above and report each as found or none; a family with
+no instances is a result worth stating, not silence.
