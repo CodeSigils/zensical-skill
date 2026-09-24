@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-expected_version="0.0.60"
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 fixture_root="$repo_root/tests/fixtures"
 scenario_root="$repo_root/tests/scenario-env"
+expected_version="$(sed -n 's/^dependencies = \["zensical==\([^"]*\)"\]$/\1/p' "$scenario_root/pyproject.toml")"
+[[ -n "$expected_version" ]] || {
+  printf 'Could not read expected Zensical version from %s\n' "$scenario_root/pyproject.toml" >&2
+  exit 1
+}
 run_root="$(mktemp -d "${TMPDIR:-/tmp}/zensical-skill-scenarios.XXXXXX")"
 trap 'rm -rf "$run_root"' EXIT
 

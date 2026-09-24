@@ -159,8 +159,11 @@ zensical/
 docs/
 ├── vision.md                # purpose, boundaries, and quality criteria
 ├── roadmap.md               # evidence-gated implementation plan
-├── research.md              # verified sources and comparable patterns
+├── research/
+│   ├── index.md             # verified sources and comparable patterns
+│   └── editorial-voice.md   # human editorial voice and AI-tell research
 ├── scenarios.md             # bounded real-site acceptance procedures
+├── reports/                 # dated governance audits and implementation records
 └── README.md                # maintainer reading matrix
 tests/fixtures/              # site-only deterministic scenario inputs
 tests/scenario-env/          # locked Zensical test environment
@@ -191,8 +194,8 @@ context and is not loaded as part of the skill.
 - The repository is licensed under MIT and has a security reporting policy.
 - The initial workflows are acceptance-tested against the Code Sigils Zensical
   blog; its editorial conventions are not part of the portable payload.
-- The initial fixtures run through a lockfile-pinned Zensical `0.0.60`
-  scenario environment.
+- The initial fixtures run through a lockfile-pinned Zensical `0.0.64`
+  scenario environment (pin in `tests/scenario-env/pyproject.toml`).
 - The scenario suite covers tab rendering, reproducible accessibility findings,
   and non-root deployment links; it is not a complete site or WCAG conformance
   suite.

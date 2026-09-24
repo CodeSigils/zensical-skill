@@ -90,8 +90,9 @@ not validate arbitrary YAML workflows, deployment success, or host state.
 **Purpose:** catch the rendered accessibility regression where highlighted code
 lines emit empty, zero-width anchor links that keyboard users must tab through.
 
-**Target:** a minimal site with Zensical's 0.0.60 Markdown-extension defaults
-made explicit, `pymdownx.highlight.line_spans = "__span"`, and
+**Target:** a minimal site with Zensical's pinned Markdown-extension defaults
+(the `zensical` pin in `tests/scenario-env/pyproject.toml`) made explicit,
+`pymdownx.highlight.line_spans = "__span"`, and
 `pymdownx.highlight.anchor_linenums = false`.
 
 1. Build an isolated fixture containing a highlighted multi-line code block.
@@ -162,7 +163,7 @@ only the smallest applicable case:
   deterministic sitemap behavior.
 
 Each new fixture must identify the upstream version, source task, expected
-rendered assertion, validation command, and its limits in `research.md`.
+rendered assertion, validation command, and its limits in `research/index.md`.
 
-Related: [roadmap](roadmap.md), [research](research.md), and the runtime
+Related: [roadmap](roadmap.md), [research](research/index.md), and the runtime
 [validation reference](../zensical/references/validation.md).
