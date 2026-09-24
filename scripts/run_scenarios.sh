@@ -68,7 +68,7 @@ else
     log="$run_root/$(basename "$fixture")-uv.log"
     if ! UV_CACHE_DIR="$run_root/uv-cache" uv run --locked --project "$scenario_root" --directory "$work" zensical build --clean >"$log" 2>&1; then
       cat "$log" >&2
-      if rg -qi 'pypi|dns|network|fetch|resolution' "$log"; then
+      if grep -qiE 'pypi|dns|network|fetch|resolution' "$log"; then
         printf 'Environment blocked dependency acquisition; rerun with ZENSICAL_BIN or restore package access.\n' >&2
         exit 2
       fi
@@ -87,20 +87,20 @@ done
 
 tab_output="$run_root/tabbed-site-output/index.html"
 for label in npm pnpm Yarn Bun; do
-  rg -F "$label" "$tab_output" >/dev/null
+  grep -Fq -- "$label" "$tab_output"
 done
-tab_count="$(rg -o 'data-tabs="[^"]+"' "$tab_output" | wc -l)"
+tab_count="$(grep -oE 'data-tabs="[^"]+"' "$tab_output" | wc -l)"
 if [[ "$tab_count" -lt 1 ]]; then
   printf 'tabbed-site: no rendered tab group found\n' >&2
   exit 1
 fi
-panel_count="$(rg -o '<div class="tabbed-block">' "$tab_output" | wc -l)"
+panel_count="$(grep -oF '<div class="tabbed-block">' "$tab_output" | wc -l)"
 if [[ "$panel_count" -ne 4 ]]; then
   printf 'tabbed-site: expected 4 non-empty tab panels; found %s\n' "$panel_count" >&2
   exit 1
 fi
 for command_name in npm pnpm yarn bun; do
-  if ! rg -F "$command_name" "$tab_output" >/dev/null; then
+  if ! grep -Fq -- "$command_name" "$tab_output"; then
     printf 'tabbed-site: rendered panel missing command: %s\n' "$command_name" >&2
     exit 1
   fi
@@ -108,7 +108,7 @@ done
 printf 'tabbed-site: rendered tab group with four non-empty alternatives\n'
 
 a11y_output="$run_root/accessibility-site-output/index.html"
-if ! rg -F '<iframe ' "$a11y_output" >/dev/null; then
+if ! grep -Fq '<iframe ' "$a11y_output"; then
   printf 'accessibility-site: iframe fixture missing from output\n' >&2
   exit 1
 fi
@@ -119,7 +119,7 @@ else
   printf 'accessibility-site: expected 3 missing iframe titles; found %s\n' "$missing_title_count" >&2
   exit 1
 fi
-if rg -F 'Example video' "$a11y_output" >/dev/null && rg -F 'Whitespace title' "$a11y_output" >/dev/null; then
+if grep -Fq 'Example video' "$a11y_output" && grep -Fq 'Whitespace title' "$a11y_output"; then
   printf 'accessibility-site: correctly titled iframe controls remain valid\n'
 else
   printf 'accessibility-site: positive iframe-title control missing\n' >&2
@@ -127,25 +127,25 @@ else
 fi
 
 code_anchor_output="$run_root/code-anchor-site-output/index.html"
-if ! rg -F 'id="__span-0-1"' "$code_anchor_output" >/dev/null; then
+if ! grep -Fq 'id="__span-0-1"' "$code_anchor_output"; then
   printf 'code-anchor-site: rendered line spans are missing\n' >&2
   exit 1
 fi
-if rg -F '<a id="__codelineno-' "$code_anchor_output" >/dev/null; then
+if grep -Fq '<a id="__codelineno-' "$code_anchor_output"; then
   printf 'code-anchor-site: empty code-line anchors remain in rendered output\n' >&2
   exit 1
 fi
 printf 'code-anchor-site: retained line spans without focusable code-line anchors\n'
 
 base_output="$run_root/base-path-site-output/index.html"
-if rg -F 'href="about/"' "$base_output" >/dev/null && [[ -f "$run_root/base-path-site-output/about/index.html" ]]; then
+if grep -Fq 'href="about/"' "$base_output" && [[ -f "$run_root/base-path-site-output/about/index.html" ]]; then
   printf 'base-path-site: generated relative link resolves under /docs deployment path\n'
 else
   printf 'base-path-site: generated link lost configured deployment path\n' >&2
   exit 1
 fi
 about_output="$run_root/base-path-site-output/about/index.html"
-if rg -F 'href="./.."' "$about_output" >/dev/null; then
+if grep -Fq 'href="./.."' "$about_output"; then
   printf 'base-path-site: nested page links back to home under deployment path\n'
 else
   printf 'base-path-site: nested page lost its home link\n' >&2
@@ -154,8 +154,8 @@ fi
 
 sitemap_output="$run_root/base-path-site-output/sitemap.xml"
 if [[ -f "$sitemap_output" ]] \
-  && rg -F '<loc>https://example.test/docs/</loc>' "$sitemap_output" >/dev/null \
-  && rg -F '<loc>https://example.test/docs/about/</loc>' "$sitemap_output" >/dev/null; then
+  && grep -Fq '<loc>https://example.test/docs/</loc>' "$sitemap_output" \
+  && grep -Fq '<loc>https://example.test/docs/about/</loc>' "$sitemap_output"; then
   printf 'base-path-site: sitemap retains canonical root and nested route under /docs\n'
 else
   printf 'base-path-site: sitemap missing canonical routes or deployment subpath\n' >&2
@@ -163,7 +163,7 @@ else
 fi
 robots_output="$run_root/base-path-site-output/robots.txt"
 if [[ -f "$robots_output" ]] \
-  && rg -F 'Sitemap: https://example.test/docs/sitemap.xml' "$robots_output" >/dev/null; then
+  && grep -Fq 'Sitemap: https://example.test/docs/sitemap.xml' "$robots_output"; then
   printf 'base-path-site: robots directive advertises canonical sitemap location\n'
 else
   printf 'base-path-site: robots sitemap directive missing or inconsistent\n' >&2

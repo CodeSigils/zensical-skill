@@ -379,7 +379,8 @@ under the configured `/docs/` deployment path. The strengthened suite passed
 with the pinned Zensical `0.0.60` package loaded from the local uv cache via
 `ZENSICAL_BIN`; no network or source-site mutation was required. The iframe
 assertion now uses Python's HTML parser, so it does not require `rg` PCRE2
-support; `rg` remains a general runner prerequisite.
+support; `rg` remained a general runner prerequisite until the 2026-09-24
+switch to portable `grep`.
 
 This improves regression confidence for the three observed boundaries without
 claiming complete tab, accessibility, or deployment coverage.

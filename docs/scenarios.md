@@ -119,7 +119,7 @@ The runner resolves all scenarios through the committed
 only site inputs. If dependency acquisition is unavailable, the runner reports
 an environment block rather than a fixture failure. Use an already-installed
 matching binary through `ZENSICAL_BIN` when offline validation is authorized.
-The runner requires Bash, `rg`, and `python3` for its shell checks and
+The runner requires Bash, `grep`, and `python3` for its shell checks and
 HTML-aware iframe-title assertion. It also requires either `uv` or an exact
 matching `ZENSICAL_BIN`; standard shell tools such as `awk`, `cp`, `mktemp`,
 and `wc` must be available.
