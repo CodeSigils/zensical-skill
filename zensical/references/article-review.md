@@ -11,7 +11,10 @@ Check only what fits the article's purpose and form:
 - understandable flow and proportionate structure;
 - useful examples, observations, or decision criteria where they help;
 - factual support, attribution, and clearly framed uncertainty;
-- jargon explained where it becomes necessary; and
+- jargon explained where it becomes necessary;
+- machine-typical prose patterns reworded toward a more natural human style
+  when the user asks for it, such as the period-stopped inversion "It was not
+  X. It was Y." — usually one flowing sentence carries the same idea; and
 - purposeful links and volatile details that need a source, date, or caveat.
 
 Do not require a fixed opening, conclusion, point of view, length, heading
