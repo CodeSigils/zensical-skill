@@ -157,21 +157,25 @@ zensical/
 ├── scripts/                 # bounded runtime checks
 └── references/              # loaded only when a workflow needs detail
 docs/
-├── vision.md                # purpose, boundaries, and quality criteria
-├── roadmap.md               # evidence-gated implementation plan
+├── vision.md                        # purpose, boundaries, and quality criteria
+├── roadmap.md                       # evidence-gated implementation plan
 ├── research/
-│   ├── index.md             # verified sources and comparable patterns
-│   └── editorial-voice.md   # human editorial voice and AI-tell research
-├── scenarios.md             # bounded real-site acceptance procedures
-├── reports/                 # dated governance audits and implementation records
-└── README.md                # maintainer reading matrix
-tests/fixtures/              # site-only deterministic scenario inputs
-tests/scenario-env/          # locked Zensical test environment
-scripts/run_scenarios.sh     # isolated fixture runner
-AGENTS.md                   # maintainer change contract
-CHANGELOG.md                # project-level history
-LICENSE                     # MIT license
-SECURITY.md                 # reporting and payload boundaries
+│   ├── index.md                     # verified sources and comparable patterns
+│   ├── editorial-voice.md           # human editorial voice and AI-tell research
+│   └── skill-structure-conventions.md # agentskills/skills.sh packaging contract
+├── scenarios.md                     # bounded real-site acceptance procedures
+├── release-checklist.md             # release gate and recorded evidence
+├── reports/                         # dated governance audits and implementation records
+└── README.md                        # maintainer reading matrix
+tests/fixtures/                      # site-only deterministic scenario inputs
+tests/scenario-env/                  # locked Zensical test environment
+scripts/
+├── check_commit_messages.py         # commit subject and what:/why: policy
+└── run_scenarios.sh                 # isolated fixture runner
+AGENTS.md                            # maintainer change contract
+CHANGELOG.md                         # project-level history
+LICENSE                              # MIT license
+SECURITY.md                          # reporting and payload boundaries
 ```
 
 The runtime payload is under `zensical/`. The `docs/` directory is maintainer
@@ -197,8 +201,8 @@ context and is not loaded as part of the skill.
 - The initial fixtures run through a lockfile-pinned Zensical `0.0.64`
   scenario environment (pin in `tests/scenario-env/pyproject.toml`).
 - The scenario suite covers tab rendering, reproducible accessibility findings,
-  and non-root deployment links; it is not a complete site or WCAG conformance
-  suite.
+  code-line-anchor repair, non-root deployment links, and sitemap/canonical
+  assertions; it is not a complete site or WCAG conformance suite.
 - The runner distinguishes dependency/network blocks from fixture failures and
   accepts an installed matching binary through `ZENSICAL_BIN`.
 - The runtime payload includes a no-secret-output hygiene preflight for common
@@ -252,12 +256,17 @@ conventional documented deployment section with its workflow. None proves
 deployment success, player behavior, remote-link availability, or full
 accessibility conformance.
 
+The commit-policy check and the scenario suite also run in CI
+([`.github/workflows/validate.yml`](.github/workflows/validate.yml)) on every
+push and pull request against `main`; Dependabot watches the pinned workflow
+actions. The gate runs checks, not a deployment.
+
 ## Primary references
 
 - [Zensical documentation](https://zensical.org/docs/)
 - [Admonitions](https://zensical.org/docs/authoring/admonitions/)
 - [Content tabs](https://zensical.org/docs/authoring/content-tabs/)
-- [Agent Skills specification](https://github.com/agentskills/agentskills/blob/main/docs/specification.mdx)
+- [Agent Skills specification](https://agentskills.io/specification)
 - [Zola skill architectural reference](https://github.com/CodeSigils/zola-skill)
 
 The source registry in

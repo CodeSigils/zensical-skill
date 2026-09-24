@@ -6,11 +6,18 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 .pyright/
+.pytype/
+.dmypy.json
+.hypothesis/
 .uv-cache/
 .cache/
+.pip-wheel-metadata/
 .npm/
 .pnpm-store/
 .yarn/
+.eslintcache
+.stylelintcache
+.sass-cache/
 node_modules/
 
 # Build, render, and coverage artifacts
@@ -41,15 +48,30 @@ ENV/
 !.env.*.sample
 !.env.template
 !.env.*.template
+.envrc
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
 *.pem
 *.key
 *.p12
 *.pfx
 *.kdbx
+*.jks
+*.keystore
+*.der
+*.p8
+*.asc
 credentials*.json
 secrets*.json
+secrets.yaml
+secrets.yml
+service-account*.json
 .npmrc
 .pypirc
+.netrc
+.htpasswd
 
 # Editor and operating-system files
 .DS_Store
@@ -58,6 +80,17 @@ secrets*.json
 ._*
 .vscode/
 .idea/
+.fleet/
+.zed/
+.helix/
+.settings/
+.project
+.classpath
+.dir-locals.el
+Session.vim
+.netrwhist
+*.sublime-project
+*.sublime-workspace
 tmp/
 .tmp/
 *.log
@@ -77,3 +110,8 @@ Thumbs.db
 .opencode/
 .open-mem/
 .omo/
+.windsurf/
+.cline/
+.continue/
+.roo/
+.aider*

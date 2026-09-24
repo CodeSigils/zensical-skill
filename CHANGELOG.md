@@ -5,12 +5,17 @@
 - Added a minimal validation gate in CI (`validate.yml`: commit-message
   policy and the shared scenario suite on push and pull request) after the
   governance audit; GitHub Releases and semver tags stay optional.
+- Made the scenario runner and its assertions use portable `grep` instead of
+  `rg`, so the validation gate needs no extra host tooling beyond `uv`.
 - Moved research records under `docs/research/` and added dated audit records
   under `docs/reports/`; all references and reading-matrix rows updated.
 - Recorded the agentskills specification and skills.sh CLI packaging
   conventions (frontmatter contract, payload layout, `agents/openai.yaml`
   scope, and our payload's status) in a dedicated
   `docs/research/skill-structure-conventions.md` reference.
+- Refreshed `README.md` (repository map, scenario coverage, CI gate note, and
+  canonical specification link), added a `docs/roadmap.md` revision history, and
+  hardened `.gitignore` with cache, secret, and IDE/agent-artifact patterns.
 
 - Allowed the optional article review to load an installed community de-slop
   skill as an additional lens when the user explicitly asks for a more human

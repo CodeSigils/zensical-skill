@@ -10,6 +10,8 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
+Last reviewed: 2026-09-24.
+
 ## Priority order
 
 1. **Prove the core workflow:** existing-site inspection, one light edit, and
@@ -332,7 +334,9 @@ CI workflow for each host or copy the skill into host-specific directories.
 A minimal validation gate (commit-message policy and the shared scenario suite)
 now runs in CI on push and pull request against `main` (2026-09-24). It is a
 single host-agnostic workflow, not per-host CI, and it does not change the
-manual release checklist or deploy anything.
+manual release checklist or deploy anything. The runner and its scenario
+assertions use only portable shell tools (`grep`, `python3`, `awk`, `cp`,
+`mktemp`, `wc`), so the gate needs no additional host tooling beyond `uv`.
 
 ## Deferred
 
@@ -360,3 +364,12 @@ workflow, current primary-source evidence, a bounded behavior scenario, and a
 maintenance owner. Candidate future slices include navigation feature
 interactions, MkDocs compatibility, workspace watch/symlink behavior, and theme
 customization; each remains deferred until real work requires it.
+
+## Revision history
+
+- 2026-09-24: Recorded the minimal CI validation gate and portable `grep`
+  runner, the Zensical version-pin canonicalization and `0.0.64` bump, the
+  research/reports directory restructure, and the skill-structure conventions
+  record; added the deferred automated version-freshness item.
+- 2026-09-12: Added the editorial-boundary correction and new-article placement
+  clarification, and admitted the optional article-review reference.
