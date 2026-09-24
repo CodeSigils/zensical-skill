@@ -2,9 +2,9 @@
 name: zensical
 description: "Review, lightly edit, and validate existing Zensical static sites: inspect their configuration and content model, check Markdown components, links, accessibility, media, builds, and bounded deployment concerns. Use for concrete Zensical repository work; not for generic prose writing, frontend development, or autonomous publishing."
 license: MIT
+compatibility: "Requires filesystem and shell access; Zensical is required for build validation; network is needed only for current documentation and external-link checks."
 metadata:
   short-description: "Maintain Zensical sites safely"
-  compatibility: "Requires filesystem and shell access; Zensical is required for build validation; network is needed only for current documentation and external-link checks."
   keywords:
     - zensical
     - static-site-generator
