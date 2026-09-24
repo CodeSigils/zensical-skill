@@ -13,9 +13,29 @@ Check only what fits the article's purpose and form:
 - factual support, attribution, and clearly framed uncertainty;
 - jargon explained where it becomes necessary;
 - machine-typical prose patterns reworded toward a more natural human style
-  when the user asks for it, such as the period-stopped inversion "It was not
-  X. It was Y." — usually one flowing sentence carries the same idea; and
+  when the user asks for it. Families worth flagging when they cluster:
+  negative-antithesis inversions ("It was not X. It was Y.", "Not just X,
+  but Y", "It's not about X, it's about Y", "The answer is not X — it's Y",
+  "X isn't just A; it's B"); stacked rhetorical questions; opener tics
+  ("Imagine...", "Let's...", "In this article...", "Here's the thing",
+  "—the thing is—"); filler hedges ("It's worth noting", "That said",
+  "At the end of the day"); colon- and dash-heavy constructions that
+  manufacture a reveal; formulaic three-part lists; scope inflation
+  ("Beyond X"); copula avoidance ("serves as" for "is") and
+  present-participle padding tails ("...highlighting the importance of").
+  Judge density, not single instances: flag clusters, repetition, and
+  mismatch with the surrounding voice; never rewrite a phrase that is
+  quoted, titled, or under discussion; a contrast that genuinely rules
+  out a specific alternative is load-bearing, not a tell; and
 - purposeful links and volatile details that need a source, date, or caveat.
+
+When the user explicitly asks for a more human voice pass and a community
+de-slop skill is installed in the environment, it may be loaded as an
+additional lens. Apply it at sentence level, never as a gate; its phrase
+lists are triage, and the density rule and quotation caveat above still
+govern. Prefer skills with exception discipline: load-bearing contrasts
+are legitimate, and one flagged word proves nothing. Keep the author's
+voice, structure, facts, and uncertainty; report, do not rewrite.
 
 Do not require a fixed opening, conclusion, point of view, length, heading
 pattern, callout, keyword, FAQ, or metadata field. Do not invent experiences,
