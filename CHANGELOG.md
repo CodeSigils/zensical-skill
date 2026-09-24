@@ -5,8 +5,14 @@
 - Refined the optional article review with three light behavioral guards
   borrowed from community de-slop skills: an over-correction guard, an
   authority-precedence rule for conflicting guidance, and second-generation
-  "performed authenticity" tells; the sources and non-adopted heavy
-  techniques are recorded in the editorial-voice research.
+  "performed authenticity" tells; it now also states that the lens should
+  honor and improve the author's voice rather than replace it. The sources
+  and non-adopted heavy techniques are recorded in the editorial-voice
+  research.
+- Recorded a real audit pass with the installed community de-slop lens over a
+  published article and added a light dash-density suggestion to the optional
+  article review: keep dash density low and reserve em-dashes for genuine
+  asides. Absolute em-dash bans stay rejected.
 - Trimmed the `README.md` positioning paragraph to its scope statement,
   removing the product-facing/Code Sigils-and-Digital-Basement framing.
 - Added a minimal validation gate in CI (`validate.yml`: commit-message

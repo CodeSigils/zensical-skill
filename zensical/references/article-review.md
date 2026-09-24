@@ -41,12 +41,15 @@ de-slop skill is installed in the environment, it may be loaded as an
 additional lens. Apply it at sentence level, never as a gate; its phrase
 lists are triage, and the density rule and quotation caveat above still
 govern. Prefer skills with exception discipline: load-bearing contrasts
-are legitimate, and one flagged word proves nothing. Keep the author's
-voice, structure, facts, and uncertainty; report, do not rewrite. The
+are legitimate, and one flagged word proves nothing. Honor the author's
+voice and improve it rather than replace it; keep the structure, facts,
+and uncertainty; report, do not rewrite. The
 opposite failure counts too: stripping connectives, flattening register, or
 deleting structure that serves the content can read worse than the tell it
 removed. Prefer a rewrite that states the concrete fact over a word swap,
-and never add slang, typos, or invented personality to sound human.
+and never add slang, typos, or invented personality to sound human. Keep
+dash density low: an em-dash that only joins two clauses usually reads the
+same with a comma or a period, so reserve dashes for genuine asides.
 
 Do not require a fixed opening, conclusion, point of view, length, heading
 pattern, callout, keyword, FAQ, or metadata field. Do not invent experiences,
