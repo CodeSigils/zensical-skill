@@ -31,7 +31,8 @@ When a repository documents deployment in `AGENTS.md` and uses
 `.github/workflows/docs.yml`, compare the documented trigger paths and build
 commands with the workflow before a deployment-sensitive change. The bundled
 check covers the observed lockfile-backed Zensical contract without reading or
-printing secrets:
+printing secrets. Run it from the skill root — the directory containing
+`SKILL.md` (`zensical/` in this repository, or the installed skill directory):
 
 ```bash
 python3 scripts/check_instruction_contract.py /path/to/site
@@ -44,7 +45,9 @@ documentation-drift finding, not proof that the workflow itself is broken.
 ## Sensitive-material preflight
 
 Before an authorized commit, publish, or deployment action in a Git repository,
-run the bundled check from the skill directory:
+run the bundled check from the skill root (the directory containing
+`SKILL.md` — `zensical/` in this repository, or the installed skill
+directory):
 
 ```bash
 bash scripts/check_site_hygiene.sh /path/to/site

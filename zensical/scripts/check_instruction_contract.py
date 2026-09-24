@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Check documented Zensical deployment instructions against a docs workflow."""
+"""Check a *target site's* documented Zensical deployment instructions against
+its docs workflow. This validates the conventional `docs.yml` lockfile-backed
+contract on repositories the skill inspects; it does not validate this skill
+repository's own deployment (this repo has no such workflow)."""
 
 from __future__ import annotations
 
