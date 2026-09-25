@@ -251,6 +251,22 @@ the mdBook `output.html.redirect` mechanism, but no such file exists in the
 checkout. This is a target documentation-drift finding, not evidence that
 Zensical supports that redirect mechanism; the target was not edited.
 
+### Second-target theme-override trace (2026-09-25)
+
+A separate review-only trace inspected MapLibre Martin's configured
+`custom_dir = "docs/overrides"` and its focused `404.html` template. The
+template extends `main.html`, sets a page-specific title, uses `config.site_url`
+for both `<base>` and the home link, and retains the target's `.html`-to-slash
+redirect script.
+
+The target's documented Docker build completed with `No issues found`; the
+`zensical/zensical:latest` image reported version `0.0.61` immediately after
+the build. Generated `target/book/404.html` retained the configured
+`https://maplibre.org/martin/` base URL, home link, title, and redirect script.
+The checkout remained clean. This is one external presentation/override
+observation, not evidence that a generic override workflow or fixture should be
+admitted: no target change or repeatable failure was involved.
+
 ## Verified-edit handoff (2026-09-12)
 
 During the live Code Sigils BrowserOS guide review, a small, validated media

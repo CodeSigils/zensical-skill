@@ -154,6 +154,13 @@ and content-model workflow admission remains deferred until an authorized
 repair or repeated need appears. A review-only trace is evidence of the review
 method, not evidence of a generic authoring capability.
 
+**Theme/override trace outcome (2026-09-25):** the same target's
+`custom_dir` and focused 404 template were inspected and built successfully.
+The rendered page retained its configured `/martin/` base URL, home link,
+page-specific title, and `.html`-to-slash redirect behavior. This supplies one
+external presentation/override observation, but no target repair or repeated
+failure; generic customization workflow and fixture admission remain deferred.
+
 The evaluation handoff should suggest only the relevant documented Zensical
 sections or capabilities, explain their target-specific fit and trade-offs, and
 name any validation needed. It must not substitute a feature catalog for a
