@@ -267,6 +267,23 @@ The checkout remained clean. This is one external presentation/override
 observation, not evidence that a generic override workflow or fixture should be
 admitted: no target change or repeatable failure was involved.
 
+### Third-target hand-curated API trace (2026-09-25)
+
+A clean AI Riksarkivet ra-mcp checkout at `37137a1303cf1eee9d6221ec9478ca161f2f10d6`
+provided a second, materially different target. Its explicit `API → Search`
+navigation entry maps to the hand-curated `docs/api/search.md`; the target
+deliberately omits mkdocstrings directives because its recorded compatibility
+failure leaves pages empty.
+
+The locked command `uv run --locked --group docs zensical build --clean`
+resolved Zensical `0.0.57` and completed with `No issues found`. Generated
+`site/api/search/index.html` retained the expected title, all three canonical
+source links, and the adjacent API navigation. The target checkout remained
+clean. This confirms that source links, explicit navigation, and a hand-curated
+API route can be traced together on a target with a different configuration
+shape; it found no repair or repeated failure, so it does not admit a generic
+content-model/authoring workflow or fixture.
+
 ## Verified-edit handoff (2026-09-12)
 
 During the live Code Sigils BrowserOS guide review, a small, validated media

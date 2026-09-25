@@ -161,6 +161,14 @@ page-specific title, and `.html`-to-slash redirect behavior. This supplies one
 external presentation/override observation, but no target repair or repeated
 failure; generic customization workflow and fixture admission remain deferred.
 
+**Second independent target outcome (2026-09-25):** an AI Riksarkivet ra-mcp
+hand-curated API page was traced through its explicit navigation, source links,
+and locked Zensical build. The emitted route and adjacent navigation matched the
+source, with no repair or repeatable failure. The two-target observation set now
+covers a presentation override and a content-model page, but it does not yet
+justify generic customization or authoring admission; retain the current
+review-only guidance and wait for a real maintenance need or repeated gap.
+
 The evaluation handoff should suggest only the relevant documented Zensical
 sections or capabilities, explain their target-specific fit and trade-offs, and
 name any validation needed. It must not substitute a feature catalog for a
