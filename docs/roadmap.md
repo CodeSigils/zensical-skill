@@ -241,6 +241,12 @@ community de-slop skill as an additional sentence-level lens, never as a
 gate; this keeps the portable-suggestion framing and adds no workflow or
 automation capability.
 
+A fifth review-only pass on a verification-heavy Code Sigils guide
+(2026-09-25) found a clean voice profile and one stale review-date maintenance
+note after current primary-source checks. It confirms that factual maintenance
+can remain separate from voice feedback; no new runtime rule, rubric, or
+fixture is justified.
+
 ### New-article placement clarification (2026-09-12)
 
 Creating a page needs an explicit category decision because its location

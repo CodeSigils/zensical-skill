@@ -470,6 +470,30 @@ paths. This is a one-off source-coverage observation, not a new runtime rubric
 or fixture candidate; the existing target-guidance-first review remains the
 right boundary.
 
+## Fifth published-article pass: Free AI Models Guide (2026-09-25)
+
+The optional article-review workflow was tested against the Code Sigils
+`free-ai-models.md`, a 1,312-word verification-first guide. Its voice is calm,
+practical, and methodical, with a single opening question that frames the
+reader's decision and a small amount of genuine warmth in the setup guidance.
+The existing structure—decision, provider setup, evaluation criteria, and a
+repeatable record—supports that reader promise without imposing a formula.
+
+Tell-family coverage was clean: no problematic negative-antithesis cluster,
+stacked rhetorical questions, opener tics, filler hedges, manufactured reveals,
+formulaic three-part prose, scope inflation, copula avoidance,
+present-participle padding, or performed-authenticity language. Its tables and
+numbered tests serve the guide's evaluation purpose rather than functioning as
+formulaic prose.
+
+Current OpenCode and Hugging Face primary documentation confirmed the guide's
+Hugging Face authentication path, `/models` selection, provider/model ID
+framing, and its decision to avoid a static quota table. The only maintenance
+note is that the article's `Last reviewed` field predates this source check;
+update that date when the maintainer accepts the factual-review result. The
+pass found no voice or workflow gap that justifies a runtime change, rubric, or
+fixture.
+
 ## Sources
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
