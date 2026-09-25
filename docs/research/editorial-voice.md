@@ -445,13 +445,15 @@ absolute em-dash rule; most dashes were annotated link descriptions, and the
 two sentence-internal dashes fit the target's voice. They were correctly
 treated as an `over-correction`, not a cleanup target.
 
-The pass produced three small maintenance edits rather than a rewrite:
+The pass produced four small maintenance edits rather than a rewrite:
 
 - Replaced the vague claim that a large MCP catalogue consumes "significant
   context" with OpenCode's concrete warning that it can exceed the context
   limit.
 - Replaced six redirecting `developers.openai.com/codex/` links with their
   canonical `learn.chatgpt.com/docs/` destinations.
+- Replaced the Codex-only baseline with compact native-host paths for both
+  OpenCode and Codex.
 - Updated the article's review date after revalidating the upstream project,
   its installation guide, OpenCode's MCP documentation, and the redirected
   Codex pages.
@@ -460,6 +462,13 @@ This is evidence that the voice-profile and coverage-line additions work as
 intended: they preserve a strong target voice, make no tell-family omission
 invisible, and let factual/link maintenance emerge separately from style.
 It does not justify another runtime change or a scoring gate.
+
+A follow-up reader question exposed one content-review omission: the article
+addressed both OpenCode and Codex but initially gave only a Codex-native
+baseline. The repair now presents short, host-specific OpenCode and Codex
+paths. This is a one-off source-coverage observation, not a new runtime rubric
+or fixture candidate; the existing target-guidance-first review remains the
+right boundary.
 
 ## Sources
 

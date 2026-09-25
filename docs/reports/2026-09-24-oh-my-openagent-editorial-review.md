@@ -34,7 +34,9 @@ feature catalogue.
 
 ## Review result
 
-The voice-profile and coverage procedure behaved as intended.
+The voice-profile and coverage procedure behaved as intended for prose tells.
+A follow-up reader question found a separate source-coverage omission: the
+article addressed both hosts but initially gave only a Codex-native baseline.
 
 | Tell family | Result |
 | --- | --- |
@@ -59,17 +61,20 @@ therefore remains a lens output, not an editorial verdict or authorship claim.
 1. Made the MCP-context caution concrete and directly attributable to OpenCode.
 2. Replaced six redirecting Codex documentation URLs with canonical ChatGPT
    Learn URLs.
-3. Advanced the article's `Last reviewed` date from 2026-09-09 to 2026-09-24.
+3. Replaced the Codex-only baseline with compact native-host paths for both
+   OpenCode and Codex.
+4. Advanced the article's `Last reviewed` date from 2026-09-09 to 2026-09-24.
 
-No rewrite, title change, structural change, or automatic prose cleanup was
-made. The articles' target voice remains intact.
+No prose rewrite, title change, or automatic cleanup was made. The focused
+structural change makes the article's host-neutral reader promise match its
+supporting links while preserving the target voice.
 
 ## Resume point
 
-1. `uv run zensical build --clean` was run from
-   `/home/sand/labs/zensical-test` on 2026-09-24. It finished successfully in
-   0.37 seconds with `No issues found`; it writes only the ignored `site/`
-   output directory.
+1. `uv run zensical build --clean` was rerun from
+   `/home/sand/labs/zensical-test` after the host-baseline correction on
+   2026-09-24. It finished successfully in 0.37 seconds with `No issues
+   found`; it writes only the ignored `site/` output directory.
 2. Inspect the focused target diff and decide whether to
    commit it in the target repository. Commit and push remain maintainer-only
    decisions.
