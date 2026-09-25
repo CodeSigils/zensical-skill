@@ -178,12 +178,37 @@ sentence level with the density rule: a skill is a lens, not a gate.
    opt-in suggestions when the user asks for a more human style — never as
    a gate, house voice, or automatic rewrite, consistent with
    [vision](../vision.md).
+
 2. Density and voice-mismatch are the judgment criteria; single instances
    are not evidence, and quoted or discussed phrases are out of scope.
 3. Human voice in practice comes from accountability, first-hand specifics,
    and layered editing — not from sprinkling imperfections. The skill keeps
    voice and substantive editorial judgment with the target repository's
    own policy and the user.
+
+## Manual review test protocol
+
+Test the optional review pass, not whether prose can satisfy a detector. On an
+explicit editorial-review request, select two or three published articles with
+materially different forms (for example, a practical guide, a reflective post,
+and a verification-heavy explainer). For each article:
+
+1. Read the target's editorial guidance and state the existing reader promise
+   and voice traits worth preserving.
+2. Run a factual pass separately from the voice pass: verify volatile claims,
+   commands, links, versions, and review dates against primary sources before
+   considering phrasing.
+3. Walk the article-review tell families and record only clusters, repetition,
+   or a mismatch with the surrounding voice. Classify each result as a factual
+   correction, clarity suggestion, genuine voice mismatch, or a false positive
+   that should remain.
+4. Build the target site and inspect the generated route. This validates the
+   authored change and rendered links; it does not validate voice.
+
+Add a runtime rule, fixture, or helper only when at least two materially
+different reviews reveal the same concrete problem and the intervention has a
+bounded validation path and named maintenance owner. Otherwise, retain the
+manual, target-guidance-first review and record only durable findings here.
 
 ## Adopted guidance (2026-09-24)
 
@@ -488,10 +513,9 @@ formulaic prose.
 
 Current OpenCode and Hugging Face primary documentation confirmed the guide's
 Hugging Face authentication path, `/models` selection, provider/model ID
-framing, and its decision to avoid a static quota table. The only maintenance
-note is that the article's `Last reviewed` field predates this source check;
-update that date when the maintainer accepts the factual-review result. The
-pass found no voice or workflow gap that justifies a runtime change, rubric, or
+framing, and its decision to avoid a static quota table. The accepted factual
+review updated the article's `Last reviewed` field on 2026-09-25. The pass
+found no voice or workflow gap that justifies a runtime change, rubric, or
 fixture.
 
 ## Sources
