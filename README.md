@@ -296,9 +296,8 @@ Do not promise Zola-equivalent multilingual content routing or native feeds:
 Zensical currently supports one canonical language per generated project and
 can link alternate-language deployments; its RSS compatibility support remains
 planned. Generated sitemap behavior can be reviewed when `site_url` is
-configured; it is the next planned release-review slice, but it is not
-deployment proof. See the roadmap and source registry for the capability
-boundaries.
+configured; it is an admitted bounded release-output review, not deployment
+proof. See the roadmap and source registry for the capability boundaries.
 
 ## Roadmap
 
