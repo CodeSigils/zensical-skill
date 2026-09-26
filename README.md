@@ -22,9 +22,10 @@ validation needs—not a generic feature catalog or an unapproved change.
 
 ## Quick start
 
-Copy the complete `zensical/` directory; its references are part of the
-runtime payload. The following project-scoped paths have file-availability
-smoke evidence, but they do not imply long-running host reload behavior.
+Copy the complete [`zensical/`](zensical/) directory; its references are part
+of the runtime payload. The following project-scoped paths have
+[file-availability smoke evidence](docs/research/current-state.md), but they
+do not imply long-running host reload behavior.
 
 | Host     | Project-scoped location                     | Setup                                                                                                                                     |
 | -------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -131,10 +132,10 @@ remain target-specific editorial, presentation, or release capabilities.
 
 ## Skill Payload — What Ships to the User
 
-Only the `zensical/` directory is the portable Agent Skill payload. It contains
-the router, on-demand references, client metadata, and two bounded checks: a
-tracked-file hygiene preflight and a conventional deployment-instruction
-contract check.
+Only the [`zensical/`](zensical/) directory is the portable Agent Skill
+payload. It contains the router, on-demand references, client metadata, and
+two bounded checks: a tracked-file hygiene preflight and a conventional
+deployment-instruction contract check.
 
 ```text
 zensical/
@@ -213,6 +214,9 @@ context and is not loaded as part of the skill.
 
 ## Current state
 
+The [dated current-state record](docs/research/current-state.md) is the
+authoritative evidence ledger for these status claims.
+
 | Surface            | Status                      | Evidence boundary                                                                        |
 | ------------------ | --------------------------- | ---------------------------------------------------------------------------------------- |
 | Codex              | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.agents/skills/zensical/`              |
@@ -229,7 +233,8 @@ context and is not loaded as part of the skill.
 - The initial workflows are acceptance-tested against the Code Sigils Zensical
   blog; its editorial conventions are not part of the portable payload.
 - The initial fixtures run through a lockfile-pinned Zensical `0.0.65`
-  scenario environment (pin in `tests/scenario-env/pyproject.toml`).
+  scenario environment (pin in
+  [`tests/scenario-env/pyproject.toml`](tests/scenario-env/pyproject.toml)).
 - The scenario suite covers tab rendering, reproducible accessibility findings,
   code-line-anchor repair, non-root deployment links, and sitemap/canonical
   assertions; it is not a complete site or WCAG conformance suite.
@@ -288,13 +293,17 @@ accessibility conformance.
 
 Three CI jobs run on every push and pull request against `main`
 ([`.github/workflows/validate.yml`](.github/workflows/validate.yml)): the
-commit-policy check, the scenario suite, and a third job running five local
-checks (`check_instruction_contract.py --self-test`, `check_site_hygiene.sh`,
-`check_readme_inventory.py --self-test`, `check_readme_inventory.py`, which
-fails when the README's file trees stop matching the repository, and `ruff
-check .` against the narrow rule set in `ruff.toml`). Dependabot watches the
-pinned workflow actions. The gate runs checks, not a
-deployment.
+[commit-policy check](scripts/check_commit_messages.py), the
+[scenario suite](scripts/run_scenarios.sh), and a third job running five local
+checks ([`check_instruction_contract.py --self-test`](zensical/scripts/check_instruction_contract.py),
+[`check_site_hygiene.sh`](zensical/scripts/check_site_hygiene.sh),
+[`check_readme_inventory.py --self-test`](scripts/check_readme_inventory.py),
+[`check_readme_inventory.py`](scripts/check_readme_inventory.py), which fails
+when the README's file trees stop matching the repository, and
+[`uvx ruff@0.15.16 check .`](.github/workflows/validate.yml) against the
+narrow rule set in [`ruff.toml`](ruff.toml); that workflow is the authoritative command
+definition). [Dependabot](.github/dependabot.yml) watches the pinned workflow
+actions. The gate runs checks, not a deployment.
 
 ## Primary references
 
@@ -312,10 +321,11 @@ Repeated semantic values are review signals for possible duplication or drift,
 not automatic extraction targets. Centralize a value only when its copies
 should change together and the trade-off improves clarity.
 
-Commit policy is checked with `python3 scripts/check_commit_messages.py`; each
-commit must explain `what:` and `why:` in its body. Release-facing history lives
-in those commit bodies; there is no changelog file, because a running list
-duplicated the commit log, drifted from it, and never changed a decision.
+Commit policy is checked with
+[`python3 scripts/check_commit_messages.py`](scripts/check_commit_messages.py);
+each commit must explain `what:` and `why:` in its body. Release-facing history
+lives in those commit bodies; there is no changelog file, because a running
+list duplicated the commit log, drifted from it, and never changed a decision.
 
 Public release, support, and compatibility guarantees are not claimed yet.
 Skills.sh indexing is discoverability evidence, not a release. The verification
