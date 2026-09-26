@@ -179,7 +179,11 @@ def compare(
 
 def check(root: Path, readme: Path) -> int:
     files = tracked_files(root)
-    trees = parse_trees(readme.read_text())
+    try:
+        markdown = readme.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as error:
+        raise CheckError(f"could not read {readme}: {error}") from error
+    trees = parse_trees(markdown)
     if not trees:
         raise CheckError(f"no file tree found in {readme}")
 
@@ -283,10 +287,21 @@ def self_test() -> int:
                 failures += 1
             print(f"  [{verdict}] {label}: expected {expected}, got {actual}")
 
+    with tempfile.TemporaryDirectory() as sandbox:
+        case_root = Path(sandbox)
+        run("git", "-C", str(case_root), "init", "--quiet")
+        try:
+            check(case_root, case_root / readme)
+        except CheckError:
+            print("  [ok] a missing README is an environmental error")
+        else:
+            failures += 1
+            print("  [FAILED] a missing README did not raise CheckError")
+
     if failures:
         print(f"self-test failed: {failures} case(s) did not behave as specified")
         return 1
-    print(f"self-test passed: {len(cases)} cases")
+    print(f"self-test passed: {len(cases)} cases plus the missing-README error boundary")
     return 0
 
 

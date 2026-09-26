@@ -42,7 +42,10 @@ github_fine_grained_prefix='github''_pat_'
 aws_access_prefix='AK''IA'
 aws_secret_name='aws''_secret_access_key'
 signature_pattern="${private_key_header}|${github_classic_prefix}[A-Za-z0-9]{36}|${github_fine_grained_prefix}[A-Za-z0-9_]{20,}|${aws_access_prefix}[0-9A-Z]{16}|${aws_secret_name}[[:space:]]*[:=]"
-matches_file="$(mktemp "${TMPDIR:-/tmp}/zensical-site-hygiene.XXXXXX")"
+if ! matches_file="$(mktemp "${TMPDIR:-/tmp}/zensical-site-hygiene.XXXXXX")"; then
+  printf 'Could not create a temporary file for the hygiene scan\n' >&2
+  exit 2
+fi
 trap 'rm -f "$matches_file"' EXIT
 set +e
 git -C "$repository" grep -I -l -E -e "$signature_pattern" -- >"$matches_file"

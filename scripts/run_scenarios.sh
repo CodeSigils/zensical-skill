@@ -12,7 +12,10 @@ if [[ -z "$expected_version" ]]; then
   printf 'No zensical pin found in %s\n' "$scenario_root/pyproject.toml" >&2
   exit 2
 fi
-run_root="$(mktemp -d "${TMPDIR:-/tmp}/zensical-skill-scenarios.XXXXXX")"
+if ! run_root="$(mktemp -d "${TMPDIR:-/tmp}/zensical-skill-scenarios.XXXXXX")"; then
+  printf 'Could not create a temporary scenario workspace\n' >&2
+  exit 2
+fi
 trap 'rm -rf "$run_root"' EXIT
 
 count_iframes_missing_titles() {
@@ -42,8 +45,16 @@ PY
 
 zensical_bin="${ZENSICAL_BIN:-}"
 if [[ -n "$zensical_bin" ]]; then
-  zensical_bin="$(cd "$(dirname "$zensical_bin")" && pwd)/$(basename "$zensical_bin")"
-  actual_version="$($zensical_bin --version | awk 'NR == 1 { print $NF }')"
+  if ! zensical_dir="$(cd "$(dirname "$zensical_bin")" && pwd)"; then
+    printf 'Could not resolve ZENSICAL_BIN: %s\n' "$zensical_bin" >&2
+    exit 2
+  fi
+  zensical_bin="$zensical_dir/$(basename "$zensical_bin")"
+  if ! version_output="$("$zensical_bin" --version 2>&1)"; then
+    printf 'Could not run ZENSICAL_BIN: %s\n' "$zensical_bin" >&2
+    exit 2
+  fi
+  actual_version="$(awk 'NR == 1 { print $NF }' <<<"$version_output")"
   [[ "$actual_version" == "$expected_version" ]] || {
     printf 'Expected Zensical %s; found %s from %s\n' "$expected_version" "$actual_version" "$zensical_bin" >&2
     exit 1

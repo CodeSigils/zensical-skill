@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import sys
 import tempfile
 
 
@@ -23,6 +24,18 @@ REQUIRED_TEXT = (
 )
 
 
+class CheckError(RuntimeError):
+    """The check could not read the target repository's deployment contract."""
+
+
+def read_text(path: Path) -> str:
+    """Read UTF-8 target text, translating host or encoding failures for callers."""
+    try:
+        return path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as error:
+        raise CheckError(f"could not read {path}: {error}") from error
+
+
 def missing_contract_text(repository: Path) -> list[str] | None:
     """Return missing documented workflow details, or None when not applicable."""
     instructions = repository / "AGENTS.md"
@@ -30,11 +43,11 @@ def missing_contract_text(repository: Path) -> list[str] | None:
     if not instructions.is_file() or not workflow.is_file():
         return None
 
-    instruction_text = instructions.read_text(encoding="utf-8")
+    instruction_text = read_text(instructions)
     if "## Deployment" not in instruction_text:
         return None
 
-    workflow_text = workflow.read_text(encoding="utf-8")
+    workflow_text = read_text(workflow)
     return [
         value
         for value in REQUIRED_TEXT
@@ -54,6 +67,13 @@ def self_test() -> int:
         assert missing_contract_text(repository) == []
         (repository / "AGENTS.md").write_text("## Deployment\n", encoding="utf-8")
         assert missing_contract_text(repository) == list(REQUIRED_TEXT)
+        (repository / "AGENTS.md").write_bytes(b"\xff")
+        try:
+            missing_contract_text(repository)
+        except CheckError:
+            pass
+        else:
+            raise AssertionError("malformed target text did not raise CheckError")
     print("PASS: instruction-contract self-test")
     return 0
 
@@ -68,7 +88,11 @@ def main() -> int:
     if arguments.self_test:
         return self_test()
 
-    missing = missing_contract_text(arguments.repository)
+    try:
+        missing = missing_contract_text(arguments.repository)
+    except CheckError as error:
+        print(f"Instruction contract check could not run: {error}", file=sys.stderr)
+        return 2
     if missing is None:
         print("SKIP: no AGENTS.md deployment section and conventional docs workflow pair")
         return 0

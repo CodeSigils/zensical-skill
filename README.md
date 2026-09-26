@@ -288,11 +288,12 @@ accessibility conformance.
 
 Three CI jobs run on every push and pull request against `main`
 ([`.github/workflows/validate.yml`](.github/workflows/validate.yml)): the
-commit-policy check, the scenario suite, and a third job running four local
+commit-policy check, the scenario suite, and a third job running five local
 checks (`check_instruction_contract.py --self-test`, `check_site_hygiene.sh`,
-`check_readme_inventory.py`, which fails when the README's file trees stop
-matching the repository, and `ruff check .` against the narrow rule set in
-`ruff.toml`). Dependabot watches the pinned workflow actions. The gate runs checks, not a
+`check_readme_inventory.py --self-test`, `check_readme_inventory.py`, which
+fails when the README's file trees stop matching the repository, and `ruff
+check .` against the narrow rule set in `ruff.toml`). Dependabot watches the
+pinned workflow actions. The gate runs checks, not a
 deployment.
 
 ## Primary references

@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   commit-policy:
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -32,7 +32,7 @@ jobs:
           fi
 
   scenarios:
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       # A shallow checkout is sufficient here: the fixtures are synthetic and
@@ -45,7 +45,7 @@ jobs:
         run: bash scripts/run_scenarios.sh
 
   payload-checks:
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -54,7 +54,9 @@ jobs:
         run: python3 zensical/scripts/check_instruction_contract.py --self-test
       - name: Site hygiene scan
         run: bash zensical/scripts/check_site_hygiene.sh .
+      - name: README inventory self-test
+        run: python3 scripts/check_readme_inventory.py --self-test
       - name: README inventory
         run: python3 scripts/check_readme_inventory.py
       - name: Lint the local checks
-        run: uvx ruff check .
+        run: uvx ruff@0.15.16 check .

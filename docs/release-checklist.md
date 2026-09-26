@@ -135,6 +135,6 @@ host matrix, marketplace status, known limitations, and the next review trigger
 validation gate (`validate.yml`) runs on push and pull request. It has three
 jobs: the commit-message policy check, the shared scenario suite, and a job
 running the instruction-contract self-test, the site-hygiene preflight, the
-README inventory check, and `ruff check .`. GitHub Releases and semver tags
-remain
+README inventory self-test, the README inventory check, and `ruff check .`.
+GitHub Releases and semver tags remain
 optional until the manual process becomes a demonstrated bottleneck.
