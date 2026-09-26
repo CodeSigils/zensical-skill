@@ -46,10 +46,11 @@ browser or assistive-technology testing.
 ### Code-line anchors
 
 When a target configures `pymdownx.highlight.anchor_linenums = true`, inspect a
-representative rendered code block if keyboard use is in scope. In Zensical
-0.0.60, the Code Sigils acceptance site emitted empty, zero-width line-anchor
-links that became keyboard tab stops. This is an observed rendering behavior,
-not a universal defect claim.
+representative rendered code block if keyboard use is in scope. This setting
+has been observed emitting empty, zero-width line-anchor links that become
+keyboard tab stops. Treat that as a behavior to verify on the target version
+rather than a universal defect: build the site and read the rendered anchors
+before recommending a change.
 
 If disabling those anchors is the appropriate repair, preserve the target's
 complete Markdown-extension configuration: defining

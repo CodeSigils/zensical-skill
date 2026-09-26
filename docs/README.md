@@ -12,14 +12,14 @@ documents relevant to the proposed change.
 | Accessibility workflow | `vision.md`, `roadmap.md`, `research/index.md` |
 | Documentation freshness contract | `AGENTS.md`, the canonical owner for each affected claim, and the relevant planning document |
 | Runtime distribution contract | `AGENTS.md`, `release-checklist.md`, and the relevant host-install evidence |
-| Commit or changelog policy | `AGENTS.md`, `README.md`, `release-checklist.md`, `CHANGELOG.md` |
+| Commit or release-history policy | `AGENTS.md`, `README.md`, `release-checklist.md` |
 | Repeated values or centralization | `AGENTS.md`, `vision.md`, `roadmap.md`, `release-checklist.md` |
 | External source or comparable-skill pattern | `research/index.md`, `vision.md` |
 | Editorial voice or prose-tell guidance | `research/editorial-voice.md`, `research/index.md`, `vision.md` |
-| Skill packaging, frontmatter, or payload contract | `research/skill-structure-conventions.md`, `research/index.md`, `release-checklist.md` |
+| Skill packaging, frontmatter, or payload contract | `research/skill-structure-conventions.md`, `research/skill-sync-and-cross-agent-distribution.md`, `research/index.md`, `release-checklist.md` |
 | Sequencing or release gate | `roadmap.md`, `vision.md` |
 | Acceptance scenario or fixture | `scenarios.md`, `roadmap.md`, `research/index.md` |
-| Distribution or compatibility | `vision.md`, `roadmap.md`, `research/index.md`, `release-checklist.md` |
+| Distribution or compatibility | `vision.md`, `roadmap.md`, `research/skill-sync-and-cross-agent-distribution.md`, `research/index.md`, `release-checklist.md` |
 | Release or market discoverability | `roadmap.md`, `research/index.md`, `release-checklist.md` |
 | Digital Basement umbrella alignment | `AGENTS.md`, `roadmap.md`, `research/index.md`; then the corresponding Digital Basement architecture, roadmap, editorial core, and session note when available |
 

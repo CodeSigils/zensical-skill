@@ -10,7 +10,7 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Last reviewed: 2026-09-24.
+Last reviewed: 2026-09-26.
 
 ## Priority order
 
@@ -104,9 +104,9 @@ sequence of small workflow admissions, not a promise of Zola feature parity:
    documents one canonical language per generated project; do not promise
    Zola-style translated-content routing. Admit it only after a real project
    needs alternate-language links, `hreflang`, and base-path validation.
-5. Keep feeds deferred. The current Zensical compatibility roadmap lists RSS
-   as planned, so no native-feed workflow is admitted without upstream support
-   or an explicitly authorized, maintained integration.
+5. Keep authoring, i18n, and theme-authoring deferred. Feeds are no longer on
+   this list: Zensical has provided them natively since 0.0.65, and an
+   authorized task on a real site enabled and verified the output.
 
 Fixture planning follows the same gate. Do not pre-create a large matrix. The
 sitemap/canonical assertion is now an admitted bounded release-output fixture.
@@ -274,6 +274,45 @@ Keep structural validation, behavioral validation on the Code Sigils blog,
 host discoverability, and marketplace availability as separate claims. A pass
 in one layer must not imply a pass in another.
 
+## Documentation admission rule and governance freeze (2026-09-26)
+
+Governance has outgrown the payload. As of this revision the maintainer
+documentation is roughly three times the size of the runtime payload, and
+almost half of it sits in two research files. That ratio is the project's
+principal delivery risk, named here so the next reader inherits the decision
+rather than rediscovering the problem.
+
+**Freeze.** Do not add a new planning, research, or governance document until
+the payload itself is more polished. Extend an existing document instead when
+the new material is genuinely the same subject, and record the addition in that
+document's own revision history.
+
+**Hard admission rule.** A new document is justified only when at least one of
+these holds:
+
+1. it changes a decision an agent must make, and the change cannot be expressed
+   as an edit to an existing document;
+2. it records dated evidence that a future reader would otherwise have to
+   re-collect, with the source and the check date attached; or
+3. it is required by an external constraint, such a license or a distribution
+   channel requirement.
+
+"Would be useful to know" and "documents the reasoning behind an earlier
+decision" are not sufficient on their own. Reasoning that changed no decision
+belongs in the commit body, which is where the reason a change was made already
+lives.
+
+**Revisit.** Reassess the ratio once the payload is more polished, and treat
+that as a consolidation exercise with named targets rather than an open-ended
+cleanup. The obvious targets are the two large research files, which have grown
+by accretion and mix dated evidence with standing rules.
+
+**Consequence for reports.** A report earns its place by recording evidence or
+a correction that changed a decision. This remediation added one, because it
+recorded a live defect and the reasoning that admitted a capability. The next
+review should not assume a report is warranted merely because a review
+happened.
+
 ## Acceptance environment
 
 The Code Sigils blog is the first real acceptance environment. It already
@@ -388,6 +427,21 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-09-26: Froze governance growth by decision. Maintainer documentation now
+  runs about three times the size of the runtime payload, which the project had
+  already named as its principal delivery risk without constraining it. The
+  roadmap gained a documentation admission rule with three qualifying grounds,
+  and a revisit condition tied to the payload becoming more polished. Chose a
+  freeze over a consolidation pass because most of the mass is dated evidence
+  that is still load-bearing, and rewriting it would cost more than it returns.
+- 2026-09-26: Removed the feeds deferral. A review found that the deferral's own
+  escape clause had fired: Zensical shipped a native `rss` plugin in 0.0.65, so
+  "keep feeds deferred until upstream support" was still deferring an available
+  capability. An authorized task on a real site enabled and verified the output,
+  which admitted feeds as a bounded component workflow with its own reference
+  file and router entry. Bumped the scenario pin to `0.0.65`. Also recorded the
+  `0.1.0` upgrade boundary and the `0.0.63` dotfile-exclusion behavior, and
+  removed the changelog file in favour of commit-body history.
 - 2026-09-24: Recorded the minimal CI validation gate and portable `grep`
   runner, the Zensical version-pin canonicalization and `0.0.64` bump, the
   research/reports directory restructure, and the skill-structure conventions

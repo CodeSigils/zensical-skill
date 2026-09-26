@@ -102,7 +102,12 @@ After building, inspect the generated HTML and output tree:
    variants are supplied;
 4. remote embeds are clearly distinguishable from local assets; and
 5. large media does not enter the repository without an explicit size,
-   licensing, and maintenance decision.
+   licensing, and maintenance decision; and
+6. every asset the pages reference is present in the output tree. Dot-prefixed
+   files and directories are excluded from the built site, so a `.htaccess`,
+   `.well-known` entry, or dotfile asset referenced by a page will resolve in
+   the repository and 404 after a build. Verify the reference rather than
+   assuming the file was copied.
 
 Use a browser or equivalent rendered inspection for layout and interaction.
 For an affected lead image or media-heavy page, use browser network or

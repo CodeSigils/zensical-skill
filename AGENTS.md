@@ -46,11 +46,18 @@ observable drift shows that it would remove real maintenance work.
 ### Runtime distribution contract
 
 The repository's `zensical/` directory is the canonical runtime payload.
-Installed copies are distribution artifacts, not a second source of truth. When
-a change affects that payload, verify or refresh an installed copy only when
-the user requests active-host use or a release/install check requires it;
-otherwise report that existing sessions may still use an older copy. Do not
-assume a source commit updates an installed skill or a running host session.
+Installed copies are distribution artifacts, not a second source of truth. Do
+not assume a source commit updates an installed skill or a running host session.
+
+Checking installed-copy freshness is a standing task, not an optional extra.
+Before reporting any payload change as done, diff the payload against every
+installed copy you can locate on this machine and say plainly which files are
+stale. When the user works against an installed copy in the same session,
+refreshing it takes priority over finishing other work: a correct source tree
+that the active host never loads is not a delivered change. Refresh only the
+payload files, never the host's own configuration, and report exactly which
+files were copied. When no installed copy is in play, say so once and move on
+rather than refreshing speculatively.
 
 ## Digital Basement umbrella alignment
 
@@ -92,7 +99,8 @@ quality criteria, update the relative records in the same work session:
 - `docs/research/index.md` and the source registry for new evidence or volatile
   claims;
 - the affected `zensical/references/` file for operational detail; and
-- `CHANGELOG.md` for a user-visible capability change.
+- the git commit body for a user-visible capability change, which is where
+  release-facing history now lives.
 
 If the change produces a durable decision, lesson, finding, or unresolved
 question, add a concise session or decision note in the related project and
@@ -148,11 +156,13 @@ batch, pass a range such as `HEAD~5..HEAD`. The checker enforces a concise
 subject plus non-empty `what:` and `why:` fields; add validation details when
 they affect confidence or future maintenance.
 
-Keep `CHANGELOG.md` curated: record user-visible or maintainer-significant
-changes, group related work under `Unreleased`, and periodically consolidate it
-into release notes. Commit history, research, decisions, and session notes hold
-the detailed implementation and rationale; do not mirror every commit in the
-changelog.
+Do not keep a changelog file. Release-facing history lives in the git commit
+body: record user-visible or maintainer-significant changes there, in the
+`what:` and `why:` fields the commit policy already requires, and use the
+subject line as the one-line summary a reader would have wanted from a release
+note. A separate changelog was removed because it duplicated the commit log,
+drifted from it, and grew without changing a decision. Research, decisions, and
+session notes still hold detailed rationale; use those, not a running list.
 
 ### Runtime source-registry boundary
 

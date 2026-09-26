@@ -39,8 +39,9 @@ The intended generic scope is existing-site maintenance, not a claim that
 every feature of Zensical or another generator is available. A future language
 workflow must model Zensical's documented one-canonical-language-per-project
 behavior and alternate deployments, rather than copying Zola's multilingual
-content-routing model. Feed support remains deferred until an upstream-native
-or explicitly owned integration has a real use case.
+content-routing model. Feeds are an admitted bounded capability: Zensical has provided them natively
+since 0.0.65, and a feed is verified by inspecting generated output rather than
+by owning an integration.
 
 ## Principles
 

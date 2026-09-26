@@ -43,6 +43,10 @@ coverage that was not performed, or add a new workflow merely because Zensical
 or HTML supports it. Record a bounded finding instead. Expand the skill only
 after a concrete user need, repeated or observed behavior, current primary
 evidence, a proportionate validation path, and a named maintenance owner.
+Feeds meet that bar: Zensical provides them natively, they are ordinary
+component configuration, and a bounded post-build check confirms the output.
+See [references/rss.md](references/rss.md) for what the plugin does and does
+not do on the target's version.
 
 When the user evaluates a proposed Zensical addition, integration, workflow,
 or automation capability, first inspect the target repository and consult the
@@ -116,6 +120,10 @@ Choose the smallest applicable workflow:
   validation requirements.
 - **Review admonitions, tabs, links, or navigation:** read
   [references/content-components.md](references/content-components.md).
+- **Review or enable feeds (RSS, JSON Feed):** read
+  [references/rss.md](references/rss.md). Feeds are ordinary component work
+  once the target runs a Zensical version that supports them natively; they are
+  not a third-party integration.
 - **Review search behavior or exclusions:** inspect the target's native search
   configuration and current source-registry entry before proposing an external
   search service.
@@ -186,6 +194,9 @@ Keep these modes distinct:
   them.
 - Treat images, video, audio, and external embeds as separate media concerns.
   A passing build proves neither player behavior nor remote availability.
+- Treat feeds as generated output that also needs a discovery link. A feed
+  file with no advertised `<link rel="alternate">` is invisible to readers, and
+  item dates fall back to the build time when the build has no Git history.
 - Treat CSS overrides, custom templates, and landing pages as version-sensitive
   presentation layers. Preserve scoped changes and validate rendered behavior.
 - Treat accessibility as a cross-cutting quality concern. Prefer native HTML

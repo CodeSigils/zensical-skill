@@ -8,7 +8,8 @@ release guarantee.
 
 - [ ] `LICENSE` is present and the runtime `SKILL.md` declares the same license.
 - [ ] `SECURITY.md` describes private reporting and payload boundaries.
-- [ ] `CHANGELOG.md` records the user-facing change.
+- [ ] The commit range records the user-facing change in its `what:` and `why:`
+      fields, with subject lines that read as release-note summaries.
 - [ ] `docs/vision.md`, `docs/roadmap.md`, and `docs/research/index.md` reflect the
       release scope and current evidence.
 - [ ] The source registry has current primary-source dates and version caveats.
@@ -29,9 +30,9 @@ release guarantee.
 - [ ] Run `python3 scripts/check_commit_messages.py <release-range>` and verify
       every commit has a concise subject plus non-empty `what:` and `why:`
       fields.
-- [ ] Keep `CHANGELOG.md` limited to user-visible or maintainer-significant
-      changes; detailed rationale belongs in commits and research/decision
-      records.
+- [ ] Keep release-facing history in the commit bodies: user-visible or
+      maintainer-significant changes in `what:` and `why:`, with detailed
+      rationale in research and decision records. There is no changelog file.
 - [ ] Review repeated semantic values (versions, runners, OS names, paths,
       SHAs, ports, and feature flags) as possible duplication/drift smells;
       centralize only when the values should change together and the trade-off

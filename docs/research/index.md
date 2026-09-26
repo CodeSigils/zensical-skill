@@ -152,17 +152,17 @@ alternate deployment links with `hreflang`.
 Important limits were rechecked. Zensical documents one canonical language per
 generated project, so an eventual language workflow must validate multiple
 deployments rather than claim Zola-style translated-content routing. The
-compatibility roadmap still lists RSS as planned; feed generation is not a
-native skill capability. These facts are recorded in the source registry with
-the 2026-09-13 review date.
+Feed generation stopped being hypothetical: Zensical shipped a native `rss`
+plugin in 0.0.65, and an authorized task on a real site enabled and verified
+it. The language limit above is unchanged. Both facts are recorded in the
+source registry with the 2026-09-26 review date.
 
-Decision: retain the existing runtime boundary and add no new router entry,
-automation, or fixture yet. First collect two or three authorized,
-materially different existing-site tasks. A fixture is justified only when one
-of those tasks produces a deterministic, repeated behavior that the current
-suite cannot represent. The roadmap now names the smallest candidate fixture
-shapes and required evidence; this is a planning decision, not an implemented
-authoring, i18n, feed, sitemap, or theme-authoring workflow.
+Decision: admit feeds as a bounded component workflow, with its own reference
+file and a router entry. Keep authoring, i18n, and theme-authoring out of the
+payload until a real task supplies the evidence the roadmap gate requires. Add
+no feed fixture yet: the current guidance is verified against a real site
+build, and a fixture is justified only when a repeated behavior appears that
+the suite cannot represent.
 
 ### Sitemap priority update (2026-09-13)
 
@@ -401,8 +401,6 @@ The source checkout remained clean. This revalidates the current fixture
 environment against the real acceptance site; it does not establish release,
 host discovery, or deployment evidence.
 
-## Blog research evidence
-
 ## Scenario assertion hardening (2026-09-09)
 
 The isolated fixture runner now checks four rendered tab panels and their
@@ -492,9 +490,9 @@ evidence that either reference is Zensical-compatible.
 The follow-up was static and read-only. Candidate scripts were not executed;
 no installation or behavior smoke test was authorized.
 
-## Evidence and scope lessons from the latest Zola review
+## Evidence and scope lessons from a Zola skill review
 
-The latest Zola evidence reinforces four rules for this project:
+The Zola evidence reinforces four rules for this project:
 
 - `skills-ref` conformance is a reproducible format gate only; pin its source
   revision before release.

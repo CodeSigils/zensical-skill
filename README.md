@@ -168,7 +168,6 @@ scripts/
 ├── check_commit_messages.py         # commit subject and what:/why: policy
 └── run_scenarios.sh                 # isolated fixture runner
 AGENTS.md                            # maintainer change contract
-CHANGELOG.md                         # project-level history
 LICENSE                              # MIT license
 SECURITY.md                          # reporting and payload boundaries
 ```
@@ -193,7 +192,7 @@ context and is not loaded as part of the skill.
 - The repository is licensed under MIT and has a security reporting policy.
 - The initial workflows are acceptance-tested against the Code Sigils Zensical
   blog; its editorial conventions are not part of the portable payload.
-- The initial fixtures run through a lockfile-pinned Zensical `0.0.64`
+- The initial fixtures run through a lockfile-pinned Zensical `0.0.65`
   scenario environment (pin in `tests/scenario-env/pyproject.toml`).
 - The scenario suite covers tab rendering, reproducible accessibility findings,
   code-line-anchor repair, non-root deployment links, and sitemap/canonical
@@ -292,12 +291,14 @@ multi-deployment language-selector workflow. Each needs a real user request,
 current official evidence, a focused scenario or fixture, and a named
 maintenance owner before it becomes part of the portable payload.
 
-Do not promise Zola-equivalent multilingual content routing or native feeds:
-Zensical currently supports one canonical language per generated project and
-can link alternate-language deployments; its RSS compatibility support remains
-planned. Generated sitemap behavior can be reviewed when `site_url` is
-configured; it is an admitted bounded release-output review, not deployment
-proof. See the roadmap and source registry for the capability boundaries.
+Do not promise Zola-equivalent multilingual content routing: Zensical currently
+supports one canonical language per generated project and can link
+alternate-language deployments. Feeds are an admitted bounded capability,
+because Zensical has provided them natively since 0.0.65; check the target's
+version before writing feed configuration. Generated sitemap behavior can be
+reviewed when `site_url` is configured; it is an admitted bounded
+release-output review, not deployment proof. See the roadmap and source
+registry for the capability boundaries.
 
 ## Roadmap
 

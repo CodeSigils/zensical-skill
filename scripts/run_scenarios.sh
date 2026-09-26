@@ -4,11 +4,14 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 fixture_root="$repo_root/tests/fixtures"
 scenario_root="$repo_root/tests/scenario-env"
-expected_version="$(sed -n 's/^dependencies = \["zensical==\([^"]*\)"\]$/\1/p' "$scenario_root/pyproject.toml")"
-[[ -n "$expected_version" ]] || {
-  printf 'Could not read expected Zensical version from %s\n' "$scenario_root/pyproject.toml" >&2
-  exit 1
-}
+if ! expected_version="$(sed -n 's/^dependencies = \["zensical==\([^"]*\)"\]$/\1/p' "$scenario_root/pyproject.toml")"; then
+  printf 'Could not read %s\n' "$scenario_root/pyproject.toml" >&2
+  exit 2
+fi
+if [[ -z "$expected_version" ]]; then
+  printf 'No zensical pin found in %s\n' "$scenario_root/pyproject.toml" >&2
+  exit 2
+fi
 run_root="$(mktemp -d "${TMPDIR:-/tmp}/zensical-skill-scenarios.XXXXXX")"
 trap 'rm -rf "$run_root"' EXIT
 
@@ -39,6 +42,7 @@ PY
 
 zensical_bin="${ZENSICAL_BIN:-}"
 if [[ -n "$zensical_bin" ]]; then
+  zensical_bin="$(cd "$(dirname "$zensical_bin")" && pwd)/$(basename "$zensical_bin")"
   actual_version="$($zensical_bin --version | awk 'NR == 1 { print $NF }')"
   [[ "$actual_version" == "$expected_version" ]] || {
     printf 'Expected Zensical %s; found %s from %s\n' "$expected_version" "$actual_version" "$zensical_bin" >&2
@@ -86,9 +90,6 @@ for fixture in tabbed-site accessibility-site base-path-site code-anchor-site; d
 done
 
 tab_output="$run_root/tabbed-site-output/index.html"
-for label in npm pnpm Yarn Bun; do
-  grep -Fq -- "$label" "$tab_output"
-done
 tab_count="$(grep -oE 'data-tabs="[^"]+"' "$tab_output" | wc -l)"
 if [[ "$tab_count" -lt 1 ]]; then
   printf 'tabbed-site: no rendered tab group found\n' >&2
@@ -99,9 +100,11 @@ if [[ "$panel_count" -ne 4 ]]; then
   printf 'tabbed-site: expected 4 non-empty tab panels; found %s\n' "$panel_count" >&2
   exit 1
 fi
-for command_name in npm pnpm yarn bun; do
-  if ! grep -Fq -- "$command_name" "$tab_output"; then
-    printf 'tabbed-site: rendered panel missing command: %s\n' "$command_name" >&2
+# grep -F is case-sensitive: harmonizing these labels with the lowercase
+# commands in the fixture bodies would make the check pass vacuously.
+for label in npm pnpm Yarn Bun; do
+  if ! grep -Fq -- "$label" "$tab_output"; then
+    printf 'tabbed-site: rendered tab group missing label: %s\n' "$label" >&2
     exit 1
   fi
 done
