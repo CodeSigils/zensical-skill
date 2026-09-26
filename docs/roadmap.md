@@ -12,6 +12,16 @@ Review-only evidence must not be described as implementation.
 
 Last reviewed: 2026-09-26.
 
+Planning documents: [documentation index](README.md) for the read-first matrix,
+[vision](vision.md) for boundaries and quality criteria,
+[current research state](research/current-state.md) for what is currently true,
+[research field record](research/index.md) for dated observations,
+[scenarios](scenarios.md) for fixtures, and
+[release checklist](release-checklist.md) for release evidence. Dated audits and
+implementation records live in [reports/](reports/) and are historical records,
+not planning inputs; the evidence behind the current documentation mechanism is
+[2026-09-26-governance-mechanism.md](reports/2026-09-26-governance-mechanism.md).
+
 ## Priority order
 
 1. **Prove the core workflow:** existing-site inspection, one light edit, and
