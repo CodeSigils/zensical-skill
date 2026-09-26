@@ -50,6 +50,35 @@ directly at the repository's `zensical/` directory. The security policy and
 release checklist are maintainer records, not guarantees that every target site
 is safe.
 
+### Refreshing an installed copy
+
+The agent specification has no version field and no update channel, so nothing
+can compare an installed copy against the source on its own. Refresh explicitly:
+
+```bash
+npx skills update zensical     # or: npx skills upgrade zensical
+```
+
+Skills CLI `1.5.25` was recorded as the install baseline on 2026-09-10; the
+refresh behaviour described here was inspected on 2026-09-26 through
+`npx skills@latest --help`. `update` (alias `upgrade`) is the only refresh
+command. There is no read-only staleness check, because `check` and `update`
+dispatch to the same code path rather than only reporting a difference, and
+there is no `--dry-run`. It compares a content hash of the installed files, not
+a version number, so a payload edit is picked up even though no version
+changed.
+
+Two caveats are worth knowing before relying on it. An open upstream issue
+reports that `update` re-installs skills originally added with `--copy` as
+symlinks, so a copied install can turn into a linked one; re-copy manually if
+that matters. And a skill installed by copying files has no recorded source, so
+the CLI cannot update it at all — re-run the `cp -R` command from the table
+above.
+
+Maintainers refresh every installed copy after changing the payload, and say
+which files changed. That is a maintainer obligation rather than a user step,
+because a host loads its installed copy and never reads the repository.
+
 ## Current scope
 
 The skill currently routes these tasks:
