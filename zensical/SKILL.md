@@ -96,6 +96,11 @@ capability is enabled, or implement an optional addition without authorization.
   standards (such as W3C) and reputable community or provider sources for
   accessibility, design, embeds, and context. Never replace an official
   Zensical answer with a cached blog or generic static-site advice.
+- Do not run `npx skills update`, `skills update`, or any other self-update
+  command on the user's machine. If the installed payload may be behind its
+  source, say so and offer the command; let the user run it. Refreshing an
+  installed skill executes third-party code on the host and can replace the
+  instructions the current session is following.
 
 ## Route the request
 
@@ -213,4 +218,8 @@ proposing fixes. For an edit, report the focused change and validation. When a
 validated edit is pending in a Git working tree, offer to commit it; do not
 commit, push, publish, or deploy unless the user separately authorizes each
 action. If a source, command, link, or rendering behavior could have drifted,
-say exactly what was verified and what still needs a maintainer's review.
+say exactly what was verified and what still needs a maintainer's review. If a
+version-sensitive claim looks dated, or the payload's own version is unclear,
+tell the user this copy may be behind its source and offer
+`npx skills update zensical` for them to run. An install made with `--copy` or
+a manual copy records no source, so that command may not update it.
