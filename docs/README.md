@@ -49,6 +49,7 @@ than the newest:
 | [2026-09-24-oh-my-openagent-editorial-review.md](reports/2026-09-24-oh-my-openagent-editorial-review.md) | An external editorial review of a sibling guide, and what was declined. |
 | [2026-09-26-payload-review-and-remediation.md](reports/2026-09-26-payload-review-and-remediation.md) | The payload review that admitted feeds and corrected stale claims. |
 | [2026-09-26-governance-mechanism.md](reports/2026-09-26-governance-mechanism.md) | Why documentation is governed by a duplication rule rather than a size limit. |
+| [2026-09-26-governance-recommendations-applied.md](reports/2026-09-26-governance-recommendations-applied.md) | The four documentation recommendations that followed, and the counts that verify them. |
 
 Every behavioral rule has exactly one owning file, per the canonical-owner rule
 in `AGENTS.md`. This table routes to owners; it does not restate them. If a row

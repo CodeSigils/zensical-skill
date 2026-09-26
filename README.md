@@ -13,10 +13,8 @@ customization.
 This is a usable, actively developed skill for its documented, evidence-backed
 maintenance scope—not a complete Zensical automation suite.
 
-It can evolve into a broader methodology or automation capability, but only
-when real use demonstrates value and current official Zensical documentation,
-the target's installed version, validation cost, and ongoing maintenance support
-the addition.
+It can evolve into a broader methodology or automation capability only under the
+[capability-admission rule](docs/roadmap.md#capability-admission-rule).
 
 When a user explores an addition, the skill should turn that documentation
 check into a short, relevant set of Zensical options with fit, trade-offs, and
@@ -119,6 +117,7 @@ runtime router selects focused references progressively.
 | “Check article structure, navigation, or embed” | Media and component review                    |
 | “Review this article draft”                      | Optional target-guidance-first content review |
 | “Check accessibility or responsive presentation” | Accessibility and customization review       |
+| “Add an RSS or JSON feed to my site”              | Feed setup and discovery-link check          |
 | “Build and validate this change”                 | Build and rendered-output validation         |
 | “Why did this Zensical build fail?”              | Narrow failure diagnosis                     |
 
@@ -148,6 +147,7 @@ zensical/
 │   ├── customization.md             # CSS, themes, templates, landing pages
 │   ├── light-edit.md                # authorized minimal Markdown edits
 │   ├── media.md                     # media, embeds, assets, base paths
+│   ├── rss.md                       # native RSS and JSON feeds
 │   ├── site-inspection.md           # repository orientation and preflight
 │   ├── source-registry.md           # version-sensitive primary sources
 │   └── validation.md                # build and rendered-output checks
@@ -187,9 +187,11 @@ docs/
 ├── vision.md                        # purpose, boundaries, and quality criteria
 ├── roadmap.md                       # evidence-gated implementation plan
 ├── research/
-│   ├── index.md                     # verified sources and comparable patterns
+│   ├── current-state.md             # what the project currently knows, with check dates
+│   ├── index.md                     # append-only dated field record
 │   ├── editorial-voice.md           # human editorial voice and AI-tell research
-│   └── skill-structure-conventions.md # agentskills/skills.sh packaging contract
+│   ├── skill-structure-conventions.md # agentskills/skills.sh packaging contract
+│   └── skill-sync-and-cross-agent-distribution.md # install, refresh, and versioning research
 ├── scenarios.md                     # bounded real-site acceptance procedures
 ├── release-checklist.md             # release gate and recorded evidence
 ├── reports/                         # dated governance audits and implementation records
@@ -214,7 +216,7 @@ context and is not loaded as part of the skill.
 | Codex              | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.agents/skills/zensical/`              |
 | OpenCode           | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.opencode/skills/zensical/`            |
 | Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
-| Skills CLI install | Passed at `d7ef1e0`         | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` |
+| Skills CLI install | Passed at `d7ef1e0`         | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` at the time; the payload has since grown to 14 files |
 | Skills.sh search   | Indexed on 2026-09-10        | Public API searches returned `codesigils/zensical-skill/zensical`                        |
 | Public release     | Not claimed                 | Marketplace indexing is not a release, support, or compatibility guarantee               |
 
@@ -282,10 +284,12 @@ conventional documented deployment section with its workflow. None proves
 deployment success, player behavior, remote-link availability, or full
 accessibility conformance.
 
-The commit-policy check and the scenario suite also run in CI
-([`.github/workflows/validate.yml`](.github/workflows/validate.yml)) on every
-push and pull request against `main`; Dependabot watches the pinned workflow
-actions. The gate runs checks, not a deployment.
+Three CI jobs run on every push and pull request against `main`
+([`.github/workflows/validate.yml`](.github/workflows/validate.yml)): the
+commit-policy check, the scenario suite, and the two payload checks
+(`check_instruction_contract.py --self-test` and `check_site_hygiene.sh`).
+Dependabot watches the pinned workflow actions. The gate runs checks, not a
+deployment.
 
 ## Primary references
 
@@ -304,8 +308,9 @@ not automatic extraction targets. Centralize a value only when its copies
 should change together and the trade-off improves clarity.
 
 Commit policy is checked with `python3 scripts/check_commit_messages.py`; each
-commit must explain `what:` and `why:` in its body. The changelog is curated and
-does not duplicate the full commit history.
+commit must explain `what:` and `why:` in its body. Release-facing history lives
+in those commit bodies; there is no changelog file, because a running list
+duplicated the commit log, drifted from it, and never changed a decision.
 
 Public release, support, and compatibility guarantees are not claimed yet.
 Skills.sh indexing is discoverability evidence, not a release. The verification
@@ -333,9 +338,9 @@ registry for the capability boundaries.
 
 ## Roadmap
 
-See [`docs/roadmap.md`](docs/roadmap.md). The existing-site review and light-
-edit workflow is substantially proven against the Code Sigils blog, with a
-small repeatable scenario suite for the observed failures. The completed
+See [`docs/roadmap.md`](docs/roadmap.md). The existing-site review, light-
+edit, and native-feed workflows are substantially proven against the Code Sigils
+blog, with a small repeatable scenario suite for the observed failures. The completed
 three-task field run did not justify another helper or fixture. The next
 milestone requires either a repeated, testable maintenance gap or an explicit
 reviewed release candidate; new scripts, fixtures, integrations, and CI should

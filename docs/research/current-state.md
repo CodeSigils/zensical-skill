@@ -59,7 +59,7 @@ commands, configuration, and supported features must be verified separately.
   pinned official `skills-ref` validator at agentskills commit
   `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
 - The initial fixture scenarios run in isolated temporary copies through the
-  committed, lockfile-pinned Zensical `0.0.64` scenario environment (pin in
+  committed, lockfile-pinned Zensical `0.0.65` scenario environment (pin in
   `tests/scenario-env/pyproject.toml`).
 - The independent scenario suite covers tab rendering, reproducible
   accessibility findings, and non-root deployment links; it is not a complete
@@ -93,6 +93,24 @@ maintenance boundaries that matter to the first release. This is stronger
 evidence than speculative fixtures, so the first behavioral validation should
 run against the blog in an isolated branch or worktree. Synthetic fixtures
 should be added only when a real-site failure needs a smaller reproducible case.
+
+## Documentation governance state
+
+Checked 2026-09-26. The canonical-owner rule is owned by `AGENTS.md` and its
+documentation arm by `docs/roadmap.md` `## Capability-admission rule`. The
+admission conditions are restated exactly twice: that section, and
+`zensical/SKILL.md`, which keeps its own wording because an agent may read the
+payload without the roadmap.
+
+Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
+`SECURITY.md`, and this file. The six dated reports carry `Date:` instead,
+because a report's date records when it was written. Eight of ten payload
+references carry a review footer naming Zensical 0.0.65 and pointing at the
+registry row; `article-review.md` is version-independent and `source-registry.md`
+is the registry.
+
+Evidence and measurements for these statements are in
+`docs/reports/2026-09-26-governance-recommendations-applied.md`.
 
 ## Research-source priority
 
