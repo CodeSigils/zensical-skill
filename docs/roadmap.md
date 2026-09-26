@@ -34,8 +34,13 @@ compatibility. See [release-checklist.md](release-checklist.md).
 The core existing-site workflow has been exercised against the Code Sigils
 blog. Inspection, an authorized tab light edit, navigation and internal-link
 review, media and video review, presentation review, and a structured
-accessibility pass all have recorded evidence in `docs/research/index.md` and the
-Digital Basement session note. The observed tab, accessibility-invocation, and
+accessibility pass all have recorded evidence in the
+[research field record](research/index.md) and the Digital Basement session
+note. Maintainer documentation is governed by the canonical-owner rule and the
+expiry marker recorded in [Documentation admission rule and governance
+freeze](#documentation-admission-rule-and-governance-freeze-2026-09-26), and
+what the project currently knows to be true is owned by
+[research/current-state.md](research/current-state.md). The observed tab, accessibility-invocation, and
 non-root-link failures are now covered by a small repeatable fixture suite.
 Further fixture work remains conditional on a real-site gap. The runtime also
 includes a bounded tracked-file hygiene preflight for authorized publication
@@ -277,35 +282,54 @@ in one layer must not imply a pass in another.
 ## Documentation admission rule and governance freeze (2026-09-26)
 
 Governance has outgrown the payload. As of this revision the maintainer
-documentation is roughly three times the size of the runtime payload, and
-almost half of it sits in two research files. That ratio is the project's
-principal delivery risk, named here so the next reader inherits the decision
-rather than rediscovering the problem.
+documentation is roughly three times the size of the runtime payload. That
+ratio is a symptom, not the disease: every serious finding this project has
+recorded was a duplication failure, not a size failure. A rule restated in a
+second file drifted from the first, and the drift reached an agent as a false
+instruction. Fixing the ratio by rewriting files would not have prevented any
+of them.
+
+**Canonical-owner rule.** Every behavioral rule has exactly one owning file.
+Every other file that needs the rule links to the owner instead of restating
+it, so a rule change is one edit. When two files assert the same rule, one of
+them is wrong and the other is a pointer that has drifted. This is checkable:
+search the claim and count the files that assert it rather than mention it. The
+rule governs statements of a rule, not its application: a reference file that
+applies a shared principle to its own domain states that application rather
+than linking, because a reference may be read on its own.
+
+**Expiry instead of a size limit.** Every maintainer document carries a
+`Reviewed <date>` marker. A document that has not been re-checked against
+primary sources and that no current decision depends on has expired: archive it
+rather than refresh it. A document nobody needs stops being updated, which is
+what makes its own obsolescence visible. This targets the harm that actually
+occurred, which was stale claims reaching an agent, and it is self-limiting in a
+way a line ceiling is not.
+
+**Split by audience, not subject.** Agent-facing content must be current and
+canonical; history must be append-only and never retro-edited. Mixing the two in
+one file guarantees both fail, because a dated record cannot be refreshed and a
+current fact cannot stay append-only. `docs/research/index.md` is the dated
+field record and is never consulted for current state;
+`docs/research/current-state.md` owns current facts and carries the review date.
 
 **Freeze.** Do not add a new planning, research, or governance document until
 the payload itself is more polished. Extend an existing document instead when
 the new material is genuinely the same subject, and record the addition in that
-document's own revision history.
-
-**Hard admission rule.** A new document is justified only when at least one of
-these holds:
-
-1. it changes a decision an agent must make, and the change cannot be expressed
-   as an edit to an existing document;
-2. it records dated evidence that a future reader would otherwise have to
-   re-collect, with the source and the check date attached; or
-3. it is required by an external constraint, such a license or a distribution
-   channel requirement.
-
-"Would be useful to know" and "documents the reasoning behind an earlier
-decision" are not sufficient on their own. Reasoning that changed no decision
-belongs in the commit body, which is where the reason a change was made already
-lives.
+document's own revision history. The freeze is a default, not a gate: a user
+request for research is a preference, not an external constraint, and treating
+it as one is how the previous revision of this section was satisfied by a
+787-line file written the same day the freeze was adopted.
 
 **Revisit.** Reassess the ratio once the payload is more polished, and treat
 that as a consolidation exercise with named targets rather than an open-ended
-cleanup. The obvious targets are the two large research files, which have grown
-by accretion and mix dated evidence with standing rules.
+cleanup.
+
+**Deliberately not built.** No line-count ceiling, because it measures volume
+rather than duplication and only moves the growth under the limit. No ratio
+gate in CI, for the same reason. No rule aimed at a single past instance,
+because machinery built to prevent one occurrence is the failure this section
+exists to stop; a single judgment call belongs to the reviewer.
 
 **Consequence for reports.** A report earns its place by recording evidence or
 a correction that changed a decision. This remediation added one, because it
@@ -442,6 +466,14 @@ customization; each remains deferred until real work requires it.
   file and router entry. Bumped the scenario pin to `0.0.65`. Also recorded the
   `0.1.0` upgrade boundary and the `0.0.63` dotfile-exclusion behavior, and
   removed the changelog file in favour of commit-body history.
+- 2026-09-26: Replaced the documentation admission rule with a canonical-owner
+  rule and an expiry model, after the admission rule was satisfied by a
+  787-line research file written in the same session that adopted it. The
+  diagnosis is that the ratio is a symptom: every serious recorded finding was
+  a duplication failure, so the rule now constrains duplication rather than
+  volume. Split `docs/research/index.md` by audience so the dated field record
+  and the current-state owner are separate files, which is the split the rule
+  requires and the first real test of it.
 - 2026-09-24: Recorded the minimal CI validation gate and portable `grep`
   runner, the Zensical version-pin canonicalization and `0.0.64` bump, the
   research/reports directory restructure, and the skill-structure conventions

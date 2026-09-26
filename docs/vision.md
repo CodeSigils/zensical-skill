@@ -10,7 +10,8 @@ It is product-facing for current Code Sigils and Digital Basement publishing
 work while deliberately generalizing through proven existing-site workflows.
 
 Related planning documents: [roadmap](roadmap.md) for sequencing and acceptance
-gates, [research](research/index.md) for current evidence, and
+gates, [current research state](research/current-state.md) for current
+evidence, [field record](research/index.md) for dated observations, and
 [the documentation index](README.md) for the reading matrix.
 
 ## Boundaries

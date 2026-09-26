@@ -6,7 +6,7 @@ documents relevant to the proposed change.
 | Change | Read first |
 | --- | --- |
 | Skill scope or trigger | `vision.md`, `roadmap.md` |
-| Workflow or validation change | `vision.md`, `roadmap.md`, `research/index.md` |
+| Workflow or validation change | `vision.md`, `roadmap.md`, `research/current-state.md` |
 | Media or asset workflow | `vision.md`, `roadmap.md`, `research/index.md` |
 | CSS, theme, or landing-page workflow | `vision.md`, `roadmap.md`, `research/index.md` |
 | Accessibility workflow | `vision.md`, `roadmap.md`, `research/index.md` |
@@ -14,11 +14,11 @@ documents relevant to the proposed change.
 | Runtime distribution contract | `AGENTS.md`, `release-checklist.md`, and the relevant host-install evidence |
 | Commit or release-history policy | `AGENTS.md`, `README.md`, `release-checklist.md` |
 | Repeated values or centralization | `AGENTS.md`, `vision.md`, `roadmap.md`, `release-checklist.md` |
-| External source or comparable-skill pattern | `research/index.md`, `vision.md` |
-| Editorial voice or prose-tell guidance | `research/editorial-voice.md`, `research/index.md`, `vision.md` |
+| External source or comparable-skill pattern | `research/current-state.md`, then `research/index.md` for dated observations, `vision.md` |
+| Editorial voice or prose-tell guidance | `research/editorial-voice.md`, `research/current-state.md`, `vision.md` |
 | Skill packaging, frontmatter, or payload contract | `research/skill-structure-conventions.md`, `research/skill-sync-and-cross-agent-distribution.md`, `research/index.md`, `release-checklist.md` |
 | Sequencing or release gate | `roadmap.md`, `vision.md` |
-| Acceptance scenario or fixture | `scenarios.md`, `roadmap.md`, `research/index.md` |
+| Acceptance scenario or fixture | `scenarios.md`, `roadmap.md`, `research/current-state.md` |
 | Distribution or compatibility | `vision.md`, `roadmap.md`, `research/skill-sync-and-cross-agent-distribution.md`, `research/index.md`, `release-checklist.md` |
 | Release or market discoverability | `roadmap.md`, `research/index.md`, `release-checklist.md` |
 | Digital Basement umbrella alignment | `AGENTS.md`, `roadmap.md`, `research/index.md`; then the corresponding Digital Basement architecture, roadmap, editorial core, and session note when available |
@@ -32,5 +32,13 @@ for a public or package-discovery release. Do not copy its installation
 commands into the runtime skill until they have been verified for the target
 host and current provider contract.
 
-Dated governance audits and implementation records live in `reports/`; they are
-historical records, not planning inputs.
+Dated governance audits and implementation records live in `reports/`, and
+dated field observations live in `research/index.md`; both are historical
+records, not planning inputs. For what is currently true, read
+`research/current-state.md`, which owns current facts and carries a
+`Reviewed <date>` marker.
+
+Every behavioral rule has exactly one owning file, per the canonical-owner rule
+in `AGENTS.md`. This table routes to owners; it does not restate them. If a row
+below sends you to two files that both state the same rule, one is a stale
+pointer: fix the duplicate rather than reconciling them at read time.

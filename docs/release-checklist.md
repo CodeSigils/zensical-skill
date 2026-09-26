@@ -10,8 +10,9 @@ release guarantee.
 - [ ] `SECURITY.md` describes private reporting and payload boundaries.
 - [ ] The commit range records the user-facing change in its `what:` and `why:`
       fields, with subject lines that read as release-note summaries.
-- [ ] `docs/vision.md`, `docs/roadmap.md`, and `docs/research/index.md` reflect the
-      release scope and current evidence.
+- [ ] `docs/vision.md`, `docs/roadmap.md`, and `docs/research/current-state.md`
+      reflect the release scope and current evidence, and every new maintainer
+      document carries a `Reviewed <date>` marker.
 - [ ] The source registry has current primary-source dates and version caveats.
 - [ ] No credentials, generated output, agent runtime state, or private data is
       included in the payload.

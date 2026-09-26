@@ -1,31 +1,19 @@
-# Research and design record
+# Research field record
 
-This is an active evidence index, not a graveyard. Each substantial entry must
-support a current workflow, decision, or roadmap gate. When evidence is
-superseded, mark the version/date and explain whether it was replaced, retained
-as historical context, or removed. Keep detailed dated execution notes in the
-related session record; keep this document concise enough to re-check.
+This file is the append-only record of dated research and field observations. It
+is evidence, not current state: do not consult it to answer what is true now or
+what the project currently supports. For that, read
+[current-state.md](current-state.md), which owns current facts and carries its
+own review date.
 
-Related documents: [vision](../vision.md), [roadmap](../roadmap.md),
-[documentation index](../README.md), and the
+Each substantial entry must support a workflow, decision, or roadmap gate. When
+evidence is superseded, mark the version and date and explain whether it was
+replaced, retained as historical context, or removed. Never retro-edit a dated
+entry to reflect a later finding; add a new dated entry instead.
+
+Related documents: [current state](current-state.md), [vision](../vision.md),
+[roadmap](../roadmap.md), [documentation index](../README.md), and the
 [source registry](../../zensical/references/source-registry.md).
-
-## Link effectiveness evidence
-
-The [agent-concepts-study link-integrity research](https://github.com/CodeSigils/agent-concepts-study/blob/main/research/note-organization/link-integrity-and-stable-identifiers.md)
-and its [anti-drift findings](https://github.com/CodeSigils/agent-concepts-study/blob/main/2026-07-26-DRIFT-minimum-anti-drift-strategy.md)
-provide a useful cross-project reference. The transferable rules are:
-
-- prefer stable identifiers and treat renames as repository-wide migrations;
-- validate references recursively, including anchors and non-content pointers;
-- separate navigation links from integrity checks and semantic relationships;
-- keep one owner for each truth and link to it rather than duplicating prose;
-- add links to solve a navigation need, not to inflate connectivity metrics; and
-- test link controls with both valid and intentionally broken cases.
-
-These are maintenance patterns, not universal Zensical behavior. Apply them
-proportionately to the target repository and record the target's actual link
-checker and deployment behavior.
 
 ## Machine-typical prose tells and editorial voice (2026-09-24)
 
@@ -76,27 +64,6 @@ trailing slashes, and harmless query differences do not create false drift.
 manifest to every article until link inventory or a real rot incident shows
 that inline links plus Zensical's native checks are insufficient.
 
-## Zola skill patterns worth transferring
-
-The existing `zola-skill` provides several transferable maintenance patterns:
-
-- concise runtime router with progressive disclosure;
-- explicit light authoring, review-only, and modification workflows;
-- source registry rows containing source, verified version/date, and caveat;
-- evidence-based review findings with severity, path, evidence, impact,
-  remediation, and validation;
-- isolated build validation and a clear deployment boundary;
-- realistic scenario prompts that include prohibited unsafe advice;
-- documentation-index and phase-close gates that make drift visible.
-
-The corresponding quality pattern is also transferable: precise trigger
-selection, evidence-first inspection, authorization fidelity, minimal repairs,
-reproducible validation, and an honest handoff. Zola's exact commands,
-templates, and fixture expectations are not transferable facts.
-
-These are architectural patterns, not Zensical facts. Zensical-specific syntax,
-commands, configuration, and supported features must be verified separately.
-
 ## Independent Zensical skill and target search (2026-09-13)
 
 An authorized independent search used Skills.sh's one-shot CLI with the query
@@ -123,21 +90,6 @@ and `custom_dir = "docs/overrides"`. Its observed documentation build command
 uses a Docker image through `just docs-build`; inspect it read-only first and
 do not run containers, alter content, or add a fixture until an authorized
 bounded task identifies a repeatable behavior.
-
-## Current evidence limits
-
-- The runtime payload passes the local Agent Skill structural validator and the
-  pinned official `skills-ref` validator at agentskills commit
-  `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
-- The initial fixture scenarios run in isolated temporary copies through the
-  committed, lockfile-pinned Zensical `0.0.64` scenario environment (pin in
-  `tests/scenario-env/pyproject.toml`).
-- The independent scenario suite covers tab rendering, reproducible
-  accessibility findings, and non-root deployment links; it is not a complete
-  site or WCAG conformance suite.
-- Direct Skills CLI installation and project-scoped host smoke checks are
-  recorded; public release and long-running host-reload behavior remain
-  unclaimed.
 
 ## Generic-site expansion baseline (2026-09-13)
 
@@ -490,33 +442,6 @@ evidence that either reference is Zensical-compatible.
 The follow-up was static and read-only. Candidate scripts were not executed;
 no installation or behavior smoke test was authorized.
 
-## Evidence and scope lessons from a Zola skill review
-
-The Zola evidence reinforces four rules for this project:
-
-- `skills-ref` conformance is a reproducible format gate only; pin its source
-  revision before release.
-- Structural checks, real-site behavior, host loading, and marketplace listing
-  are separate evidence layers and must not be collapsed into one support
-  claim.
-- A capability enters the roadmap only after a user need, observed failure,
-  primary-source evidence, bounded fixture, and maintenance owner exist.
-- Roadmap status is evidence, not aspiration; remove or relabel stale phase
-  claims when implementation or validation changes.
-
-The larger Zola fixture suite and future-capability document remain references,
-not requirements. The current Zensical roadmap is intentionally smaller until
-the Code Sigils blog acceptance workflow demonstrates a gap.
-
-## Acceptance-environment decision
-
-The Code Sigils blog is the primary real-world testbed for this skill. Its
-existing Zensical configuration and content exercise the components and
-maintenance boundaries that matter to the first release. This is stronger
-evidence than speculative fixtures, so the first behavioral validation should
-run against the blog in an isolated branch or worktree. Synthetic fixtures
-should be added only when a real-site failure needs a smaller reproducible case.
-
 ## Independent Zensical capability review (2026-09-09)
 
 Zola is an architectural reference for repository discipline, not a capability
@@ -708,17 +633,6 @@ keyboard behavior, contrast, or remote-player availability.
 Primary sources: [Zensical customization](https://zensical.org/docs/customization/),
 [front matter](https://zensical.org/docs/authoring/frontmatter/), and
 [colors](https://zensical.org/docs/setup/colors/).
-
-## Research-source priority
-
-Because a personal site spans Zensical behavior, accessibility, media, design,
-providers, and editorial concerns, agents should use web search as a research
-instrument without flattening all sources into one authority order. Inspect the
-repository first; use current official Zensical documentation for Zensical-
-specific behavior; then consult W3C or other standards and primary provider
-documentation for cross-cutting claims. Community guides are useful for
-alternatives and practical observations when clearly labelled. Cached blog
-posts and search snippets are discovery leads, not evidence.
 
 ## Front matter, base path, and asset acceptance (2026-09-09)
 

@@ -82,11 +82,29 @@ Before handoff, update every affected planning document or state why it remains
 unchanged. Search for duplicate guidance and drift between `SKILL.md`,
 references, and planning documents before adding a new rule.
 
-Keep `docs/research/index.md` active rather than archival: every entry must have a
-current purpose, source/date, or explicit historical disposition. Promote only
-evidence that informs a workflow, decision, or roadmap gate; move detailed
-session chronology to a session note and mark superseded claims instead of
-silently leaving them to drift.
+Keep `docs/research/current-state.md` current rather than archival: it owns what
+the project currently knows to be true, so every claim in it needs a check date.
+Keep `docs/research/index.md` as the append-only dated field record: promote
+evidence to the current-state file when it informs a decision, move detailed
+session chronology to a session note, and never retro-edit a dated entry to
+reflect a later finding. Neither file is a graveyard, and a claim that can no
+longer be re-checked moves out of current state rather than being refreshed in
+place.
+
+### Canonical-owner rule
+
+Every behavioral rule has exactly one owning file. Every other file that needs
+the rule links to the owner instead of restating it, so a rule change is one
+edit. When two files assert the same rule, one is wrong and the other is a
+pointer that has drifted; fix the duplicate rather than reconciling the two
+later. Search a claim and count the files that assert it rather than mention it.
+This rule governs statements of a rule, not its application. A reference file
+that applies a shared principle to its own domain states that application
+rather than linking to the owner, because a reference may be read on its own and
+a boundary the agent cannot see in the file it is reading is not enforced. Three
+payload files each state that a passing build proves less than it appears to,
+and that is correct: they bound authorization, verification scope, and media
+behavior respectively.
 
 ### Meaningful-change documentation directive
 
@@ -96,8 +114,9 @@ quality criteria, update the relative records in the same work session:
 - `README.md` when discoverable scope or user-facing capability changes;
 - `docs/vision.md` for boundaries or quality criteria;
 - `docs/roadmap.md` for sequencing or acceptance expectations;
-- `docs/research/index.md` and the source registry for new evidence or volatile
-  claims;
+- `docs/research/current-state.md` for new evidence or volatile claims, and
+  `docs/research/index.md` when the finding is a dated observation rather than
+  a current fact;
 - the affected `zensical/references/` file for operational detail; and
 - the git commit body for a user-visible capability change, which is where
   release-facing history now lives.

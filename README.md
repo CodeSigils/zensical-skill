@@ -99,6 +99,9 @@ The skill currently routes these tasks:
   publishing, or deployment;
 - review generated sitemaps and canonical URLs during an explicit release-output
   review, without claiming indexing or deployment success;
+- enable and verify RSS and JSON feeds on a target running a Zensical version
+  that provides them natively, including the discovery link a feed needs to be
+  findable and the Git history its item dates come from;
 - validate a build and, where feasible, affected rendered output; and
 - identify a focused, validated pending diff as ready to commit and offer that
   next step, without treating review or validation as Git authorization; and

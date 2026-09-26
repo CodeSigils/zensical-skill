@@ -165,5 +165,6 @@ only the smallest applicable case:
 Each new fixture must identify the upstream version, source task, expected
 rendered assertion, validation command, and its limits in `research/index.md`.
 
-Related: [roadmap](roadmap.md), [research](research/index.md), and the runtime
+Related: [roadmap](roadmap.md), [current research state](research/current-state.md),
+[field record](research/index.md), and the runtime
 [validation reference](../zensical/references/validation.md).
