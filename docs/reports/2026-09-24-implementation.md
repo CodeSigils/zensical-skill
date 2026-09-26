@@ -1,7 +1,7 @@
 # Zensical-skill governance audit — implementation record
 
 **Date:** 2026-09-24 13:05 EEST
-**Scope:** [Governance audit](../2026-09-24-governance-audit.md) follow-up — all
+**Scope:** [Governance audit](./2026-09-24-governance-audit.md) follow-up — all
 approved recommendations implemented, gaps closed, structure re-validated.
 
 ## What was done

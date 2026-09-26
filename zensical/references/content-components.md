@@ -60,3 +60,7 @@ accessibility checks inside an admonition or tab review.
 
 For accessible names, keyboard behavior, contrast, and alternatives, also read
 [accessibility.md](accessibility.md).
+
+Reviewed 2026-09-26 against Zensical 0.0.65. Re-check the matching row in
+[source-registry.md](source-registry.md) before relying on a version-sensitive
+detail here.

@@ -62,3 +62,7 @@ For the cross-cutting accessibility review, continue with
 Sources: [Zensical customization](https://zensical.org/docs/customization/),
 [front matter](https://zensical.org/docs/authoring/frontmatter/), and
 [colors](https://zensical.org/docs/setup/colors/).
+
+Reviewed 2026-09-26 against Zensical 0.0.65. Re-check the matching row in
+[source-registry.md](source-registry.md) before relying on a version-sensitive
+detail here.

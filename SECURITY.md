@@ -29,4 +29,4 @@ The skill should request only the filesystem, shell, and network access needed
 for the target repository and current documentation. A successful build is not
 evidence that a deployment or external integration is safe.
 
-Last reviewed: 2026-09-12.
+Reviewed: 2026-09-12.

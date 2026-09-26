@@ -134,3 +134,7 @@ source in use, and any limit the user may need to revisit as the site grows.
 
 Do not claim a feed is working because the build succeeded. A clean build
 produces the files even when the dates are wrong and no reader can discover them.
+
+Reviewed 2026-09-26 against Zensical 0.0.65. Re-check the matching row in
+[source-registry.md](source-registry.md) before relying on a version-sensitive
+detail here.

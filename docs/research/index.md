@@ -308,8 +308,8 @@ demonstrate a repeated, testable gap.
 The resulting direction is not a permanent ceiling: it may become a reusable
 methodology or automation capability if value is demonstrated. For each
 proposal, the agent must first inspect the target repository and reconsult
-current official Zensical documentation, then evaluate the installed version,
-user value, validation path, maintenance owner, and authorization boundary.
+current official Zensical documentation, then weigh the installed version against
+the capability-admission rule in the roadmap.
 That consultation should produce a concise, target-relevant set of documented
 options for the user, including fit, trade-offs, and verification needs rather
 than an exhaustive feature list or an implied configuration change.
@@ -746,8 +746,8 @@ maintenance, security hygiene, or bounded deployment checks.
 
 The candidates show that authoring references and templates could complement
 this skill, but they do not justify widening the runtime router yet. Admit a
-feature only after a Code Sigils blog need, current primary-source evidence, a
-bounded scenario, and a maintenance owner exist.
+feature only under the capability-admission rule, with a Code Sigils blog need as
+the evidence.
 
 The first discovery pass missed these candidates because it did not run a
 fresh, broad Skills CLI search. A follow-up `npx --yes skills find zensical`

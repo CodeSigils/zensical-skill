@@ -36,3 +36,7 @@ Run the smallest applicable build and link checks, inspect the affected rendered
 page when feasible, and run `git diff --check`. Report the exact files changed,
 the requested boundary, checks performed, and any remaining source or rendering
 uncertainty.
+
+Reviewed 2026-09-26 against Zensical 0.0.65. Re-check the matching row in
+[source-registry.md](source-registry.md) before relying on a version-sensitive
+detail here.

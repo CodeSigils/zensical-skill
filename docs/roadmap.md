@@ -10,7 +10,7 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Last reviewed: 2026-09-26.
+Reviewed: 2026-09-26.
 
 Planning documents: [documentation index](README.md) for the read-first matrix,
 [vision](vision.md) for boundaries and quality criteria,
@@ -85,17 +85,17 @@ rigorous than the current runtime automation, so keep new process and payload
 material only when it changes an agent decision.
 
 Before broadening the remaining payload, exercise it on two or three materially
-different real Zensical maintenance tasks. Record only repeated, concrete gaps. Admit a
-small rendered-output helper or a new fixture only when such a gap has a stable
-observable behavior and a maintenance owner; otherwise preserve the current
-review guidance and state its limits.
+different real Zensical maintenance tasks. Record only repeated, concrete gaps.
+Admit a small rendered-output helper or a new fixture only under the
+[capability-admission rule](#capability-admission-rule) below; otherwise preserve
+the current review guidance and state its limits.
 
 For every proposed Zensical addition, integration, workflow, or automation
 capability, inspect the target repository and reconsult current official
 Zensical documentation before evaluating value. If repeated evidence justifies
 it, the next form may be a reusable methodology or automation capability—not
-necessarily another reference file—but it must retain explicit validation,
-maintenance ownership, and authorization boundaries.
+necessarily another reference file—but it must keep the validation, ownership, and
+authorization boundaries that rule already requires.
 
 ### Generic existing-site expansion plan
 
@@ -275,6 +275,11 @@ not a new automation workflow.
 
 ## Capability-admission rule
 
+This section is the single statement of the rule. Other maintainer documents
+apply it and link here instead of restating the conditions, so that a change to
+the gate is made once. The runtime payload carries its own wording in
+`zensical/SKILL.md` because an agent may read that file without the roadmap.
+
 Do not add a new Zensical workflow, integration, or validation control merely
 because the framework supports it. Admit a capability only when all five
 conditions are present:
@@ -453,9 +458,9 @@ assertions use only portable shell tools (`grep`, `python3`, `awk`, `cp`,
 
 Zensical's wider built-in surface is documented independently from Zola. Do
 not expand the runtime router just because a feature exists. Add a focused
-capability only when the blog or another accepted target supplies a concrete
-workflow, current primary-source evidence, a bounded behavior scenario, and a
-maintenance owner. Candidate future slices include navigation feature
+capability only under the [capability-admission rule](#capability-admission-rule),
+with the blog or another accepted target supplying the evidence. Candidate future
+slices include navigation feature
 interactions, MkDocs compatibility, workspace watch/symlink behavior, and theme
 customization; each remains deferred until real work requires it.
 

@@ -77,8 +77,7 @@ The Zola evidence reinforces four rules for this project:
 - Structural checks, real-site behavior, host loading, and marketplace listing
   are separate evidence layers and must not be collapsed into one support
   claim.
-- A capability enters the roadmap only after a user need, observed failure,
-  primary-source evidence, bounded fixture, and maintenance owner exist.
+- A capability enters the roadmap only under the capability-admission rule.
 - Roadmap status is evidence, not aspiration; remove or relabel stale phase
   claims when implementation or validation changes.
 

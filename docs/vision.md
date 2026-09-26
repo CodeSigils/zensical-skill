@@ -56,8 +56,8 @@ by owning an integration.
 - Prefer current primary sources and record version uncertainty.
 - Extract new workflows only after repeated work demonstrates a stable need.
 - Before assessing a proposed Zensical capability, consult the target
-  repository and current official Zensical documentation; weigh demonstrated
-  user value, validation burden, maintenance ownership, and authorization.
+  repository and current official Zensical documentation, then weigh the result
+  against the capability-admission rule.
 - Turn that consultation into a small, relevant set of documented Zensical
   options for the user, with concrete fit, trade-offs, and validation needs;
   do not present an exhaustive catalog or imply optional functionality is

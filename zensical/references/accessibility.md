@@ -64,3 +64,7 @@ discoverability and search-result usability. Accessibility review is still an
 inclusion and quality practice, not an SEO shortcut or a ranking guarantee.
 
 Sources: [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [W3C Images Tutorial](https://www.w3.org/WAI/tutorials/images/), [W3C Audio and Video Media](https://www.w3.org/WAI/media/av/), and [W3C Accessible Names](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/).
+
+Reviewed 2026-09-26 against Zensical 0.0.65. Re-check the matching row in
+[source-registry.md](source-registry.md) before relying on a version-sensitive
+detail here.

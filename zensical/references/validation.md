@@ -56,3 +56,7 @@ A successful local build proves only that the configured site generated output.
 It does not prove that hosting, DNS, permissions, cache invalidation, or a
 remote workflow succeeded. Inspect CI status only when the user asks for
 deployment verification or the repository workflow makes it relevant.
+
+Reviewed 2026-09-26 against Zensical 0.0.65. Re-check the matching row in
+[source-registry.md](source-registry.md) before relying on a version-sensitive
+detail here.

@@ -128,3 +128,7 @@ and [GLightbox documentation](https://zensical.org/docs/setup/extensions/glightb
 for version-sensitive syntax. The target repository and its lockfile remain the
 source of truth for enabled extensions, asset conventions, and any optimization
 pipeline.
+
+Reviewed 2026-09-26 against Zensical 0.0.65. Re-check the matching row in
+[source-registry.md](source-registry.md) before relying on a version-sensitive
+detail here.

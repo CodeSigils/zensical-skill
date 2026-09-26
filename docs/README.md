@@ -38,6 +38,18 @@ records, not planning inputs. For what is currently true, read
 `research/current-state.md`, which owns current facts and carries a
 `Reviewed <date>` marker.
 
+Reports are never retro-edited, so read the one matching your question rather
+than the newest:
+
+| Report | Read it for |
+| ------ | ----------- |
+| [2026-09-24-governance-audit.md](reports/2026-09-24-governance-audit.md) | The audit that found the scenario pin behind the current release. |
+| [2026-09-24-implementation.md](reports/2026-09-24-implementation.md) | What that audit changed, and what it deliberately left alone. |
+| [2026-09-24-version-drift-strategy.md](reports/2026-09-24-version-drift-strategy.md) | Why repeated version literals were collapsed to one canonical source. |
+| [2026-09-24-oh-my-openagent-editorial-review.md](reports/2026-09-24-oh-my-openagent-editorial-review.md) | An external editorial review of a sibling guide, and what was declined. |
+| [2026-09-26-payload-review-and-remediation.md](reports/2026-09-26-payload-review-and-remediation.md) | The payload review that admitted feeds and corrected stale claims. |
+| [2026-09-26-governance-mechanism.md](reports/2026-09-26-governance-mechanism.md) | Why documentation is governed by a duplication rule rather than a size limit. |
+
 Every behavioral rule has exactly one owning file, per the canonical-owner rule
 in `AGENTS.md`. This table routes to owners; it does not restate them. If a row
 below sends you to two files that both state the same rule, one is a stale

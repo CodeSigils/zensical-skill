@@ -66,3 +66,7 @@ deployment artifacts, or every secret format. A real exposure needs provider
 rotation/revocation before any history-removal plan. See GitHub's
 [secret-scanning guidance](https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning)
 and [sensitive-data removal guidance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
+
+Reviewed 2026-09-26 against Zensical 0.0.65. Re-check the matching row in
+[source-registry.md](source-registry.md) before relying on a version-sensitive
+detail here.

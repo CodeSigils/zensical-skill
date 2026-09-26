@@ -319,9 +319,8 @@ template that other sites must follow. The next expansion is to prove the
 existing-site workflow on two or three materially different Zensical
 repositories. Candidate slices are generic content-model/authoring work,
 bounded MiniJinja theme overrides, explicit release review, and a
-multi-deployment language-selector workflow. Each needs a real user request,
-current official evidence, a focused scenario or fixture, and a named
-maintenance owner before it becomes part of the portable payload.
+multi-deployment language-selector workflow. Each must satisfy the
+capability-admission rule before it becomes part of the portable payload.
 
 Do not promise Zola-equivalent multilingual content routing: Zensical currently
 supports one canonical language per generated project and can link

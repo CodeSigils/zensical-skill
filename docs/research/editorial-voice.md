@@ -206,9 +206,9 @@ and a verification-heavy explainer). For each article:
    authored change and rendered links; it does not validate voice.
 
 Add a runtime rule, fixture, or helper only when at least two materially
-different reviews reveal the same concrete problem and the intervention has a
-bounded validation path and named maintenance owner. Otherwise, retain the
-manual, target-guidance-first review and record only durable findings here.
+different reviews reveal the same concrete problem and the capability-admission
+rule is satisfied. Otherwise, retain the manual, target-guidance-first review
+and record only durable findings here.
 
 ## Adopted guidance (2026-09-24)
 
@@ -430,9 +430,8 @@ are not Zensical sites. It would stay a thin orchestrator: read the target's
 guidance, optionally load an installed lens, apply the density rule and
 preservation contract, and report suggestions without rewriting. It must not
 reimplement tell lists or impose a house voice, or it duplicates the seven
-community skills already recorded here. Per the capability-admission rule it
-still needs a bounded fixture and a named owner, so this is flagged as a
-future decision, not adopted.
+community skills already recorded here. It does not yet satisfy the
+capability-admission rule, so this is flagged as a future decision, not adopted.
 
 ## Runtime guidance promoted (2026-09-24)
 
