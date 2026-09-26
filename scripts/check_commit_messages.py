@@ -10,11 +10,22 @@ SUBJECT_LIMIT = 72
 FIELDS = ("what:", "why:")
 
 
+class CheckError(RuntimeError):
+    """The check could not run, as opposed to finding a policy violation."""
+
+
 def run(*args: str) -> str:
-    """Return command output, or raise RuntimeError with git's own message."""
-    result = subprocess.run(args, text=True, capture_output=True)
+    """Return command output, or raise CheckError carrying git's own message.
+
+    A missing git binary raises FileNotFoundError, which is translated here so
+    the caller has one exception type to handle rather than two.
+    """
+    try:
+        result = subprocess.run(args, text=True, capture_output=True)
+    except FileNotFoundError as error:
+        raise CheckError(f"{args[0]} is not available on this host") from error
     if result.returncode != 0:
-        raise RuntimeError(result.stderr.strip() or f"{' '.join(args)} failed")
+        raise CheckError(result.stderr.strip() or f"{' '.join(args)} failed")
     return result.stdout
 
 
@@ -78,15 +89,14 @@ def check(commit: str) -> list[str]:
 
 def main() -> int:
     refs = sys.argv[1:] or ["HEAD"]
+    errors: list[str] = []
     try:
         hashes = resolve(refs)
-    except RuntimeError as exc:
-        print(f"Commit message policy could not run: {exc}", file=sys.stderr)
+        for commit in hashes:
+            errors.extend(check(commit))
+    except CheckError as error:
+        print(f"Commit message policy could not run: {error}", file=sys.stderr)
         return 2
-
-    errors: list[str] = []
-    for commit in hashes:
-        errors.extend(check(commit))
 
     if errors:
         print("Commit message policy failed:", file=sys.stderr)

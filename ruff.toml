@@ -1,0 +1,19 @@
+# Ruff configuration for the repository's local checks.
+#
+# The scope is deliberately narrow. These four rule sets catch real defects
+# (unused names, unreachable logic, mutable defaults, reimplemented builtins)
+# and nothing else. Style and modernization are not the point of a repository
+# that runs four bespoke gates, and a wider selection would produce findings
+# that change no decision.
+#
+# E and F are the correctness floor. B and SIM were added after verifying they
+# report nothing today, so they cost nothing and catch density bugs early.
+#
+# line-length matches the width already used in this repository's scripts and
+# the sibling repo-health project, rather than importing a default the code
+# never followed.
+line-length = 120
+target-version = "py310"
+
+[lint]
+select = ["E", "F", "B", "SIM"]

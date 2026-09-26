@@ -49,9 +49,12 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
       - name: Instruction contract self-test
         run: python3 zensical/scripts/check_instruction_contract.py --self-test
       - name: Site hygiene scan
         run: bash zensical/scripts/check_site_hygiene.sh .
       - name: README inventory
         run: python3 scripts/check_readme_inventory.py
+      - name: Lint the local checks
+        run: uvx ruff check .

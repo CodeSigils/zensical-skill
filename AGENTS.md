@@ -193,6 +193,33 @@ digests, page counts, or test results in it. Record target-specific observations
 and historical evidence in `docs/research/index.md`, `docs/roadmap.md`, or a linked
 session note instead.
 
+### Local check contract
+
+Every script under `scripts/` and `zensical/scripts/` returns the same three
+codes, so a caller can tell a finding from a broken environment without parsing
+prose: `0` clean, `1` findings, `2` the check could not run. A check must not
+exit `1` for an environmental problem, and must not let a subprocess failure
+escape as a traceback. When adding a check, follow the existing scripts rather
+than inventing a new convention.
+
+### Separate environmental failure from repository failure
+
+Before treating a failed command as a finding about the repository, rule out the
+reviewer's own environment: an unavailable network, an unwritable temporary
+directory, a missing binary, or a sandbox restriction. Compare the configured CI
+workflow before concluding the repository is at fault. Report a command that
+could not run as an environment limit, not as a defect, and do not spend
+another pass retrying the same unavailable capability.
+
+### Review budget
+
+Default to one discovery pass and one post-fix verification pass. The
+verification pass checks the applied fixes and looks for regressions the fixes
+introduced. Continue past those two only when verification exposes a new,
+concrete behavioral risk. Do not repeat an unchanged review to seek more
+confidence: reasoning that changed no decision belongs in the commit body, the
+same rule the documentation admission gate applies to new documents.
+
 ## Change boundaries
 
 - Keep Zensical-specific implementation separate from editorial voice and

@@ -29,7 +29,15 @@ class CheckError(RuntimeError):
 
 
 def run(*args: str) -> str:
-    result = subprocess.run(args, capture_output=True, text=True, check=False)
+    """Return command output, or raise CheckError with git's own message.
+
+    A missing git binary raises FileNotFoundError, which is translated here so
+    the caller has one exception type to handle rather than two.
+    """
+    try:
+        result = subprocess.run(args, capture_output=True, text=True, check=False)
+    except FileNotFoundError as error:
+        raise CheckError(f"{args[0]} is not available on this host") from error
     if result.returncode != 0:
         raise CheckError(result.stderr.strip() or f"{args[0]} failed")
     return result.stdout
@@ -151,7 +159,6 @@ def compare(
             continue
 
         if name not in actual:
-            kind = "directory" if is_directory else "file"
             findings.append(f"{path}: listed in the README but not tracked in the repository")
             continue
 

@@ -203,6 +203,7 @@ scripts/
 ├── check_readme_inventory.py        # README file trees against the repository
 └── run_scenarios.sh                 # isolated fixture runner
 AGENTS.md                            # maintainer change contract
+ruff.toml                            # narrow lint scope for the local checks
 LICENSE                              # MIT license
 SECURITY.md                          # reporting and payload boundaries
 ```
@@ -287,10 +288,11 @@ accessibility conformance.
 
 Three CI jobs run on every push and pull request against `main`
 ([`.github/workflows/validate.yml`](.github/workflows/validate.yml)): the
-commit-policy check, the scenario suite, and a third job running three local
+commit-policy check, the scenario suite, and a third job running four local
 checks (`check_instruction_contract.py --self-test`, `check_site_hygiene.sh`,
-and `check_readme_inventory.py`, which fails when the README's file trees stop
-matching the repository). Dependabot watches the pinned workflow actions. The gate runs checks, not a
+`check_readme_inventory.py`, which fails when the README's file trees stop
+matching the repository, and `ruff check .` against the narrow rule set in
+`ruff.toml`). Dependabot watches the pinned workflow actions. The gate runs checks, not a
 deployment.
 
 ## Primary references

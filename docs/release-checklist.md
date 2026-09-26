@@ -46,6 +46,8 @@ release guarantee.
 - [ ] Run the shared locked scenario/fixture suite.
 - [ ] Run `python3 scripts/check_readme_inventory.py` and resolve any file the
       README tree and the repository disagree about.
+- [ ] Run `ruff check .` and resolve every finding. The rule set is scoped in
+      `ruff.toml`; widen it deliberately rather than by accumulation.
 - [ ] Review the final payload tree and confirm only `zensical/` is distributed.
 - [ ] Record unresolved network, version, rendering, or deployment uncertainty.
 
@@ -132,6 +134,7 @@ host matrix, marketplace status, known limitations, and the next review trigger
 (for example, a Zensical upgrade or provider contract change). A minimal
 validation gate (`validate.yml`) runs on push and pull request. It has three
 jobs: the commit-message policy check, the shared scenario suite, and a job
-running the instruction-contract self-test, the site-hygiene preflight, and the
-README inventory check. GitHub Releases and semver tags remain
+running the instruction-contract self-test, the site-hygiene preflight, the
+README inventory check, and `ruff check .`. GitHub Releases and semver tags
+remain
 optional until the manual process becomes a demonstrated bottleneck.

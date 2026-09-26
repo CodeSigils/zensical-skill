@@ -61,6 +61,10 @@ commands, configuration, and supported features must be verified separately.
 - The initial fixture scenarios run in isolated temporary copies through the
   committed, lockfile-pinned Zensical `0.0.65` scenario environment (pin in
   `tests/scenario-env/pyproject.toml`).
+- Four repository-level checks are wired into CI: the commit-message policy,
+  the scenario suite, and a job running the instruction-contract self-test, the
+  site-hygiene preflight, the README inventory check, and `ruff check .`. All
+  local scripts share one exit contract: 0 clean, 1 findings, 2 could not run.
 - The independent scenario suite covers tab rendering, reproducible
   accessibility findings, the deployment-instruction contract, and
   non-root deployment and sitemap output; it is not a complete site or WCAG
