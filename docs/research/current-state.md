@@ -62,8 +62,9 @@ commands, configuration, and supported features must be verified separately.
   committed, lockfile-pinned Zensical `0.0.65` scenario environment (pin in
   `tests/scenario-env/pyproject.toml`).
 - The independent scenario suite covers tab rendering, reproducible
-  accessibility findings, and non-root deployment links; it is not a complete
-  site or WCAG conformance suite.
+  accessibility findings, the deployment-instruction contract, and
+  non-root deployment and sitemap output; it is not a complete site or WCAG
+  conformance suite. Feeds are an admitted capability with no scenario yet.
 - Direct Skills CLI installation and project-scoped host smoke checks are
   recorded; public release and long-running host-reload behavior remain
   unclaimed.
@@ -82,8 +83,10 @@ The Zola evidence reinforces four rules for this project:
   claims when implementation or validation changes.
 
 The larger Zola fixture suite and future-capability document remain references,
-not requirements. The current Zensical roadmap is intentionally smaller until
-the Code Sigils blog acceptance workflow demonstrates a gap.
+not requirements. The current Zensical roadmap is intentionally smaller. The
+blog acceptance workflow has since demonstrated a gap, and the one it
+demonstrated, feeds, was admitted; the remaining deferred slices still need
+their own real-site evidence.
 
 ## Acceptance-environment decision
 
@@ -103,8 +106,10 @@ admission conditions are restated exactly twice: that section, and
 payload without the roadmap.
 
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
-`SECURITY.md`, and this file. The six dated reports carry `Date:` instead,
-because a report's date records when it was written. Eight of ten payload
+`SECURITY.md`, and this file. The seven dated reports carry a date instead,
+because a report's date records when it was written; four write it as a plain
+`Date:` line and three as a bolded list label, so a marker search must accept
+both forms. Eight of ten payload
 references carry a review footer naming Zensical 0.0.65 and pointing at the
 registry row; `article-review.md` is version-independent and `source-registry.md`
 is the registry.

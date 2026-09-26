@@ -53,3 +53,5 @@ jobs:
         run: python3 zensical/scripts/check_instruction_contract.py --self-test
       - name: Site hygiene scan
         run: bash zensical/scripts/check_site_hygiene.sh .
+      - name: README inventory
+        run: python3 scripts/check_readme_inventory.py

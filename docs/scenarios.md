@@ -109,8 +109,8 @@ when the pinned Zensical version or its default extension set changes.
 
 These scenarios prove only the bounded behaviors named above, not universal
 Zensical support or WCAG conformance. The pinned fixtures and runner reproduce
-those observed failures and the non-root deployment boundary in isolated
-temporary copies. Add another fixture or assertion only when a repeated
+those observed failures, the non-root deployment boundary, and the
+sitemap/canonical output boundary in isolated temporary copies. Add another fixture or assertion only when a repeated
 real-site run exposes a deterministic failure that the current scenarios cannot
 represent. Keep target-site results and source versions in the research record.
 

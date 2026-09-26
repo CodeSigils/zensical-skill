@@ -53,5 +53,5 @@ than the newest:
 
 Every behavioral rule has exactly one owning file, per the canonical-owner rule
 in `AGENTS.md`. This table routes to owners; it does not restate them. If a row
-below sends you to two files that both state the same rule, one is a stale
+above sends you to two files that both state the same rule, one is a stale
 pointer: fix the duplicate rather than reconciling them at read time.

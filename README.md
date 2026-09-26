@@ -200,6 +200,7 @@ tests/fixtures/                      # site-only deterministic scenario inputs
 tests/scenario-env/                  # locked Zensical test environment
 scripts/
 ├── check_commit_messages.py         # commit subject and what:/why: policy
+├── check_readme_inventory.py        # README file trees against the repository
 └── run_scenarios.sh                 # isolated fixture runner
 AGENTS.md                            # maintainer change contract
 LICENSE                              # MIT license
@@ -286,9 +287,10 @@ accessibility conformance.
 
 Three CI jobs run on every push and pull request against `main`
 ([`.github/workflows/validate.yml`](.github/workflows/validate.yml)): the
-commit-policy check, the scenario suite, and the two payload checks
-(`check_instruction_contract.py --self-test` and `check_site_hygiene.sh`).
-Dependabot watches the pinned workflow actions. The gate runs checks, not a
+commit-policy check, the scenario suite, and a third job running three local
+checks (`check_instruction_contract.py --self-test`, `check_site_hygiene.sh`,
+and `check_readme_inventory.py`, which fails when the README's file trees stop
+matching the repository). Dependabot watches the pinned workflow actions. The gate runs checks, not a
 deployment.
 
 ## Primary references

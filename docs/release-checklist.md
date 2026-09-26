@@ -19,12 +19,15 @@ release guarantee.
 
 ## Local validation
 
-- [x] Run the official Agent Skills validator from a clean environment using
+- [ ] Run the official Agent Skills validator from a clean environment using
       the pinned command below; record the exact commit and result.
 
       `uvx --from git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref skills-ref validate zensical`
 
-      Result (2026-09-09): `Valid skill: zensical`.
+      Result (2026-09-09): `Valid skill: zensical`. That run covered an earlier
+      payload, so the box is unchecked until it is repeated against the current
+      one; a validator result is evidence about the tree it ran on, not about
+      the repository.
 - [ ] Check relative references and front matter.
 - [ ] Run `bash zensical/scripts/check_site_hygiene.sh .` and resolve or
       explicitly review any candidate before release.
@@ -41,6 +44,8 @@ release guarantee.
 - [ ] Apply the accessibility reference to affected media, components, CSS,
       templates, or landing pages; record browser/assistive-technology limits.
 - [ ] Run the shared locked scenario/fixture suite.
+- [ ] Run `python3 scripts/check_readme_inventory.py` and resolve any file the
+      README tree and the repository disagree about.
 - [ ] Review the final payload tree and confirm only `zensical/` is distributed.
 - [ ] Record unresolved network, version, rendering, or deployment uncertainty.
 
@@ -105,6 +110,11 @@ returned HTTP 200. The requester verified and closed
 [`vercel-labs/skills#2205`](https://github.com/vercel-labs/skills/issues/2205).
 Skills.sh indexing is now confirmed; public-release claims remain pending.
 
+Both recorded installs predate the current payload. The tree below records what
+each install contained, not what a fresh install contains today; re-run the
+documented command and confirm the current file set before announcing a
+package install.
+
 Latest recorded package refresh (2026-09-10): Skills CLI `1.5.25` copied
 `CodeSigils/zensical-skill@main` at
 `d7ef1e05583593d66e79fce807f38979566f088c` into an isolated
@@ -120,6 +130,8 @@ project-path smoke evidence rather than an inferred host-loader claim.
 The handoff must include the source ref, validation commands and outcomes,
 host matrix, marketplace status, known limitations, and the next review trigger
 (for example, a Zensical upgrade or provider contract change). A minimal
-validation gate (`validate.yml`: commit-message policy and the shared scenario
-suite) runs on push and pull request; GitHub Releases and semver tags remain
+validation gate (`validate.yml`) runs on push and pull request. It has three
+jobs: the commit-message policy check, the shared scenario suite, and a job
+running the instruction-contract self-test, the site-hygiene preflight, and the
+README inventory check. GitHub Releases and semver tags remain
 optional until the manual process becomes a demonstrated bottleneck.

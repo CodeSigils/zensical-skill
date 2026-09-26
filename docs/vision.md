@@ -18,8 +18,9 @@ evidence, [field record](research/index.md) for dated observations, and
 
 The skill owns repository inspection, presentation syntax, content/navigation
 consistency, link and front-matter checks, builds, rendered-output inspection,
-media and asset behavior, CSS/theme customization, landing pages, bounded
-tracked-file hygiene before authorized publication, and deployment awareness.
+media and asset behavior, CSS/theme customization, landing pages, generated
+feeds, bounded tracked-file hygiene before authorized publication, and
+deployment awareness.
 For a new article, it chooses among existing categories from the primary reader
 question and observed navigation conventions; new categories or navigation
 branches remain an explicitly authorized site modification.
@@ -40,9 +41,9 @@ The intended generic scope is existing-site maintenance, not a claim that
 every feature of Zensical or another generator is available. A future language
 workflow must model Zensical's documented one-canonical-language-per-project
 behavior and alternate deployments, rather than copying Zola's multilingual
-content-routing model. Feeds are an admitted bounded capability: Zensical has provided them natively
-since 0.0.65, and a feed is verified by inspecting generated output rather than
-by owning an integration.
+content-routing model. Feeds are an admitted bounded capability: Zensical has provided them
+natively since 0.0.65, and a feed is verified by inspecting generated output
+rather than by owning an integration.
 
 ## Principles
 
