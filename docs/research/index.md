@@ -938,3 +938,22 @@ reflows at narrow widths. The original OWI review target remains unusable for a
 complete build because its sparse checkout still cannot fetch `src/`; record
 that as an environment limit rather than a site finding. No generic
 customization workflow or fixture is admitted from this single clean review.
+
+## SeqPro locked documentation CI repair (2026-09-27)
+
+The downloaded ML4GLand SeqPro checkout at
+`63a843985d96dd3f5a7bc8cc20e8bd03f1dabdd9` has a committed Pixi `doc`
+environment with Python 3.12, Zensical, mkdocstrings-python, and an editable
+SeqPro package, but its GitHub Pages workflow bypassed that lockfile through a
+series of floating `uv pip` installs. The authorized repair replaces those
+steps with `prefix-dev/setup-pixi@v0.10.0`, `environments: doc`, and
+`locked: true`, followed by
+`pixi run --locked --environment doc build-doc`. The existing Rust toolchain
+step remains because SeqPro's editable package builds a Rust extension.
+
+The workflow YAML parsed and its Pixi settings matched the target's declared
+environment; `pixi.lock` contains the documented Zensical and mkdocstrings
+artifacts. Pixi itself was not installed locally, so this is static
+reproducibility evidence only. The first GitHub Actions run must establish
+whether the lock installs and the Pages artifact builds; no deployment,
+provider success, or generic Zensical CI pattern is claimed.
