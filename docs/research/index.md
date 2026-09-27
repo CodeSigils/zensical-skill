@@ -869,3 +869,72 @@ guidance mentioned section indexes and navigation but did not state the primary
 reader-question rule, so the light-edit reference now makes it explicit. This
 is one observed authoring decision; it does not justify a category classifier
 or fixture.
+
+## External-site maintenance probes (2026-09-27)
+
+Two downloaded external targets were assessed against the generic existing-site
+expansion plan. In the locally materialized AI Riksarkivet `ra-mcp` checkout at
+`37137a1303cf1eee9d6221ec9478ca161f2f10d6`, the preserved Zensical `0.0.57`
+environment built the unchanged site with `No issues found`. A disposable
+probe enabled the documented `mkdocstrings` Python handler and rendered one
+`::: ra_mcp_search_lib.models` directive. The generated API route contained
+the expected model anchors and the historical empty-site failure did not recur.
+
+The probe is not an implementation result: the target's docs group does not
+declare `mkdocstrings-python`, so the handler was staged from a separate local
+environment solely for this isolated test. An attempted
+`uv add --group docs mkdocstrings-python --offline` correctly stopped because
+the workspace resolver could not find `fastmcp==3.4.7` in the cache. No
+`--frozen` fallback was used, and the target remained clean. The official
+[MkDocs-plugin compatibility documentation](https://zensical.org/docs/compatibility/mkdocs/plugins/)
+was rechecked on 2026-09-27; it lists `mkdocstrings` as supported and directs
+Python projects to install `mkdocstrings-python`. A future authorized repair
+must update and lock that dependency in a materialized current checkout before
+restoring a directive.
+
+The OWI Lab target could not supply the independent presentation review: its
+partial clone tracks 39 `docs/` files but materializes none, and GitHub DNS was
+unavailable to fetch the missing objects. This is an environment limit, not a
+site finding. These two probes add no generic authoring, customization, or
+fixture admission; retain the current review guidance and repeat the tasks
+only with complete target sources and a resolvable locked environment.
+
+## Authorized external authoring repair (2026-09-27)
+
+Network-enabled dependency resolution subsequently completed the AI Riksarkivet
+task in the same materialized checkout. The authorized change added
+`mkdocstrings-python` to the docs group and refreshed `uv.lock`, configured
+`packages/libs/search-lib/src` as the Python handler path, and replaced only
+the hand-written Models summary in `docs/api/search.md` with
+`::: ra_mcp_search_lib.models`. The target command
+`UV_CACHE_DIR=/tmp/zensical-uv-cache-network uv run --locked --group docs zensical build --clean`
+completed with `No issues found`; generated `site/api/search/index.html`
+contained `RecordsResponse` and `SearchRecord` anchors. `git diff --check`
+passed.
+
+This is the first completed external content-model repair for the deferred
+generic-authoring slice. It validates the existing target-guidance-first method
+on a locked Zensical `0.0.57` project, but it does not demonstrate a repeated
+failure or justify a new generic authoring reference or fixture. The OWI
+presentation task remains blocked by unavailable partial-clone objects, so the
+independent theme/presentation evidence gate remains open.
+
+## External presentation review (2026-09-27)
+
+The AI Riksarkivet checkout also supplied a bounded presentation review after
+the clean locked Zensical `0.0.57` build. Its `zensical.toml` configures
+`docs/overrides` as `custom_dir`; the sole override is the focused
+`partials/integrations/analytics/custom.html` Matomo script. Generated
+`site/index.html` retained that scoped override, the local `ra.svg` logo with
+`alt="ra-mcp"`, accessible labels for both palette toggles, and the configured
+Getting Started, How it Works, and Tools & Skills navigation links. The review
+found no source or static-output defect, and did not alter the target beyond
+the separately recorded authoring repair.
+
+The result is limited to generated static output. It does not establish that
+the remote analytics provider loads, that palette interaction works with a
+keyboard, that colors meet contrast requirements, or that the landing page
+reflows at narrow widths. The original OWI review target remains unusable for a
+complete build because its sparse checkout still cannot fetch `src/`; record
+that as an environment limit rather than a site finding. No generic
+customization workflow or fixture is admitted from this single clean review.

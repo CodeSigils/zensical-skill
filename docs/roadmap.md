@@ -184,6 +184,26 @@ covers a presentation override and a content-model page, but it does not yet
 justify generic customization or authoring admission; retain the current
 review-only guidance and wait for a real maintenance need or repeated gap.
 
+**External authoring repair outcome (2026-09-27):** an authorized AI
+Riksarkivet `ra-mcp` change added the locked `mkdocstrings-python` dependency,
+configured the existing Search-library source path, and replaced the hand-written
+Models summary on `docs/api/search.md` with a generated
+`ra_mcp_search_lib.models` directive. The target's locked Zensical `0.0.57`
+build completed with `No issues found`, and generated output retained the API
+route, navigation, and model anchors. This is one completed external
+content-model task, not a generic authoring admission: no repeated behavior
+yet warrants a fixture or runtime expansion.
+
+**External presentation review outcome (2026-09-27):** the same AI Riksarkivet
+target's configured `custom_dir` Matomo partial and themed landing page were
+reviewed after the clean locked build. Static generated output retained the
+scoped analytics script, local logo with an `alt` label, explicit light/dark
+palette controls, and representative configured navigation links. This completes
+the requested presentation-review task but found no repair or recurring
+behavior. It validates static output only—not remote analytics loading,
+keyboard interaction, contrast, or narrow-view reflow—so it does not admit a
+generic customization workflow or fixture.
+
 The evaluation handoff should suggest only the relevant documented Zensical
 sections or capabilities, explain their target-specific fit and trade-offs, and
 name any validation needed. It must not substitute a feature catalog for a
