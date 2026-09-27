@@ -1,6 +1,6 @@
 # Current research state
 
-Reviewed: 2026-09-26.
+Reviewed: 2026-09-27.
 
 This file owns what the project currently knows to be true. Every claim here
 carries a check date. A claim that can no longer be re-checked against a primary
@@ -31,6 +31,16 @@ provide a useful cross-project reference. The transferable rules are:
 These are maintenance patterns, not universal Zensical behavior. Apply them
 proportionately to the target repository and record the target's actual link
 checker and deployment behavior.
+
+Checked 2026-09-27 for the Code Sigils blog. The target owns no working link
+checker: its scheduled workflow had been red on every run since it was added and
+the failure was invisible, because the trigger was cron-only and the job was
+marked `continue-on-error`. A real run exposed 12 references to 11 distinct dead
+URLs. Zensical's native build-time validation covers internal links and anchors
+only; the target's [GitHub Pages workflow](https://zensical.org/docs/publish-your-site/)
+defines no link check at all, so external link monitoring is a target-owned
+concern rather than a Zensical feature. Full account in
+[index.md](index.md#external-link-checking-and-the-first-real-rot-incident-2026-09-27).
 
 ## Zola skill patterns worth transferring
 

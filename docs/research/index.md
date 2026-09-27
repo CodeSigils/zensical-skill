@@ -957,3 +957,99 @@ artifacts. Pixi itself was not installed locally, so this is static
 reproducibility evidence only. The first GitHub Actions run must establish
 whether the lock installs and the Pages artifact builds; no deployment,
 provider success, or generic Zensical CI pattern is claimed.
+
+## External link checking and the first real rot incident (2026-09-27)
+
+The [link-manifest evaluation](#evaluation-lightweight-article-link-manifests)
+above was deferred "until link inventory or a real rot incident shows that
+inline links plus Zensical's native checks are insufficient." That condition has
+now fired on the Code Sigils blog, and the tool that answered it turned out to be
+a general-purpose link checker rather than a manifest.
+
+**The rot was real and the existing checker was fake.** The blog's link-check
+workflow had been failing on every scheduled run since it was added, and nobody
+had seen it, because the only trigger was a weekly cron and the job was marked
+`continue-on-error`. The cause was instructive rather than exotic: root-relative
+image links such as `/assets/images/...` cannot be resolved without a root
+directory, and the workflow excluded them with a pattern written against the raw
+source text while lychee matches `--exclude` against the *normalised* URL, so
+the exclusion silently did nothing. Every run reported errors; every run was
+allowed to fail quietly. A real run then found 12 references to 11 distinct dead
+URLs across five article files, plus two npmjs URLs that answer `403` to any bot
+regardless of whether the package exists.
+
+That combination is the transferable finding: **a link checker that has never
+been verified against a known-broken case is not a check, it is a scheduled
+source of noise.** A permanently-red report trains a maintainer to ignore the
+output, which is worse than having no link check at all. The cross-project rule
+in [current-state.md](current-state.md) — "test link controls with both valid and
+intentionally broken cases" — is the right bar, and this is the second tool on
+which it has now paid off.
+
+**What lychee is, precisely.** Verified at version 0.24.2 against the project's
+own README and command help. It is a fast, asynchronous, stream-based link
+checker written in Rust, distributed as a CLI, a library, a Docker image, and a
+GitHub Action. It extracts links from files by type, normalises them (relative
+against the file, root-absolute against `--root-dir`), filters them, checks them,
+and compares each result against an accepted status set. It **only reports**: it
+has no fix, rewrite, or in-place mode, and its replacement-suggestion option
+draws on a web archive rather than editing anything.
+
+Four properties decide whether it fits this project:
+
+- **Verdicts are configurable and the default excludes redirects.** The default
+  accepted range is `100..=103,200..=299`, which omits `3xx`, so redirects
+  surface as their own status rather than as success.
+- **Fragments are not checked by default.** `--include-fragments` must be set
+  explicitly. Zensical's own build-time validation already covers internal links
+  and anchors, so this is not a gap in practice for local integrity.
+- **Images are ordinary links.** Existence and HTTP status only; bytes, format,
+  and rendered dimensions are not inspected, so a 665-byte placeholder logo
+  passes forever. That limitation is already stated in
+  `zensical/references/media.md`.
+- **It reads what you give it.** A `docs/**/*.md` glob never sees
+  `zensical.toml`, so a footer social URL is outside its reach. That is a scoping
+  property, not a defect, and it is easy to forget.
+
+**The one genuine simplification over the manifest design.** lychee derives its
+inventory by globbing the Markdown, so it needs no second manually maintained
+copy, no role field, no `last_verified` bookkeeping, and no URL-normalisation
+pass to prevent false drift. The maintenance cost the 2026-09-13 entry was
+trying to bound does not arise. For the purpose that entry stated, the manifest
+is superseded; the entry is retained rather than rewritten because this file is
+an append-only field record.
+
+**The shape is a soft suggestion by construction.** The repaired workflow splits
+the two concerns this project already keeps separate — "report external-link
+freshness separately from local integrity" — into two jobs with different
+authority. Local file links are deterministic and owned by the author, so they
+gate. External URLs are largely outside the author's control (rate limits,
+bot-blocking, vendor churn), so they are advisory and cannot block publishing.
+`--offline` makes the local job hermetic and fast. This is exactly the "small
+advisory scheduled workflow that ... reports failures for review ... should not
+rewrite articles or block ordinary publishing" that the 2026-09-13 entry
+prescribed, reached from the target side rather than from the design side.
+
+**Against the [capability-admission rule](../roadmap.md#capability-admission-rule).**
+A link-checking capability is **not admitted**:
+
+1. a concrete user need — **met.** Dead links shipped on a live site and a
+   permanently-red checker went unnoticed.
+2. an observed failure or repeated workflow — **weakly met.** One rot incident on
+   one site, found by a maintainer audit rather than by a recurring process. This
+   is the condition that has always governed admission here.
+3. current primary-source evidence — **met.** Version, flags, and behaviour were
+   verified at 0.24.2, and the failure mode was reproduced by deliberately
+   removing a referenced file.
+4. a bounded fixture or scenario that can prove the behavior — **not met.** The
+   payload has no scenario for link checking, and such a scenario needs either
+   network access or a hermetic fixture to be testable at all.
+5. a named maintenance owner — **not met.** No maintainer has claimed external
+   link monitoring.
+
+**Disposition:** do not add link checking to the runtime payload. Record lychee
+as the evaluated tool for the external-link slice, keep Zensical's native
+validation as the primary path for local integrity, and re-evaluate only when a
+second independent site shows the same workflow. The deferred list in
+[roadmap.md](../roadmap.md) now carries this item together with its two unmet
+conditions.

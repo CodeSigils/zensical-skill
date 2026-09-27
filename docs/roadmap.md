@@ -10,7 +10,7 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Reviewed: 2026-09-26.
+Reviewed: 2026-09-27.
 
 Planning documents: [documentation index](README.md) for the read-first matrix,
 [vision](vision.md) for boundaries and quality criteria,
@@ -483,6 +483,13 @@ assertions use only portable shell tools (`grep`, `python3`, `awk`, `cp`,
 - Automated version-freshness detection (for example a Dependabot flow for the
   `tests/scenario-env` uv project) while the pin-bump evidence gate remains the
   manual contract.
+- Link checking beyond Zensical's native internal-link and anchor validation,
+  until a second independent site shows the same workflow and a bounded scenario
+  can prove the behavior. Zensical itself defines no link check, so this is
+  target-owned; lychee is the evaluated tool for the external slice, and the
+  2026-09-13 article-link-manifest idea is superseded for its stated purpose
+  because a Markdown glob needs no second maintained inventory. See
+  [the 2026-09-27 field record](research/index.md#external-link-checking-and-the-first-real-rot-incident-2026-09-27).
 
 ## Independent capability boundary
 
@@ -496,6 +503,18 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-09-27: Evaluated external link checking after the Code Sigils blog
+  produced the rot incident the 2026-09-13 link-manifest entry was waiting on.
+  The target's existing link workflow had been failing silently since it was
+  added, and a real run found 12 references to 11 dead URLs. Recorded lychee's
+  report-only behaviour and its scoping limits, and did not admit a
+  link-checking capability: admission conditions 4 (bounded scenario) and 5
+  (named maintenance owner) are unmet, and condition 2 is weak because this is a
+  single-site incident. The item now sits in Deferred with its two blocking
+  conditions. The manifest idea is superseded for its stated purpose, because
+  globbing Markdown removes the second maintained inventory it was designed to
+  bound. No payload, README, or vision change follows, because no capability was
+  admitted.
 - 2026-09-26: Froze governance growth by decision. Maintainer documentation now
   runs about three times the size of the runtime payload, which the project had
   already named as its principal delivery risk without constraining it. The
