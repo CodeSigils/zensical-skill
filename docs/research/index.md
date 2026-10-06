@@ -116,6 +116,46 @@ no feed fixture yet: the current guidance is verified against a real site
 build, and a fixture is justified only when a repeated behavior appears that
 the suite cannot represent.
 
+### Article-transition review clarification (2026-10-06)
+
+An explicit review of a long-form Samba guide exposed a narrow blind spot in
+the portable article-review reference: it asked for flow and proportionate
+structure, but did not direct a reviewer to notice a major section that
+abruptly changed the reader's task or system layer before dropping into
+procedures. The guide's configuration, testing, and troubleshooting sections
+made the missing connection visible without justifying a universal heading
+template.
+
+The runtime reference now treats this as an article-form-sensitive suggestion.
+For articles, narrative technical guides, field notes, and explainers, it asks
+whether a brief, voice-consistent orienting passage would help the reader
+arrive at a substantive `##` transition. It explicitly excludes already
+oriented sections and rapid-reference pages, and forbids invented perspective,
+experience, stakes, or warmth. This preserves the Digital Basement boundary:
+the target's editorial guidance decides quality and voice; the portable skill
+only makes a bounded developmental suggestion on an explicit article-review
+request.
+
+No external or version-sensitive claim was introduced, no fixture is warranted,
+and the presentation-maintenance scope is unchanged.
+
+### Live-blog RSS evidence reconciliation (2026-09-28)
+
+The real-site feed validation that admitted this workflow is the maintainer's
+Code Sigils blog, retained locally at `/home/sand/labs/zensical-test`; the
+dated [payload remediation report](../reports/2026-09-26-payload-review-and-remediation.md#how-the-admitted-capability-was-verified)
+owns the original deployment evidence. A read-only follow-up found the current
+`[project.plugins.rss]` configuration with a 50-item cap and named created and
+updated RSS files. Its generated output contains `feed.xml`, `feed-updated.xml`,
+the two JSON feeds, 19 RSS items, and RSS discovery links on 20 generated HTML
+pages. The checkout was clean before inspection.
+
+This confirms the local source and generated-output side of the documented
+workflow. It does not re-establish a deployment, remote reader availability,
+or a second content-shape result; those remain outside this follow-up. No
+fixture is added because this is corroborating evidence, not a repeated
+deterministic failure.
+
 ### Sitemap priority update (2026-09-13)
 
 The maintainer identified a sitemap as a concrete next need. Zensical's current

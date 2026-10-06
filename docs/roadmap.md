@@ -290,6 +290,14 @@ note after current primary-source checks. It confirms that factual maintenance
 can remain separate from voice feedback; no new runtime rule, rubric, or
 fixture is justified.
 
+Clarification (2026-10-06): the portable article-review reference now asks an
+explicit review to consider abrupt major-section transitions in an article or
+narrative technical guide. It offers a voice-consistent orienting passage only
+when the reader changes task, system layer, risk, or mode of work; it neither
+requires introductions nor decides editorial quality. This is a refinement of
+the existing suggestion pass, not a new workflow, automation capability, or
+fixture.
+
 ### New-article placement clarification (2026-09-12)
 
 Creating a page needs an explicit category decision because its location

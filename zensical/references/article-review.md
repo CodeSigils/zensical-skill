@@ -41,6 +41,23 @@ Check only what fits the article's purpose and form:
   out a specific alternative is load-bearing, not a tell; and
 - purposeful links and volatile details that need a source, date, or caveat.
 
+Read the page in its actual form rather than treating every Markdown document
+as a reference page. For an article, narrative technical guide, field note, or
+explainer, inspect the transitions between major `##` sections. When a heading
+changes the reader's task, system layer, risk, or mode of work and immediately
+drops into a subordinate heading, command, table, or procedure, consider
+whether one or two voice-consistent orienting sentences would improve the
+arrival. The passage may explain why this stage matters, what it establishes,
+how it follows from the preceding stage, or what evidence the reader should
+expect next.
+
+This is a contextual suggestion, not a section-introduction formula. Do not
+ask for connective prose where the heading and surrounding text already orient
+the reader, or where rapid reference retrieval is the page's purpose. Do not
+invent authorial perspective, experience, stakes, or a warmer voice to create
+an introduction; tie any suggestion to the draft's existing reader promise,
+voice, and nearby reasoning.
+
 When the user explicitly asks for a more human voice pass and a community
 de-slop skill is installed in the environment, it may be loaded as an
 additional lens. Apply it at sentence level, never as a gate; its phrase
