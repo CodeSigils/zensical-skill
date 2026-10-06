@@ -79,7 +79,9 @@ commands, configuration, and supported features must be verified separately.
 - The independent scenario suite covers tab rendering, reproducible
   accessibility findings, the deployment-instruction contract, and
   non-root deployment and sitemap output; it is not a complete site or WCAG
-  conformance suite. Feeds are an admitted capability with no scenario yet.
+  conformance suite. Feeds are an admitted capability with no scenario yet;
+  the Code Sigils live-blog evidence was reconciled against its retained source
+  checkout and generated output on 2026-09-28 in the [field record](index.md#live-blog-rss-evidence-reconciliation-2026-09-28).
 - Direct Skills CLI installation and project-scoped host smoke checks are
   recorded; public release and long-running host-reload behavior remain
   unclaimed.

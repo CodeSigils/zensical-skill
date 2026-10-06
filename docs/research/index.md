@@ -958,6 +958,24 @@ reproducibility evidence only. The first GitHub Actions run must establish
 whether the lock installs and the Pages artifact builds; no deployment,
 provider success, or generic Zensical CI pattern is claimed.
 
+### SeqPro remote-verification correction (2026-09-28)
+
+The preceding record described a repair as completed, but a direct GitHub
+Actions review found that the change had not reached the remote repository.
+The latest successful Pages run, at commit
+[`246bd72`](https://github.com/ML4GLand/SeqPro/commit/246bd7224b2d20fc5077e57f156b7403c0e417d2),
+still runs floating `uv pip` installs. The GitHub-hosted workflow is the
+canonical operational state, so that success does not validate the claimed
+locked-Pixi repair.
+
+The downloaded checkout is a third-party read-only test target, not a
+contribution workspace. No local workflow change, commit, push, or upstream
+collaboration is in scope. The lockfile does carry the `doc` environment,
+Zensical, and `mkdocstrings-python`, but a locked-Pixi workflow remains an
+unverified alternative rather than a completed repair. The unresolved remote
+workflow is recorded as target-specific testing evidence, not as a generic
+runtime workflow or fixture.
+
 ## External link checking and the first real rot incident (2026-09-27)
 
 The [link-manifest evaluation](#evaluation-lightweight-article-link-manifests)

@@ -204,15 +204,13 @@ behavior. It validates static output only—not remote analytics loading,
 keyboard interaction, contrast, or narrow-view reflow—so it does not admit a
 generic customization workflow or fixture.
 
-**External CI reproducibility repair outcome (2026-09-27):** SeqPro's GitHub
-Pages workflow was changed from floating `uv pip` installation to its committed
-Pixi `doc` environment, using `setup-pixi` with the lock enforced and
-`pixi run --locked --environment doc build-doc`. Static validation confirmed
-the workflow fields and the lockfile's `doc` environment with Zensical and
-mkdocstrings artifacts. Pixi was unavailable locally, so the first GitHub
-Actions execution remains the required build and deployment check. This is a
-target-specific CI repair, not evidence for a generic runtime workflow or
-fixture.
+**External CI verification status (2026-09-28):** Remote verification found
+that the 2026-09-27 SeqPro repair was not present on GitHub: the latest
+successful Pages run still used the floating `uv pip` workflow. SeqPro is a
+third-party read-only test target, so no local workflow edit, commit, push, or
+upstream collaboration is in scope. The locked-Pixi alternative remains an
+unverified observation rather than a completed repair. This is target-specific
+testing evidence, not evidence for a generic runtime workflow or fixture.
 
 The evaluation handoff should suggest only the relevant documented Zensical
 sections or capabilities, explain their target-specific fit and trade-offs, and
