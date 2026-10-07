@@ -94,6 +94,9 @@ The skill currently routes these tasks:
 - review accessibility concerns across content, media, components, and themes;
 - use a browser for a representative rendered-page check when it is available
   and the requested presentation scope warrants it;
+- sanitize user-supplied usernames, hostnames, local paths, network addresses,
+  account identifiers, and private URLs in publishable examples unless the
+  maintainer explicitly approves their disclosure;
 - run a bounded tracked-file hygiene preflight before authorized commits,
   publishing, or deployment;
 - review generated sitemaps and canonical URLs during an explicit release-output
