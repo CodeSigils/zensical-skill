@@ -83,6 +83,10 @@ A workflow is ready to keep when it demonstrates all of the following:
   deployment action, it uses a bounded no-secret-output preflight and stops for
   maintainer direction rather than attempting credential rotation or history
   rewriting.
+- **Privacy-aware examples:** it keeps personal local-machine and network
+  details out of publishable technical material unless the maintainer explicitly
+  approves their disclosure, without weakening a genuinely public,
+  reproducible example.
 - **Source-of-truth discipline:** it preserves the observed content model,
   navigation, configuration, and output conventions without duplicating them.
 - **Minimal coherent change:** an authorized repair changes only the affected

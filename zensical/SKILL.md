@@ -75,6 +75,14 @@ capability is enabled, or implement an optional addition without authorization.
 - Separate editorial intent from presentation implementation. The article or
   review process decides whether a tip, warning, or tab is useful; this skill
   implements and validates the Zensical syntax.
+- Treat user-supplied local identifiers as potentially personal when preparing
+  publishable material. Keep exact values only for private diagnosis; in
+  articles, examples, captions, front matter, generated output, and commit
+  messages, replace usernames, hostnames, local paths, IP or MAC addresses,
+  account identifiers, and private URLs with accurate neutral placeholders
+  unless the user explicitly approves their publication. Do not over-redact a
+  value that is essential to a reproducible public example; ask when the
+  publication boundary is unclear.
 - Make bounded changes authorized by the user. Do not publish, change hosting,
   or install third-party integrations unless requested.
 - Before an authorized commit, publish, or deployment change, run the bounded

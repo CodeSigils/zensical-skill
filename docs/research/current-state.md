@@ -1,6 +1,6 @@
 # Current research state
 
-Reviewed: 2026-09-27.
+Reviewed: 2026-10-07.
 
 This file owns what the project currently knows to be true. Every claim here
 carries a check date. A claim that can no longer be re-checked against a primary
@@ -121,6 +121,13 @@ documentation arm by `docs/roadmap.md` `## Capability-admission rule`. The
 admission conditions are restated exactly twice: that section, and
 `zensical/SKILL.md`, which keeps its own wording because an agent may read the
 payload without the roadmap.
+
+On 2026-10-07, a Code Sigils Samba article exposed a complementary authoring
+boundary: command output can contain local identifiers that are useful while
+diagnosing a machine but inappropriate in a published guide. The runtime now
+owns the rule to replace such details with accurate neutral placeholders unless
+the maintainer explicitly approves publication; this is a privacy-aware
+authoring correction, not a secret-scanning or automated-redaction claim.
 
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, and this file. The seven dated reports carry a date instead,

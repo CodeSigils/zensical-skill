@@ -1111,3 +1111,14 @@ validation as the primary path for local integrity, and re-evaluate only when a
 second independent site shows the same workflow. The deferred list in
 [roadmap.md](../roadmap.md) now carries this item together with its two unmet
 conditions.
+
+## Publishable command-output sanitization (2026-10-07)
+
+An authorized Code Sigils Samba article initially used real local command
+output, then replaced the machine-specific username and network values with
+placeholders at the maintainer's request. The correction establishes a narrow
+authoring boundary: exact local values can be useful for private diagnosis, but
+published examples should use accurate neutral placeholders unless the
+maintainer explicitly approves disclosure. The runtime payload owns the
+operational rule; this record is evidence for the decision, not a claim of
+automatic redaction or secret scanning.

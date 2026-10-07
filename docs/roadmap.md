@@ -10,7 +10,7 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Reviewed: 2026-09-27.
+Reviewed: 2026-10-07.
 
 Planning documents: [documentation index](README.md) for the read-first matrix,
 [vision](vision.md) for boundaries and quality criteria,
@@ -54,7 +54,12 @@ what the project currently knows to be true is owned by
 non-root-link failures are now covered by a small repeatable fixture suite.
 Further fixture work remains conditional on a real-site gap. The runtime also
 includes a bounded tracked-file hygiene preflight for authorized publication
-work; it is intentionally not a comprehensive secret-scanning claim.
+work; it is intentionally not a comprehensive secret-scanning claim. A
+user-reported Samba-guide sanitization failure also added a narrow runtime
+boundary for publishable examples: preserve exact local values for private
+diagnosis, but use neutral placeholders for user-supplied personal identifiers
+unless their publication is explicitly approved. This is authoring guidance,
+not automated redaction or a new validation capability.
 
 Phase 2 is substantially proven for the target-used component and presentation
 paths: admonitions, tabs, front matter, navigation, base paths, images, local

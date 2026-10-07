@@ -118,13 +118,14 @@ truth). Keep the two in sync when either changes.
 | 2 | `compatibility` is a spec top-level field | Fixed 2026-09-24 in commit `311adf8` (was wrongly nested as `metadata.compatibility`; moved between `license` and `metadata`) |
 | 3 | `metadata` values are strings per spec | Tolerated deviation — `keywords`/`maintainers` are YAML arrays; not validator-enforced; zola-skill does the same |
 | 4 | `name`/`description` present and conformant | OK — `name: zensical` matches the directory |
-| 5 | Layout compliant | OK — `SKILL.md` at payload root (205 lines < 500), 9 focused lowercase `references/` files, executable `scripts/` |
+| 5 | Layout compliant | OK — `SKILL.md` at payload root (233 lines < 500), 10 focused lowercase `references/` files, executable `scripts/` |
 | 6 | Script references use skill-root-relative paths | OK — references invoke `scripts/check_instruction_contract.py` and `scripts/check_site_hygiene.sh`, the spec-recommended form |
 | 7 | `agents/openai.yaml` | OK with duplication note — matches OpenClaw convention; keep `short_description` in sync with `metadata.short-description` |
 
 ## Sources
 
-All verified 2026-09-24.
+The payload inventory was rechecked 2026-10-07; the external source evidence
+above remains verified as of 2026-09-24.
 
 1. agentskills Agent Skills specification, pinned commit
    `69ef37e9424c0a7ea9dd2293b559e43ec8176379`
