@@ -303,6 +303,15 @@ requires introductions nor decides editorial quality. This is a refinement of
 the existing suggestion pass, not a new workflow, automation capability, or
 fixture.
 
+Clarification (2026-10-08): an authorized human-tone revision of a technical
+field note refined the existing prose-tell guidance with thesis-like
+scene-setting, over-signposting, performative emphasis, invented aphorisms,
+moral escalation, exhaustive negatives, research-simulated precision, and
+binary verdicts. The runtime reference treats these as cluster-level review
+signals and preserves load-bearing contrasts, factual measurements, and the
+author's judgment. This does not add a house voice, a gate, automation, or a
+fixture.
+
 ### New-article placement clarification (2026-09-12)
 
 Creating a page needs an explicit category decision because its location

@@ -1,6 +1,6 @@
 # Current research state
 
-Reviewed: 2026-10-07.
+Reviewed: 2026-10-08.
 
 This file owns what the project currently knows to be true. Every claim here
 carries a check date. A claim that can no longer be re-checked against a primary
@@ -128,6 +128,14 @@ diagnosing a machine but inappropriate in a published guide. The runtime now
 owns the rule to replace such details with accurate neutral placeholders unless
 the maintainer explicitly approves publication; this is a privacy-aware
 authoring correction, not a secret-scanning or automated-redaction claim.
+
+On 2026-10-08, an authorized human-tone revision added bounded cluster signals
+to the optional article-review guidance: thesis-like scene-setting,
+over-signposting, performative emphasis, invented aphorisms, moral escalation,
+exhaustive negatives, research-simulated precision, and binary verdicts. The
+guidance retains its density rule and does not turn any single construction,
+including a load-bearing contrast or factual measurement, into a violation.
+The dated application is recorded in [editorial-voice.md](editorial-voice.md).
 
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, and this file. The seven dated reports carry a date instead,

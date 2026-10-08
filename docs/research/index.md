@@ -1122,3 +1122,15 @@ published examples should use accurate neutral placeholders unless the
 maintainer explicitly approves disclosure. The runtime payload owns the
 operational rule; this record is evidence for the decision, not a claim of
 automatic redaction or secret scanning.
+
+## Human-tone field application (2026-10-08)
+
+An authorized revision of a verification-heavy technical field note showed a
+cluster of prose patterns that can make concrete reporting feel generated:
+thesis-like scene-setting, over-signposting, performative emphasis, invented
+aphorisms, moral escalation, exhaustive negatives, research-simulated
+precision, and binary verdicts. The runtime article-review reference now names
+these as optional cluster-level review signals. It preserves the existing
+density rule: a construction remains when it carries factual, argumentative,
+or stylistic work. The durable research record is
+[editorial-voice.md](editorial-voice.md#field-application-human-tone-review-2026-10-08).

@@ -2,8 +2,9 @@
 
 Created: 2026-09-24. Status: supporting evidence for the portable prose-tell
 guidance in [article-review](../../zensical/references/article-review.md). This
-file records external findings only; it does not define a house voice for the
-skill. Community tooling and blog observations are labelled as such.
+file records external findings and dated internal field applications; it does
+not define a house voice for the skill. Community tooling and blog observations
+are labelled as such.
 
 ## Why this record exists
 
@@ -44,6 +45,34 @@ agree on the same pattern families (community tooling, reviewed 2026-09-24):
   avoidance ("serves as", "stands as", "features" for "is" or "has"),
   plus present-participle padding tails ("...highlighting the need for
   further research").
+
+## Field application: human-tone review (2026-10-08)
+
+An authorized review of a verification-heavy technical field note supplied a
+useful application-level refinement. The following patterns appeared together
+and made otherwise concrete reporting feel generated:
+
+- **Thesis-like scene-setting** — a line such as "The question I kept coming
+  back to was simple" delays the fact it is about to introduce.
+- **Over-signposting** — labels such as "The drastic part", "One residual
+  worth knowing", "What each line does", and "What I took from it" announce
+  the prose instead of carrying it.
+- **Performative emphasis and invented aphorisms** — claims that a step is
+  "the sequence that actually" worked, or a maxim such as "caches with
+  opinions", add a synthetic authorial flourish without adding evidence.
+- **Moral escalation and exhaustive negatives** — parallel clauses and lists
+  of absent remedies can state the author's judgment more loudly than the
+  available facts require.
+- **Research-simulated precision and binary verdicts** — narrow measurements,
+  issue-number catalogues, and lines that name a single "ethical failure" can
+  overwhelm the reader's practical question when the detail does not change
+  the recommended action.
+
+The revision rule is narrow: collapse unnecessary two-sentence setup into one
+direct sentence, remove contrast scaffolding that does not exclude a real
+alternative, and retain measurements, distinctions, and emotional force when
+they do useful factual or argumentative work. This is an internal field
+observation, not external evidence or a house-style mandate.
 
 Anchor reference: Wikipedia's descriptive
 [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)

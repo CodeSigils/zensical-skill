@@ -34,7 +34,13 @@ Check only what fits the article's purpose and form:
   ("Beyond X"); copula avoidance ("serves as" for "is"); present-participle
   padding tails ("...highlighting the importance of"); and second-generation
   "performed authenticity" tells (philosophical mic drops, forced casual
-  asides, invented informality).
+  asides, invented informality). Additional patterns that often appear in the
+  same clusters are thesis-like scene-setting ("The question I kept coming
+  back to..."), over-signposts ("The drastic part", "What I took from it"),
+  performative emphasis ("This is the sequence that actually..."), invented
+  aphorisms, moral escalation through parallel clauses, exhaustive negative
+  lists, research-simulated precision, and binary verdicts. Prefer a direct
+  statement of the fact or procedure when it preserves the author's meaning.
   Judge density, not single instances: flag clusters, repetition, and
   mismatch with the surrounding voice; never rewrite a phrase that is
   quoted, titled, or under discussion; a contrast that genuinely rules
