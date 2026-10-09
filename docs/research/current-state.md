@@ -137,6 +137,12 @@ guidance retains its density rule and does not turn any single construction,
 including a load-bearing contrast or factual measurement, into a violation.
 The dated application is recorded in [editorial-voice.md](editorial-voice.md).
 
+On 2026-10-09, a follow-on field request clarified that generic
+documentation-template prose is a review concern only when it replaces the
+author's observation, reasoning, or reader context in an explicitly requested
+human-voice pass. Direct reference prose remains legitimate; the runtime owner
+is [article-review.md](../../zensical/references/article-review.md).
+
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, and this file. The seven dated reports carry a date instead,
 because a report's date records when it was written; four write it as a plain

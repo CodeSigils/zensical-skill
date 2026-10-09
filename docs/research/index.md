@@ -1134,3 +1134,14 @@ these as optional cluster-level review signals. It preserves the existing
 density rule: a construction remains when it carries factual, argumentative,
 or stylistic work. The durable research record is
 [editorial-voice.md](editorial-voice.md#field-application-human-tone-review-2026-10-08).
+
+## Documentation-template prose clarification (2026-10-09)
+
+An author-led technical field-note edit showed that a useful human-tone rule
+needs a second boundary: generic documentation-template prose is a concern
+only when it displaces the author's observation, reasoning, or reader context.
+An explicit human-voice request and the target's editorial guidance remain
+preconditions. Direct, conventional prose remains appropriate for technical
+reference material and fast-retrieval pages. The runtime owner is
+`zensical/references/article-review.md`; this record documents the field
+decision rather than restating a new house style.

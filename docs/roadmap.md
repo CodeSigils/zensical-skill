@@ -312,6 +312,12 @@ signals and preserves load-bearing contrasts, factual measurements, and the
 author's judgment. This does not add a house voice, a gate, automation, or a
 fixture.
 
+Clarification (2026-10-09): the same optional review path now distinguishes
+generic documentation-template prose from legitimate direct reference prose.
+It applies only when target guidance and the user ask for a human, author-led
+voice, and remains a cluster-level suggestion rather than a style system or
+publication gate.
+
 ### New-article placement clarification (2026-09-12)
 
 Creating a page needs an explicit category decision because its location

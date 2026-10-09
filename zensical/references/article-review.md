@@ -47,6 +47,13 @@ Check only what fits the article's purpose and form:
   out a specific alternative is load-bearing, not a tell; and
 - purposeful links and volatile details that need a source, date, or caveat.
 
+When the target's editorial guidance and the user's request call for a human,
+author-led voice, avoid generic documentation-template prose where it replaces
+the author's observation, reasoning, or a specific reader context. Treat that
+as a cluster-level mismatch, not a phrase ban, automatic rewrite, or review
+gate. Direct, conventional prose can be the right form for reference material
+and a technical page whose purpose is fast retrieval.
+
 Read the page in its actual form rather than treating every Markdown document
 as a reference page. For an article, narrative technical guide, field note, or
 explainer, inspect the transitions between major `##` sections. When a heading
