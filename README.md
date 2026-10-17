@@ -284,6 +284,8 @@ uvx --from git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9
 bash scripts/run_scenarios.sh
 bash zensical/scripts/check_site_hygiene.sh .
 python3 zensical/scripts/check_instruction_contract.py /path/to/site
+python3 scripts/check_readme_inventory.py --self-test
+python3 scripts/check_readme_inventory.py
 git diff --check
 ```
 
