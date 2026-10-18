@@ -307,7 +307,10 @@ checks ([`check_instruction_contract.py --self-test`](zensical/scripts/check_ins
 when the README's file trees stop matching the repository, and
 [`uvx ruff@0.15.16 check .`](.github/workflows/validate.yml) against the
 narrow rule set in [`ruff.toml`](ruff.toml); that workflow is the authoritative command
-definition). [Dependabot](.github/dependabot.yml) watches the pinned workflow
+definition). The commit-policy job skips Dependabot-authored pull requests,
+because bot bodies cannot carry `what:` and `why:` fields; those diffs are
+reviewed directly instead. [Dependabot](.github/dependabot.yml) watches the
+pinned workflow
 actions. The gate runs checks, not a deployment.
 
 ## Primary references

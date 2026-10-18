@@ -17,6 +17,11 @@ jobs:
   commit-policy:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    # Dependabot bodies cannot carry the what:/why: fields the contract
+    # requires, so its PRs skip this job and are reviewed as diffs instead.
+    # Condition on the PR author, not the actor: a human who reopens or
+    # re-runs a Dependabot PR must not drag the bot's commits through policy.
+    if: github.event.pull_request.user.login != 'dependabot[bot]'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
