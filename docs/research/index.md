@@ -1145,3 +1145,17 @@ preconditions. Direct, conventional prose remains appropriate for technical
 reference material and fast-retrieval pages. The runtime owner is
 `zensical/references/article-review.md`; this record documents the field
 decision rather than restating a new house style.
+
+## Fragment-stacked inventory guidance (2026-10-18)
+
+A flow request on a published Code Sigils field note flagged a paragraph whose
+middle was an inventory rendered as successive short noun-phrase sentences
+("A summary. Two findings, each with its evidence."). Searching the skill for
+fragment, staccato, or noun-phrase vocabulary found no matching prose rule:
+the rhythm principle in [editorial-voice.md](editorial-voice.md) exists under
+"period-stopped inversion" wording, so the symptom was not findable under the
+words a reader would use. The runtime reference
+`zensical/references/article-review.md` now names the family as
+fragment-stacked inventories inside its existing cluster list, with the
+density rule and load-bearing-contrast exception unchanged. The edit and this
+record are the evidence; no new house style, gate, or automation was added.

@@ -30,7 +30,11 @@ Check only what fits the article's purpose and form:
   ("Imagine...", "Let's...", "In this article...", "Here's the thing",
   "—the thing is—"); filler hedges ("It's worth noting", "That said",
   "At the end of the day"); colon- and dash-heavy constructions that
-  manufacture a reveal; formulaic three-part lists; scope inflation
+  manufacture a reveal; formulaic three-part lists; fragment-stacked
+  inventories (a list rendered as successive short noun-phrase sentences,
+  "A summary. Two findings with their evidence. A sources section listing...",
+  where folding the items into one flowing sentence keeps the meaning); scope
+  inflation
   ("Beyond X"); copula avoidance ("serves as" for "is"); present-participle
   padding tails ("...highlighting the importance of"); and second-generation
   "performed authenticity" tells (philosophical mic drops, forced casual

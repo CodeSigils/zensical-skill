@@ -143,6 +143,15 @@ author's observation, reasoning, or reader context in an explicitly requested
 human-voice pass. Direct reference prose remains legitimate; the runtime owner
 is [article-review.md](../../zensical/references/article-review.md).
 
+On 2026-10-18, a light edit requested for flow exposed a gap in that guidance:
+an inventory paragraph written as staccato noun-phrase sentence fragments
+("A summary. Two findings, each with its evidence.") could not be located
+under fragment or staccato vocabulary, because the existing rhythm principle
+lives under "period-stopped inversion" wording. The runtime reference now
+names the family directly as fragment-stacked inventories, with the existing
+density rule unchanged. The dated observation is recorded in
+[research/index.md](index.md).
+
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, and this file. The seven dated reports carry a date instead,
 because a report's date records when it was written; four write it as a plain
