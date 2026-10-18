@@ -174,3 +174,16 @@ specific behavior; then consult W3C or other standards and primary provider
 documentation for cross-cutting claims. Community guides are useful for
 alternatives and practical observations when clearly labelled. Cached blog
 posts and search snippets are discovery leads, not evidence.
+
+## Automatic selection observation
+
+A four-prompt read-only Codex pilot on the Code Sigils blog observed one
+explicitly Zensical site-maintenance request read the installed skill, while a
+site tab-validation request and two out-of-scope requests had no skill read in
+their emitted event streams. Discovery in the latter sessions and the cause of
+the missed read are unconfirmed. See the [dated field record](index.md#codex-automatic-selection-pilot-on-the-code-sigils-blog-2026-10-18)
+for prompts, versions, and limits. A same-day re-run after the description
+rewrite observed the installed skill read in both in-scope prompts, including
+the tab-validation prompt that had produced no read; both positive turns then
+ended on a usage limit before their final answers, so the re-run shows
+selection, not completion. (checked 2026-10-18)

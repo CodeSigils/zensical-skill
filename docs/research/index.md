@@ -1159,3 +1159,46 @@ words a reader would use. The runtime reference
 fragment-stacked inventories inside its existing cluster list, with the
 density rule and load-bearing-contrast exception unchanged. The edit and this
 record are the evidence; no new house style, gate, or automation was added.
+
+## Codex automatic-selection pilot on the Code Sigils blog (2026-10-18)
+
+Four independent Codex CLI 0.163.0 read-only sessions ran in the existing
+Code Sigils blog checkout at commit
+`3d27a6839522bf4c853fa4df7ff7187f4f0be9dd`. The installed user-scope
+`zensical` payload's `SKILL.md` matched the source at
+`99eeb19d0c80da640eef298f047962e5f3df2b59` by SHA-256
+`293019493f6a19b232364b2685dca0e6726b3b946194614985a6584ef81fcc6a`.
+The configured default model was `gpt-5.6-terra`; the event streams did not
+independently identify the effective model or enumerate competing skills.
+Each prompt requested no file changes, and the blog remained clean afterward.
+
+| Prompt | Expected | Observed in JSON event stream |
+| --- | --- | --- |
+| Review this Zensical site’s navigation and identify any obvious configuration issues. Report only; do not change files or publish. | Select | The agent read the installed `SKILL.md` and a content-components reference. |
+| Inspect this documentation site’s configuration and explain how its Markdown content tabs should be validated. Report only; do not change files or publish. | Select for concrete site maintenance | The agent inspected `zensical.toml` and identified tab configuration, but no installed `SKILL.md` read appeared in emitted events. |
+| Suggest a warmer opening sentence for an article about maintaining a personal blog. Do not inspect or change any files. | Do not select | A prose suggestion was returned; no skill read appeared. |
+| Explain how CSS flexbox differs from grid, using a small generic example. Do not inspect or change any files. | Do not select | A generic explanation was returned; no skill read appeared. |
+
+The first session demonstrates availability and an observed read in that
+session. Absence of a read in another event stream does not independently
+prove that the skill was discovered in that session or expose the model's
+selection decision. The tab prompt is a candidate routing gap worth further
+reproduction, not proof of a defective description or a quantified failure
+rate. The answer's technical quality was not independently evaluated, and no
+site build or rendered review was requested as part of this selection test.
+All four sessions reported an unavailable configured local MCP endpoint; its
+bearing on selection is unknown. One trial per prompt, one host and the current
+configuration cannot establish cross-agent behaviour or reliability. No
+runtime instruction, installation, publication, or release status changed.
+
+The four prompts were repeated the same day after the `SKILL.md` description
+was rewritten to name site and blog site-maintenance requests; the installed
+payload carried the new description at SHA-256
+`44fe9499ef8058e00b7ac9c173731efb7aee025ad7ab8f4cec9296f3a1bbae6e`.
+Both out-of-scope prompts completed with no skill read. Both in-scope prompts,
+including the tab-validation prompt that produced no read in the first round,
+issued reads of the installed `zensical/SKILL.md` before their turns ended.
+The two positive turns then terminated on the configured model's usage limit
+before their final answers, so the re-run observes selection, not completion.
+One trial per prompt, under the same host, configuration, and unavailable-MCP
+limits as above.

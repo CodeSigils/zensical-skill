@@ -80,6 +80,13 @@ for a public release or publication is claimed.
 See the [research record](research/index.md) for the evidence behind this status and
 the [vision](vision.md) for the quality criteria.
 
+A bounded Codex automatic-selection observation on the target blog found one
+explicit Zensical request read the skill, while a site tab-validation request
+did not show a skill read. A same-day re-run after a description rewrite
+observed reads in both in-scope prompts, one trial each. These are bounded
+observations, not a new release gate or evidence of a runtime fix; see the
+[dated field record](research/index.md#codex-automatic-selection-pilot-on-the-code-sigils-blog-2026-10-18).
+
 ## Maturity assessment and next evidence gate
 
 The skill is a work in progress. Its current strength is a narrow,
