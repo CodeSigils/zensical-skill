@@ -2,6 +2,8 @@
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-2563eb.svg)](https://agentskills.io/specification)
 [![skills.sh](https://skills.sh/b/codesigils/zensical-skill)](https://skills.sh/codesigils/zensical-skill)
+[![validate](https://github.com/CodeSigils/zensical-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/CodeSigils/zensical-skill/actions/workflows/validate.yml)
+[![CodeQL](https://img.shields.io/badge/CodeQL-enabled-2ea44f.svg)](https://github.com/CodeSigils/zensical-skill/security/code-scanning)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 `zensical-skill` is a focused Agent Skill for inspecting, lightly editing,

@@ -11,10 +11,12 @@ references, and supply-chain changes to the published payload.
 
 ## Reporting
 
-Once a public GitHub repository is configured, report vulnerabilities through
-its private GitHub Security Advisory channel. Do not include secrets or
-personal data in a public issue. Until that channel exists, keep the report
-private and identify the affected commit, file, and behavior.
+Report vulnerabilities privately through
+[Report a vulnerability](https://github.com/CodeSigils/zensical-skill/security/advisories/new)
+on this repository; private vulnerability reporting is enabled. Do not include
+secrets or personal data in a public issue. If private reporting is ever
+unavailable, keep the report private and identify the affected commit, file,
+and behavior.
 
 ## Maintainer response
 
@@ -29,4 +31,4 @@ The skill should request only the filesystem, shell, and network access needed
 for the target repository and current documentation. A successful build is not
 evidence that a deployment or external integration is safe.
 
-Reviewed: 2026-09-12.
+Reviewed: 2026-10-20.
