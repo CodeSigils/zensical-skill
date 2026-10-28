@@ -1207,6 +1207,13 @@ plain diagnostic prose: say what the source returned, what it cannot establish,
 and why it affects the next decision. This is not a ban on literary writing or
 a claim that one phrase proves AI authorship.
 
+The completed field result is available in the revised [Code Sigils field
+note](https://codesigils.github.io/AI/Agent-Work/when-an-ai-signs-your-commits/)
+and its linked [ai-repo-sanitize](https://github.com/CodeSigils/ai-repo-sanitize)
+remedy. The dated editorial-voice record lists the observable changes and their
+limits. This is one linked application, not comparative evidence that a fixed
+article brief or punctuation policy improves every form of writing.
+
 ## Codex automatic-selection pilot on the Code Sigils blog (2026-10-18)
 
 Four independent Codex CLI 0.163.0 read-only sessions ran in the existing

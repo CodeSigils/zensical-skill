@@ -440,6 +440,40 @@ reversal, verdict, or mic drop substitutes staging for explanation. This is a
 contextual prose judgment, not a phrase detector or a prohibition on genuine
 dramatic writing.
 
+### Observed results and linked evidence
+
+The resulting revision of [When an AI Agent Signs Your
+Commits](https://codesigils.github.io/AI/Agent-Work/when-an-ai-signs-your-commits/)
+provides a bounded field result rather than a style theory. It changed four
+things that can be reviewed in the published article and its source:
+
+1. A REST result that had been framed as a reveal now reports the returned
+   contributor result, the still-stale sidebar, and the clean Insights view as
+   separate diagnostics. That makes the reader's next question, what each
+   surface can establish, explicit.
+2. Seven issue-by-issue paragraphs became three linked findings: consent,
+   configuration inconsistency, and the cost of repairing published history.
+   The original issue links remain available in the source list, so the shorter
+   narrative does not discard the evidence.
+3. The article replaces a copy-and-run shell sequence with the maintained
+   [ai-repo-sanitize](https://github.com/CodeSigils/ai-repo-sanitize) process:
+   read-only `check` and `preview`, a message-only rewrite with backup and tree
+   verification, then an explicit opt-in push. Its [pattern
+   definition](https://github.com/CodeSigils/ai-repo-sanitize/blob/master/src/ai_repo_sanitize/patterns.py)
+   preserves human co-author trailers while matching the known agent
+   attribution lines.
+4. The related tool documentation exposed a concrete drift check: its README
+   still linked to the article's deleted copy-and-run section and implied a
+   shipped hook command that the CLI did not provide. The repair now points to
+   the safer-recovery section and separates repository-local hooks from the
+   package's `check`, `preview`, and `rewrite` commands.
+
+The latest pass found no em dashes or semicolons in the three revised Code
+Sigils agent-work articles. That is a result of the target's stated preference
+and the explicit punctuation scan, not evidence that those marks are generally
+invalid. The stronger reusable lesson is to decide evidence and explanatory
+scope early, then use the final pass to check mechanics and claims.
+
 ## How the downloaded skills approach the problem (2026-09-24)
 
 Detail behind the ranking above — each skill's actual method, read from the
