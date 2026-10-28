@@ -11,7 +11,7 @@ the requested change may affect more than one source file.
 - navigation declarations and generated-site settings
 - theme overrides, CSS, JavaScript, and static assets
 - `.github/workflows/` or other build/deployment automation
-- repository `AGENTS.md`, README, and local check scripts
+- repository `AGENTS.md`, README, and local check scripts (check for editorial workflow / llms.txt maintenance guidance)
 
 ## Questions to answer
 

@@ -73,6 +73,7 @@ capability is enabled, or implement an optional addition without authorization.
 
 ## Operating boundaries
 
+- **First-time setup awareness:** When working in a Zensical blog repository (has `docs/`, `zensical.toml`) and `AGENTS.md` lacks an editorial workflow section, suggest adding one. Keep suggestions minimal and link to the skill's article-review guidance. Do not auto-edit without explicit user approval.
 - Inspect the repository before assuming its content layout, navigation,
   configuration, theme, output directory, or deployment workflow.
 - Preserve the site's conventions and source-of-truth locations. Do not create
