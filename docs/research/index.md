@@ -1160,6 +1160,23 @@ fragment-stacked inventories inside its existing cluster list, with the
 density rule and load-bearing-contrast exception unchanged. The edit and this
 record are the evidence; no new house style, gate, or automation was added.
 
+## Mechanics-and-rhythm review clarification (2026-10-28)
+
+An explicit human-flow review of two evidence-heavy Code Sigils articles found
+that the useful signal was not punctuation density alone. In the awesome-list
+field note, mechanically split thoughts and lower-case continuations after
+periods made well-supported material read like a status report. In the
+instruction-drift field note, the argument and concrete example remained
+strong, while a few semicolon and clause-joining dash uses could be simplified.
+The runtime article-review reference now asks for a read-aloud
+mechanics-and-rhythm pass: preserve real parentheticals and balanced clauses,
+but repair punctuation that hides the relation between ideas or manufactures a
+reveal. For evidence-heavy articles it also asks whether the reader can follow
+a causal thread rather than receive an inventory of controls or facts. This is
+a suggestion pass, not a punctuation quota, detector, house voice, or
+publication gate. The detailed observation is recorded in
+[editorial-voice.md](editorial-voice.md#two-evidence-heavy-article-reviews-2026-10-28).
+
 ## Codex automatic-selection pilot on the Code Sigils blog (2026-10-18)
 
 Four independent Codex CLI 0.163.0 read-only sessions ran in the existing

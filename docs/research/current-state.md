@@ -1,6 +1,6 @@
 # Current research state
 
-Reviewed: 2026-10-08.
+Reviewed: 2026-10-28.
 
 This file owns what the project currently knows to be true. Every claim here
 carries a check date. A claim that can no longer be re-checked against a primary
@@ -151,6 +151,17 @@ lives under "period-stopped inversion" wording. The runtime reference now
 names the family directly as fragment-stacked inventories, with the existing
 density rule unchanged. The dated observation is recorded in
 [research/index.md](index.md).
+
+On 2026-10-28, an explicit human-flow review of two evidence-heavy Code Sigils
+articles clarified a related point: punctuation density alone is not the
+signal. Mechanically split thoughts, lower-case continuations after periods,
+and unconnected inventories can obscure the relation between otherwise sound
+facts. The runtime owner now calls for a read-aloud mechanics-and-rhythm pass
+that preserves real parentheticals and balanced clauses while simplifying
+punctuation that manufactures a reveal or hides causal flow. This remains an
+optional, target-guidance-first suggestion; it adds no detector, quota,
+automation, house voice, or publication gate. The dated observation is in
+[research/index.md](index.md#mechanics-and-rhythm-review-clarification-2026-10-28).
 
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, and this file. The seven dated reports carry a date instead,

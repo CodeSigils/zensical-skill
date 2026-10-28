@@ -55,6 +55,31 @@ Check only what fits the article's purpose and form:
   rather than constructing a forced contrast; and
 - purposeful links and volatile details that need a source, date, or caveat.
 
+Run a mechanics-and-rhythm pass before calling a passage an AI tell. Read a
+dense paragraph aloud and inspect what each stop is doing. A period followed
+by a lowercase connector, a run of clipped declarations, or fragment-stacked
+inventory prose often signals that the sentence was assembled in pieces rather
+than written for a reader. Restore the relationship between ideas instead of
+just swapping punctuation. Keep a semicolon only when two balanced independent
+clauses belong tightly together; otherwise use a period or recast the sentence.
+Keep an em dash for a genuine interruption or parenthetical where commas,
+parentheses, or a new sentence would lose something. Do not use either mark to
+manufacture a reveal, hurry a contrast, or carry an accumulating list.
+
+When punctuation has been a concern in the target guidance or the user's
+request, make the last pass mechanical as well as editorial: scan the finished
+article for `—` and `;`, inspect every match in its paragraph, and replace it
+unless it is clearly required by a quotation, code, citation, or unusually
+tight balanced clause. Record the exceptions in the review report. This is a
+focused safeguard, not a universal style rule for every repository.
+
+For an evidence-heavy article, also check whether the reader can follow a
+causal thread rather than receiving a catalogue of controls, files, or facts.
+Consolidate repeated labels, connect a mechanism to its consequence, and add a
+brief bridge only when the article genuinely changes layer or question. This
+is not a fixed narrative template: a reference page may stay direct, and a
+short technical note may need no bridge at all.
+
 When the target's editorial guidance and the user's request call for a human,
 author-led voice, avoid generic documentation-template prose where it replaces
 the author's observation, reasoning, or a specific reader context. Treat that

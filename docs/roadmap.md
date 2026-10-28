@@ -10,7 +10,7 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Reviewed: 2026-10-07.
+Reviewed: 2026-10-28.
 
 Planning documents: [documentation index](README.md) for the read-first matrix,
 [vision](vision.md) for boundaries and quality criteria,
@@ -325,6 +325,13 @@ It applies only when target guidance and the user ask for a human, author-led
 voice, and remains a cluster-level suggestion rather than a style system or
 publication gate.
 
+Clarification (2026-10-28): review of two evidence-heavy field notes added a
+read-aloud mechanics-and-rhythm pass to the existing optional article review.
+It distinguishes real parentheticals and balanced clauses from punctuation
+that obscures causal flow or manufactures a reveal, and asks whether a reader
+can follow the argument rather than an inventory of controls or facts. This is
+not a new workflow, detector, punctuation quota, house voice, or fixture.
+
 ### New-article placement clarification (2026-09-12)
 
 Creating a page needs an explicit category decision because its location
@@ -513,6 +520,14 @@ assertions use only portable shell tools (`grep`, `python3`, `awk`, `cp`,
 - Deployment automation.
 - A large fixture suite before the first workflow proves what needs testing.
 - Support and CI matrices for agents outside Codex, OpenCode, and Hermes.
+- A research-consultation aid for agents working with this skill. First test,
+  on two materially different real tasks, whether a compact brief naming the
+  decision, question, canonical current source, dated evidence record,
+  freshness trigger, and expected validation prevents missed or redundant
+  research better than the existing `AGENTS.md` and documentation-index
+  routing. Do not add a second agent, autonomous research, score, mandatory
+  checklist, or parallel source registry unless repeated evidence shows that it
+  changes an agent decision and a maintainer owns it.
 - Automated version-freshness detection (for example a Dependabot flow for the
   `tests/scenario-env` uv project) while the pin-bump evidence gate remains the
   manual contract.
@@ -536,6 +551,12 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-10-28: Added a deferred, evidence-gated evaluation of a compact
+  research-consultation brief for agents. The current `AGENTS.md` already
+  establishes source quality, freshness, and research-once rules; the open
+  question is whether agents need a more usable decision-level handoff without
+  duplicating those owners. No runtime workflow, automation, or agent role was
+  added.
 - 2026-09-27: Evaluated external link checking after the Code Sigils blog
   produced the rot incident the 2026-09-13 link-manifest entry was waiting on.
   The target's existing link workflow had been failing silently since it was

@@ -385,6 +385,36 @@ Suggestions for the voice guidance (proposals, not yet adopted):
 - Keep walking every tell family and reporting each as found or none, so the
   pass stays complete.
 
+## Two evidence-heavy article reviews (2026-10-28)
+
+An explicit human-flow review of `agent-maintained-awesome-list.md` and
+`agent-instruction-drift.md` supplied a narrower punctuation and pacing
+lesson. The target editorial policy asks for a natural opening, a clear reader
+promise, concrete observations, and a useful reflection; neither article needs
+to conform to a shared template.
+
+The awesome-list article has strong first-hand evidence, clear stakes, and
+useful source links. Its weaker passages are mechanical rather than factual:
+several periods split one continuing thought and leave a lower-case connector
+at the next apparent sentence (for example, "fine. the checks" and
+"beautifully. and it"). Elsewhere, a run of short declaratives turns a causal
+explanation into a status-report inventory. The issue is not a raw dash or
+semicolon count. It is the reader losing the relation between the facts.
+
+The instruction-drift article is more focused and already has a natural field
+note arc. Its concrete `py-review` example carries the argument. A few
+punctuation turns can still be made quieter: the semicolon in the large-file
+qualification and the dashes that merely join clauses do not add meaning, and
+the opening's short catalogue of repeated guidance can be folded into a more
+continuous observation. Those are edit suggestions, not evidence that the
+article is machine-written.
+
+The durable change is a manual mechanics-and-rhythm pass in the runtime
+article-review reference. It asks a reviewer to read dense prose aloud, repair
+the relation between ideas rather than chase marks, and distinguish a causal
+thread from a catalogue of controls or facts. No punctuation quota, detector,
+automation, or house voice was adopted.
+
 ## How the downloaded skills approach the problem (2026-09-24)
 
 Detail behind the ranking above — each skill's actual method, read from the
