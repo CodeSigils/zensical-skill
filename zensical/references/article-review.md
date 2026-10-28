@@ -27,7 +27,7 @@ Check only what fits the article's purpose and form:
   when the user asks for it. Families worth flagging when they cluster:
   negative-antithesis inversions ("It was not X. It was Y.", "Not just X,
   but Y", "It's not about X, it's about Y", "The answer is not X — it's Y",
-  "X isn't just A; it's B", "not because X, but because Y", "not for X but for Y"); semicolon overuse as a clause joiner between independent clauses (prefer a period or restructure); stacked rhetorical questions; opener tics
+  "X isn't just A; it's B", "not because X, but because Y", "not for X but for Y"); semicolon overuse as a clause joiner between independent clauses (prefer a period or restructure); em-dash overuse (— used as a clause joiner or dramatic reveal; prefer a period, comma, colon, or parentheses); stacked rhetorical questions; opener tics
   ("Imagine...", "Let's...", "In this article...", "Here's the thing",
   "—the thing is—"); filler hedges ("It's worth noting", "That said",
   "At the end of the day"); colon- and dash-heavy constructions that
@@ -90,9 +90,12 @@ and uncertainty; report, do not rewrite. The
 opposite failure counts too: stripping connectives, flattening register, or
 deleting structure that serves the content can read worse than the tell it
 removed. Prefer a rewrite that states the concrete fact over a word swap,
-and never add slang, typos, or invented personality to sound human. Keep
-dash density low: an em-dash that only joins two clauses usually reads the
-same with a comma or a period, so reserve dashes for genuine asides.
+and never add slang, typos, or invented personality to sound human. Avoid
+em dashes (—) almost entirely. They are frequently overused by LLMs as dramatic
+separators or reveals and break reading flow. Use periods to split independent
+clauses, commas for light separation, colons for introductions, or parentheses
+for asides. Reserve em dashes only for true parentheticals where no other
+punctuation reads naturally.
 
 Do not require a fixed opening, conclusion, point of view, length, heading
 pattern, callout, keyword, FAQ, or metadata field. Do not invent experiences,
