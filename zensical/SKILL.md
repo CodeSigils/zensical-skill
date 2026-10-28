@@ -126,6 +126,11 @@ capability is enabled, or implement an optional addition without authorization.
 Choose the smallest applicable workflow:
 
 - **Inspect or orient:** read [references/site-inspection.md](references/site-inspection.md).
+- **Create or draft an article:** read
+  [references/article-review.md](references/article-review.md) before drafting
+  substantive prose, then use its article-start handoff with the target's
+  editorial guidance. It is a compact planning aid, not a house style or a
+  publication gate.
 - **Lightly edit or author Markdown:** read [references/light-edit.md](references/light-edit.md)
   and [references/content-components.md](references/content-components.md), then
   preserve the article's own editorial rules.

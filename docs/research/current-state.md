@@ -163,6 +163,20 @@ optional, target-guidance-first suggestion; it adds no detector, quota,
 automation, house voice, or publication gate. The dated observation is in
 [research/index.md](index.md#mechanics-and-rhythm-review-clarification-2026-10-28).
 
+Also on 2026-10-28, a third Code Sigils article required substantial late
+editorial restructuring. The runtime route now reads `article-review.md` for
+explicit article creation and substantial drafting, not only retrospective
+review. Its compact article-start handoff records the reader question,
+supportable contribution, evidence boundary, freshness needs, and proportional
+shape before substantive prose. A one-third draft check catches evidence or
+scope drift early. Target editorial rules remain authoritative, and this is not
+a generic writing workflow, template, score, or publication gate. The dated
+field record is [article-start editorial handoff](index.md#article-start-editorial-handoff-2026-10-28).
+The same field application made one prose preference explicit: routine
+diagnostic results should report what a source returned, its limit, and the
+next decision. They should not be written as a manufactured reveal or
+mic-drop moment unless the target voice and evidence require it.
+
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, and this file. The seven dated reports carry a date instead,
 because a report's date records when it was written; four write it as a plain

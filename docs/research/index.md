@@ -1177,6 +1177,36 @@ a suggestion pass, not a punctuation quota, detector, house voice, or
 publication gate. The detailed observation is recorded in
 [editorial-voice.md](editorial-voice.md#two-evidence-heavy-article-reviews-2026-10-28).
 
+## Article-start editorial handoff (2026-10-28)
+
+The subsequent review of `when-an-ai-signs-your-commits.md` found that the
+expensive part was not a missed sentence-level tell. The article had acquired
+too much recovery detail and stronger-than-supported claims before its
+evidence boundary and reader purpose had been settled. The final edit removed
+the copy-and-run rewrite sequence, bounded GitHub and Codex observations to
+their evidence, and made the causal path easier to follow.
+
+That is sufficient evidence for a small routing correction, not a generic
+writing capability. Explicit article creation and substantial drafting now read
+the existing target-guidance-first article-review reference before substantive
+prose. Its compact handoff names the form, reader question, warranted
+contribution, evidence boundary, freshness needs, personal-context gap, and
+proportional shape. Evidence-heavy drafts pause once at roughly one-third
+complete to check whether the draft is still explaining rather than collecting.
+
+The handoff does not prescribe a template, require an outline for a short
+note, create a research agent, score prose, or block publication. Target
+editorial rules remain authoritative. No external or version-sensitive fact was
+added, and no scenario is warranted because this is a human editorial routing
+aid rather than deterministic Zensical behavior.
+
+The same review made an existing performed-authenticity concern concrete.
+Describing a routine API result as a reversal or verdict creates a false sense
+of drama and hides the diagnostic limit. The runtime reference now asks for
+plain diagnostic prose: say what the source returned, what it cannot establish,
+and why it affects the next decision. This is not a ban on literary writing or
+a claim that one phrase proves AI authorship.
+
 ## Codex automatic-selection pilot on the Code Sigils blog (2026-10-18)
 
 Four independent Codex CLI 0.163.0 read-only sessions ran in the existing

@@ -283,12 +283,13 @@ build blocker.
 ### Editorial-boundary correction (2026-09-12)
 
 The portable runtime keeps an optional, target-guidance-first article-review
-reference for explicit review requests. It offers portable suggestions about
+reference for explicit review requests and a compact article-start handoff for
+explicit creation or substantial drafting. It offers portable suggestions about
 clarity, evidence, examples, jargon, links, and durable details without
 carrying a house voice, article formula, SEO strategy, or publication gate.
-Ordinary new-article work remains focused on front matter, headings, links,
+Light new-article work remains focused on front matter, headings, links,
 components, media, navigation, and rendered output. This is a scope
-clarification, not a new workflow or automation capability.
+clarification, not a generic writing workflow or automation capability.
 
 Scope extension (2026-09-24): on an explicit user request for a more human
 voice pass, the same article-review reference may load an installed
@@ -331,6 +332,17 @@ It distinguishes real parentheticals and balanced clauses from punctuation
 that obscures causal flow or manufactures a reveal, and asks whether a reader
 can follow the argument rather than an inventory of controls or facts. This is
 not a new workflow, detector, punctuation quota, house voice, or fixture.
+
+Clarification (2026-10-28): a late editorial rewrite of a third field note
+showed that a review pass must be reachable while an article is still taking
+shape. The runtime now routes explicit article creation and substantial drafting
+through a compact article-start handoff: reader question, warranted
+contribution, evidence boundary, freshness needs, and a proportional outline.
+An evidence-heavy draft receives one early shape check at roughly one-third
+complete. This remains target-guidance-first and does not admit generic prose
+generation, a fixed article formula, score, automation, or publication gate.
+The same pass now asks ordinary diagnostics to state the result, its limit, and
+the next decision rather than staging a manufactured reveal.
 
 ### New-article placement clarification (2026-09-12)
 
@@ -551,6 +563,11 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-10-28: Routed explicit article creation and substantial drafting through
+  the existing target-guidance-first article-review reference. Added a compact
+  article-start handoff and one early evidence-and-shape check so substantial
+  editorial issues are found before final polish. No generic writing workflow,
+  house voice, template, automation, or new fixture was added.
 - 2026-10-28: Added a deferred, evidence-gated evaluation of a compact
   research-consultation brief for agents. The current `AGENTS.md` already
   establishes source quality, freshness, and research-once rules; the open

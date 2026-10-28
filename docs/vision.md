@@ -28,9 +28,10 @@ branches remain an explicitly authorized site modification.
 It does not define a target's prose craft, article-quality policy, blog voice,
 SEO strategy, generic frontend work, autonomous publishing, or every Zensical
 feature. Those capabilities remain separate workflows or repository-specific
-guidance. When explicitly asked to review an article, it applies the target's
-guidance first and offers portable suggestions; it does not turn them into a
-style system, validation gate, or automatic rewrite.
+guidance. When explicitly asked to create, draft, or review an article, it
+applies the target's guidance first and offers a compact planning or suggestion
+pass; it does not turn that pass into a style system, validation gate, or
+automatic rewrite.
 
 The Code Sigils blog is an acceptance environment, not a template for other
 sites. Blog-specific editorial conventions remain in the Digital Basement

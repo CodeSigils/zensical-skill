@@ -11,6 +11,32 @@ rules first, then the user's explicit instruction, then a supplied writing
 sample, then general defaults. A writing sample lends style traits only; it
 never supplies facts, claims, or experiences.
 
+## Article-start handoff
+
+When creating or substantially drafting an article, do this after inspecting
+the target's editorial guidance and before writing substantive prose. Keep the
+result compact and in the working conversation unless the target already owns
+an article-brief format:
+
+- name the article form and the reader's question;
+- state the bounded insight, recommendation, or uncertainty the author can
+  actually support;
+- name the evidence boundary: direct observation, repository evidence, current
+  primary sources, or clearly labelled community reports;
+- identify volatile facts that need a current source and any personal context
+  the agent must ask the maintainer to supply; and
+- sketch only the sections needed to carry the reader from opening observation
+  to useful takeaway.
+
+At roughly a third of the draft, pause when the article is evidence-heavy or
+has grown beyond its original shape. Check that the claim remains supportable,
+the evidence is explaining rather than accumulating, and the structure still
+fits the chosen form. This catches scope drift while a draft is cheap to move.
+
+This is a target-guidance-first handoff, not a mandatory template, score,
+research agent, or publication gate. A short note, reference page, or article
+with a target-owned brief can use a smaller version or its existing process.
+
 Before flagging anything, characterize the voice already present: name the
 traits worth keeping — formality, rhythm, punctuation habits, and whether
 warmth or humor is genuine — from the draft and any supplied sample, and state
@@ -65,6 +91,12 @@ clauses belong tightly together; otherwise use a period or recast the sentence.
 Keep an em dash for a genuine interruption or parenthetical where commas,
 parentheses, or a new sentence would lose something. Do not use either mark to
 manufacture a reveal, hurry a contrast, or carry an accumulating list.
+
+Keep diagnostic prose plain. Do not stage an ordinary result as a reversal,
+reveal, verdict, or mic-drop moment through clipped lines such as "It was" or
+"Period." Explain what the source returned, what it can and cannot establish,
+and why that matters to the next decision. Use a dramatic turn only when the
+target voice and the evidence genuinely call for one.
 
 When punctuation has been a concern in the target guidance or the user's
 request, make the last pass mechanical as well as editorial: scan the finished

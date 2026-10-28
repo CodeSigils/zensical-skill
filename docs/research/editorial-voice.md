@@ -415,6 +415,31 @@ the relation between ideas rather than chase marks, and distinguish a causal
 thread from a catalogue of controls or facts. No punctuation quota, detector,
 automation, or house voice was adopted.
 
+## Article-start handoff field application (2026-10-28)
+
+The later review of `when-an-ai-signs-your-commits.md` showed a complementary
+timing problem. Its personal incident and ethical judgment were useful, but an
+unsettled evidence boundary let the middle grow into a recovery dossier,
+including a copy-and-run history-rewrite sequence and claims that needed more
+careful limits. A final voice pass can repair that material, but it is the
+wrong time to decide what the article is actually trying to establish.
+
+The runtime article-review reference now asks for a compact, target-guidance-
+first handoff before substantive drafting: form, reader question, warranted
+contribution, evidence boundary, freshness needs, personal-context gaps, and
+only the structure needed to carry the argument. Evidence-heavy drafts receive
+one early shape check at roughly one-third complete. This is deliberately not a
+house outline, score, generic writing workflow, automation, or publication
+gate. It moves an existing suggestion pass earlier so that it can prevent
+structural drift instead of only cleaning up after it.
+
+The application also gives the existing performed-authenticity warning a more
+useful editorial test. A routine diagnostic result should state what the source
+returned, the limit of that result, and the next decision. Writing it as a
+reversal, verdict, or mic drop substitutes staging for explanation. This is a
+contextual prose judgment, not a phrase detector or a prohibition on genuine
+dramatic writing.
+
 ## How the downloaded skills approach the problem (2026-09-24)
 
 Detail behind the ranking above — each skill's actual method, read from the
