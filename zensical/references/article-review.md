@@ -1,7 +1,7 @@
 # Optional article-content review
 
-Use this reference only when the user explicitly asks to review or improve an
-article draft. Read and follow any editorial guidance in the target repository
+Use this reference when the user asks to review or improve an article draft
+(whether human- or agent-written). Read and follow any editorial guidance in the target repository
 first. This is a portable suggestion pass, not a house style, an SEO formula,
 or a publication gate.
 
@@ -26,7 +26,7 @@ Check only what fits the article's purpose and form:
   when the user asks for it. Families worth flagging when they cluster:
   negative-antithesis inversions ("It was not X. It was Y.", "Not just X,
   but Y", "It's not about X, it's about Y", "The answer is not X — it's Y",
-  "X isn't just A; it's B", "not because X, but because Y", "not for X but for Y"); stacked rhetorical questions; opener tics
+  "X isn't just A; it's B", "not because X, but because Y", "not for X but for Y"); semicolon overuse as a clause joiner between independent clauses (prefer a period or restructure); stacked rhetorical questions; opener tics
   ("Imagine...", "Let's...", "In this article...", "Here's the thing",
   "—the thing is—"); filler hedges ("It's worth noting", "That said",
   "At the end of the day"); colon- and dash-heavy constructions that
