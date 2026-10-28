@@ -11,7 +11,7 @@ the requested change may affect more than one source file.
 - navigation declarations and generated-site settings
 - theme overrides, CSS, JavaScript, and static assets
 - `.github/workflows/` or other build/deployment automation
-- repository `AGENTS.md`, README, and local check scripts (check for editorial workflow / llms.txt maintenance guidance)
+- repository `AGENTS.md`, README, and local check scripts (check for editorial workflow / llms.txt maintenance guidance). If missing and this is a Zensical blog, the skill may suggest adding an editorial workflow section (user approval required; no automatic injection).
 
 ## Questions to answer
 
