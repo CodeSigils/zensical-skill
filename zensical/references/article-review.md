@@ -26,7 +26,7 @@ Check only what fits the article's purpose and form:
   when the user asks for it. Families worth flagging when they cluster:
   negative-antithesis inversions ("It was not X. It was Y.", "Not just X,
   but Y", "It's not about X, it's about Y", "The answer is not X — it's Y",
-  "X isn't just A; it's B"); stacked rhetorical questions; opener tics
+  "X isn't just A; it's B", "not because X, but because Y", "not for X but for Y"); stacked rhetorical questions; opener tics
   ("Imagine...", "Let's...", "In this article...", "Here's the thing",
   "—the thing is—"); filler hedges ("It's worth noting", "That said",
   "At the end of the day"); colon- and dash-heavy constructions that
@@ -48,7 +48,10 @@ Check only what fits the article's purpose and form:
   Judge density, not single instances: flag clusters, repetition, and
   mismatch with the surrounding voice; never rewrite a phrase that is
   quoted, titled, or under discussion; a contrast that genuinely rules
-  out a specific alternative is load-bearing, not a tell; and
+  out a specific alternative is load-bearing, not a tell. Justification
+  antitheses ("not because X, but because Y") are often overused to explain
+  negative decisions; prefer stating the concrete tradeoff or reason directly
+  rather than constructing a forced contrast; and
 - purposeful links and volatile details that need a source, date, or caveat.
 
 When the target's editorial guidance and the user's request call for a human,
