@@ -1,7 +1,8 @@
 # Optional article-content review
 
-Use this reference when the user asks to review or improve an article draft
-(whether human- or agent-written). Read and follow any editorial guidance in the target repository
+Use this reference when the user asks to create, draft, review, or improve an article
+(whether human- or agent-written). Apply editorial guidance during drafting to avoid
+AI slop, not just as a post-hoc pass. Read and follow any editorial guidance in the target repository
 first. This is a portable suggestion pass, not a house style, an SEO formula,
 or a publication gate.
 
