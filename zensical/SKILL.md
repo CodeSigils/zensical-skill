@@ -1,14 +1,20 @@
 ---
 name: zensical
-description: "Review, lightly edit, and validate existing Zensical sites, including site configuration, navigation, Markdown components such as content tabs, links, and builds. Use for concrete site-maintenance tasks in a Zensical repository even when the request says only site or blog. Exclude generic prose writing, unrelated frontend work, and autonomous publishing."
+description: "Use this skill when reviewing, editing, or polishing blog articles and Markdown content in a Zensical site. Improves tone and voice, removes AI slop, follows site editorial rules, validates links/components and builds. Apply when asked to review an article draft, improve writing tone, polish a blog post, or edit Markdown in docs/. Also handles concrete Zensical site-maintenance tasks (configuration, navigation, components). Exclude unrelated frontend work, generic writing outside a Zensical site, and autonomous publishing."
 license: MIT
 compatibility: "Requires filesystem and shell access; bundled checks require Python 3.10+ and Bash; Zensical is required for build validation; network is needed only for current documentation and external-link checks."
 metadata:
-  short-description: "Maintain Zensical sites safely"
+  short-description: "Maintain and polish Zensical blog content"
   keywords:
     - zensical
     - static-site-generator
     - markdown
+    - blog
+    - article
+    - editorial-review
+    - tone
+    - voice
+    - ai-slop
     - documentation-site
     - site-maintenance
     - content-tabs
@@ -127,10 +133,11 @@ Choose the smallest applicable workflow:
 - **Review accessibility:** read [references/accessibility.md](references/accessibility.md)
   whenever content, media, components, CSS, templates, or landing pages affect
   names, alternatives, keyboard use, contrast, zoom, or motion.
-- **Review an article draft:** only when explicitly requested, read
-  [references/article-review.md](references/article-review.md). Apply the
-  target's own editorial guidance first; treat the result as suggestions, not
-  validation requirements.
+- **Review or polish an article/blog post:** read
+  [references/article-review.md](references/article-review.md) when asked
+  to review, edit, improve tone/voice, or remove AI slop from Markdown content
+  in a Zensical site. Apply the target's own editorial guidance first; treat
+  the result as suggestions, not validation requirements.
 - **Review admonitions, tabs, links, or navigation:** read
   [references/content-components.md](references/content-components.md).
 - **Review or enable feeds (RSS, JSON Feed):** read
