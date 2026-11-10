@@ -363,6 +363,13 @@ record. A repeated, decision-changing failure is required before expanding the
 portable review; no score, corpus-wide rewrite, or publication gate follows
 from this checkpoint.
 
+Result (2026-11-10): the field note, guide, and reference-oriented guide each
+kept their selected form. The reference-oriented guide needs a separate
+current-source maintenance pass, not a narrative or human-voice rewrite. The
+dated field record includes the evidence, declined recommendations, and a
+limited Jan Brennenstuhl craft-reference comparison. No new runtime rule is
+admitted.
+
 ### New-article placement clarification (2026-09-12)
 
 Creating a page needs an explicit category decision because its location
@@ -582,6 +589,10 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-11-10: Completed the field-note, guide, and reference-oriented
+  calibration on existing Code Sigils blog pages. The result did not admit a
+  new runtime rule: the only distinct finding was a factual-maintenance
+  boundary for the reference-oriented guide.
 - 2026-11-10: Added a compact form-fit check to the optional article review
   and a three-form calibration checkpoint. It makes field-note, guide, and
   reference-page review choices explicit while preserving target-owned voice

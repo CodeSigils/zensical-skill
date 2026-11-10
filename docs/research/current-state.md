@@ -186,12 +186,13 @@ boundary, and the reader consequence without prescribing a template or
 inventing first-person experience. The dated field record is
 [research/index.md](index.md#evidence-led-field-note-clarification-2026-11-10).
 
-The next editorial evidence gate is deliberately narrower than a corpus-wide
-rewrite. Three further Code Sigils pages will exercise the existing review as a
-field note, guide or explainer, and reference-oriented page. Each result must
-record the selected form, target guidance, evidence boundary, and a declined
-recommendation where forcing the wrong shape would harm the page. Only a
-repeated, decision-changing failure can justify another portable rule.
+The three-form calibration completed on 2026-11-10. A Code Sigils field note,
+guide, and reference-oriented guide each retained its appropriate shape. The
+reference-oriented guide identified a separate factual-maintenance boundary,
+not a reason to impose a narrative rewrite. The dated record lists the selected
+form, evidence boundary, and deliberately declined recommendation for every
+review. Only a repeated, decision-changing failure can justify another portable
+rule.
 
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, and this file. The seven dated reports carry a date instead,

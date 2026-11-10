@@ -1236,6 +1236,34 @@ it should not replace them with slang, forced informality, or citations that do
 the author's reasoning for them. The target repository remains the authority
 for editorial voice.
 
+## Three-form editorial calibration (2026-11-10)
+
+The roadmap's calibration checkpoint was exercised as three read-only reviews
+of the Code Sigils blog. The target's `AGENTS.md` was the editorial authority.
+Jan Brennenstuhl's writing index and three representative essays were consulted
+as a craft reference only: they reinforced the value of a concrete opening,
+bounded evidence, and an actionable close, but supplied neither a template nor
+facts for the target articles.
+
+| Article | Selected form | Outcome | Deliberately declined |
+| --- | --- | --- | --- |
+| `when-an-ai-signs-your-commits.md` | Evidence-led field note | The opening already names the motive, direct observation, and consequence. Its later recovery sections preserve the observation → evidence → reader-decision chain. | Recasting the incident as a short procedural guide would remove the consent judgment that makes the evidence matter. |
+| `free-ai-models.md` | Guide / explainer | The opening turns a volatile “best free model” search into a reader decision. The provider table and repeatable test preserve the guide's practical path without pretending that allowances are stable. | Adding a personal incident or field-note scene would not improve a guide whose authority is its current verification method. |
+| `opencode-guide.md` | Reference-oriented guide | Its table of contents and task-based sections support retrieval across a broad product surface. Its existing opening gives enough orientation before the reference material. | A narrative field-note opening or an evidence-led overhaul would slow retrieval. Its release-dependent commands and provider claims instead need a separate current-source maintenance pass. |
+
+The first two reviews found no decision-changing shape failure. The third found
+a form-appropriate boundary, not a prose defect: broad retrieval material must
+be factually maintained before it is stylistically refreshed. No new runtime
+rule, score, corpus-wide rewrite, or publication gate follows. The next
+editorial change must still be justified by a repeated failure that the existing
+form-fit check cannot express.
+
+Craft-reference pages consulted: [What I Learned Building an Identity Broker
+With Coding Agents](https://www.janbrennenstuhl.eu/agentic-identity-broker/),
+[Dependency Updates: latest Is Not a Security
+Strategy](https://www.janbrennenstuhl.eu/dependency-updates/), and [What is
+JWA?](https://www.janbrennenstuhl.eu/jwa/). Checked 2026-11-10.
+
 ## Codex automatic-selection pilot on the Code Sigils blog (2026-10-18)
 
 Four independent Codex CLI 0.163.0 read-only sessions ran in the existing
