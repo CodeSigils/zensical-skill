@@ -1,141 +1,64 @@
 ---
 name: zensical
-description: "Use this skill when creating, drafting, writing, authoring, reviewing, editing, or polishing blog articles and Markdown content in a Zensical site. Improves tone and voice, removes AI slop, follows site editorial rules, validates links/components and builds. Apply when asked to write a new post, draft an article, create content in docs/, review a draft, improve tone, polish a blog post, or edit Markdown in docs/. Also handles concrete Zensical site-maintenance tasks (configuration, navigation, components). Exclude unrelated frontend work, generic writing outside a Zensical site, and autonomous publishing."
+description: "Maintain, review, and validate Zensical sites and their source Markdown. Use for Zensical content, components, configuration, accessibility, and target-guided article revisions; exclude generic writing, SEO, frontend work, and autonomous publishing."
 license: MIT
 metadata:
   compatibility: "Requires filesystem and shell access; bundled checks require Python 3.10+ and Bash; Zensical is required for build validation; network is needed only for current documentation and external-link checks."
-  short-description: "Maintain and polish Zensical blog content"
-  keywords:
-    - zensical
-    - static-site-generator
-    - markdown
-    - blog
-    - article
-    - create
-    - draft
-    - write
-    - author
-    - editorial-review
-    - tone
-    - voice
-    - ai-slop
-    - documentation-site
-    - site-maintenance
-    - content-tabs
-    - admonitions
-    - accessibility
-    - link-validation
-    - agent-skills
+  short-description: "Maintain Zensical sites and source content"
+  keywords: "zensical, static-site-generator, markdown, documentation-site, site-maintenance, content-components, accessibility"
   repository: "CodeSigils/zensical-skill"
-  maintainers:
-    - CodeSigils
+  maintainers: "CodeSigils"
 ---
 
 # Zensical
 
 Use this skill for a concrete task in an existing or explicitly requested
-Zensical site. It is a presentation and site-maintenance skill, not a writing
-voice, SEO, generic frontend, or autonomous publishing skill.
+Zensical site. It covers site maintenance and source-content work governed by
+the target repository. It is not a generic writing voice, SEO, frontend, or
+autonomous-publishing skill.
 
 Never impose conventions from the Code Sigils acceptance blog or any other
 test site on a target repository. The target site's own configuration, content
 model, and editorial rules are authoritative; project-specific observations in
 the source registry are evidence only.
 
-## Maturity and evidence
+## Core boundaries
 
-This skill is usable for its documented, evidence-backed maintenance scope and
-is actively developed; it is not a comprehensive Zensical automation or
-conformance tool. Apply only the workflow and validation confidence supported
-by the target repository and the referenced evidence. Do not turn a review
-prompt into a universal lint rule, claim browser, provider, deployment, or WCAG
-coverage that was not performed, or add a new workflow merely because Zensical
-or HTML supports it. Record a bounded finding instead. Expand the skill only
-after a concrete user need, repeated or observed behavior, current primary
-evidence, a proportionate validation path, and a named maintenance owner.
-Feeds meet that bar: Zensical provides them natively, they are ordinary
-component configuration, and a bounded post-build check confirms the output.
-See [references/rss.md](references/rss.md) for what the plugin does and does
-not do on the target's version.
-
-When the user evaluates a proposed Zensical addition, integration, workflow,
-or automation capability, first inspect the target repository and consult the
-current official Zensical documentation through
-[references/source-registry.md](references/source-registry.md). Treat that
-documentation and the target's installed version as the decision baseline;
-then assess user value, validation, maintenance cost, and authorization before
-recommending or implementing it. The skill may grow into a reusable methodology
-or automation capability only when that value is demonstrated, not assumed.
-After that consultation, suggest the small set of relevant documented Zensical
-sections or capabilities to the user, explain the concrete fit and trade-offs,
-and identify what would need validation. Do not dump a feature catalog, imply a
-capability is enabled, or implement an optional addition without authorization.
-
-## Operating boundaries
-
-- **First-time setup awareness:** When working in a Zensical blog repository (has `docs/`, `zensical.toml`) and `AGENTS.md` lacks an editorial workflow section, suggest adding one. Keep suggestions minimal and link to the skill's article-review guidance. Do not auto-edit without explicit user approval.
-- Inspect the repository before assuming its content layout, navigation,
-  configuration, theme, output directory, or deployment workflow.
-- Preserve the site's conventions and source-of-truth locations. Do not create
-  parallel configuration or duplicate navigation entries.
-- Notice repeated semantic values in site configuration, CI, scripts, and
-  repository Python as possible duplication or drift smells. Recommend
-  centralization only when the values should change together and the benefit
-  outweighs the loss of local clarity; do not mechanically extract examples or
-  prose.
-- Separate editorial intent from presentation implementation. The article or
-  review process decides whether a tip, warning, or tab is useful; this skill
-  implements and validates the Zensical syntax.
-- Treat user-supplied local identifiers as potentially personal when preparing
-  publishable material. Keep exact values only for private diagnosis; in
-  articles, examples, captions, front matter, generated output, and commit
-  messages, replace usernames, hostnames, local paths, IP or MAC addresses,
-  account identifiers, and private URLs with accurate neutral placeholders
-  unless the user explicitly approves their publication. Do not over-redact a
-  value that is essential to a reproducible public example; ask when the
-  publication boundary is unclear.
-- Make bounded changes authorized by the user. Do not publish, change hosting,
-  or install third-party integrations unless requested.
-- Before an authorized commit, publish, or deployment change, run the bounded
-  tracked-file hygiene check when the target is a Git repository. Treat a
-  finding as a stop-and-review signal: do not print its value, rotate or remove
-  credentials, rewrite history, or bypass provider protection without explicit
-  user authorization.
-- Treat package versions, CLI commands, supported components, and theme
-  behavior as release-dependent. Consult [references/source-registry.md](references/source-registry.md)
-  and current upstream documentation when a claim depends on a version.
-- For skill-discovery or release requests, search in this order: the local
-  payload and repository, documented/official catalogs, then Skills.sh via a
-  fresh Skills CLI query. Record the query date, result count, and any
-  unauthenticated, stale, or unavailable catalog state; treat search results
-  as retrieval leads rather than quality or completeness proof.
-- Use web research deliberately for broad site concerns, but give sources a
-  clear order: inspect the target repository, consult current official
-  Zensical documentation first for Zensical behavior, then use authoritative
-  standards (such as W3C) and reputable community or provider sources for
-  accessibility, design, embeds, and context. Never replace an official
-  Zensical answer with a cached blog or generic static-site advice.
-- Do not run `npx skills update`, `skills update`, or any other self-update
-  command on the user's machine. If the installed payload may be behind its
-  source, say so and offer the command; let the user run it. Refreshing an
-  installed skill executes third-party code on the host and can replace the
-  instructions the current session is following.
+- Inspect the target before assuming its layout, configuration, navigation,
+  theme, output, or deployment workflow. Preserve its source-of-truth files;
+  do not create parallel configuration or duplicate navigation.
+- For version-sensitive Zensical behavior, consult
+  [references/source-registry.md](references/source-registry.md) and current
+  official documentation before recommending a change. Report a bounded
+  finding rather than claiming browser, provider, deployment, or WCAG coverage
+  that was not performed.
+- For article work, the target's editorial rules decide voice and argument.
+  This skill supplies review mechanics and Zensical-aware validation; it never
+  invents author experience or imposes a house style.
+- Keep publishing, hosting, third-party integrations, and Git delivery as
+  separate authorization decisions. Before an authorized commit, publish, or
+  deployment action in a Git repository, run the tracked-file hygiene check
+  and stop for review on a finding.
+- Treat local identifiers as potentially personal in publishable material. Use
+  accurate neutral placeholders unless disclosure is necessary and authorized.
 
 ## Route the request
 
 Choose the smallest applicable workflow:
 
 - **Inspect or orient:** read [references/site-inspection.md](references/site-inspection.md).
-- **Create or draft an article:** read
-  [references/article-review.md](references/article-review.md) before drafting
-  substantive prose, then use its article-start handoff with the target's
-  editorial guidance. It is a compact planning aid, not a house style or a
-  publication gate.
-- **Lightly edit or author Markdown:** read [references/light-edit.md](references/light-edit.md)
-  and [references/content-components.md](references/content-components.md), then
-  preserve the article's own editorial rules.
+- **Draft, revise, or review substantive article prose:** read
+  [references/article-review.md](references/article-review.md) before changing
+  it. Use the target's editorial guidance; this is a planning and review aid,
+  not a house style or publication gate.
+- **Make a light Markdown edit:** read
+  [references/light-edit.md](references/light-edit.md). Read
+  [references/content-components.md](references/content-components.md) only if
+  the edit affects an admonition, tab, link, or navigation.
 - **Review media or assets:** read [references/media.md](references/media.md),
   then inspect the target's image, video, audio, embed, and asset conventions.
+- **Review admonitions, tabs, links, or navigation:** read
+  [references/content-components.md](references/content-components.md).
 - **Review responsive presentation or customization:** read
   [references/customization.md](references/customization.md), then inspect
   `extra_css`, `extra_javascript`, `custom_dir`, theme settings, and landing
@@ -143,13 +66,6 @@ Choose the smallest applicable workflow:
 - **Review accessibility:** read [references/accessibility.md](references/accessibility.md)
   whenever content, media, components, CSS, templates, or landing pages affect
   names, alternatives, keyboard use, contrast, zoom, or motion.
-- **Review or polish an article/blog post:** read
-  [references/article-review.md](references/article-review.md) when asked
-  to review, edit, improve tone/voice, or remove AI slop from Markdown content
-  in a Zensical site. Apply the target's own editorial guidance first; treat
-  the result as suggestions, not validation requirements.
-- **Review admonitions, tabs, links, or navigation:** read
-  [references/content-components.md](references/content-components.md).
 - **Review or enable feeds (RSS, JSON Feed):** read
   [references/rss.md](references/rss.md). Feeds are ordinary component work
   once the target runs a Zensical version that supports them natively; they are
@@ -167,84 +83,24 @@ Choose the smallest applicable workflow:
   first; consult the relevant reference only after identifying the failing
   layer.
 
-## Default workflow
+## Proportionate workflow
 
-1. Confirm the requested outcome and whether the task is review-only or allows
-   edits.
-2. Inspect `pyproject.toml`, `zensical.toml`, `mkdocs.yml` if present,
-   `docs/`, navigation declarations, theme overrides, scripts, and CI files.
-3. Identify the canonical source file and the narrowest affected scope.
-4. Check existing conventions before adding a component, link, section, or
-   configuration key.
-5. Make the smallest coherent change. Keep equivalent alternatives compact
-   with tabs when that improves scanning, but keep shared prerequisites and
-   warnings outside the tabs.
-6. Validate Markdown structure, links, navigation, and the rendered output
-   using the project's own commands where available.
-7. Report changed files, checks run, deployment implications, and remaining
-   version-sensitive uncertainty. When an authorized edit leaves a focused,
-   validated diff in a Git repository, say that it is ready to commit and offer
-   that next step.
+1. Confirm the outcome and whether the task permits edits.
+2. Inspect only the configuration, source, and conventions needed for the
+   requested scope; identify the canonical file.
+3. Read the smallest routed reference, make the smallest coherent change, and
+   validate the affected surface with the target's own commands.
+4. For review-only work, report evidence and recommendations without editing.
+   For an edit, report changed files, checks, and any remaining uncertainty.
 
-For review-only work, do not modify files or claim that a recommendation was
-implemented. Tie every finding to repository evidence and distinguish a broken
-site from a bounded maintainability or editorial concern.
-
-## Authorization modes
-
-Keep these modes distinct:
-
-- **Light edit:** make a small requested wording, Markdown, front-matter, link,
-  admonition, or tab change. Preserve the page's voice, route, metadata shape,
-  and surrounding structure. Do not silently turn it into a rewrite.
-- **Content-structure review:** inspect front matter, headings, links,
-  components, media, and the rendered route. Follow any target-repository
-  editorial guidance, but report only presentation, integrity, or validation
-  findings; do not judge voice, argument, or article quality.
-- **Article-content review:** only for an explicit article-review request,
-  apply the target's editorial guidance first and offer portable suggestions on
-  clarity, evidence, examples, jargon, links, and durable details. Do not
-  impose a voice, article formula, SEO strategy, or publication gate.
-- **Site modification:** change navigation, configuration, assets, or templates
-  only within the explicitly requested scope.
-- **Publish or deploy:** never infer authorization from a successful build.
-  Treat commit, push, hosting, and deployment as separate actions.
-
-## Components that commonly need care
-
-- Use admonitions as visible signposts for safety, comprehension, memory, or
-  optional detail; do not box ordinary prose.
-- Use content tabs for genuinely parallel alternatives such as npm, pnpm, Yarn,
-  Python, or platform-specific commands. Do not hide material differences or
-  warnings in a tab.
-- Prefer descriptive links and one canonical navigation entry. Search for an
-  existing page before creating a new one.
-- Keep front matter and section metadata consistent with the site's existing
-  conventions. Do not invent fields because another static-site generator uses
-  them.
-- Treat images, video, audio, and external embeds as separate media concerns.
-  A passing build proves neither player behavior nor remote availability.
-- Treat feeds as generated output that also needs a discovery link. A feed
-  file with no advertised `<link rel="alternate">` is invisible to readers, and
-  item dates fall back to the build time when the build has no Git history.
-- Treat CSS overrides, custom templates, and landing pages as version-sensitive
-  presentation layers. Preserve scoped changes and validate rendered behavior.
-- Treat accessibility as a cross-cutting quality concern. Prefer native HTML
-  and visible text before ARIA, and never claim WCAG compliance from a build
-  alone.
-- When rendered behavior is in scope and browser access is available, inspect
-  a representative affected page. Otherwise, report the static-check limit;
-  browser inspection is evidence, not a new mandatory dependency.
+A light edit must remain a light edit. A site modification may change
+configuration, navigation, assets, or templates only within the requested
+scope. A successful build never authorizes commit, push, hosting, or deploy.
 
 ## Handoff
 
 For a review, report findings with file paths and concrete evidence before
-proposing fixes. For an edit, report the focused change and validation. When a
-validated edit is pending in a Git working tree, offer to commit it; do not
-commit, push, publish, or deploy unless the user separately authorizes each
-action. If a source, command, link, or rendering behavior could have drifted,
-say exactly what was verified and what still needs a maintainer's review. If a
-version-sensitive claim looks dated, or the payload's own version is unclear,
-tell the user this copy may be behind its source and offer
-`npx skills update zensical` for them to run. An install made with `--copy` or
-a manual copy records no source, so that command may not update it.
+proposing fixes. For an edit, report the focused change and validation. State
+exactly what was verified and what still needs maintainer review. Do not run a
+skill self-update command; if this copy may be stale, explain that the user can
+choose to refresh it.

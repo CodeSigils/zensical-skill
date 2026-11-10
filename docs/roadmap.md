@@ -572,6 +572,13 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-11-10: Narrowed the runtime entrypoint after a skill-creator review.
+  The payload now names Zensical site and source-content maintenance as one
+  bounded scope, uses a shorter selection description and conditional workflow,
+  and removes duplicated article routes and policy prose. The release checklist
+  now requires a four-request router forward test and the bundled Codex
+  `skill-creator` validator. Target repositories still own editorial voice and
+  publishing authority.
 - 2026-11-10: Added a narrow, optional evidence-led field-note aid to the
   existing article-review reference after an authorized Code Sigils rewrite.
   It makes the existing author-observation and evidence-boundary guidance

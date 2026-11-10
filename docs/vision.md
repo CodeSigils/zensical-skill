@@ -3,9 +3,10 @@
 ## Purpose
 
 `zensical` is a focused Agent Skill for inspecting, lightly editing, reviewing,
-and validating Zensical static sites. It helps an agent preserve an existing
-site's conventions while using Zensical components such as admonitions and
-content tabs, media assets, and the site's presentation customization safely.
+and validating Zensical static sites and their source Markdown. It helps an
+agent preserve an existing site's conventions while using Zensical components
+such as admonitions and content tabs, media assets, and the site's presentation
+customization safely.
 It is product-facing for current Code Sigils and Digital Basement publishing
 work while deliberately generalizing through proven existing-site workflows.
 
