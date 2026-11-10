@@ -37,6 +37,23 @@ This is a target-guidance-first handoff, not a mandatory template, score,
 research agent, or publication gate. A short note, reference page, or article
 with a target-owned brief can use a smaller version or its existing process.
 
+## Evidence-led field notes
+
+When the target's guidance and the article form call for a field note,
+experiment report, or evidence-led technical essay, let the reader meet the
+specific observation before its general lesson. Establish the factual boundary
+near the opening: what the author observed, tested, changed, or compared, and
+what that evidence cannot establish. A source list or a catalogue of controls
+does not replace that orientation.
+
+As the draft develops, check whether each major section carries a useful chain:
+claim, supporting observation or source, then the consequence for the reader's
+next decision. Combine repeated labels and incident lists when they do not
+change that decision. This is a shape aid, not a required sequence. A reference
+page may lead with the answer, and an author without a direct observation must
+not be given invented first-person experience. Leave an author note where that
+perspective is necessary but absent.
+
 Before flagging anything, characterize the voice already present: name the
 traits worth keeping — formality, rhythm, punctuation habits, and whether
 warmth or humor is genuine — from the draft and any supplied sample, and state
@@ -118,6 +135,11 @@ the author's observation, reasoning, or a specific reader context. Treat that
 as a cluster-level mismatch, not a phrase ban, automatic rewrite, or review
 gate. Direct, conventional prose can be the right form for reference material
 and a technical page whose purpose is fast retrieval.
+
+Do not make prose sound human by adding informality. Preserve the author's
+actual observation, judgment, and uncertainty; remove generic scaffolding only
+when it lets those things reach the reader more directly. Citations should
+support the author's reasoning, not stand in for it.
 
 Read the page in its actual form rather than treating every Markdown document
 as a reference page. For an article, narrative technical guide, field note, or

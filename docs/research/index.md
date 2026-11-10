@@ -1214,6 +1214,28 @@ remedy. The dated editorial-voice record lists the observable changes and their
 limits. This is one linked application, not comparative evidence that a fixed
 article brief or punctuation policy improves every form of writing.
 
+## Evidence-led field-note clarification (2026-11-10)
+
+An authorized rewrite of the Code Sigils field note
+`when-an-ai-signs-your-commits.md` made a closely related gap practical. The
+draft had reliable sources and a real incident, but its strongest observation
+arrived after a broad framing sentence. Several later sections also collected
+reports before explaining the decision those reports informed.
+
+The revision led with the concrete provenance problem, stated the evidence
+boundary, and tightened transitions so that a reader encounters the claim, its
+support, and its consequence together. This did not justify a generic article
+formula: reference material may still lead with an answer, and a writer who did
+not make a direct observation must not be supplied with one. The runtime
+article-review reference therefore adds an optional field-note aid, not a voice
+template, score, detector, or publication gate.
+
+The same pass confirmed a complementary human-tone principle. Removing generic
+scaffolding should reveal the author's observation, judgment, and uncertainty;
+it should not replace them with slang, forced informality, or citations that do
+the author's reasoning for them. The target repository remains the authority
+for editorial voice.
+
 ## Codex automatic-selection pilot on the Code Sigils blog (2026-10-18)
 
 Four independent Codex CLI 0.163.0 read-only sessions ran in the existing

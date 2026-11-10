@@ -10,7 +10,7 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Reviewed: 2026-10-28.
+Reviewed: 2026-11-10.
 
 Planning documents: [documentation index](README.md) for the read-first matrix,
 [vision](vision.md) for boundaries and quality criteria,
@@ -344,6 +344,15 @@ generation, a fixed article formula, score, automation, or publication gate.
 The same pass now asks ordinary diagnostics to state the result, its limit, and
 the next decision rather than staging a manufactured reveal.
 
+Clarification (2026-11-10): an authorized Code Sigils field-note rewrite made
+the existing article-start handoff more usable for evidence-led work. The
+optional article-review reference now asks a field note, experiment report, or
+technical essay to bring its concrete observation and evidence boundary forward,
+then connect claims, support, and reader consequences. It preserves reference
+pages that lead with an answer and forbids invented first-person experience.
+This is a shape aid within the target-guidance-first review, not a house voice,
+template, detector, automation capability, or publication gate.
+
 ### New-article placement clarification (2026-09-12)
 
 Creating a page needs an explicit category decision because its location
@@ -563,6 +572,11 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-11-10: Added a narrow, optional evidence-led field-note aid to the
+  existing article-review reference after an authorized Code Sigils rewrite.
+  It makes the existing author-observation and evidence-boundary guidance
+  easier to apply without changing the skill's scope or creating a generic
+  writing workflow, voice, score, automation, or fixture.
 - 2026-10-28: Routed explicit article creation and substantial drafting through
   the existing target-guidance-first article-review reference. Added a compact
   article-start handoff and one early evidence-and-shape check so substantial

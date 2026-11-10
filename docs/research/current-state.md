@@ -1,6 +1,6 @@
 # Current research state
 
-Reviewed: 2026-10-28.
+Reviewed: 2026-11-10.
 
 This file owns what the project currently knows to be true. Every claim here
 carries a check date. A claim that can no longer be re-checked against a primary
@@ -176,6 +176,15 @@ The same field application made one prose preference explicit: routine
 diagnostic results should report what a source returned, its limit, and the
 next decision. They should not be written as a manufactured reveal or
 mic-drop moment unless the target voice and evidence require it.
+
+On 2026-11-10, an authorized rewrite of a Code Sigils technical field note
+showed that the existing handoff needed one more usable distinction: direct
+observation should reach the reader before an article's broader lesson, and
+citations should support that reasoning rather than replace it. The optional
+field-note aid in `article-review.md` now asks for an observation, its evidence
+boundary, and the reader consequence without prescribing a template or
+inventing first-person experience. The dated field record is
+[research/index.md](index.md#evidence-led-field-note-clarification-2026-11-10).
 
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, and this file. The seven dated reports carry a date instead,
