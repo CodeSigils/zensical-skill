@@ -2,8 +2,8 @@
 name: zensical
 description: "Use this skill when creating, drafting, writing, authoring, reviewing, editing, or polishing blog articles and Markdown content in a Zensical site. Improves tone and voice, removes AI slop, follows site editorial rules, validates links/components and builds. Apply when asked to write a new post, draft an article, create content in docs/, review a draft, improve tone, polish a blog post, or edit Markdown in docs/. Also handles concrete Zensical site-maintenance tasks (configuration, navigation, components). Exclude unrelated frontend work, generic writing outside a Zensical site, and autonomous publishing."
 license: MIT
-compatibility: "Requires filesystem and shell access; bundled checks require Python 3.10+ and Bash; Zensical is required for build validation; network is needed only for current documentation and external-link checks."
 metadata:
+  compatibility: "Requires filesystem and shell access; bundled checks require Python 3.10+ and Bash; Zensical is required for build validation; network is needed only for current documentation and external-link checks."
   short-description: "Maintain and polish Zensical blog content"
   keywords:
     - zensical
