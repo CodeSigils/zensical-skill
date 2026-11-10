@@ -8,6 +8,17 @@ import sys
 
 SUBJECT_LIMIT = 72
 FIELDS = ("what:", "why:")
+# Dependabot composes its messages from configuration and cannot add the
+# what:/why: fields this contract requires, so its commits are excluded by
+# author rather than by subject wording. Identity is a property of the commit,
+# so the same exemption holds on push, on a pull request, and in a local range
+# review, where the workflow cannot see who opened the request.
+GENERATED_AUTHORS = frozenset(
+    {
+        "dependabot[bot]",
+        "49699333+dependabot[bot]@users.noreply.github.com",
+    }
+)
 
 
 class CheckError(RuntimeError):
@@ -64,11 +75,31 @@ def field_value(body_lines: list[str], field: str) -> str | None:
     return None
 
 
-def check(commit: str) -> list[str]:
-    short = commit[:12]
-    subject = run("git", "show", "--quiet", "--format=%s", commit).strip()
-    body = run("git", "show", "--quiet", "--format=%b", commit).strip()
+def read_commit(commit: str) -> tuple[str, str, str, str]:
+    """Return the subject, author email, author name, and body of commit.
 
+    The parts are read in one call and separated by NUL because a subject may
+    contain any other delimiter. Reading the author beside the message is what
+    lets the caller recognize a generated commit from its identity instead of
+    from the words it happens to use.
+    """
+    output = run("git", "show", "--quiet", "--format=%s%x00%ae%x00%an%x00%b", commit)
+    subject, email, name, body = output.split("\0", 3)
+    return subject.strip(), email.casefold(), name.casefold(), body.strip()
+
+
+def generated(email: str, name: str) -> bool:
+    """Return whether the commit was written by a tool that generates messages.
+
+    Excluding a generated commit does not loosen the contract: every human
+    commit is still judged, and a hand-written subject that imitates a bot's
+    wording is judged like any other.
+    """
+    return email in GENERATED_AUTHORS or name in GENERATED_AUTHORS
+
+
+def check(commit: str, subject: str, body: str) -> list[str]:
+    short = commit[:12]
     errors: list[str] = []
     if not subject:
         errors.append(f"{short}: empty subject")
@@ -90,10 +121,20 @@ def check(commit: str) -> list[str]:
 def main() -> int:
     refs = sys.argv[1:] or ["HEAD"]
     errors: list[str] = []
+    checked = 0
+    skipped = 0
     try:
         hashes = resolve(refs)
         for commit in hashes:
-            errors.extend(check(commit))
+            subject, email, name, body = read_commit(commit)
+            if generated(email, name):
+                skipped += 1
+                print(
+                    f"Skipped {commit[:12]} ({name or email}): generated commit message"
+                )
+                continue
+            checked += 1
+            errors.extend(check(commit, subject, body))
     except CheckError as error:
         print(f"Commit message policy could not run: {error}", file=sys.stderr)
         return 2
@@ -102,7 +143,7 @@ def main() -> int:
         print("Commit message policy failed:", file=sys.stderr)
         print("\n".join(errors), file=sys.stderr)
         return 1
-    print(f"Commit message policy passed for {len(hashes)} commit(s).")
+    print(f"Commit message policy passed for {checked} commit(s), {skipped} skipped.")
     return 0
 
 

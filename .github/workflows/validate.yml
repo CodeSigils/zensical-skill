@@ -17,11 +17,10 @@ jobs:
   commit-policy:
     runs-on: ubuntu-26.04
     timeout-minutes: 5
-    # Dependabot bodies cannot carry the what:/why: fields the contract
-    # requires, so its PRs skip this job and are reviewed as diffs instead.
-    # Condition on the PR author, not the actor: a human who reopens or
-    # re-runs a Dependabot PR must not drag the bot's commits through policy.
-    if: github.event.pull_request.user.login != 'dependabot[bot]'
+    # Runs on every push and pull request. The checker reads each commit's
+    # author and reports the generated commits it skips, so Dependabot is
+    # handled from the commit itself rather than from an event that a push
+    # does not carry.
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
