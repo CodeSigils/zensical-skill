@@ -353,6 +353,16 @@ pages that lead with an answer and forbids invented first-person experience.
 This is a shape aid within the target-guidance-first review, not a house voice,
 template, detector, automation capability, or publication gate.
 
+Calibration checkpoint (2026-11-10): before adding another editorial rule,
+apply the existing review to three further Code Sigils pieces with materially
+different forms: a field note, a guide or explainer, and a reference-oriented
+page. Each review records the selected form, references loaded or deliberately
+skipped, target guidance, evidence boundary, and any recommendation declined
+because it would distort the form. Record the outcomes in the dated field
+record. A repeated, decision-changing failure is required before expanding the
+portable review; no score, corpus-wide rewrite, or publication gate follows
+from this checkpoint.
+
 ### New-article placement clarification (2026-09-12)
 
 Creating a page needs an explicit category decision because its location
@@ -572,6 +582,10 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-11-10: Added a compact form-fit check to the optional article review
+  and a three-form calibration checkpoint. It makes field-note, guide, and
+  reference-page review choices explicit while preserving target-owned voice
+  and refusing a generic article template.
 - 2026-11-10: Narrowed the runtime entrypoint after a skill-creator review.
   The payload now names Zensical site and source-content maintenance as one
   bounded scope, uses a shorter selection description and conditional workflow,
