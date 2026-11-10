@@ -7,10 +7,10 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 `zensical-skill` is a focused Agent Skill for inspecting, lightly editing,
-reviewing, and validating existing [Zensical](https://zensical.org/) sites.
-It helps an agent preserve a repository's conventions while working with
-Zensical Markdown components, navigation, media assets, and presentation
-customization.
+reviewing, and validating [Zensical](https://zensical.org/) sites and their
+source Markdown. It helps an agent preserve a repository's conventions while
+working with target-guided article revisions, Zensical components, navigation,
+media assets, and presentation customization.
 
 This is a usable, actively developed skill for its documented, evidence-backed
 maintenance scope—not a complete Zensical automation suite.

@@ -127,7 +127,7 @@ choice, not a claim that the older reference evidence was fabricated.
 | 2 | Environment requirements are discoverable without rejecting the payload | `metadata.compatibility` holds them. The 2026-09-24 top-level placement matched the pinned reference validator, but Codex's applicable `skill-creator` validator rejects that key. |
 | 3 | `metadata` values are strings per spec | Tolerated deviation — `keywords`/`maintainers` are YAML arrays; not validator-enforced; zola-skill does the same |
 | 4 | `name`/`description` present and conformant | OK — `name: zensical` matches the directory |
-| 5 | Layout compliant | OK — `SKILL.md` at payload root (233 lines < 500), 10 focused lowercase `references/` files, executable `scripts/` |
+| 5 | Layout compliant | OK — `SKILL.md` at payload root (106 lines < 500), 10 focused lowercase `references/` files, executable `scripts/` |
 | 6 | Script references use skill-root-relative paths | OK — references invoke `scripts/check_instruction_contract.py` and `scripts/check_site_hygiene.sh`, the spec-recommended form |
 | 7 | `agents/openai.yaml` | OK with duplication note — matches OpenClaw convention; keep `short_description` in sync with `metadata.short-description` |
 

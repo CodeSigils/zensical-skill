@@ -188,7 +188,7 @@ false-positives the API returned (Python/docs skills matching on the substring
 
 | Skill | Author | Installs | What it does | Maintained? |
 |-------|--------|----------|--------------|-------------|
-| `zensical` | (this project) | 1 | Review, lightly edit, and validate existing Zensical static sites; presentation/site maintenance, explicitly not a writing voice or autonomous publishing skill | This project's own listing |
+| `zensical` | (this project) | 1 | Maintain, review, and validate Zensical sites and source Markdown; target-guided article work, explicitly not generic writing voice or autonomous publishing | This project's own listing |
 | `zensical-site` | `layeredcraft/skills` | 10 | Create/revise content for zensical.org; compact reference pages, links out to upstream docs for depth | **Closest competitor.** Content-authoring rather than site maintenance |
 | `zensical` | `kettleofketchup/dotfiles` | 3 | Zensical as MkDocs Material successor: install (pip/uv/Docker), `zensical.toml`, dev workflow, split into topic reference pages | Active-looking; shipped inside a dotfiles repo |
 | `koda-zensical` | `xcode-nlp/kodaskills` | 4 | Zensical inside a larger Koda skills pack | Not read; installs only |

@@ -19,6 +19,13 @@ release guarantee.
 
 ## Local validation
 
+- [ ] Run Codex's bundled structural validator and record the exact result.
+
+      `python3 /home/sand/.codex/skills/.system/skill-creator/scripts/quick_validate.py zensical`
+
+      This is the release gate for the Codex payload. The older pinned
+      Agent Skills validator remains useful compatibility evidence, but it
+      does not replace the validator used by the host that loads this skill.
 - [ ] Run the official Agent Skills validator from a clean environment using
       the pinned command below; record the exact commit and result.
 
@@ -44,6 +51,13 @@ release guarantee.
 - [ ] Apply the accessibility reference to affected media, components, CSS,
       templates, or landing pages; record browser/assistive-technology limits.
 - [ ] Run the shared locked scenario/fixture suite.
+- [ ] Forward-test the runtime router with four realistic requests: a typo-only
+      Markdown repair, a substantive article revision with target guidance, a
+      component or configuration change, and a review-only request. For each,
+      record the selected reference, references intentionally not loaded, the
+      authorization boundary, and the validation chosen. Use a clean temporary
+      site or an independent reviewer when practical; judge the route and
+      evidence, not generated prose.
 - [ ] Run `python3 scripts/check_readme_inventory.py` and resolve any file the
       README tree and the repository disagree about.
 - [ ] Run `ruff check .` and resolve every finding. The rule set is scoped in

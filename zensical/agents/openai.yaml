@@ -1,4 +1,4 @@
 interface:
   display_name: "Zensical"
-  short_description: "Maintain Zensical sites safely"
-  default_prompt: "Use $zensical to review this Zensical site and validate its bounded changes."
+  short_description: "Maintain Zensical sites and source content"
+  default_prompt: "Use $zensical to make or review a bounded Zensical site or source-Markdown change and validate it."
