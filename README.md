@@ -43,8 +43,13 @@ recorded installation evidence, not a claim about every current CLI option.
 
 ```bash
 npx skills add CodeSigils/zensical-skill \
-  --skill zensical --agent codex --copy --yes
+  --skill zensical --agent codex --yes
 ```
+
+The CLI uses symlinks by default, which is its recommended installation mode.
+Use `--copy` only where symlinks are unsuitable. An open upstream issue reports
+that a later `skills update` can replace a copied installation with links, so
+verify the resulting layout if a repository requires real files.
 
 For live development, agents that support external skill directories can point
 directly at the repository's `zensical/` directory. The security policy and
@@ -53,32 +58,35 @@ is safe.
 
 ### Refreshing an installed copy
 
-The agent specification has no version field and no update channel, so nothing
-can compare an installed copy against the source on its own. Refresh explicitly:
+The Agent Skills format has no update channel of its own. The Skills CLI can
+compare eligible recorded installs with their source without modifying them:
+
+```bash
+npx skills check
+```
+
+`check` exits with status 1 when an update is available. Refresh only after
+reviewing that result:
 
 ```bash
 npx skills update zensical     # or: npx skills upgrade zensical
 ```
 
 Skills CLI `1.5.25` was recorded as the install baseline on 2026-09-10; the
-refresh behaviour described here was inspected on 2026-09-26 through
-`npx skills@latest --help`. `update` (alias `upgrade`) is the only refresh
-command. There is no read-only staleness check, because `check` and `update`
-dispatch to the same code path rather than only reporting a difference, and
-there is no `--dry-run`. It compares a content hash of the installed files, not
-a version number, so a payload edit is picked up even though no version
-changed.
+current CLI behavior should be checked in its own documentation before acting.
+`check` and `update` compare a recorded content hash rather than a version
+number, so a payload edit can be detected even when no version changed. A
+manual `cp -R` installation has no recorded source, so neither command can
+compare or refresh it; copy the current payload again instead.
 
 Two caveats are worth knowing before relying on it. An open upstream issue
 reports that `update` re-installs skills originally added with `--copy` as
 symlinks, so a copied install can turn into a linked one; re-copy manually if
-that matters. And a skill installed by copying files has no recorded source, so
-the CLI cannot update it at all — re-run the `cp -R` command from the table
-above.
+that matters.
 
-Maintainers refresh every installed copy after changing the payload, and say
-which files changed. That is a maintainer obligation rather than a user step,
-because a host loads its installed copy and never reads the repository.
+Maintainers refresh the active copies they control after changing the payload
+and say which files changed. Other users can run `skills check` when their
+installation has recorded source metadata.
 
 ## Current scope
 
@@ -230,7 +238,7 @@ authoritative evidence ledger for these status claims.
 | Codex              | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.agents/skills/zensical/`              |
 | OpenCode           | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.opencode/skills/zensical/`            |
 | Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
-| Skills CLI install | Passed at `d7ef1e0`         | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` at the time; the payload has since grown to 14 files |
+| Skills CLI install | Historical: passed at `d7ef1e0` | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` on 2026-09-10; the payload has since grown to 14 files |
 | Skills.sh search   | Indexed on 2026-09-10        | Public API searches returned `codesigils/zensical-skill/zensical`                        |
 | Public release     | Not claimed                 | Marketplace indexing is not a release, support, or compatibility guarantee               |
 
@@ -273,8 +281,8 @@ payload boundaries.
 1. Read [`AGENTS.md`](AGENTS.md) and the relevant documents in
    [`docs/README.md`](docs/README.md).
 2. Make a narrow change to the runtime payload or its supporting evidence.
-3. Run the Agent Skills validator and inspect the diff for duplicated or
-   drifting guidance.
+3. Run the Codex `skill-creator` validator, the Agent Skills validator, and
+   inspect the diff for duplicated or drifting guidance.
 4. Record changed sources, uncertainty, and the validation performed.
 
 Do not install, execute, publish, or deploy third-party material as part of
@@ -285,6 +293,7 @@ discovery or review without explicit authorization.
 Run the focused checks from the repository root:
 
 ```bash
+python3 /home/sand/.codex/skills/.system/skill-creator/scripts/quick_validate.py zensical
 uvx --from git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref skills-ref validate zensical
 bash scripts/run_scenarios.sh
 bash zensical/scripts/check_site_hygiene.sh .
