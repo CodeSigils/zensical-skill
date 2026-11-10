@@ -37,6 +37,20 @@ This is a target-guidance-first handoff, not a mandatory template, score,
 research agent, or publication gate. A short note, reference page, or article
 with a target-owned brief can use a smaller version or its existing process.
 
+## Form-fit check
+
+Before applying an evidence-led shape, name what the page is trying to be and
+what the reader needs from it. A field note, experiment report, or technical
+essay benefits from an observation, its evidence boundary, and a consequence
+for the reader. A guide or explainer may instead need a reader problem followed
+by a supported path through it. A reference page should lead with the answer
+and preserve fast retrieval.
+
+Use this distinction to decline an unnecessary rewrite as well as to suggest
+one. Do not give a reference page an invented scene or give a field note a
+generic documentation skeleton. Record the chosen form and the reason for any
+shape recommendation in the review report.
+
 ## Evidence-led field notes
 
 When the target's guidance and the article form call for a field note,
