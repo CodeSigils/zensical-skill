@@ -82,34 +82,53 @@ Check only what fits the article's purpose and form:
 - jargon explained where it becomes necessary;
 - machine-typical prose patterns reworded toward a more natural human style
   when the user asks for it. Families worth flagging when they cluster:
-  negative-antithesis inversions ("It was not X. It was Y.", "Not just X,
-  but Y", "It's not about X, it's about Y", "The answer is not X — it's Y",
-  "X isn't just A; it's B", "not because X, but because Y", "not for X but for Y"); semicolon overuse as a clause joiner between independent clauses (prefer a period or restructure); em-dash overuse (— used as a clause joiner or dramatic reveal; prefer a period, comma, colon, or parentheses); stacked rhetorical questions; opener tics
-  ("Imagine...", "Let's...", "In this article...", "Here's the thing",
-  "—the thing is—"); filler hedges ("It's worth noting", "That said",
-  "At the end of the day"); colon- and dash-heavy constructions that
-  manufacture a reveal; formulaic three-part lists; fragment-stacked
-  inventories (a list rendered as successive short noun-phrase sentences,
-  "A summary. Two findings with their evidence. A sources section listing...",
-  where folding the items into one flowing sentence keeps the meaning); scope
-  inflation
-  ("Beyond X"); copula avoidance ("serves as" for "is"); present-participle
-  padding tails ("...highlighting the importance of"); and second-generation
-  "performed authenticity" tells (philosophical mic drops, forced casual
-  asides, invented informality). Additional patterns that often appear in the
-  same clusters are thesis-like scene-setting ("The question I kept coming
-  back to..."), over-signposts ("The drastic part", "What I took from it"),
-  performative emphasis ("This is the sequence that actually..."), invented
-  aphorisms, moral escalation through parallel clauses, exhaustive negative
-  lists, research-simulated precision, and binary verdicts. Prefer a direct
-  statement of the fact or procedure when it preserves the author's meaning.
-  Judge density, not single instances: flag clusters, repetition, and
-  mismatch with the surrounding voice; never rewrite a phrase that is
-  quoted, titled, or under discussion; a contrast that genuinely rules
-  out a specific alternative is load-bearing, not a tell. Justification
-  antitheses ("not because X, but because Y") are often overused to explain
-  negative decisions; prefer stating the concrete tradeoff or reason directly
-  rather than constructing a forced contrast; and
+
+  - negative-antithesis inversions ("It was not X. It was Y.", "Not just
+    X, but Y", "It's not about X, it's about Y", "The answer is not X —
+    it's Y", "X isn't just A; it's B", "not because X, but because Y",
+    "not for X but for Y");
+  - semicolon overuse as a clause joiner between independent clauses
+    (prefer a period or restructure);
+  - em-dash overuse (— used as a clause joiner or dramatic reveal; prefer
+    a period, comma, colon, or parentheses);
+  - stacked rhetorical questions;
+  - opener tics ("Imagine...", "Let's...", "In this article...", "Here's
+    the thing", "—the thing is—");
+  - filler hedges ("It's worth noting", "That said", "At the end of the
+    day");
+  - colon- and dash-heavy constructions that manufacture a reveal;
+  - formulaic three-part lists;
+  - fragment-stacked inventories (a list rendered as successive short
+    noun-phrase sentences, "A summary. Two findings with their evidence.
+    A sources section listing...", where folding the items into one
+    flowing sentence keeps the meaning);
+  - scope inflation ("Beyond X");
+  - copula avoidance ("serves as" for "is");
+  - present-participle padding tails ("...highlighting the importance
+    of");
+  - second-generation "performed authenticity" tells (philosophical mic
+    drops, forced casual asides, invented informality).
+
+  Additional patterns that often appear in the same clusters:
+
+  - thesis-like scene-setting ("The question I kept coming back to...");
+  - over-signposts ("The drastic part", "What I took from it");
+  - performative emphasis ("This is the sequence that actually...");
+  - invented aphorisms;
+  - moral escalation through parallel clauses;
+  - exhaustive negative lists;
+  - research-simulated precision; and
+  - binary verdicts.
+
+  Prefer a direct statement of the fact or procedure when it preserves
+  the author's meaning. Judge density, not single instances: flag
+  clusters, repetition, and mismatch with the surrounding voice; never
+  rewrite a phrase that is quoted, titled, or under discussion; a
+  contrast that genuinely rules out a specific alternative is
+  load-bearing, not a tell. Justification antitheses ("not because X,
+  but because Y") are often overused to explain negative decisions;
+  prefer stating the concrete tradeoff or reason directly rather than
+  constructing a forced contrast.
 - purposeful links and volatile details that need a source, date, or caveat.
 
 Run a mechanics-and-rhythm pass before calling a passage an AI tell. Read a
@@ -119,8 +138,12 @@ inventory prose often signals that the sentence was assembled in pieces rather
 than written for a reader. Restore the relationship between ideas instead of
 just swapping punctuation. Keep a semicolon only when two balanced independent
 clauses belong tightly together; otherwise use a period or recast the sentence.
-Keep an em dash for a genuine interruption or parenthetical where commas,
-parentheses, or a new sentence would lose something. Do not use either mark to
+Avoid em dashes (—) almost entirely: they are frequently overused by LLMs as
+dramatic separators or reveals, and they break reading flow. Use periods to
+split independent clauses, commas for light separation, colons for
+introductions, or parentheses for asides. Reserve an em dash only for a
+genuine interruption or true parenthetical where no alternative (a comma,
+parentheses, or a new sentence) reads naturally. Do not use either mark to
 manufacture a reveal, hurry a contrast, or carry an accumulating list.
 
 Keep diagnostic prose plain. Do not stage an ordinary result as a reversal,
@@ -183,12 +206,9 @@ and uncertainty; report, do not rewrite. The
 opposite failure counts too: stripping connectives, flattening register, or
 deleting structure that serves the content can read worse than the tell it
 removed. Prefer a rewrite that states the concrete fact over a word swap,
-and never add slang, typos, or invented personality to sound human. Avoid
-em dashes (—) almost entirely. They are frequently overused by LLMs as dramatic
-separators or reveals and break reading flow. Use periods to split independent
-clauses, commas for light separation, colons for introductions, or parentheses
-for asides. Reserve em dashes only for true parentheticals where no other
-punctuation reads naturally.
+and never add slang, typos, or invented personality to sound human.
+Punctuation calibration for dashes and semicolons is owned by the
+mechanics-and-rhythm pass above.
 
 Do not require a fixed opening, conclusion, point of view, length, heading
 pattern, callout, keyword, FAQ, or metadata field. Do not invent experiences,

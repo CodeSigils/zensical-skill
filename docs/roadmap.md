@@ -10,7 +10,7 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Reviewed: 2026-11-10.
+Reviewed: 2026-11-11.
 
 Planning documents: [documentation index](README.md) for the read-first matrix,
 [vision](vision.md) for boundaries and quality criteria,
@@ -589,6 +589,13 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-11-11: Remediated an editorial-review surface review: the runtime
+  article-review reference now states its em-dash rule once, keeping the
+  strict field-tested calibration as the single owner, and lists its tell
+  families one per line so the coverage walk can execute them. The editorial
+  research record was reconciled and gained a `Reviewed:` marker after a
+  link liveness re-check. No editorial scope, rule strength, boundary, or
+  capability changed.
 - 2026-11-10: Completed the field-note, guide, and reference-oriented
   calibration on existing Code Sigils blog pages. The result did not admit a
   new runtime rule: the only distinct finding was a factual-maintenance

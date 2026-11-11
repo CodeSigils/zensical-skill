@@ -1,6 +1,6 @@
 # Current research state
 
-Reviewed: 2026-11-10.
+Reviewed: 2026-11-11.
 
 This file owns what the project currently knows to be true. Every claim here
 carries a check date. A claim that can no longer be re-checked against a primary
@@ -194,8 +194,20 @@ form, evidence boundary, and deliberately declined recommendation for every
 review. Only a repeated, decision-changing failure can justify another portable
 rule.
 
+On 2026-11-11, a review of the editorial-review surface remediated two
+structural defects without changing editorial behavior: the runtime
+article-review reference now states its em-dash rule once, at the strict
+calibration the Code Sigils field results came from, and lists its tell
+families one per line so the required coverage walk can execute them.
+`editorial-voice.md` gained a `Reviewed:` marker after an external-link
+liveness re-check (all links returned 200), corrected a stale
+compact-principle claim, and now points at the runtime owner for the
+suggestion format instead of restating it. One non-compliant historical
+commit (`061ca9a`, empty body) was documented and left in place; no history
+rewrite was authorized.
+
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
-`SECURITY.md`, and this file. The seven dated reports carry a date instead,
+`SECURITY.md`, `docs/research/editorial-voice.md`, and this file. The seven dated reports carry a date instead,
 because a report's date records when it was written; four write it as a plain
 `Date:` line and three as a bolded list label, so a marker search must accept
 both forms. Eight of ten payload

@@ -1,7 +1,9 @@
 # Editorial voice and machine-typical prose research
 
-Created: 2026-09-24. Status: supporting evidence for the portable prose-tell
-guidance in [article-review](../../zensical/references/article-review.md). This
+Created: 2026-09-24. Reviewed: 2026-11-11 (external links re-checked for
+liveness; all returned 200). Status: supporting evidence for the portable
+prose-tell guidance in
+[article-review](../../zensical/references/article-review.md). This
 file records external findings and dated internal field applications; it does
 not define a house voice for the skill. Community tooling and blog observations
 are labelled as such.
@@ -531,9 +533,9 @@ The line between "a lens" and "a rewriter" is the whole point:
 
 - Follow the target repository's published rules first, then the user's
   instruction, then a supplied sample, then defaults.
-- Treat every finding as a candidate, reported with
-  `severity | path | evidence | reader impact | suggestion | validation`; the
-  author decides.
+- Treat every finding as a candidate and report it in the runtime
+  article-review suggestion format, which that reference owns; the author
+  decides.
 - Judge density, not single instances; leave quoted, titled, and load-bearing
   material alone.
 - Never add slang, typos, or invented personality to "sound human."
@@ -567,8 +569,10 @@ than adding another tell list:
   This promotes the coverage lesson recorded after the second review pass, where
   the antithesis family was missed until it was asked about.
 
-The runtime reference stays a compact principle; exhaustive tell lists remain in
-the installed lens and in this file.
+The runtime reference keeps the principle compact and, since the 2026-11-11
+restructure, carries the tell families as an enumerable one-per-line list so
+its coverage walk can execute them directly; the evidence, citations, and
+field applications behind the families remain here and in any installed lens.
 
 ## Fourth published-article pass: Oh My OpenAgent Guide (2026-09-24)
 
@@ -634,6 +638,29 @@ framing, and its decision to avoid a static quota table. The accepted factual
 review updated the article's `Last reviewed` field on 2026-09-25. The pass
 found no voice or workflow gap that justifies a runtime change, rubric, or
 fixture.
+
+## Review remediation: one dash-rule owner and an enumerable tell list (2026-11-11)
+
+A review of the editorial-review surface found two structural defects, not
+behavior gaps. The em-dash rule was stated twice with drifted calibration (a
+permissive mechanics-pass version and a near-ban inside the conditional
+community-lens paragraph), and the tell families lived in run-on prose that
+the reference's own coverage walk could not enumerate. The runtime reference
+now states the dash rule once, in the mechanics-and-rhythm pass, at the
+strict calibration the Code Sigils field results came from: avoid em dashes
+almost entirely, and reserve one only for a genuine interruption or true
+parenthetical where no alternative reads naturally. The families are
+unchanged in content and now list one family per line; the mechanical
+punctuation scan, the density rule, and every exception are untouched. No
+tell, example, caveat, boundary, or capability was removed.
+
+This file gained its `Reviewed:` marker after the external links were
+re-checked for liveness on 2026-11-11 (all returned 200), its stale
+compact-principle claim was corrected above, and its restated
+suggestion-format line now points at the runtime owner. One non-compliant
+historical commit (`061ca9a`, empty body) was documented and deliberately
+left in place: rewriting published history for one message body was neither
+authorized nor proportionate.
 
 ## Sources
 
