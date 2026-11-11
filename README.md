@@ -150,8 +150,8 @@ remain target-specific editorial, presentation, or release capabilities.
 
 Only the [`zensical/`](zensical/) directory is the portable Agent Skill
 payload. It contains the router, on-demand references, client metadata, and
-two bounded checks: a tracked-file hygiene preflight and a conventional
-deployment-instruction contract check.
+three bounded checks: a tracked-file hygiene preflight, a conventional
+deployment-instruction contract check, and a prose punctuation scan.
 
 ```text
 zensical/
@@ -170,6 +170,7 @@ zensical/
 │   └── validation.md                # build and rendered-output checks
 └── scripts/
     ├── check_instruction_contract.py # deployment-instruction drift check
+    ├── check_punctuation.py          # em-dash and semicolon prose scan
     └── check_site_hygiene.sh         # no-secret-output tracked-file preflight
 ```
 
@@ -177,9 +178,11 @@ What users receive:
 
 - agentskills.io `name` and `description` frontmatter for `zensical`;
 - repository-agnostic Zensical maintenance and review instructions;
-- references loaded progressively for the requested workflow; and
+- references loaded progressively for the requested workflow;
 - a bounded, read-only-by-default hygiene preflight for authorized publication
-  work.
+  work; and
+- a read-only prose punctuation scan that reports em-dash and semicolon
+  candidates for the editorial density judgment.
 
 What does not ship in the payload:
 
@@ -238,7 +241,7 @@ authoritative evidence ledger for these status claims.
 | Codex              | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.agents/skills/zensical/`              |
 | OpenCode           | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.opencode/skills/zensical/`            |
 | Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
-| Skills CLI install | Historical: passed at `d7ef1e0` | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` on 2026-09-10; the payload has since grown to 14 files |
+| Skills CLI install | Historical: passed at `d7ef1e0` | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` on 2026-09-10; the payload has since grown to 15 files |
 | Skills.sh search   | Indexed on 2026-09-10        | Public API searches returned `codesigils/zensical-skill/zensical`                        |
 | Public release     | Not claimed                 | Marketplace indexing is not a release, support, or compatibility guarantee               |
 

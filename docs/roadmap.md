@@ -589,6 +589,13 @@ customization; each remains deferred until real work requires it.
 
 ## Revision history
 
+- 2026-11-11: Added a portable prose punctuation scan
+  (`zensical/scripts/check_punctuation.py`) to the payload. It mechanically
+  reports em dashes and semicolons in Markdown prose, excluding front matter,
+  fenced code, and inline code, as candidates for the density judgment owned by
+  the article-review reference. The scan never edits content, follows the
+  shared 0/1/2 exit contract, and includes a self-test. CI wiring is
+  intentionally unchanged.
 - 2026-11-11: Remediated an editorial-review surface review: the runtime
   article-review reference now states its em-dash rule once, keeping the
   strict field-tested calibration as the single owner, and lists its tell

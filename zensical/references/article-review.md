@@ -159,6 +159,12 @@ unless it is clearly required by a quotation, code, citation, or unusually
 tight balanced clause. Record the exceptions in the review report. This is a
 focused safeguard, not a universal style rule for every repository.
 
+The payload ships a mechanical scan for that pass. Run
+`python3 zensical/scripts/check_punctuation.py <paths>` to report em-dash and
+semicolon line numbers, prose word counts, and density; front matter, fenced
+code blocks, and inline code are excluded. Its findings are candidates for the
+density judgment this file owns, not automatic rewrites.
+
 For an evidence-heavy article, also check whether the reader can follow a
 causal thread rather than receiving a catalogue of controls, files, or facts.
 Consolidate repeated labels, connect a mechanism to its consequence, and add a

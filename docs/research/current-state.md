@@ -206,6 +206,16 @@ suggestion format instead of restating it. One non-compliant historical
 commit (`061ca9a`, empty body) was documented and left in place; no history
 rewrite was authorized.
 
+Also on 2026-11-11, the payload gained `scripts/check_punctuation.py`, a
+portable mechanical scan derived from the field record's manual em-dash and
+semicolon counting across editorial passes. It reports per-file counts, prose
+word counts, density, and finding line numbers for Markdown content, excluding
+YAML front matter, fenced code blocks, and inline code spans. Findings are
+candidates for the density judgment owned by `article-review.md`, and the
+script never edits content. It follows the shared 0/1/2 exit contract and
+ships a self-test. The dated observation is in
+[editorial-voice.md](editorial-voice.md).
+
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, `docs/research/editorial-voice.md`, and this file. The seven dated reports carry a date instead,
 because a report's date records when it was written; four write it as a plain

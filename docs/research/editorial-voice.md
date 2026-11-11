@@ -662,6 +662,16 @@ historical commit (`061ca9a`, empty body) was documented and deliberately
 left in place: rewriting published history for one message body was neither
 authorized nor proportionate.
 
+## Mechanical punctuation scan promoted to the payload (2026-11-11)
+
+The editorial passes recorded here counted em dashes and semicolons by hand
+with ad hoc grep runs. The payload now ships
+`scripts/check_punctuation.py`, which reports those marks in Markdown prose
+(front matter, fenced code blocks, and inline code excluded) with line numbers,
+prose word counts, and density. It carries the mechanical counting this record
+previously did by hand; the density judgment and every exception remain with
+`article-review.md`.
+
 ## Sources
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
