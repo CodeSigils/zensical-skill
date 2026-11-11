@@ -280,95 +280,21 @@ least two tasks repeat the same observable check; it should begin as a
 report-only audit of explicitly named affected pages, not a global linter or
 build blocker.
 
-### Editorial-boundary correction (2026-09-12)
+### Editorial boundary
 
-The portable runtime keeps an optional, target-guidance-first article-review
-reference for explicit review requests and a compact article-start handoff for
-explicit creation or substantial drafting. It offers portable suggestions about
-clarity, evidence, examples, jargon, links, and durable details without
-carrying a house voice, article formula, SEO strategy, or publication gate.
-Light new-article work remains focused on front matter, headings, links,
-components, media, navigation, and rendered output. This is a scope
-clarification, not a generic writing workflow or automation capability.
+The runtime keeps one optional, target-guidance-first article-review reference
+for explicit article work. It offers a compact handoff and contextual
+suggestions about structure, evidence, prose patterns, and mechanics without
+creating a house voice, article formula, score, automation, or publication
+gate. The completed calibration across a field note, guide, and reference page
+did not admit another workflow. Detailed applications and declined
+recommendations belong in the [dated field record](research/index.md), not in
+this sequencing document.
 
-Scope extension (2026-09-24): on an explicit user request for a more human
-voice pass, the same article-review reference may load an installed
-community de-slop skill as an additional sentence-level lens, never as a
-gate; this keeps the portable-suggestion framing and adds no workflow or
-automation capability.
-
-A fifth review-only pass on a verification-heavy Code Sigils guide
-(2026-09-25) found a clean voice profile and one stale review-date maintenance
-note after current primary-source checks. It confirms that factual maintenance
-can remain separate from voice feedback; no new runtime rule, rubric, or
-fixture is justified.
-
-Clarification (2026-10-06): the portable article-review reference now asks an
-explicit review to consider abrupt major-section transitions in an article or
-narrative technical guide. It offers a voice-consistent orienting passage only
-when the reader changes task, system layer, risk, or mode of work; it neither
-requires introductions nor decides editorial quality. This is a refinement of
-the existing suggestion pass, not a new workflow, automation capability, or
-fixture.
-
-Clarification (2026-10-08): an authorized human-tone revision of a technical
-field note refined the existing prose-tell guidance with thesis-like
-scene-setting, over-signposting, performative emphasis, invented aphorisms,
-moral escalation, exhaustive negatives, research-simulated precision, and
-binary verdicts. The runtime reference treats these as cluster-level review
-signals and preserves load-bearing contrasts, factual measurements, and the
-author's judgment. This does not add a house voice, a gate, automation, or a
-fixture.
-
-Clarification (2026-10-09): the same optional review path now distinguishes
-generic documentation-template prose from legitimate direct reference prose.
-It applies only when target guidance and the user ask for a human, author-led
-voice, and remains a cluster-level suggestion rather than a style system or
-publication gate.
-
-Clarification (2026-10-28): review of two evidence-heavy field notes added a
-read-aloud mechanics-and-rhythm pass to the existing optional article review.
-It distinguishes real parentheticals and balanced clauses from punctuation
-that obscures causal flow or manufactures a reveal, and asks whether a reader
-can follow the argument rather than an inventory of controls or facts. This is
-not a new workflow, detector, punctuation quota, house voice, or fixture.
-
-Clarification (2026-10-28): a late editorial rewrite of a third field note
-showed that a review pass must be reachable while an article is still taking
-shape. The runtime now routes explicit article creation and substantial drafting
-through a compact article-start handoff: reader question, warranted
-contribution, evidence boundary, freshness needs, and a proportional outline.
-An evidence-heavy draft receives one early shape check at roughly one-third
-complete. This remains target-guidance-first and does not admit generic prose
-generation, a fixed article formula, score, automation, or publication gate.
-The same pass now asks ordinary diagnostics to state the result, its limit, and
-the next decision rather than staging a manufactured reveal.
-
-Clarification (2026-11-10): an authorized Code Sigils field-note rewrite made
-the existing article-start handoff more usable for evidence-led work. The
-optional article-review reference now asks a field note, experiment report, or
-technical essay to bring its concrete observation and evidence boundary forward,
-then connect claims, support, and reader consequences. It preserves reference
-pages that lead with an answer and forbids invented first-person experience.
-This is a shape aid within the target-guidance-first review, not a house voice,
-template, detector, automation capability, or publication gate.
-
-Calibration checkpoint (2026-11-10): before adding another editorial rule,
-apply the existing review to three further Code Sigils pieces with materially
-different forms: a field note, a guide or explainer, and a reference-oriented
-page. Each review records the selected form, references loaded or deliberately
-skipped, target guidance, evidence boundary, and any recommendation declined
-because it would distort the form. Record the outcomes in the dated field
-record. A repeated, decision-changing failure is required before expanding the
-portable review; no score, corpus-wide rewrite, or publication gate follows
-from this checkpoint.
-
-Result (2026-11-10): the field note, guide, and reference-oriented guide each
-kept their selected form. The reference-oriented guide needs a separate
-current-source maintenance pass, not a narrative or human-voice rewrite. The
-dated field record includes the evidence, declined recommendations, and a
-limited Jan Brennenstuhl craft-reference comparison. No new runtime rule is
-admitted.
+Before broadening the editorial reference, require a repeated,
+decision-changing failure across materially different target tasks. Treat a
+future factual-maintenance need as separate from a narrative or human-voice
+rewrite unless the evidence proves they belong together.
 
 ### New-article placement clarification (2026-09-12)
 
@@ -438,11 +364,11 @@ field record and is never consulted for current state;
 
 **Freeze.** Do not add a new planning, research, or governance document until
 the payload itself is more polished. Extend an existing document instead when
-the new material is genuinely the same subject, and record the addition in that
-document's own revision history. The freeze is a default, not a gate: a user
-request for research is a preference, not an external constraint, and treating
-it as one is how the previous revision of this section was satisfied by a
-787-line file written the same day the freeze was adopted.
+the new material is genuinely the same subject, and record a durable decision
+once in its dated field record or commit body. The freeze is a default, not a
+gate: a user request for research is a preference, not an external constraint,
+and treating it as one is how the previous revision of this section was
+satisfied by a 787-line file written the same day the freeze was adopted.
 
 **Revisit.** Reassess the ratio once the payload is more polished, and treat
 that as a consolidation exercise with named targets rather than an open-ended
@@ -586,92 +512,3 @@ with the blog or another accepted target supplying the evidence. Candidate futur
 slices include navigation feature
 interactions, MkDocs compatibility, workspace watch/symlink behavior, and theme
 customization; each remains deferred until real work requires it.
-
-## Revision history
-
-- 2026-11-11: Added a portable prose punctuation scan
-  (`zensical/scripts/check_punctuation.py`) to the payload. It mechanically
-  reports em dashes and semicolons in Markdown prose, excluding front matter,
-  fenced code, and inline code, as candidates for the density judgment owned by
-  the article-review reference. The scan never edits content, follows the
-  shared 0/1/2 exit contract, and includes a self-test. CI wiring is
-  intentionally unchanged.
-- 2026-11-11: Remediated an editorial-review surface review: the runtime
-  article-review reference now states its em-dash rule once, keeping the
-  strict field-tested calibration as the single owner, and lists its tell
-  families one per line so the coverage walk can execute them. The editorial
-  research record was reconciled and gained a `Reviewed:` marker after a
-  link liveness re-check. No editorial scope, rule strength, boundary, or
-  capability changed.
-- 2026-11-10: Completed the field-note, guide, and reference-oriented
-  calibration on existing Code Sigils blog pages. The result did not admit a
-  new runtime rule: the only distinct finding was a factual-maintenance
-  boundary for the reference-oriented guide.
-- 2026-11-10: Added a compact form-fit check to the optional article review
-  and a three-form calibration checkpoint. It makes field-note, guide, and
-  reference-page review choices explicit while preserving target-owned voice
-  and refusing a generic article template.
-- 2026-11-10: Narrowed the runtime entrypoint after a skill-creator review.
-  The payload now names Zensical site and source-content maintenance as one
-  bounded scope, uses a shorter selection description and conditional workflow,
-  and removes duplicated article routes and policy prose. The release checklist
-  now requires a four-request router forward test and the bundled Codex
-  `skill-creator` validator. Target repositories still own editorial voice and
-  publishing authority.
-- 2026-11-10: Added a narrow, optional evidence-led field-note aid to the
-  existing article-review reference after an authorized Code Sigils rewrite.
-  It makes the existing author-observation and evidence-boundary guidance
-  easier to apply without changing the skill's scope or creating a generic
-  writing workflow, voice, score, automation, or fixture.
-- 2026-10-28: Routed explicit article creation and substantial drafting through
-  the existing target-guidance-first article-review reference. Added a compact
-  article-start handoff and one early evidence-and-shape check so substantial
-  editorial issues are found before final polish. No generic writing workflow,
-  house voice, template, automation, or new fixture was added.
-- 2026-10-28: Added a deferred, evidence-gated evaluation of a compact
-  research-consultation brief for agents. The current `AGENTS.md` already
-  establishes source quality, freshness, and research-once rules; the open
-  question is whether agents need a more usable decision-level handoff without
-  duplicating those owners. No runtime workflow, automation, or agent role was
-  added.
-- 2026-09-27: Evaluated external link checking after the Code Sigils blog
-  produced the rot incident the 2026-09-13 link-manifest entry was waiting on.
-  The target's existing link workflow had been failing silently since it was
-  added, and a real run found 12 references to 11 dead URLs. Recorded lychee's
-  report-only behaviour and its scoping limits, and did not admit a
-  link-checking capability: admission conditions 4 (bounded scenario) and 5
-  (named maintenance owner) are unmet, and condition 2 is weak because this is a
-  single-site incident. The item now sits in Deferred with its two blocking
-  conditions. The manifest idea is superseded for its stated purpose, because
-  globbing Markdown removes the second maintained inventory it was designed to
-  bound. No payload, README, or vision change follows, because no capability was
-  admitted.
-- 2026-09-26: Froze governance growth by decision. Maintainer documentation now
-  runs about three times the size of the runtime payload, which the project had
-  already named as its principal delivery risk without constraining it. The
-  roadmap gained a documentation admission rule with three qualifying grounds,
-  and a revisit condition tied to the payload becoming more polished. Chose a
-  freeze over a consolidation pass because most of the mass is dated evidence
-  that is still load-bearing, and rewriting it would cost more than it returns.
-- 2026-09-26: Removed the feeds deferral. A review found that the deferral's own
-  escape clause had fired: Zensical shipped a native `rss` plugin in 0.0.65, so
-  "keep feeds deferred until upstream support" was still deferring an available
-  capability. An authorized task on a real site enabled and verified the output,
-  which admitted feeds as a bounded component workflow with its own reference
-  file and router entry. Bumped the scenario pin to `0.0.65`. Also recorded the
-  `0.1.0` upgrade boundary and the `0.0.63` dotfile-exclusion behavior, and
-  removed the changelog file in favour of commit-body history.
-- 2026-09-26: Replaced the documentation admission rule with a canonical-owner
-  rule and an expiry model, after the admission rule was satisfied by a
-  787-line research file written in the same session that adopted it. The
-  diagnosis is that the ratio is a symptom: every serious recorded finding was
-  a duplication failure, so the rule now constrains duplication rather than
-  volume. Split `docs/research/index.md` by audience so the dated field record
-  and the current-state owner are separate files, which is the split the rule
-  requires and the first real test of it.
-- 2026-09-24: Recorded the minimal CI validation gate and portable `grep`
-  runner, the Zensical version-pin canonicalization and `0.0.64` bump, the
-  research/reports directory restructure, and the skill-structure conventions
-  record; added the deferred automated version-freshness item.
-- 2026-09-12: Added the editorial-boundary correction and new-article placement
-  clarification, and admitted the optional article-review reference.

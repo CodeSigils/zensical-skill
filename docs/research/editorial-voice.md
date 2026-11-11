@@ -471,10 +471,10 @@ things that can be reviewed in the published article and its source:
    package's `check`, `preview`, and `rewrite` commands.
 
 The latest pass found no em dashes or semicolons in the three revised Code
-Sigils agent-work articles. That is a result of the target's stated preference
-and the explicit punctuation scan, not evidence that those marks are generally
-invalid. The stronger reusable lesson is to decide evidence and explanatory
-scope early, then use the final pass to check mechanics and claims.
+Sigils agent-work articles. That reflects the target's stated preference, not
+evidence that those marks are generally invalid. The stronger reusable lesson
+is to decide evidence and explanatory scope early, then use the final pass to
+check mechanics and claims.
 
 ## How the downloaded skills approach the problem (2026-09-24)
 
@@ -645,14 +645,13 @@ A review of the editorial-review surface found two structural defects, not
 behavior gaps. The em-dash rule was stated twice with drifted calibration (a
 permissive mechanics-pass version and a near-ban inside the conditional
 community-lens paragraph), and the tell families lived in run-on prose that
-the reference's own coverage walk could not enumerate. The runtime reference
-now states the dash rule once, in the mechanics-and-rhythm pass, at the
-strict calibration the Code Sigils field results came from: avoid em dashes
-almost entirely, and reserve one only for a genuine interruption or true
-parenthetical where no alternative reads naturally. The families are
-unchanged in content and now list one family per line; the mechanical
-punctuation scan, the density rule, and every exception are untouched. No
-tell, example, caveat, boundary, or capability was removed.
+the reference's own coverage walk could not enumerate. The runtime now keeps
+one target-guidance-led mechanics rule: prefer plainer punctuation when it
+reads naturally, but retain marks the sentence, source, or target voice needs.
+The Code Sigils preference for avoiding em dashes remains field evidence, not a
+universal constraint. The families are unchanged in content and now list one
+per line; the density judgment and every exception are untouched. No tell,
+example, caveat, boundary, or capability was removed.
 
 This file gained its `Reviewed:` marker after the external links were
 re-checked for liveness on 2026-11-11 (all returned 200), its stale
@@ -662,15 +661,23 @@ historical commit (`061ca9a`, empty body) was documented and deliberately
 left in place: rewriting published history for one message body was neither
 authorized nor proportionate.
 
-## Mechanical punctuation scan promoted to the payload (2026-11-11)
+## Punctuation remains editorial guidance (2026-11-11)
 
-The editorial passes recorded here counted em dashes and semicolons by hand
-with ad hoc grep runs. The payload now ships
-`scripts/check_punctuation.py`, which reports those marks in Markdown prose
-(front matter, fenced code blocks, and inline code excluded) with line numbers,
-prose word counts, and density. It carries the mechanical counting this record
-previously did by hand; the density judgment and every exception remain with
-`article-review.md`.
+The editorial passes recorded here included an optional review of em dashes
+and semicolons where the target's guidance made that useful. A brief payload
+scanner was removed after review: returning a nonzero status for punctuation
+would turn that contextual reading into a generic validation condition. The
+runtime keeps the manual guidance in `article-review.md`: read each mark in its
+paragraph, suggest a revision only when it weakens the writing or conflicts
+with the target's voice, and preserve a mark that the content genuinely needs.
+
+## Coverage correction (2026-11-11)
+
+The 2026-09 field entries above record the then-current exhaustive coverage
+rule. That rule has been retired: the runtime now uses tell families as a
+coverage aid and reports material patterns or decision-changing clean results,
+not one absence per family. The historical entries remain unchanged as dated
+evidence; `article-review.md` owns the current behavior.
 
 ## Sources
 
