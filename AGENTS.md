@@ -15,6 +15,14 @@ or clearly label the proposed action as provisional. Re-check volatile
 external sources at the point of use. Record the freshness check and any
 intentionally unchanged records in the handoff.
 
+## Research map
+
+- `docs/research/current-state.md` holds current, review-dated decisions.
+- `docs/research/index.md` holds dated field observations and applications.
+- `docs/reports/` holds completed audits and implementation records.
+
+Use `docs/README.md` to select the smallest relevant record set.
+
 ### Roadmap after-action gate
 
 For every consequential implementation, research, review, or validation
@@ -78,12 +86,15 @@ portable runtime payload lives only under `zensical/`. Before changing scope,
 workflow boundaries, source evidence, or release expectations, read
 `docs/README.md` and the documents required by its reading matrix.
 
-Before handoff, update every affected planning document or state why it remains
-unchanged. Search for duplicate guidance and drift between `SKILL.md`,
-references, and planning documents before adding a new rule.
+Before handoff, update the canonical owner and only the planning records whose
+current claim actually changed. For a consulted record that plausibly appears
+affected but is intentionally unchanged, say so in the handoff. Search for
+duplicate guidance and drift between `SKILL.md`, references, and planning
+documents before adding a new rule.
 
 Keep `docs/research/current-state.md` current rather than archival: it owns what
-the project currently knows to be true, so every claim in it needs a check date.
+the project currently knows to be true, so it carries an overall review date and
+gives a claim its own date when its freshness differs from that review.
 Keep `docs/research/index.md` as the append-only dated field record: promote
 evidence to the current-state file when it informs a decision, move detailed
 session chronology to a session note, and never retro-edit a dated entry to
@@ -109,7 +120,8 @@ behavior respectively.
 ### Meaningful-change documentation directive
 
 After any meaningful change to the skill's scope, workflow, evidence, or
-quality criteria, update the relative records in the same work session:
+quality criteria, update the canonical owner and then only the applicable
+records in the same work session:
 
 - `README.md` when discoverable scope or user-facing capability changes;
 - `docs/vision.md` for boundaries or quality criteria;
@@ -121,10 +133,11 @@ quality criteria, update the relative records in the same work session:
 - the git commit body for a user-visible capability change, which is where
   release-facing history now lives.
 
-If the change produces a durable decision, lesson, finding, or unresolved
-question, add a concise session or decision note in the related project and
-link it rather than copying the same prose into every file. State explicitly
-which records were intentionally unchanged.
+Do not add a second summary merely because a record was consulted. If a change
+produces a durable decision, lesson, finding, or unresolved question, add one
+concise dated record and link it rather than copying the same prose into every
+file. State the intentionally unchanged records only when their omission would
+otherwise be surprising.
 
 For research, inspect the target repository first and consult current official
 Zensical documentation before general web search. Use standards bodies or

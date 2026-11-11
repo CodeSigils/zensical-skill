@@ -131,39 +131,26 @@ Check only what fits the article's purpose and form:
   constructing a forced contrast.
 - purposeful links and volatile details that need a source, date, or caveat.
 
-Run a mechanics-and-rhythm pass before calling a passage an AI tell. Read a
-dense paragraph aloud and inspect what each stop is doing. A period followed
-by a lowercase connector, a run of clipped declarations, or fragment-stacked
-inventory prose often signals that the sentence was assembled in pieces rather
-than written for a reader. Restore the relationship between ideas instead of
-just swapping punctuation. Keep a semicolon only when two balanced independent
-clauses belong tightly together; otherwise use a period or recast the sentence.
-Avoid em dashes (—) almost entirely: they are frequently overused by LLMs as
-dramatic separators or reveals, and they break reading flow. Use periods to
-split independent clauses, commas for light separation, colons for
-introductions, or parentheses for asides. Reserve an em dash only for a
-genuine interruption or true parenthetical where no alternative (a comma,
-parentheses, or a new sentence) reads naturally. Do not use either mark to
-manufacture a reveal, hurry a contrast, or carry an accumulating list.
+When the target's guidance or the user's request makes punctuation part of a
+human-voice review, run one mechanics-and-rhythm pass before calling a passage
+an AI tell. Read a dense paragraph aloud and inspect what each stop is doing. A
+period followed by a lowercase connector, a run of clipped declarations, or
+fragment-stacked inventory prose can signal that the sentence was assembled in
+pieces rather than written for a reader. Restore the relationship between ideas
+instead of just swapping punctuation. Prefer a period, comma, colon, or
+recast sentence to an em dash or semicolon when it reads naturally. Retain an
+em dash only for a genuine interruption or parenthetical, and a semicolon only
+for unusually tight balanced clauses. Do not use either mark to manufacture a
+reveal, hurry a contrast, or carry an accumulating list. Preserve punctuation
+required by a quotation, code, citation, or the target's established voice.
+This is optional, target-guidance-led editorial advice, not a count threshold
+or validation condition.
 
 Keep diagnostic prose plain. Do not stage an ordinary result as a reversal,
 reveal, verdict, or mic-drop moment through clipped lines such as "It was" or
 "Period." Explain what the source returned, what it can and cannot establish,
 and why that matters to the next decision. Use a dramatic turn only when the
 target voice and the evidence genuinely call for one.
-
-When punctuation has been a concern in the target guidance or the user's
-request, make the last pass mechanical as well as editorial: scan the finished
-article for `—` and `;`, inspect every match in its paragraph, and replace it
-unless it is clearly required by a quotation, code, citation, or unusually
-tight balanced clause. Record the exceptions in the review report. This is a
-focused safeguard, not a universal style rule for every repository.
-
-The payload ships a mechanical scan for that pass. Run
-`python3 zensical/scripts/check_punctuation.py <paths>` to report em-dash and
-semicolon line numbers, prose word counts, and density; front matter, fenced
-code blocks, and inline code are excluded. Its findings are candidates for the
-density judgment this file owns, not automatic rewrites.
 
 For an evidence-heavy article, also check whether the reader can follow a
 causal thread rather than receiving a catalogue of controls, files, or facts.
@@ -230,5 +217,6 @@ Use `blocker` only for a concrete correctness or broken-route problem,
 for a bounded improvement. For review-only work, report suggestions without
 editing.
 
-Walk every tell family above and report each as found or none; a family with
-no instances is a result worth stating, not silence.
+Use the tell families as a coverage aid, not an exhaustive audit. Report
+material patterns and any clean result that changes the reader's decision; do
+not pad a review with one "none" finding per family.

@@ -2,10 +2,11 @@
 
 Reviewed: 2026-11-11.
 
-This file owns what the project currently knows to be true. Every claim here
-carries a check date. A claim that can no longer be re-checked against a primary
-source moves to [index.md](index.md) as a dated record rather than being
-refreshed in place, and nothing in this file is history.
+This file owns what the project currently knows to be true. Its current claims
+are reviewed on the date above unless an item gives a more specific date. A
+claim that can no longer be re-checked against a primary source moves to
+[index.md](index.md) as a dated record rather than being refreshed in place;
+this file does not retain field chronology.
 
 Sections describing a durable convention rather than a current fact are still
 owned here, because an unowned convention is what drifts. When a rule also
@@ -122,99 +123,22 @@ admission conditions are restated exactly twice: that section, and
 `zensical/SKILL.md`, which keeps its own wording because an agent may read the
 payload without the roadmap.
 
-On 2026-10-07, a Code Sigils Samba article exposed a complementary authoring
-boundary: command output can contain local identifiers that are useful while
-diagnosing a machine but inappropriate in a published guide. The runtime now
-owns the rule to replace such details with accurate neutral placeholders unless
-the maintainer explicitly approves publication; this is a privacy-aware
-authoring correction, not a secret-scanning or automated-redaction claim.
+The current editorial-review state is deliberately small:
 
-On 2026-10-08, an authorized human-tone revision added bounded cluster signals
-to the optional article-review guidance: thesis-like scene-setting,
-over-signposting, performative emphasis, invented aphorisms, moral escalation,
-exhaustive negatives, research-simulated precision, and binary verdicts. The
-guidance retains its density rule and does not turn any single construction,
-including a load-bearing contrast or factual measurement, into a violation.
-The dated application is recorded in [editorial-voice.md](editorial-voice.md).
+- [`article-review.md`](../../zensical/references/article-review.md) is an
+  optional, target-guidance-first suggestion pass for explicit article work;
+  it does not define a house voice, score, publication gate, or generic writing
+  workflow.
+- Its compact handoff distinguishes field notes, guides, and reference pages;
+  it never invents first-person experience or turns one form into a template
+  for another.
+- Its prose-tell and punctuation guidance identifies clusters that can weaken
+  clarity. It is contextual, carries no detector or threshold, and preserves
+  punctuation required by the content or target voice.
 
-On 2026-10-09, a follow-on field request clarified that generic
-documentation-template prose is a review concern only when it replaces the
-author's observation, reasoning, or reader context in an explicitly requested
-human-voice pass. Direct reference prose remains legitimate; the runtime owner
-is [article-review.md](../../zensical/references/article-review.md).
-
-On 2026-10-18, a light edit requested for flow exposed a gap in that guidance:
-an inventory paragraph written as staccato noun-phrase sentence fragments
-("A summary. Two findings, each with its evidence.") could not be located
-under fragment or staccato vocabulary, because the existing rhythm principle
-lives under "period-stopped inversion" wording. The runtime reference now
-names the family directly as fragment-stacked inventories, with the existing
-density rule unchanged. The dated observation is recorded in
-[research/index.md](index.md).
-
-On 2026-10-28, an explicit human-flow review of two evidence-heavy Code Sigils
-articles clarified a related point: punctuation density alone is not the
-signal. Mechanically split thoughts, lower-case continuations after periods,
-and unconnected inventories can obscure the relation between otherwise sound
-facts. The runtime owner now calls for a read-aloud mechanics-and-rhythm pass
-that preserves real parentheticals and balanced clauses while simplifying
-punctuation that manufactures a reveal or hides causal flow. This remains an
-optional, target-guidance-first suggestion; it adds no detector, quota,
-automation, house voice, or publication gate. The dated observation is in
-[research/index.md](index.md#mechanics-and-rhythm-review-clarification-2026-10-28).
-
-Also on 2026-10-28, a third Code Sigils article required substantial late
-editorial restructuring. The runtime route now reads `article-review.md` for
-explicit article creation and substantial drafting, not only retrospective
-review. Its compact article-start handoff records the reader question,
-supportable contribution, evidence boundary, freshness needs, and proportional
-shape before substantive prose. A one-third draft check catches evidence or
-scope drift early. Target editorial rules remain authoritative, and this is not
-a generic writing workflow, template, score, or publication gate. The dated
-field record is [article-start editorial handoff](index.md#article-start-editorial-handoff-2026-10-28).
-The same field application made one prose preference explicit: routine
-diagnostic results should report what a source returned, its limit, and the
-next decision. They should not be written as a manufactured reveal or
-mic-drop moment unless the target voice and evidence require it.
-
-On 2026-11-10, an authorized rewrite of a Code Sigils technical field note
-showed that the existing handoff needed one more usable distinction: direct
-observation should reach the reader before an article's broader lesson, and
-citations should support that reasoning rather than replace it. The optional
-field-note aid in `article-review.md` now asks for an observation, its evidence
-boundary, and the reader consequence without prescribing a template or
-inventing first-person experience. The dated field record is
-[research/index.md](index.md#evidence-led-field-note-clarification-2026-11-10).
-
-The three-form calibration completed on 2026-11-10. A Code Sigils field note,
-guide, and reference-oriented guide each retained its appropriate shape. The
-reference-oriented guide identified a separate factual-maintenance boundary,
-not a reason to impose a narrative rewrite. The dated record lists the selected
-form, evidence boundary, and deliberately declined recommendation for every
-review. Only a repeated, decision-changing failure can justify another portable
-rule.
-
-On 2026-11-11, a review of the editorial-review surface remediated two
-structural defects without changing editorial behavior: the runtime
-article-review reference now states its em-dash rule once, at the strict
-calibration the Code Sigils field results came from, and lists its tell
-families one per line so the required coverage walk can execute them.
-`editorial-voice.md` gained a `Reviewed:` marker after an external-link
-liveness re-check (all links returned 200), corrected a stale
-compact-principle claim, and now points at the runtime owner for the
-suggestion format instead of restating it. One non-compliant historical
-commit (`061ca9a`, empty body) was documented and left in place; no history
-rewrite was authorized.
-
-Also on 2026-11-11, the payload gained `scripts/check_punctuation.py`, a
-portable mechanical scan derived from the field record's manual em-dash and
-semicolon counting across editorial passes. It reports per-file counts, prose
-word counts, density, and finding line numbers for Markdown content, excluding
-YAML front matter, fenced code blocks, and inline code spans. Findings are
-candidates for the density judgment owned by `article-review.md`, and the
-script never edits content. It follows the shared 0/1/2 exit contract and
-ships a self-test. The dated observation is in
-[editorial-voice.md](editorial-voice.md).
+The dated field applications and calibration evidence live in
+[research/index.md](index.md#human-tone-field-application-2026-10-08), not in
+this current-state record.
 
 Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, `docs/research/editorial-voice.md`, and this file. The seven dated reports carry a date instead,
