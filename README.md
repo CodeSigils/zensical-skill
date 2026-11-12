@@ -107,6 +107,10 @@ The skill currently routes these tasks:
 - enable and verify RSS and JSON feeds on a target running a Zensical version
   that provides them natively, including the discovery link a feed needs to be
   findable and the Git history its item dates come from;
+- upgrade a site to a newer Zensical version with the migration checklist:
+  release notes first, pin and lock, extension-table reconciliation, and a
+  rendered-output diff, with the release channel rechecked in the source
+  registry;
 - validate a build and, where feasible, affected rendered output; and
 - identify a focused, validated pending diff as ready to commit and offer that
   next step, without treating review or validation as Git authorization; and
@@ -125,6 +129,7 @@ runtime router selects focused references progressively.
 | “Review this article draft”                      | Optional target-guidance-first content review |
 | “Check accessibility or responsive presentation” | Accessibility and customization review       |
 | “Add an RSS or JSON feed to my site”              | Feed setup and discovery-link check          |
+| “Upgrade Zensical to a newer version”            | Migration checklist and evidence refresh     |
 | “Build and validate this change”                 | Build and rendered-output validation         |
 | “Why did this Zensical build fail?”              | Narrow failure diagnosis                     |
 

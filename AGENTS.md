@@ -17,11 +17,15 @@ intentionally unchanged records in the handoff.
 
 ## Research map
 
-- `docs/research/current-state.md` holds current, review-dated decisions.
-- `docs/research/index.md` holds dated field observations and applications.
-- `docs/reports/` holds completed audits and implementation records.
+- [docs/research/current-state.md](docs/research/current-state.md) holds
+  current, review-dated decisions.
+- [docs/research/index.md](docs/research/index.md) holds dated field
+  observations and applications.
+- [docs/reports/](docs/reports/) holds completed audits and implementation
+  records.
 
-Use `docs/README.md` to select the smallest relevant record set.
+Use [docs/README.md](docs/README.md) to select the smallest relevant record
+set.
 
 ### Roadmap after-action gate
 
@@ -46,6 +50,15 @@ Before handing off a meaningful change, perform this small review:
    research record, and sequencing in the roadmap.
 4. Revalidate only volatile or decision-critical external facts at the point of
    use, then record corrected, historical, or intentionally unchanged state.
+
+A claim search finds statements that exist and are wrong. It cannot find an
+entry that should exist and does not. When a change adds or removes an item in
+an enumerated surface, check every surface that enumerates that inventory. The
+router in `zensical/SKILL.md` and the `## Current scope` list in `README.md`
+are a matched pair: a new or removed route needs a matching scope bullet in
+the same change. The `How to use it` table in `README.md` is a curated sample
+of common asks, so it gains a row only when the change introduces a task a
+user would name by request.
 
 This contract is a focused manual review, not a freshness score, recurring
 schedule, or documentation linter. Add automation only after repeated,
