@@ -7,8 +7,8 @@ and validating Zensical static sites and their source Markdown. It helps an
 agent preserve an existing site's conventions while using Zensical components
 such as admonitions and content tabs, media assets, and the site's presentation
 customization safely.
-It is product-facing for current Code Sigils and Digital Basement publishing
-work while deliberately generalizing through proven existing-site workflows.
+It is product-facing for current publishing work while deliberately
+generalizing through proven existing-site workflows.
 
 Related planning documents: [roadmap](roadmap.md) for sequencing and acceptance
 gates, [current research state](research/current-state.md) for current
@@ -35,8 +35,8 @@ pass; it does not turn that pass into a style system, validation gate, or
 automatic rewrite.
 
 The Code Sigils blog is an acceptance environment, not a template for other
-sites. Blog-specific editorial conventions remain in the Digital Basement
-project; this skill uses them only as test evidence and follows each target
+sites. Blog-specific editorial conventions belong to that site's own editorial
+workflow; this skill uses them only as test evidence and follows each target
 repository's own conventions.
 
 The intended generic scope is existing-site maintenance, not a claim that

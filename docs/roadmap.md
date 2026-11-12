@@ -45,9 +45,9 @@ The core existing-site workflow has been exercised against the Code Sigils
 blog. Inspection, an authorized tab light edit, navigation and internal-link
 review, media and video review, presentation review, and a structured
 accessibility pass all have recorded evidence in the
-[research field record](research/index.md) and the Digital Basement session
-note. Maintainer documentation is governed by the canonical-owner rule and the
-expiry marker recorded in [Documentation admission rule and governance
+[research field record](research/index.md). Maintainer documentation is
+governed by the canonical-owner rule and the expiry marker recorded in
+[Documentation admission rule and governance
 freeze](#documentation-admission-rule-and-governance-freeze-2026-09-26), and
 what the project currently knows to be true is owned by
 [research/current-state.md](research/current-state.md). The observed tab, accessibility-invocation, and
@@ -240,11 +240,6 @@ provider, deployment, or broad accessibility testing. The principal delivery
 risk is governance growing faster than useful runtime capability; reject new
 documentation or process unless it changes an agent decision or supports a
 repeated, testable workflow.
-
-When a meaningful skill change affects its maturity, scope, capability
-admission, or editorial boundary, recheck the corresponding Digital Basement
-umbrella records in the same session. This is a cross-project consistency gate,
-not a reason to couple the portable runtime payload to Digital Basement.
 
 ### Field validation outcome (2026-09-12)
 
