@@ -10,7 +10,7 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Reviewed: 2026-11-11.
+Reviewed: 2026-11-12.
 
 Planning documents: [documentation index](README.md) for the read-first matrix,
 [vision](vision.md) for boundaries and quality criteria,
