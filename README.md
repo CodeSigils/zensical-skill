@@ -179,7 +179,7 @@ What users receive:
 
 What does not ship in the payload:
 
-- Code Sigils or Digital Basement editorial conventions;
+- site-specific editorial conventions;
 - blog-specific content types, tone, or terminology;
 - test fixtures, the locked scenario environment, or generated site output;
 - maintainer planning, research, release, and session documentation; or

@@ -1335,3 +1335,26 @@ lived only in the target site's configuration comment. Both are now fixed:
 the registry row records the 0.1.1 state and `references/migration.md`
 carries the bounded checklist. The scenario environment was raised from
 0.0.65 to 0.1.1 in the same change.
+
+## Cross-project coordination moved out of repository instructions (2026-11-12)
+
+The Digital Basement umbrella alignment procedure was removed from the
+committed repository instructions and is now owned by the local
+`~/projects/AGENTS.md` fleet guide. The rule named a local workspace path and
+session notes that an outside maintainer cannot use, so it read as broken
+guidance on a public repository. The redundant roadmap directive and the
+reading-matrix row were removed with it. The editorial-versus-presentation
+boundary remains in [vision.md](../vision.md) and the `Change boundaries`
+section of [AGENTS.md](../../AGENTS.md). The 2026-09-11 field note earlier in
+this record remains the historical account of the original reconciliation.
+
+## Umbrella references detached from roadmap and vision (2026-11-12)
+
+Dependency direction is now explicit: each repository owns its instructions
+and gates, and the Digital Basement umbrella only consumes repository records.
+The roadmap's current-status evidence now cites only the in-repo field record,
+which already contains the audit and field-validation entries. The vision no
+longer names the umbrella as an audience or as the owner of blog editorial
+conventions; the editorial-versus-presentation fence remains, stated without a
+cross-project dependency. The umbrella itself is under evaluation and may be
+dropped, so repository documents must not depend on it.
