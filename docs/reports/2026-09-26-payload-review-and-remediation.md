@@ -55,7 +55,7 @@ built on top of it.
 | 6 | `CHANGELOG.md` was a single `## Unreleased` bucket with 35 flat bullets and no release ever cut | Low |
 | 7 | Structural defects in the research record: an orphaned heading with no body, and an undated entry resting on the word "latest" | Low |
 | 8 | Two scripts had real defects: a field-presence test that disagreed with its own extraction, and a duplicated assertion loop | Low |
-| 9 | The installed copy at `~/.codex/skills/zensical` was stale in six files | Low |
+| 9 | The installed copy at the Codex global skills directory was stale in six files | Low |
 
 Findings 2 and 6 deserve a note on how they happened. The source-registry
 boundary — the registry holds pointers, dates, and generic caveats, never

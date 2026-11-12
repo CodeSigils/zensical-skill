@@ -35,7 +35,7 @@ gate. This report records the strategy that keeps the collapse permanent.
 - Maintainer-facing docs reference the pin location instead of repeating the
   literal (`tests/scenario-env/pyproject.toml` in README, scenarios.md, and
   the current-state lines of the research record).
-- The live blog (`/home/sand/labs/zensical-test`) still pins `0.0.60` in its
+- The live blog still pins `0.0.60` in its
   own `pyproject.toml` and `uv.lock`; it is an external repository and is
   deliberately out of scope here.
 
@@ -169,11 +169,11 @@ deferred to tooling and only correctness/clarity findings are reported.
 
 Follow-up check requested alongside this report:
 
-- `py-review-skill` repository (`/home/sand/projects/py-review-skill`):
+- `py-review-skill` repository:
   clean working tree, branch `main` at `12214ee`, in sync with
   `origin/main` (0 ahead / 0 behind), remote
   `git@github.com:CodeSigils/py-review-skill.git`. Nothing to fetch.
-- Installed OpenCode payload (`~/.config/opencode/skills/`): four of the six
+- Installed OpenCode payload (global skills directory): four of the six
   `py-*` skills are stale relative to the repository — `py-review`,
   `py-async-patterns`, `py-code-style`, and `py-type-safety` differ;
   `py-anti-patterns` and `py-error-handling` match. The installed
@@ -182,7 +182,7 @@ Follow-up check requested alongside this report:
   without the four style signals (`duplicated logic`, `regex/string
   construction`, `constants`, `domain string transformations`), i.e. the
   `a32600d` fix is not installed. Sync is: copy each `skills/*/SKILL.md` from
-  the repository into `~/.config/opencode/skills/*/SKILL.md` (or re-run the
+  the repository into the OpenCode global skills directory (or re-run the
   skills CLI install), then re-load. Pending maintainer decision.
 - Live blog: external, still pins `0.0.60`; flag only (R8).
 

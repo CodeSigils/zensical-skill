@@ -3,8 +3,7 @@
 - **Date:** 2026-09-24
 - **Status:** maintenance edits applied and target build passed.
 - **Target:** Code Sigils article
-  `docs/AI/OpenCode/oh-my-opencode-guide.md` in
-  `/home/sand/labs/zensical-test`.
+  `docs/AI/OpenCode/oh-my-opencode-guide.md` in the blog checkout.
 - **Purpose:** exercise the optional Zensical article-review procedure after
   adding its voice-profile and tell-family coverage steps.
 
@@ -48,8 +47,8 @@ article addressed both hosts but initially gave only a Codex-native baseline.
 | Scope inflation, copula avoidance, and padding tails | None. |
 | Performed-authenticity tells | None. |
 
-The installed community lens was the local
-`/home/sand/projects/prose-skills-research/antislop` checkout at `c65cd6b`
+The installed community lens was the local `antislop` skill checkout at
+`c65cd6b`
 (SKILL version 3.0.0). Its zero-em-dash rule flagged the article's dashes, but
 that is a project house rule rather than a target requirement. Six dashes are
 annotated link descriptions and the two sentence-internal cases preserve the
@@ -71,10 +70,10 @@ supporting links while preserving the target voice.
 
 ## Resume point
 
-1. `uv run zensical build --clean` was rerun from
-   `/home/sand/labs/zensical-test` after the host-baseline correction on
-   2026-09-24. It finished successfully in 0.37 seconds with `No issues
-   found`; it writes only the ignored `site/` output directory.
+1. `uv run zensical build --clean` was rerun from the blog checkout after the
+   host-baseline correction on 2026-09-24. It finished successfully in 0.37
+   seconds with `No issues found`; it writes only the ignored `site/` output
+   directory.
 2. Inspect the focused target diff and decide whether to
    commit it in the target repository. Commit and push remain maintainer-only
    decisions.

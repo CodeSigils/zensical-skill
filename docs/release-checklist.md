@@ -21,7 +21,7 @@ release guarantee.
 
 - [ ] Run Codex's bundled structural validator and record the exact result.
 
-      `python3 /home/sand/.codex/skills/.system/skill-creator/scripts/quick_validate.py zensical`
+      `python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" zensical`
 
       This is the release gate for the Codex payload. The older pinned
       Agent Skills validator remains useful compatibility evidence, but it

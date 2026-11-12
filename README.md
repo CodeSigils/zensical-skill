@@ -289,7 +289,7 @@ discovery or review without explicit authorization.
 Run the focused checks from the repository root:
 
 ```bash
-python3 /home/sand/.codex/skills/.system/skill-creator/scripts/quick_validate.py zensical
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" zensical
 uvx --from git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref skills-ref validate zensical
 bash scripts/run_scenarios.sh
 bash zensical/scripts/check_site_hygiene.sh .

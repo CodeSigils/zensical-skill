@@ -148,7 +148,7 @@ replaced it:
 
 > "I updated one of my Agent Skills and realized I had no way to tell my other
 > machines they were running a stale copy. Skills install as loose folders in
-> `~/.claude/skills/`. The skill runs whatever's on disk — and has no way of
+> the Claude Code global skills directory. The skill runs whatever's on disk — and has no way of
 > knowing there's a newer version."
 
 The abandoned mechanism was four parts: a `version:` field in each skill's
@@ -274,7 +274,7 @@ behaviour that the current dispatch cannot produce.
 Two lock files, with different hash semantics. This is the mechanism worth
 adopting.
 
-**Global lock** — `~/.agents/.skill-lock.json`, or
+**Global lock** — the global state directory's `.skill-lock.json` (or
 `$XDG_STATE_HOME/skills/.skill-lock.json` if that variable is set
 ([`src/skill-lock.ts` L62–L73](https://github.com/vercel-labs/skills/blob/7407f3893ad4dceab546ac002c3ef806e4000c73/src/skill-lock.ts#L62-L73)).
 Schema version 3. Each entry carries a GitHub **tree SHA** of the skill folder:
@@ -421,18 +421,18 @@ groups, not seventy:
 - **A shared "universal" project path, `.agents/skills/`.** A large majority of
   the supported agents map to exactly this: Codex, Cursor, Gemini CLI, GitHub
   Copilot, Cline, Zed, Amp/Replit, Deep Agents, Firebender, and others. Global
-  installs land under `~/.agents/skills/` or a per-vendor equivalent.
+  installs land under the universal global skills directory or a per-vendor equivalent.
 - **Per-vendor paths for hosts with their own convention.** Claude Code
-  (`.claude/skills/`), OpenCode (`~/.config/opencode/skills/`), Hermes
+  (`.claude/skills/`), OpenCode (global skills directory), Hermes
   (`.hermes/skills/`), Kiro (`.kiro/skills/`), and so on.
 
 For this project's three-host matrix, the split is:
 
 | Host | Project path | Global path |
 |------|--------------|-------------|
-| Codex | `.agents/skills/` | `~/.codex/skills/` |
-| OpenCode | `.agents/skills/` | `~/.config/opencode/skills/` |
-| Hermes | `.hermes/skills/` | `~/.hermes/skills/` |
+| Codex | `.agents/skills/` | Codex global skills directory |
+| OpenCode | `.agents/skills/` | OpenCode global skills directory |
+| Hermes | `.hermes/skills/` | Hermes global skills directory |
 
 Note that Codex and OpenCode share the same project location. That is a real
 simplification available at install time, and it is invisible if you only look

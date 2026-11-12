@@ -142,7 +142,7 @@ and the presentation-maintenance scope is unchanged.
 ### Live-blog RSS evidence reconciliation (2026-09-28)
 
 The real-site feed validation that admitted this workflow is the maintainer's
-Code Sigils blog, retained locally at `/home/sand/labs/zensical-test`; the
+Code Sigils blog, a local checkout of `CodeSigils/CodeSigils.github.io`; the
 dated [payload remediation report](../reports/2026-09-26-payload-review-and-remediation.md#how-the-admitted-capability-was-verified)
 owns the original deployment evidence. A read-only follow-up found the current
 `[project.plugins.rss]` configuration with a 50-item cap and named created and
@@ -386,7 +386,7 @@ was checked offline with `uv lock --check --offline --project
 tests/scenario-env`, and the scenario runner passed against the matching
 installed binary from the Code Sigils blog.
 
-An isolated copy of `/home/sand/labs/zensical-test` was also rebuilt with that
+An isolated copy of that blog checkout was also rebuilt with that
 binary. It passed with `No issues found`, generated 18 HTML files plus native
 search output, and retained the tabbed OXC and embedded-media OpenCode routes.
 The source checkout remained clean. This revalidates the current fixture
@@ -525,8 +525,8 @@ Primary sources checked:
 
 ## Phase 1 acceptance run (2026-09-09)
 
-The first real-site review used the Code Sigils blog at
-`/home/sand/labs/zensical-test` and the `free-ai-models.md` article as the
+The first real-site review used a local Code Sigils blog checkout and the
+`free-ai-models.md` article as the
 review target. The source checkout remained clean. Its declared environment
 uses Python `>=3.13`, Zensical `0.0.60`, `uv`, implicit navigation, native
 search, linked tabs, navigation pruning, and GitHub Pages deployment.
@@ -755,10 +755,10 @@ release, or long-running host reload behavior.
 
 ## Live Code Sigils blog audit (2026-09-10)
 
-The clean `CodeSigils/CodeSigils.github.io` checkout at
-`/home/sand/labs/zensical-test` was copied to a temporary directory and built
-with its locked Zensical `0.0.60` environment. The build completed with `No
-issues found` and produced 18 HTML pages. Static generated-output inspection
+A clean `CodeSigils/CodeSigils.github.io` checkout was copied to a temporary
+directory and built with its locked Zensical `0.0.60` environment. The build
+completed with `No issues found` and produced 18 HTML pages. Static
+generated-output inspection
 found three iframes with non-empty titles and 22 images with explicit `alt`
 attributes; source inventory found eight content tabs, three iframes, and 57
 admonitions. This is static/rendered evidence only, not browser keyboard,
@@ -840,10 +840,10 @@ support, or compatibility claim from those labels.
 
 ## Three-task live-blog field validation (2026-09-12)
 
-The skill was exercised against the live Code Sigils blog checkout at
-`/home/sand/labs/zensical-test` on three materially different maintenance
-tasks. The component task repaired `docs/JS-TS/oxc-formatting.md`: package
-manager tab bodies were not nested below their labels, so a clean Zensical
+The skill was exercised against the live Code Sigils blog checkout on three
+materially different maintenance tasks. The component task repaired
+`docs/JS-TS/oxc-formatting.md`: package manager tab bodies were not nested
+below their labels, so a clean Zensical
 build succeeded while the rendered page contained six one-panel groups rather
 than two three-panel groups. Source nesting, a clean build, and rendered panel
 counts confirmed the repair. A report-only tab audit could have exposed this
@@ -1339,8 +1339,8 @@ carries the bounded checklist. The scenario environment was raised from
 ## Cross-project coordination moved out of repository instructions (2026-11-12)
 
 The Digital Basement umbrella alignment procedure was removed from the
-committed repository instructions and is now owned by the local
-`~/projects/AGENTS.md` fleet guide. The rule named a local workspace path and
+committed repository instructions and is now owned by the maintainer's local
+fleet guide outside this repository. The rule named a local workspace path and
 session notes that an outside maintainer cannot use, so it read as broken
 guidance on a public repository. The redundant roadmap directive and the
 reading-matrix row were removed with it. The editorial-versus-presentation
@@ -1358,3 +1358,20 @@ longer names the umbrella as an audience or as the owner of blog editorial
 conventions; the editorial-versus-presentation fence remains, stated without a
 cross-project dependency. The umbrella itself is under evaluation and may be
 dropped, so repository documents must not depend on it.
+
+## Local paths removed from tracked files (2026-11-12)
+
+A tracked-file audit found machine-specific paths left by earlier local work
+and removed them. Dated entries and reports now describe the Code Sigils blog
+checkout, the Digital Basement umbrella workspace, the `antislop` checkout,
+and the `py-review-skill` repository without naming a filesystem location.
+The two operational validator commands in [README.md](../../README.md) and
+[release-checklist.md](../release-checklist.md) used an absolute path into the
+maintainer's Codex installation and now resolve through
+`${CODEX_HOME:-$HOME/.codex}`, so a reader can run them unedited. Only path
+identifiers changed in the dated records: their findings, evidence, and
+outcomes are untouched, and the append-only rule still forbids retro-editing
+evidence. A local path is unusable guidance on a public repository and
+exposes the maintainer's directory layout, which is not part of the project's
+evidence. Standard temporary locations such as `/tmp` were left alone because
+they are portable and do not identify a person's machine.

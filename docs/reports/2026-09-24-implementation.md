@@ -65,8 +65,8 @@ approved recommendations implemented, gaps closed, structure re-validated.
   canonical pin), docs/research/index.md Current evidence limits (`0.0.64`,
   pin location). Dated historical experiment records keep 0.0.60 with their
   original context — they describe what was installed then.
-- Out of scope: the external blog repo `/home/sand/labs/zensical-test` still
-  pins 0.0.60 in its own `pyproject.toml`/`uv.lock`; C-note in the audit. Not
+- Out of scope: the external blog repo still pins 0.0.60 in its own
+  `pyproject.toml`/`uv.lock`; C-note in the audit. Not
   changed here.
 
 ### 5. Skill structure fixed to the industry standard
@@ -115,10 +115,10 @@ approved recommendations implemented, gaps closed, structure re-validated.
   framing preserved); only its research link path updated.
 - `docs/roadmap.md` — phases and deferred list intact; Deferred section gained
   the CI-gate note and the after-action gate is satisfied for this work.
-- Digital Basement umbrella (`/home/sand/projects/digital-basement/`) — this
+- Digital Basement umbrella — this
   change alters the skill's automation posture and doc layout but not its
   maturity, scope, or editorial relationship; no cross-project update made.
-- Live blog `/home/sand/labs/zensical-test` — untouched (external repo).
+- Live blog checkout — untouched (external repo).
 
 ## Remaining items
 
