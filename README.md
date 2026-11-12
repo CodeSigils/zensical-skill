@@ -35,21 +35,18 @@ do not imply long-running host reload behavior.
 | OpenCode | `.opencode/skills/zensical/`                | `mkdir -p .opencode/skills && cp -R zensical .opencode/skills/`                                                                           |
 | Hermes   | configured `skills.external_dirs` directory | Add the repository's `zensical/` directory to `external_dirs`; do not copy it into a live global skill directory unless that is intended. |
 
-Skills CLI `1.5.25` installed this direct-source command successfully from
-commit `d7ef1e0` in a disposable Codex project on 2026-09-10. Skills.sh
-indexing was also confirmed that day; review the payload before using it. The
-documented baseline is `npx skills add <skill-name>`; the flags below are
-recorded installation evidence, not a claim about every current CLI option.
+Verified on 2026-11-12 with Skills CLI `1.8.1`: the CLI resolved this public
+repository and detected the `zensical` payload for Codex. The documented
+baseline is `npx skills add <skill-name>`; review the payload and the current
+CLI documentation before installing it.
 
 ```bash
 npx skills add CodeSigils/zensical-skill \
   --skill zensical --agent codex --yes
 ```
 
-The CLI uses symlinks by default, which is its recommended installation mode.
-Use `--copy` only where symlinks are unsuitable. An open upstream issue reports
-that a later `skills update` can replace a copied installation with links, so
-verify the resulting layout if a repository requires real files.
+The CLI uses symlinks by default. Use `--copy` only where independent files are
+required; a copied installation needs its own refresh after the source changes.
 
 For live development, agents that support external skill directories can point
 directly at the repository's `zensical/` directory. The security policy and
@@ -72,17 +69,11 @@ reviewing that result:
 npx skills update zensical     # or: npx skills upgrade zensical
 ```
 
-Skills CLI `1.5.25` was recorded as the install baseline on 2026-09-10; the
-current CLI behavior should be checked in its own documentation before acting.
-`check` and `update` compare a recorded content hash rather than a version
-number, so a payload edit can be detected even when no version changed. A
-manual `cp -R` installation has no recorded source, so neither command can
-compare or refresh it; copy the current payload again instead.
-
-Two caveats are worth knowing before relying on it. An open upstream issue
-reports that `update` re-installs skills originally added with `--copy` as
-symlinks, so a copied install can turn into a linked one; re-copy manually if
-that matters.
+The CLI changes independently of this skill, so consult its current
+documentation before relying on a command or flag. `check` and `update` use a
+recorded content hash to detect source changes. A manual `cp -R` installation
+has no recorded source, so copy the current payload again when it needs a
+refresh.
 
 Maintainers refresh the active copies they control after changing the payload
 and say which files changed. Other users can run `skills check` when their
