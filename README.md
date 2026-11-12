@@ -35,15 +35,14 @@ do not imply long-running host reload behavior.
 | OpenCode | `.opencode/skills/zensical/`                | `mkdir -p .opencode/skills && cp -R zensical .opencode/skills/`                                                                           |
 | Hermes   | configured `skills.external_dirs` directory | Add the repository's `zensical/` directory to `external_dirs`; do not copy it into a live global skill directory unless that is intended. |
 
-Verified on 2026-11-12 with Skills CLI `1.8.1`: the CLI resolved this public
-repository and detected the `zensical` payload for Codex. The documented
-baseline is `npx skills add <skill-name>`; review the payload and the current
-CLI documentation before installing it.
+Install the `zensical` payload for Codex:
 
 ```bash
 npx skills add CodeSigils/zensical-skill \
   --skill zensical --agent codex --yes
 ```
+
+Review the payload before installing it.
 
 The CLI uses symlinks by default. Use `--copy` only where independent files are
 required; a copied installation needs its own refresh after the source changes.

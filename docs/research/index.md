@@ -1306,3 +1306,11 @@ The two positive turns then terminated on the configured model's usage limit
 before their final answers, so the re-run observes selection, not completion.
 One trial per prompt, under the same host, configuration, and unavailable-MCP
 limits as above.
+
+## Skills CLI source-discovery recheck (2026-11-12)
+
+Skills CLI `1.8.1` ran
+`npx --yes skills add CodeSigils/zensical-skill --skill zensical --agent codex --list`.
+It resolved the public repository and found one `zensical` skill. This verifies
+current source discovery only: list mode did not write a project installation,
+prove the current payload tree, or establish host reload behavior.
