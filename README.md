@@ -154,6 +154,7 @@ zensical/
 │   ├── customization.md             # CSS, themes, templates, landing pages
 │   ├── light-edit.md                # authorized minimal Markdown edits
 │   ├── media.md                     # media, embeds, assets, base paths
+│   ├── migration.md                 # version upgrades and rendered-output diffs
 │   ├── rss.md                       # native RSS and JSON feeds
 │   ├── site-inspection.md           # repository orientation and preflight
 │   ├── source-registry.md           # version-sensitive primary sources
@@ -228,7 +229,7 @@ authoritative evidence ledger for these status claims.
 | Codex              | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.agents/skills/zensical/`              |
 | OpenCode           | Project-scoped smoke passed | `SKILL.md` and required references resolve under `.opencode/skills/zensical/`            |
 | Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
-| Skills CLI install | Historical: passed at `d7ef1e0` | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` on 2026-09-10; the payload has since grown to 14 files |
+| Skills CLI install | Historical: passed at `d7ef1e0` | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` on 2026-09-10; the payload has since grown to 15 files |
 | Skills.sh search   | Indexed on 2026-09-10        | Public API searches returned `codesigils/zensical-skill/zensical`                        |
 | Public release     | Not claimed                 | Marketplace indexing is not a release, support, or compatibility guarantee               |
 
@@ -238,7 +239,7 @@ authoritative evidence ledger for these status claims.
 - The repository is licensed under MIT and has a security reporting policy.
 - The initial workflows are acceptance-tested against the Code Sigils Zensical
   blog; its editorial conventions are not part of the portable payload.
-- The initial fixtures run through a lockfile-pinned Zensical `0.0.65`
+- The initial fixtures run through a lockfile-pinned Zensical `0.1.1`
   scenario environment (pin in
   [`tests/scenario-env/pyproject.toml`](tests/scenario-env/pyproject.toml)).
 - The scenario suite covers tab rendering, reproducible accessibility findings,

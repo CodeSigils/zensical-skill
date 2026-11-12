@@ -1314,3 +1314,24 @@ Skills CLI `1.8.1` ran
 It resolved the public repository and found one `zensical` skill. This verifies
 current source discovery only: list mode did not write a project installation,
 prove the current payload tree, or establish host reload behavior.
+
+## Zensical 0.1.1 migration and the upgrade-gap field test (2026-11-12)
+
+The Code Sigils blog moved from Zensical 0.0.65 to 0.1.1, nine stable
+releases and one pre-`1.0` minor boundary away. The documented route held:
+release notes and the upgrade guide first, then
+`uv lock --upgrade-package zensical==0.1.1` and `uv sync`. The build passed
+clean. The sitemap URL set and feed entries were identical, code-block
+rendering was unchanged, and page HTML differed only in vendor asset hashes,
+generator metadata, and upgraded markup (HTML-escaped meta quotes, an
+`aria-hidden` navigation overlay). The explicit `[project.markdown_extensions]`
+table was reconciled against the 0.1.1 default table: identical keys, with
+the deliberate `anchor_linenums = false` difference kept.
+
+The field test exposed two payload gaps. The upgrade row in
+`references/source-registry.md` still described the project as pre-0.1.0, and
+no reference described the migration procedure, so the extension-table trap
+lived only in the target site's configuration comment. Both are now fixed:
+the registry row records the 0.1.1 state and `references/migration.md`
+carries the bounded checklist. The scenario environment was raised from
+0.0.65 to 0.1.1 in the same change.
