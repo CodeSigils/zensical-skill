@@ -79,6 +79,10 @@ Choose the smallest applicable workflow:
   deployment success.
 - **Build, render, or check a change:** read
   [references/validation.md](references/validation.md).
+- **Upgrade to a newer Zensical version:** read
+  [references/migration.md](references/migration.md), then recheck the
+  release-channel row in
+  [references/source-registry.md](references/source-registry.md).
 - **Diagnose a failure:** inspect the supplied error and repository commands
   first; consult the relevant reference only after identifying the failing
   layer.

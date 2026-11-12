@@ -1,6 +1,6 @@
 # Current research state
 
-Reviewed: 2026-11-11.
+Reviewed: 2026-11-12.
 
 This file owns what the project currently knows to be true. Its current claims
 are reviewed on the date above unless an item gives a more specific date. A
@@ -64,13 +64,29 @@ templates, and fixture expectations are not transferable facts.
 These are architectural patterns, not Zensical facts. Zensical-specific syntax,
 commands, configuration, and supported features must be verified separately.
 
+## Version migration
+
+- Zensical `0.1.1` (2026-11-10) is current; `0.1.0` shipped 2026-11-05 and the
+  project is inside its announced beta period.
+- The payload carries a bounded migration checklist in
+  `zensical/references/migration.md`. It covers the changelog read, the pin
+  and lockfile bump, extension-table reconciliation, plugin and config review,
+  and rendered-output comparison.
+- The first field migration ran on 2026-11-12: the Code Sigils blog moved from
+  `0.0.65` to `0.1.1` with an unchanged sitemap URL set, identical feed
+  entries apart from timestamps, and page differences limited to vendor
+  assets, generator metadata, and upgraded markup. The explicit extension
+  table matched the new defaults, with `anchor_linenums = false` kept.
+- The scenario environment pin is `0.1.1` in
+  `tests/scenario-env/pyproject.toml`.
+
 ## Current evidence limits
 
 - The runtime payload passes the local Agent Skill structural validator and the
   pinned official `skills-ref` validator at agentskills commit
   `69ef37e9424c0a7ea9dd2293b559e43ec8176379`.
 - The initial fixture scenarios run in isolated temporary copies through the
-  committed, lockfile-pinned Zensical `0.0.65` scenario environment (pin in
+  committed, lockfile-pinned Zensical `0.1.1` scenario environment (pin in
   `tests/scenario-env/pyproject.toml`).
 - Three CI jobs are wired into the repository: the commit-message policy, the
   scenario suite, and a job running the instruction-contract self-test, the
@@ -144,10 +160,11 @@ Maintainer documents carrying a `Reviewed:` marker are `docs/roadmap.md`,
 `SECURITY.md`, `docs/research/editorial-voice.md`, and this file. The seven dated reports carry a date instead,
 because a report's date records when it was written; four write it as a plain
 `Date:` line and three as a bolded list label, so a marker search must accept
-both forms. Eight of ten payload
-references carry a review footer naming Zensical 0.0.65 and pointing at the
-registry row; `article-review.md` is version-independent and `source-registry.md`
-is the registry.
+both forms. Nine of eleven payload
+references carry a review footer naming a Zensical version and pointing at
+the registry row (eight name 0.0.65, the migration checklist names 0.1.1);
+`article-review.md` is version-independent and `source-registry.md` is the
+registry.
 
 Evidence and measurements for these statements are in
 `docs/reports/2026-09-26-governance-recommendations-applied.md`.
