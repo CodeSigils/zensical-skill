@@ -27,11 +27,15 @@ the source registry are evidence only.
 - Inspect the target before assuming its layout, configuration, navigation,
   theme, output, or deployment workflow. Preserve its source-of-truth files;
   do not create parallel configuration or duplicate navigation.
-- For version-sensitive Zensical behavior, consult
-  [references/source-registry.md](references/source-registry.md) and current
-  official documentation before recommending a change. Report a bounded
-  finding rather than claiming browser, provider, deployment, or WCAG coverage
-  that was not performed.
+- For version-sensitive Zensical behavior, or when a task depends on an
+  external primary source, consult the matching row in
+  [references/source-registry.md](references/source-registry.md) at the point
+  of use and confirm current official documentation before recommending a
+  change. Treat external URLs and reviewed dates as time-sensitive evidence:
+  recheck volatile or release-channel entries, report when a source cannot be
+  verified or network access is unavailable, and do not cache snippets as
+  current fact. Report a bounded finding rather than claiming browser,
+  provider, deployment, or WCAG coverage that was not performed.
 - For article work, the target's editorial rules decide voice and argument.
   This skill supplies review mechanics and Zensical-aware validation; it never
   invents author experience or imposes a house style.
@@ -44,7 +48,8 @@ the source registry are evidence only.
 
 ## Route the request
 
-Choose the smallest applicable workflow:
+Load only the smallest reference set that matches the task. References are
+opt-in detail, not background context.
 
 - **Inspect or orient:** read [references/site-inspection.md](references/site-inspection.md).
 - **Draft, revise, or review substantive article prose:** read
@@ -60,19 +65,20 @@ Choose the smallest applicable workflow:
 - **Review admonitions, tabs, links, or navigation:** read
   [references/content-components.md](references/content-components.md).
 - **Review responsive presentation or customization:** read
-  [references/customization.md](references/customization.md), then inspect
-  `extra_css`, `extra_javascript`, `custom_dir`, theme settings, and landing
-  page conventions.
+  [references/customization.md](references/customization.md) only when CSS,
+  templates, theme settings, or landing pages are in scope, then inspect the
+  target's `extra_css`, `extra_javascript`, `custom_dir`, and theme settings.
 - **Review accessibility:** read [references/accessibility.md](references/accessibility.md)
-  whenever content, media, components, CSS, templates, or landing pages affect
+  only when content, media, components, CSS, templates, or landing pages affect
   names, alternatives, keyboard use, contrast, zoom, or motion.
 - **Review or enable feeds (RSS, JSON Feed):** read
-  [references/rss.md](references/rss.md). Feeds are ordinary component work
-  once the target runs a Zensical version that supports them natively; they are
-  not a third-party integration.
+  [references/rss.md](references/rss.md) when feed behavior is in scope. Feeds
+  are ordinary component work once the target runs a Zensical version that
+  supports them natively; they are not a third-party integration.
 - **Review search behavior or exclusions:** inspect the target's native search
-  configuration and current source-registry entry before proposing an external
-  search service.
+  configuration first; consult the search row in
+  [references/source-registry.md](references/source-registry.md) at point of
+  use only if current behavior, exclusions, or version details matter.
 - **Review release output, sitemap, or canonical URLs:** read
   [references/validation.md](references/validation.md), inspect the configured
   `site_url`, and distinguish generated-output integrity from indexing or
@@ -82,10 +88,10 @@ Choose the smallest applicable workflow:
 - **Upgrade to a newer Zensical version:** read
   [references/migration.md](references/migration.md), then recheck the
   release-channel row in
-  [references/source-registry.md](references/source-registry.md).
+  [references/source-registry.md](references/source-registry.md) before relying
+  on version-sensitive behavior.
 - **Diagnose a failure:** inspect the supplied error and repository commands
-  first; consult the relevant reference only after identifying the failing
-  layer.
+  first; consult only the reference that matches the failing layer.
 
 ## Proportionate workflow
 

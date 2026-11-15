@@ -6,6 +6,12 @@ decision. Keep it target-generic: do not add repository names, local paths,
 commits, digests, page counts, or test results here. Put target-specific
 observations and historical evidence in `docs/research/index.md` and the roadmap.
 
+Consult this registry only at point of use, when a task depends on version-
+sensitive Zensical behavior, a current primary source, or a generic external
+claim. Recheck any row whose checked date/version, caveat, or upstream release
+channel may affect the recommendation; treat external URLs as time-sensitive
+evidence and do not cache snippets as current fact.
+
 Update this registry when a primary-source route, version-sensitive fact, or
 generic validation caveat changes—not merely because another site was tested.
 

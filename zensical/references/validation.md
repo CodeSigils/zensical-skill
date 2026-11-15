@@ -18,9 +18,10 @@ uses the same package manager or output directory.
    referrer-policy decision rather than auto-adding `noreferrer`.
    For CSS, templates, or landing pages, inspect at least a narrow viewport and
    both configured color schemes when the change affects them.
-   Apply the accessibility reference for semantic names, alt text, iframe
-   titles, captions/transcripts, focus, contrast, zoom, and motion. Report
-   static checks separately from browser or assistive-technology evidence.
+   When semantics, names, alternatives, keyboard use, contrast, zoom, or motion
+   are in scope, read [accessibility.md](accessibility.md) at point of use and
+   report static checks separately from browser or assistive-technology
+   evidence.
 4. Run `git diff --check` for whitespace and formatting errors.
 
 For an authorized commit, publish, or deployment action in a Git repository,
@@ -28,9 +29,10 @@ also run the sensitive-material preflight in
 [site-inspection.md](site-inspection.md). Report only candidate paths and the
 check's limits; never echo a suspected credential into the handoff.
 
-If a check requires network access, state that dependency. If the build tool is
-unavailable, report the limitation and use static inspection rather than
-inventing a successful result.
+If a check requires network access, state that dependency and report external
+URLs as unverified rather than current. If the build tool is unavailable,
+report the limitation and use static inspection rather than inventing a
+successful result.
 
 ## Sitemap and canonical-URL review
 

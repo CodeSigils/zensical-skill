@@ -13,15 +13,19 @@ describe the alternatives rather than writing configuration that will not work.
 
 ## Where the authoritative information lives
 
-Zensical's plugin compatibility page is the primary source for availability and
-for the settings it ignores:
+Consult the feeds row in [source-registry.md](source-registry.md) and
+Zensical's plugin compatibility page at point of use for availability, checked
+date, and caveats:
 
 - <https://zensical.org/docs/compatibility/mkdocs/plugins/>
 
 Upstream does not currently publish a dedicated feeds guide, so that page plus
 the installed package's own configuration parser is the practical reference.
-Re-verify against the target's installed version rather than trusting a
-remembered option list, because the accepted keys are validated strictly.
+Re-verify against the target's installed version and the registry's checked
+date/caveat rather than trusting a remembered option list, because accepted
+keys are validated strictly and behavior may change. If current docs cannot be
+checked, state that the recommendation is unverified against the target
+version.
 
 ## Enable the plugin
 

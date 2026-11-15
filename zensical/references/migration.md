@@ -30,7 +30,9 @@ defaults, rendering, links, and feeds can change between releases.
    vendor asset hashes and generator metadata.
 7. Record the result. Note the verified version and date beside the
    configuration or in the site's maintenance record, and recheck the
-   release-channel row in [source-registry](source-registry.md).
+   release-channel row in [source-registry](source-registry.md) at point of use
+   before treating pre-upgrade behavior as current. If the release-channel
+   source cannot be verified, report that uncertainty explicitly.
 
 ## Notes
 
