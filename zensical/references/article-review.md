@@ -55,18 +55,25 @@ shape recommendation in the review report.
 
 When the target's guidance and the article form call for a field note,
 experiment report, or evidence-led technical essay, let the reader meet the
-specific observation before its general lesson. Establish the factual boundary
-near the opening: what the author observed, tested, changed, or compared, and
-what that evidence cannot establish. A source list or a catalogue of controls
-does not replace that orientation.
+specific observation before its general lesson. Where the form and target voice
+support it, a concrete moment or observed problem can open the path to the map
+rather than the map preceding it, provided the author can support it and
+nothing is invented. Establish the factual boundary near the opening: what the
+author observed, tested, changed, or compared, and what that evidence cannot
+establish. A source list or a catalogue of controls does not replace that
+orientation.
 
 As the draft develops, check whether each major section carries a useful chain:
 claim, supporting observation or source, then the consequence for the reader's
-next decision. Combine repeated labels and incident lists when they do not
-change that decision. This is a shape aid, not a required sequence. A reference
-page may lead with the answer, and an author without a direct observation must
-not be given invented first-person experience. Leave an author note where that
-perspective is necessary but absent.
+next decision (including, when relevant and supportable, what misunderstanding
+or inaction may cost in that context). Combine repeated labels, incident lists,
+and restated thesis closures when they do not change that decision or add a
+new consequence. Where the form fits, prefer an earned implication, decision,
+or next question over restating the opening framing or central metaphor once
+the reader has already earned it. This is a shape aid, not a required
+sequence. A reference page may lead with the answer, and an author without a
+direct observation must not be given invented first-person experience. Leave an
+author note where that perspective is necessary but absent.
 
 Before flagging anything, characterize the voice already present: name the
 traits worth keeping — formality, rhythm, punctuation habits, and whether
@@ -137,14 +144,17 @@ an AI tell. Read a dense paragraph aloud and inspect what each stop is doing. A
 period followed by a lowercase connector, a run of clipped declarations, or
 fragment-stacked inventory prose can signal that the sentence was assembled in
 pieces rather than written for a reader. Restore the relationship between ideas
-instead of just swapping punctuation. Prefer a period, comma, colon, or
-recast sentence to an em dash or semicolon when it reads naturally. Retain an
-em dash only for a genuine interruption or parenthetical, and a semicolon only
-for unusually tight balanced clauses. Do not use either mark to manufacture a
-reveal, hurry a contrast, or carry an accumulating list. Preserve punctuation
-required by a quotation, code, citation, or the target's established voice.
-This is optional, target-guidance-led editorial advice, not a count threshold
-or validation condition.
+instead of just swapping punctuation. Vary sentence weight when it serves
+emphasis—a short sentence after a dense explanation, or a longer one that
+carries a thought to its consequence—so long as the result stays in the
+draft's voice. Prefer a period, comma, colon, or recast sentence to an em dash
+or semicolon when it reads naturally. Retain an em dash only for a genuine
+interruption or parenthetical, and a semicolon only for unusually tight
+balanced clauses. Do not use either mark to manufacture a reveal, hurry a
+contrast, or carry an accumulating list. Preserve punctuation required by a
+quotation, code, citation, or the target's established voice. This is
+optional, target-guidance-led editorial advice, not a count threshold or
+validation condition.
 
 Keep diagnostic prose plain. Do not stage an ordinary result as a reversal,
 reveal, verdict, or mic-drop moment through clipped lines such as "It was" or
@@ -155,9 +165,11 @@ target voice and the evidence genuinely call for one.
 For an evidence-heavy article, also check whether the reader can follow a
 causal thread rather than receiving a catalogue of controls, files, or facts.
 Consolidate repeated labels, connect a mechanism to its consequence, and add a
-brief bridge only when the article genuinely changes layer or question. This
-is not a fixed narrative template: a reference page may stay direct, and a
-short technical note may need no bridge at all.
+brief bridge only when the article genuinely changes layer or question. Prefer
+transitions that carry cause and effect or decision-to-decision logic over
+purely categorical pivots when the reader must follow reasoning across
+sections. This is not a fixed narrative template: a reference page may stay
+direct, and a short technical note may need no bridge at all.
 
 When the target's editorial guidance and the user's request call for a human,
 author-led voice, avoid generic documentation-template prose where it replaces
