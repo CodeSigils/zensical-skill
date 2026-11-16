@@ -242,6 +242,27 @@ change, `python3 zensical/scripts/check_instruction_contract.py --self-test`
 after an instruction change, and `bash zensical/scripts/check_site_hygiene.sh
 .` before a commit.
 
+### Commit-message enforcement
+
+Enable the tracked local hooks once per clone so non-compliant messages fail
+before they are created:
+
+```bash
+git config core.hooksPath .githooks
+git config commit.template .gitmessage
+```
+
+`.githooks/commit-msg` rejects commits missing a non-empty `what:` and `why:`
+field or a valid subject. CI (`scripts/check_commit_messages.py`) remains the
+backstop, but the local hook prevents bad hashes from being created or shared.
+Run `python3 scripts/check_commit_messages.py HEAD` (or the intended range)
+before handoff/push; treat this as mandatory. Do not use `--amend`/force-push to
+"fix" a message after it has been pushed to a protected/shared branch—published
+commits are effectively immutable there; prefer a compliant commit on an
+unmerged branch/PR. If a rewrite is rejected, sync to the remote tip (e.g.
+`git fetch origin && git reset --hard origin/main`) rather than keeping a
+diverged rewritten history.
+
 ### Separate environmental failure from repository failure
 
 Before treating a failed command as a finding about the repository, rule out the
