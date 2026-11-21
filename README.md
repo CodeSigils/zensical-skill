@@ -343,9 +343,17 @@ should change together and the trade-off improves clarity.
 
 Commit policy is checked with
 [`python3 scripts/check_commit_messages.py`](scripts/check_commit_messages.py);
-each commit must explain `what:` and `why:` in its body. Release-facing history
-lives in those commit bodies; there is no changelog file, because a running
-list duplicated the commit log, drifted from it, and never changed a decision.
+each commit must explain `what:` and `why:` in its body. Enable the tracked
+hooks once per clone to enforce this locally before commits are created:
+
+```bash
+git config core.hooksPath .githooks
+git config commit.template .gitmessage
+```
+
+CI remains the backstop. Release-facing history lives in commit bodies; there
+is no changelog file, because a running list duplicated the commit log, drifted
+from it, and never changed a decision.
 
 Public release, support, and compatibility guarantees are not claimed yet.
 Skills.sh indexing is discoverability evidence, not a release. The verification

@@ -1,0 +1,50 @@
+#!/bin/sh
+# Enforce commit-message policy (subject + what:/why: body fields).
+# Installed via: git config core.hooksPath .githooks
+
+set -eu
+
+msg_file="$1"
+python3 - "$msg_file" <<'PY'
+import sys
+
+path = sys.argv[1]
+with open(path, "r", encoding="utf-8") as f:
+    text = f.read()
+
+lines = text.splitlines()
+# Strip trailing comments git may keep in templates is not expected here; treat as-is.
+subject = lines[0].strip() if lines else ""
+body_lines = lines[1:] if len(lines) > 1 else []
+
+errors = []
+if not subject or subject.lstrip().startswith("#"):
+    errors.append("empty subject")
+else:
+    if len(subject) > 72:
+        errors.append("subject exceeds 72 characters")
+    if subject.endswith("."):
+        errors.append("subject must not end with a period")
+
+def field_value(field):
+    prefix = field.lower()
+    for line in body_lines:
+        if line.lower().startswith(prefix):
+            return line.split(":", 1)[1].strip()
+    return None
+
+for field in ("what:", "why:"):
+    val = field_value(field)
+    if val is None:
+        errors.append(f"missing {field} field")
+    elif not val:
+        errors.append(f"empty {field} field")
+
+if errors:
+    sys.stderr.write("Commit message policy failed:\n")
+    for e in errors:
+        sys.stderr.write(f"- {e}\n")
+    sys.stderr.write("\nRequired format:\n")
+    sys.stderr.write("  <subject>\n\n  what: ...\n  why: ...\n")
+    sys.exit(1)
+PY
