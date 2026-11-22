@@ -92,7 +92,7 @@ rather than refreshing speculatively.
 
 The planning documents under `docs/` describe the skill's intended scope; the
 portable runtime payload lives only under `zensical/`. Before changing scope,
-workflow boundaries, source evidence, or release expectations, read
+workflow boundaries, source evidence, or distribution expectations, read
 [docs/README.md](docs/README.md) and the documents required by its reading
 matrix.
 
@@ -147,7 +147,7 @@ records in the same work session:
   dated index entry, registered in the dated reports table in
   [docs/README.md](docs/README.md); and
 - the git commit body for a user-visible capability change, which is where
-  release-facing history now lives.
+  user-facing history now lives.
 
 Do not add a second summary merely because a record was consulted. If a change
 produces a durable decision, lesson, finding, or unresolved question, add one
@@ -205,11 +205,11 @@ batch, pass a range such as `HEAD~5..HEAD`. The checker enforces a subject of
 at most 72 characters plus non-empty `what:` and `why:` fields; add validation
 details when they affect confidence or future maintenance.
 
-Do not keep a changelog file. Release-facing history lives in the git commit
+Do not keep a changelog file. User-facing history lives in the git commit
 body: record user-visible or maintainer-significant changes there, in the
 `what:` and `why:` fields the commit policy already requires, and use the
-subject line as the one-line summary a reader would have wanted from a release
-note. A separate changelog was removed because it duplicated the commit log,
+subject line as the one-line summary a reader would need. A separate changelog
+was removed because it duplicated the commit log,
 drifted from it, and grew without changing a decision. Research records,
 decisions, and reports still hold detailed rationale; use those, not a running
 list.
@@ -287,7 +287,7 @@ same rule the documentation admission gate applies to new documents.
   generic frontend guidance.
 - Do not claim a version-sensitive behavior without repository or primary-source
   evidence.
-- Do not add tests, scripts, or release automation until a repeated workflow
+- Do not add tests, scripts, or GitHub Release automation until a repeated workflow
   makes their value concrete.
 - When an authorized edit leaves a focused, validated Git diff, identify it as
   ready to commit and offer that next step. Do not infer commit, push, publish,

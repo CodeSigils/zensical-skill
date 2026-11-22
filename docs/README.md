@@ -11,23 +11,23 @@ documents relevant to the proposed change.
 | CSS, theme, or landing-page workflow | `vision.md`, `roadmap.md`, `research/index.md` |
 | Accessibility workflow | `vision.md`, `roadmap.md`, `research/index.md` |
 | Documentation freshness contract | `AGENTS.md`, the canonical owner for each affected claim, and the relevant planning document |
-| Runtime distribution contract | `AGENTS.md`, `release-checklist.md`, and the relevant host-install evidence |
-| Commit or release-history policy | `AGENTS.md`, `README.md`, `release-checklist.md` |
-| Repeated values or centralization | `AGENTS.md`, `vision.md`, `roadmap.md`, `release-checklist.md` |
+| Runtime distribution contract | `AGENTS.md`, `distribution-checklist.md`, and the relevant host-install evidence |
+| Commit-history policy | `AGENTS.md`, `README.md`, `distribution-checklist.md` |
+| Repeated values or centralization | `AGENTS.md`, `vision.md`, `roadmap.md`, `distribution-checklist.md` |
 | External source or comparable-skill pattern | `research/current-state.md`, then `research/index.md` for dated observations, `vision.md` |
 | Editorial voice or prose-tell guidance | `research/editorial-voice.md`, `research/current-state.md`, `vision.md` |
-| Skill packaging, frontmatter, or payload contract | `research/skill-structure-conventions.md`, `research/skill-sync-and-cross-agent-distribution.md`, `research/index.md`, `release-checklist.md` |
-| Sequencing or release gate | `roadmap.md`, `vision.md` |
+| Skill packaging, frontmatter, or payload contract | `research/skill-structure-conventions.md`, `research/skill-sync-and-cross-agent-distribution.md`, `research/index.md`, `distribution-checklist.md` |
+| Sequencing or distribution gate | `roadmap.md`, `vision.md` |
 | Acceptance scenario or fixture | `scenarios.md`, `roadmap.md`, `research/current-state.md` |
-| Distribution or compatibility | `vision.md`, `roadmap.md`, `research/skill-sync-and-cross-agent-distribution.md`, `research/index.md`, `release-checklist.md` |
-| Release or market discoverability | `roadmap.md`, `research/index.md`, `release-checklist.md` |
+| Distribution or compatibility | `vision.md`, `roadmap.md`, `research/skill-sync-and-cross-agent-distribution.md`, `research/index.md`, `distribution-checklist.md` |
+| Market discoverability | `roadmap.md`, `research/index.md`, `distribution-checklist.md` |
 
-When a change affects scope, sequencing, evidence, or release expectations,
+When a change affects scope, sequencing, evidence, or distribution expectations,
 update the corresponding planning document before completing the work. Recheck
-volatile sources before a release or after a Zensical upgrade.
+volatile sources before a distribution claim or after a Zensical upgrade.
 
-`release-checklist.md` records commands and evidence that are only meaningful
-for a public or package-discovery release. Do not copy its installation
+`distribution-checklist.md` records commands and evidence that are only meaningful
+for a public-distribution or package-discovery decision. Do not copy its installation
 commands into the runtime skill until they have been verified for the target
 host and current provider contract.
 

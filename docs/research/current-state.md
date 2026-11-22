@@ -1,6 +1,6 @@
 # Current research state
 
-Reviewed: 2026-11-12.
+Reviewed: 2026-11-22.
 
 This file owns what the project currently knows to be true. Its current claims
 are reviewed on the date above unless an item gives a more specific date. A
@@ -100,8 +100,8 @@ commands, configuration, and supported features must be verified separately.
   the Code Sigils live-blog evidence was reconciled against its retained source
   checkout and generated output on 2026-09-28 in the [field record](index.md#live-blog-rss-evidence-reconciliation-2026-09-28).
 - Direct Skills CLI installation and project-scoped host smoke checks are
-  recorded; public release and long-running host-reload behavior remain
-  unclaimed.
+  recorded; GitHub Releases are out of scope, and long-running host-reload
+  behavior remains unclaimed.
 
 ## Evidence and scope lessons from a Zola skill review
 
