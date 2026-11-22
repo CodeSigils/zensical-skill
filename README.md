@@ -49,7 +49,7 @@ required; a copied installation needs its own refresh after the source changes.
 
 For live development, agents that support external skill directories can point
 directly at the repository's `zensical/` directory. The security policy and
-release checklist are maintainer records, not guarantees that every target site
+distribution checklist are maintainer records, not guarantees that every target site
 is safe.
 
 ### Refreshing an installed copy
@@ -102,7 +102,7 @@ The skill currently routes these tasks:
   maintainer explicitly approves their disclosure;
 - run a bounded tracked-file hygiene preflight before authorized commits,
   publishing, or deployment;
-- review generated sitemaps and canonical URLs during an explicit release-output
+- review generated sitemaps and canonical URLs during an explicit distribution-output
   review, without claiming indexing or deployment success;
 - enable and verify RSS and JSON feeds on a target running a Zensical version
   that provides them natively, including the discovery link a feed needs to be
@@ -206,7 +206,7 @@ docs/
 │   ├── skill-structure-conventions.md # agentskills/skills.sh packaging contract
 │   └── skill-sync-and-cross-agent-distribution.md # install, refresh, and versioning research
 ├── scenarios.md                     # bounded real-site acceptance procedures
-├── release-checklist.md             # release gate and recorded evidence
+├── distribution-checklist.md         # distribution gate and recorded evidence
 ├── reports/                         # dated governance audits and implementation records
 └── README.md                        # maintainer reading matrix
 tests/fixtures/                      # site-only deterministic scenario inputs
@@ -236,7 +236,7 @@ authoritative evidence ledger for these status claims.
 | Hermes             | Project-scoped smoke passed | Payload and required references resolve through the documented external-directory layout |
 | Skills CLI install | Historical: passed at `d7ef1e0` | Version 1.5.25 copied all 13 payload files into disposable `.agents/skills/zensical/` on 2026-09-10; the payload has since grown to 15 files |
 | Skills.sh search   | Indexed on 2026-09-10        | Public API searches returned `codesigils/zensical-skill/zensical`                        |
-| Public release     | Not claimed                 | Marketplace indexing is not a release, support, or compatibility guarantee               |
+| GitHub Releases    | Out of scope                | Marketplace indexing is not a support or compatibility guarantee                           |
 
 - The payload passes the local Agent Skill structural validator and the pinned
   official `skills-ref` validator at agentskills commit
@@ -256,7 +256,7 @@ authoritative evidence ledger for these status claims.
   tracked credential and private-key indicators; it is not a full secret scan.
 - Direct Skills CLI installation, project-scoped host-loader smoke checks for
   Codex, OpenCode, and Hermes, and Skills.sh search indexing have been
-  verified; public release remains unclaimed.
+  verified; GitHub Releases remain out of scope.
 
 These are development facts, not guarantees about every Zensical repository.
 Version-sensitive behavior must be checked against the current documentation
@@ -351,14 +351,14 @@ git config core.hooksPath .githooks
 git config commit.template .gitmessage
 ```
 
-CI remains the backstop. Release-facing history lives in commit bodies; there
+CI remains the backstop. User-facing history lives in commit bodies; there
 is no changelog file, because a running list duplicated the commit log, drifted
 from it, and never changed a decision.
 
-Public release, support, and compatibility guarantees are not claimed yet.
-Skills.sh indexing is discoverability evidence, not a release. The verification
+GitHub Releases are out of scope, and support and compatibility guarantees are
+not claimed. Skills.sh indexing is discoverability evidence. The verification
 steps are documented in
-[`docs/release-checklist.md`](docs/release-checklist.md).
+[`docs/distribution-checklist.md`](docs/distribution-checklist.md).
 
 ## Generic-site expansion
 
@@ -366,7 +366,7 @@ Code Sigils is the current product-facing acceptance environment, not a
 template that other sites must follow. The next expansion is to prove the
 existing-site workflow on two or three materially different Zensical
 repositories. Candidate slices are generic content-model/authoring work,
-bounded MiniJinja theme overrides, explicit release review, and a
+bounded MiniJinja theme overrides, explicit distribution-output review, and a
 multi-deployment language-selector workflow. Each must satisfy the
 capability-admission rule before it becomes part of the portable payload.
 
@@ -376,7 +376,7 @@ alternate-language deployments. Feeds are an admitted bounded capability,
 because Zensical has provided them natively since 0.0.65; check the target's
 version before writing feed configuration. Generated sitemap behavior can be
 reviewed when `site_url` is configured; it is an admitted bounded
-release-output review, not deployment proof. See the roadmap and source
+distribution-output review, not deployment proof. See the roadmap and source
 registry for the capability boundaries.
 
 ## Roadmap
@@ -386,7 +386,7 @@ edit, and native-feed workflows are substantially proven against the Code Sigils
 blog, with a small repeatable scenario suite for the observed failures. The completed
 three-task field run did not justify another helper or fixture. The next
 milestone requires either a repeated, testable maintenance gap or an explicit
-reviewed release candidate; new scripts, fixtures, integrations, and CI should
+public-distribution decision; new scripts, fixtures, integrations, and CI should
 earn their place through observed need.
 
 ## Status and feedback

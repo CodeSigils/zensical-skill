@@ -10,14 +10,14 @@ affected gate when status, evidence, sequencing, scope, or a deferred decision
 changes; otherwise record that the roadmap was intentionally left unchanged.
 Review-only evidence must not be described as implementation.
 
-Reviewed: 2026-11-12.
+Reviewed: 2026-11-22.
 
 Planning documents: [documentation index](README.md) for the read-first matrix,
 [vision](vision.md) for boundaries and quality criteria,
 [current research state](research/current-state.md) for what is currently true,
 [research field record](research/index.md) for dated observations,
 [scenarios](scenarios.md) for fixtures, and
-[release checklist](release-checklist.md) for release evidence. Dated audits and
+[distribution checklist](distribution-checklist.md) for distribution evidence. Dated audits and
 implementation records live in [reports/](reports/) and are historical records,
 not planning inputs; the evidence behind the current documentation mechanism is
 [2026-09-26-governance-mechanism.md](reports/2026-09-26-governance-mechanism.md).
@@ -30,14 +30,14 @@ not planning inputs; the evidence behind the current documentation mechanism is
    matter, navigation, and rendered output.
 3. **Add maintenance evidence:** source/version registry, drift checks, and a
    small shared validation suite.
-4. **Release deliberately:** verify project-scoped discovery for Codex,
+4. **Distribute deliberately:** verify project-scoped discovery for Codex,
    OpenCode, and Hermes before considering public distribution.
 
-The release gate includes the official `skills-ref` validator, a clean payload
+The distribution gate includes the official `skills-ref` validator, a clean payload
 tree, host-specific discoverability checks, and a documented skills.sh or
 marketplace result. Marketplace presence is treated as distribution evidence
 only; rankings, install counts, and badges do not establish quality or
-compatibility. See [release-checklist.md](release-checklist.md).
+compatibility. See [distribution-checklist.md](distribution-checklist.md).
 
 ## Current status
 
@@ -72,10 +72,10 @@ contrast, narrow-view reflow, captions/transcripts, remote-player availability,
 and deployment remain manual or provider-bound checks rather than completion
 claims.
 
-Release evidence and project-scoped host installation smoke checks are complete
+Distribution evidence and project-scoped host installation smoke checks are complete
 for Codex, OpenCode, and Hermes. The public Skills.sh directory now indexes the
 payload, but indexing is distribution evidence only; no maintainer authorization
-for a public release or publication is claimed.
+for a GitHub Release, support, or compatibility guarantee is claimed.
 
 See the [research record](research/index.md) for the evidence behind this status and
 the [vision](vision.md) for the quality criteria.
@@ -84,7 +84,7 @@ A bounded Codex automatic-selection observation on the target blog found one
 explicit Zensical request read the skill, while a site tab-validation request
 did not show a skill read. A same-day re-run after a description rewrite
 observed reads in both in-scope prompts, one trial each. These are bounded
-observations, not a new release gate or evidence of a runtime fix; see the
+observations, not a new distribution gate or evidence of a runtime fix; see the
 [dated field record](research/index.md#codex-automatic-selection-pilot-on-the-code-sigils-blog-2026-10-18).
 
 ## Maturity assessment and next evidence gate
@@ -434,12 +434,12 @@ conventions. Browser interaction, assistive technology, remote-player,
 captions/transcripts, and deployment outcomes remain separate manual checks;
 add another fixture only when a real-site run exposes a deterministic gap.
 
-## Phase 3 — Release and maintenance evidence
+## Phase 3 — Distribution and maintenance evidence
 
 - [x] Add a version-pinned source registry entry and validation runner when the
   workflow has stable observable behavior.
 - [x] Add discovery scenarios for matching and non-matching prompts.
-- [x] Define a project-scoped installation smoke check before public release.
+- [x] Define a project-scoped installation smoke check before making a public-distribution claim.
 - [x] Compare the downloaded `layeredcraft/zensical-site` references and
   templates for useful authoring patterns (voice/tone, content types,
   front-matter, and configuration caveats); admit only capabilities that meet
@@ -454,7 +454,7 @@ add another fixture only when a real-site run exposes a deterministic gap.
   documented catalog sources, while recording unavailable, stale, or
   unauthenticated sources instead of interpreting absence as proof.
 
-Keep release verification bounded to Codex, OpenCode, and Hermes. Run one
+Keep distribution verification bounded to Codex, OpenCode, and Hermes. Run one
 shared local validation suite, then one small installation/discoverability
 check per host from an isolated temporary directory. Do not create a separate
 CI workflow for each host or copy the skill into host-specific directories.
@@ -462,7 +462,7 @@ CI workflow for each host or copy the skill into host-specific directories.
 A minimal validation gate (commit-message policy and the shared scenario suite)
 now runs in CI on push and pull request against `main` (2026-09-24). It is a
 single host-agnostic workflow, not per-host CI, and it does not change the
-manual release checklist or deploy anything. The runner and its scenario
+manual distribution checklist or deploy anything. The runner and its scenario
 assertions use only portable shell tools (`grep`, `python3`, `awk`, `cp`,
 `mktemp`, `wc`), so the gate needs no additional host tooling beyond `uv`.
 
