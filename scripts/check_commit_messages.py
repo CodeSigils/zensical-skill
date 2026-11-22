@@ -19,6 +19,7 @@ GENERATED_AUTHORS = frozenset(
         "49699333+dependabot[bot]@users.noreply.github.com",
     }
 )
+GITHUB_COMMITTER_EMAIL = "noreply@github.com"
 
 
 class CheckError(RuntimeError):
@@ -75,17 +76,23 @@ def field_value(body_lines: list[str], field: str) -> str | None:
     return None
 
 
-def read_commit(commit: str) -> tuple[str, str, str, str]:
-    """Return the subject, author email, author name, and body of commit.
-
-    The parts are read in one call and separated by NUL because a subject may
-    contain any other delimiter. Reading the author beside the message is what
-    lets the caller recognize a generated commit from its identity instead of
-    from the words it happens to use.
-    """
-    output = run("git", "show", "--quiet", "--format=%s%x00%ae%x00%an%x00%b", commit)
-    subject, email, name, body = output.split("\0", 3)
-    return subject.strip(), email.casefold(), name.casefold(), body.strip()
+def read_commit(commit: str) -> tuple[str, str, str, str, str, str]:
+    output = run(
+        "git",
+        "show",
+        "--quiet",
+        "--format=%s%x00%ae%x00%an%x00%ce%x00%P%x00%b",
+        commit,
+    )
+    subject, email, name, committer_email, parents, body = output.split("\0", 5)
+    return (
+        subject.strip(),
+        email.casefold(),
+        name.casefold(),
+        committer_email.casefold(),
+        parents,
+        body.strip(),
+    )
 
 
 def generated(email: str, name: str) -> bool:
@@ -96,6 +103,10 @@ def generated(email: str, name: str) -> bool:
     wording is judged like any other.
     """
     return email in GENERATED_AUTHORS or name in GENERATED_AUTHORS
+
+
+def generated_merge(committer_email: str, parents: str) -> bool:
+    return committer_email == GITHUB_COMMITTER_EMAIL and len(parents.split()) > 1
 
 
 def check(commit: str, subject: str, body: str) -> list[str]:
@@ -126,12 +137,16 @@ def main() -> int:
     try:
         hashes = resolve(refs)
         for commit in hashes:
-            subject, email, name, body = read_commit(commit)
+            subject, email, name, committer_email, parents, body = read_commit(commit)
             if generated(email, name):
                 skipped += 1
                 print(
                     f"Skipped {commit[:12]} ({name or email}): generated commit message"
                 )
+                continue
+            if generated_merge(committer_email, parents):
+                skipped += 1
+                print(f"Skipped {commit[:12]}: GitHub-generated merge commit")
                 continue
             checked += 1
             errors.extend(check(commit, subject, body))
