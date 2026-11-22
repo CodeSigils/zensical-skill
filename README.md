@@ -207,6 +207,7 @@ docs/
 │   └── skill-sync-and-cross-agent-distribution.md # install, refresh, and versioning research
 ├── scenarios.md                     # bounded real-site acceptance procedures
 ├── distribution-checklist.md         # distribution gate and recorded evidence
+├── release-checklist.md              # historical-link pointer to the distribution checklist
 ├── reports/                         # dated governance audits and implementation records
 └── README.md                        # maintainer reading matrix
 tests/fixtures/                      # site-only deterministic scenario inputs
