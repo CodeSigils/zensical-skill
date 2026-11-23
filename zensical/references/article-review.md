@@ -11,6 +11,9 @@ rules first, then the user's explicit instruction, then a supplied writing
 sample, then general defaults. A writing sample lends style traits only; it
 never supplies facts, claims, or experiences.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds article-review observations after that method.
+
 ## Article-start handoff
 
 When creating or substantially drafting an article, do this after inspecting

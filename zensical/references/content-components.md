@@ -4,6 +4,9 @@ This reference covers presentation choices that recur in Zensical Markdown.
 The editorial reason for using a component belongs to the project's editorial
 guidance; this file covers implementation checks.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds component-specific observations after that method.
+
 ## Admonitions
 
 Use the syntax supported by the installed Zensical version and the repository's
