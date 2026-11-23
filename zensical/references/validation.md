@@ -3,6 +3,9 @@
 Use the repository's own commands first. Do not assume that every Zensical site
 uses the same package manager or output directory.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds validation-specific observations after that method.
+
 ## Minimum checks
 
 1. Run the documented build command, preferably its clean form.

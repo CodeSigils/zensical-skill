@@ -4,6 +4,9 @@ Use this reference when a user asks to add, enable, repair, or review feeds on
 a Zensical site. Zensical generates feeds natively since 0.0.65. Treat a feed
 request as ordinary component work, not a new integration.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds feed-specific observations after that method.
+
 ## Check the target version first
 
 Native feeds require Zensical 0.0.65 or later. Inspect the pinned version in the

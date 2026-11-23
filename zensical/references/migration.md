@@ -4,6 +4,9 @@ Use this workflow when a site or the scenario environment moves to a newer
 Zensical release. A clean build is necessary and not sufficient: configuration
 defaults, rendering, links, and feeds can change between releases.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds migration-specific observations after that method.
+
 ## Checklist
 
 1. Read the change before the version bump. Start with the
