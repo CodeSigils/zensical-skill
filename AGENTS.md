@@ -96,6 +96,11 @@ workflow boundaries, source evidence, or distribution expectations, read
 [docs/README.md](docs/README.md) and the documents required by its reading
 matrix.
 
+The runtime's shared target-first method is owned by
+[`zensical/SKILL.md`](zensical/SKILL.md#shared-target-first-method). When
+changing a routed reference, retain its link to that method; the reference is a
+topic-specific delta, not an independent workflow.
+
 Before handoff, update the canonical owner and only the planning records whose
 current claim actually changed. For a consulted record that plausibly appears
 affected but is intentionally unchanged, say so in the handoff. Search for

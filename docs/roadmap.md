@@ -87,6 +87,22 @@ observed reads in both in-scope prompts, one trial each. These are bounded
 observations, not a new distribution gate or evidence of a runtime fix; see the
 [dated field record](research/index.md#codex-automatic-selection-pilot-on-the-code-sigils-blog-2026-10-18).
 
+### Shared target-first routing contract (implemented 2026-11-23)
+
+The runtime already required target inspection, narrow routing, minimal
+changes, proportionate validation, and separate delivery authorization, but
+those obligations were distributed across its router and individual references.
+The shared sequence is now explicit in `zensical/SKILL.md`: establish scope,
+perform a bounded target scan, frame one affected outcome, reuse target records,
+apply one conditional reference, then validate and hand off within the
+authorized boundary. Each runtime reference links back to that shared method as
+its topic-specific delta, and `zensical/scripts/check_runtime_contract.py`
+prevents routed references from omitting the link. The validation step also
+states the boundary explicitly: a build verifies generation, rendered
+inspection verifies affected presentation, and neither verifies deployment or
+indexing. This is a maintenance-contract clarification, not a new Zensical
+capability, fixture, or generic audit.
+
 ## Maturity assessment and next evidence gate
 
 The skill is a work in progress. Its current strength is a narrow,

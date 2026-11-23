@@ -119,7 +119,10 @@ The skill currently routes these tasks:
 ## How to use it
 
 Load `zensical` for a concrete task in an existing Zensical repository. The
-runtime router selects focused references progressively.
+runtime begins with its [shared target-first method](zensical/SKILL.md#shared-target-first-method),
+then selects focused references progressively. A reference narrows that shared
+method for one affected surface; it does not replace target inspection or
+delivery boundaries.
 
 | Request                                          | Routed workflow                              |
 | ------------------------------------------------ | -------------------------------------------- |
