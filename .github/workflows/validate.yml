@@ -67,6 +67,10 @@ jobs:
           version: "0.11.7"
       - name: Instruction contract self-test
         run: python3 zensical/scripts/check_instruction_contract.py --self-test
+      - name: Runtime contract self-test
+        run: python3 zensical/scripts/check_runtime_contract.py --self-test
+      - name: Runtime contract
+        run: python3 zensical/scripts/check_runtime_contract.py
       - name: Site hygiene scan
         run: bash zensical/scripts/check_site_hygiene.sh .
       - name: README inventory self-test
