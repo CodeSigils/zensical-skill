@@ -5,6 +5,9 @@ theme templates, icons, JavaScript, or a homepage/landing page. This skill
 preserves and validates the site's presentation system; it does not choose a
 brand, write generic frontend applications, or replace editorial direction.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds customization-specific observations after that method.
+
 ## Responsive presentation
 
 - Inspect existing selectors and wrappers before adding CSS. Prefer a small,

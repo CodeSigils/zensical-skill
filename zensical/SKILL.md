@@ -46,6 +46,27 @@ the source registry are evidence only.
 - Treat local identifiers as potentially personal in publishable material. Use
   accurate neutral placeholders unless disclosure is necessary and authorized.
 
+## Shared target-first method
+
+Start every Zensical maintenance decision with this order:
+
+1. **Establish scope and authority.** Identify the target repository, requested
+   outcome, and whether the task permits review or edits. Preserve existing
+   work and keep commit, publish, and deployment authority separate.
+2. **Perform a bounded target scan.** Read local instructions and inspect only
+   the relevant configuration, canonical source files, existing conventions,
+   and target commands. Record unavailable evidence as uncertainty rather than
+   importing assumptions from another site.
+3. **Frame one affected outcome.** Identify the canonical source and the
+   rendered or source surface that must remain correct. Do not turn one request
+   into a site-wide audit or activate unrelated references.
+4. **Reuse target records, then apply one conditional reference.** Use the
+   target's own configuration, editorial guidance, maintenance records, and
+   prior evidence before selecting the smallest routed reference below. A
+   reference adds its topic-specific delta; it does not replace this method.
+5. **Make or recommend the smallest coherent change, then validate and hand
+   off.** Run target-appropriate checks within the validation boundary: a build verifies generation, rendered inspection verifies affected presentation, and neither verifies deployment or indexing. Report remaining limits.
+
 ## Route the request
 
 Load only the smallest reference set that matches the task. References are

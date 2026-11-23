@@ -4,6 +4,9 @@ Use this reference for an explicit request to make a small content or
 presentation edit in an existing Zensical site. It is not a general writing or
 rewriting workflow.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds light-edit observations after that method.
+
 ## Inspect conventions first
 
 Read the target page, front matter, nearest section index, comparable pages,

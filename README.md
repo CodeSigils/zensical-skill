@@ -119,7 +119,10 @@ The skill currently routes these tasks:
 ## How to use it
 
 Load `zensical` for a concrete task in an existing Zensical repository. The
-runtime router selects focused references progressively.
+runtime begins with its [shared target-first method](zensical/SKILL.md#shared-target-first-method),
+then selects focused references progressively. A reference narrows that shared
+method for one affected surface; it does not replace target inspection or
+delivery boundaries.
 
 | Request                                          | Routed workflow                              |
 | ------------------------------------------------ | -------------------------------------------- |
@@ -145,8 +148,9 @@ remain target-specific editorial, presentation, or release capabilities.
 
 Only the [`zensical/`](zensical/) directory is the portable Agent Skill
 payload. It contains the router, on-demand references, client metadata, and
-two bounded checks: a tracked-file hygiene preflight and a conventional
-deployment-instruction contract check.
+bounded checks: a tracked-file hygiene preflight, a conventional
+deployment-instruction contract check, and a shared target-first runtime
+contract check.
 
 ```text
 zensical/
@@ -166,6 +170,7 @@ zensical/
 │   └── validation.md                # build and rendered-output checks
 └── scripts/
     ├── check_instruction_contract.py # deployment-instruction drift check
+    ├── check_runtime_contract.py     # shared target-first routing contract check
     └── check_site_hygiene.sh         # no-secret-output tracked-file preflight
 ```
 
@@ -199,6 +204,8 @@ zensical/
 docs/
 ├── vision.md                        # purpose, boundaries, and quality criteria
 ├── roadmap.md                       # evidence-gated implementation plan
+├── evals/
+│   └── shared-target-first-routing.md # manual routing/boundary eval scenarios
 ├── research/
 │   ├── current-state.md             # what the project currently knows, with check dates
 │   ├── index.md                     # append-only dated field record

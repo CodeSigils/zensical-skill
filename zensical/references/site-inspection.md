@@ -3,6 +3,9 @@
 Use this reference when orienting yourself in a Zensical repository or when
 the requested change may affect more than one source file.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds site-inspection observations after that method.
+
 ## Inspect first
 
 - `pyproject.toml`, `uv.lock`, `requirements.txt`, or other dependency files

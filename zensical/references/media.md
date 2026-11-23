@@ -5,6 +5,9 @@ audio, embedded players, or a large asset collection. This is presentation and
 validation guidance; editorial voice and image selection remain separate
 concerns.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds media-specific observations after that method.
+
 ## Images
 
 - Prefer local, repository-controlled assets when durability, offline use, or

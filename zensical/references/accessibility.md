@@ -5,6 +5,9 @@ work that can affect people using screen readers, keyboard navigation, zoom,
 captions, high contrast, reduced motion, or other assistive technology. This is
 a practical review guide, not a claim of WCAG certification.
 
+Start with the [shared target-first method](../SKILL.md#shared-target-first-method).
+This reference adds accessibility-specific observations after that method.
+
 ## Prefer native meaning
 
 - Use semantic HTML and visible text before adding ARIA. Add `aria-label` or
