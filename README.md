@@ -102,7 +102,7 @@ The skill currently routes these tasks:
   maintainer explicitly approves their disclosure;
 - run a bounded tracked-file hygiene preflight before authorized commits,
   publishing, or deployment;
-- review generated sitemaps and canonical URLs during an explicit distribution-output
+- review generated sitemaps and canonical URLs during an explicit release-output
   review, without claiming indexing or deployment success;
 - enable and verify RSS and JSON feeds on a target running a Zensical version
   that provides them natively, including the discovery link a feed needs to be
@@ -367,7 +367,7 @@ Code Sigils is the current product-facing acceptance environment, not a
 template that other sites must follow. The next expansion is to prove the
 existing-site workflow on two or three materially different Zensical
 repositories. Candidate slices are generic content-model/authoring work,
-bounded MiniJinja theme overrides, explicit distribution-output review, and a
+bounded MiniJinja theme overrides, explicit release-output review, and a
 multi-deployment language-selector workflow. Each must satisfy the
 capability-admission rule before it becomes part of the portable payload.
 
@@ -377,7 +377,7 @@ alternate-language deployments. Feeds are an admitted bounded capability,
 because Zensical has provided them natively since 0.0.65; check the target's
 version before writing feed configuration. Generated sitemap behavior can be
 reviewed when `site_url` is configured; it is an admitted bounded
-distribution-output review, not deployment proof. See the roadmap and source
+release-output review, not deployment proof. See the roadmap and source
 registry for the capability boundaries.
 
 ## Roadmap

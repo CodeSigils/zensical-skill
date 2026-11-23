@@ -3,7 +3,8 @@
 This checklist applies only when the project has a configured public remote
 and a reviewed public-distribution or compatibility decision. A local build or
 a catalog listing is not a support or compatibility guarantee. GitHub Releases
-and semver tags are out of scope for this repository.
+are out of scope for this repository; semver tags remain a future maintainer
+decision.
 
 ## Preconditions
 
@@ -152,5 +153,5 @@ validation gate (`validate.yml`) runs on push and pull request. It has three
 jobs: the commit-message policy check, the shared scenario suite, and a job
 running the instruction-contract self-test, the site-hygiene preflight, the
 README inventory self-test, the README inventory check, and `ruff check .`.
-GitHub Releases and semver tags are not part of this repository's distribution
-workflow.
+GitHub Releases are not part of this repository's distribution workflow.
+Whether to add semver tags remains a future maintainer decision.
